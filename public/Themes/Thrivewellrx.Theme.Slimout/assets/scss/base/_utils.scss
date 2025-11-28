@@ -21,7 +21,6 @@ $color-list: (
 	"pink-2": $pink-2,
 	"success": $success,
 	"warning": $warning,
-
 );
 // Font Size Array
 $fs-list: (
@@ -39,12 +38,12 @@ $fs-list: (
 	"32": $fs-32,
 	"36": $fs-36,
 	"40": $fs-40,
+	"44": $fs-44,
 	"48": $fs-48,
 	"70": $fs-70,
 	"90": $fs-90,
 	"140": $fs-140,
 );
-
 
 $spacing-list: (
 	"auto": auto,
@@ -71,7 +70,6 @@ $spacing-list: (
 	"160": 160px,
 	"180": 180px,
 );
-
 
 // ====	Color Classes
 @each $key, $color in $color-list {
@@ -302,6 +300,14 @@ $spacing-list: (
 
 	.gap-y-#{$key} {
 		gap: 0 $margin !important;
+	}
+}
+$width-list: (
+	"full": 100%,
+);
+@each $key, $width in $width-list {
+	.w-#{$key} {
+		width: $width !important;
 	}
 }
 

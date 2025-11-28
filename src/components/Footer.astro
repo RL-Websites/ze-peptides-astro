@@ -1,62 +1,83 @@
 ---
-
+const footerLinkCols = [
+  {
+    links: [
+      { text: "Home", href: "/" },
+      // { text: "Products", href: "/#products" },
+      { text: "About Us", href: "/about" },
+      
+      // { text: "My account", href: "/login" },
+      
+    ],
+  },
+  {
+    links: [
+			{ text: "FAQs", href: "/faq" },
+			{ text: "Contact Us", href: "/contact-us" },
+      
+      // { text: "Privacy Policy", href: "/privacy-policy" },
+      // { text: "Refund and returns policy", href: "/refund-and-returns-policy" },
+    ],
+  },
+  {
+    links: [
+			{ text: "Terms and conditions", href: "/terms-and-conditions" },
+      // { text: "Semaglutide", href: "/product-details" },
+      // { text: "Tirzepatide", href: "/product-details" },
+    ],
+  },
+];
 ---
 
 <footer class="site__footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-5 col-md-6">
-				<div class="site__footer__subscription">
-					<h6 class="site__heading-six"
-						>Subscribe to our newsletter for updates and exclusive offers.</h6
-					>
-					<div class="site__footer__form">
-						<input
-							type="email"
-							name="email"
-							id=""
-							placeholder="Enter Email Address"
-							class="site__footer__input"
+    <!-- Footer Top -->
+    <div class="site__footer__top">
+			<div class="container">
+				<div class="site__footer__logo-section">
+					<a href="/">
+						<img
+							src="/Themes/Thrivewellrx.Theme.Slimout/assets/img/logo-main.png"
+							alt="ZePeptides Logo"
 						/>
-						<button
-							class="theme-btn theme-btn__primary theme-btn__primary--icon fs-md-20 fs-6"
-							>Subscribe <i class="icon-arrow"></i></button
-						>
+					</a>
+				</div>
+	
+				<div class="site__footer__links w-full">
+					{
+						footerLinkCols.map((col) => (
+							<div class="site__footer__links-column">
+								<ul>
+									{col.links.map((link) => (
+										<li>
+											<a class="site__heading-five" href={link.href}>{link.text}</a>
+										</li>
+									))}
+								</ul>
+							</div>
+						))
+					}
+					<div class="site__footer__links-column site__footer__social ml-auto pt-24">
+						<a href="#" aria-label="Instagram">
+							<i class="icon-instagram1" />
+						</a>
+						<a href="#" aria-label="Facebook">
+							<i class="icon-facebook1" />
+						</a>
+						<a href="#" aria-label="LinkedIn">
+							<i class="icon-linkedin1" />
+						</a>
 					</div>
 				</div>
+
 			</div>
-			<div class="col-lg-3 col-md-3 col-4 offset-lg-1 offset-0 mt-md-0 mt-30">
-				<ul class="site__footer__menu">
-					<li><a href="">Home</a></li>
-					<li><a href="">About</a></li>
-					<li><a href="">Solutions</a></li>
-					<li><a href="">Products</a></li>
-					<li><a href="">Legitscript</a></li>
-				</ul>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="site__footer__bottom">
+			<div class="container">
+				<p class="site__footer__copyright text-center">
+					Copyright © 2025 Zepeptides. All rights reserved.
+				</p>
 			</div>
-			<div class="col-lg-3 col-md-3 col-8 mt-md-0 mt-30">
-				<ul class="site__footer__menu">
-					<li><a href="">FAQ</a></li>
-					<li><a href="">Privacy Policy</a></li>
-					<li><a href="">Terms & Conditions</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="row">
-			<div class="site__footer__bottom">
-				<ul class="site__footer__social">
-					<li><a href=""><i class="icon-instagram1"></i></a></li>
-					<li><a href=""><i class="icon-FB"></i></a></li>
-					<li><a href=""><i class="icon-Linkedin"></i></a></li>
-					<li><a href=""><i class="icon-twitter"></i></a></li>
-				</ul>
-				<div class="site__footer__content-frame">
-					<img
-						src="Themes/Thrivewellrx.Theme.Slimout/assets/img/frame/frame-with-title-green-lg.svg"
-						alt="Frame"
-					/>
-				</div>
-			</div>
-		</div>
-	</div>
+    </div>
 </footer>
