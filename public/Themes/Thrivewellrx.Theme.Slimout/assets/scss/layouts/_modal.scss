@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 .modal-open .modal {
 	overflow-y: hidden !important;
 }

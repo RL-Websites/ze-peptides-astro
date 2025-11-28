@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 * {
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
@@ -124,19 +126,12 @@ ul {
 				color: white !important;
 			}
 		}
-
 	}
-
-
 }
-
-
 
 .list-disc {
 	list-style-type: disc;
 }
-
-
 
 .highlight {
 	&__text {
@@ -145,7 +140,6 @@ ul {
 		text-align: center;
 		border-radius: 16px;
 		margin: 30px 0;
-
 
 		p {
 			font-size: 18px;
@@ -161,9 +155,6 @@ ul {
 .cursor-auto {
 	cursor: auto !important;
 }
-
-
-
 
 @media only screen and (max-width: 1170px) {
 	.container {
@@ -182,7 +173,6 @@ ul {
 		padding: 0 15px;
 	}
 
-
 	body {
 		&.header-open {
 			height: 100vh;
@@ -190,15 +180,12 @@ ul {
 		}
 	}
 
-
 	.highlight {
 		&__text {
-
 			padding: 15px;
 
 			border-radius: 12px;
 			margin: 20px 0;
-
 
 			p {
 				font-size: 16px;
@@ -208,8 +195,6 @@ ul {
 }
 
 @media only screen and (max-width: 768px) {
-
-
 	.dropdown-menu {
 		left: 50%;
 		transform: translateX(-50%);
@@ -219,6 +204,4 @@ ul {
 		left: 50% !important;
 		transform: translateX(-50%) !important;
 	}
-
-
 }

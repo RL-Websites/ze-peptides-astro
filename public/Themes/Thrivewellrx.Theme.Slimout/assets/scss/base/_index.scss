@@ -1,7 +1,7 @@
-@import "font-face";
-@import "variables";
-@import "typography";
-@import "utils";
-@import "global";
-@import "override";
-@import "common";
+@use "font-face";
+@use "variables" as *;
+@use "typography";
+@use "utils";
+@use "global";
+@use "override";
+@use "common";

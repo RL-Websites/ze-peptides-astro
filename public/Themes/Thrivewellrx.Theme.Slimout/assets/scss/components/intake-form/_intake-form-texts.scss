@@ -1,3 +1,5 @@
+@use "../../base/variables" as *;
+
 .assessment {
 	&__title {
 		font-size: $fs-22;

@@ -1,5 +1,5 @@
 //Base
-@import "base/index";
-@import "components/index";
-@import "layouts/index";
-@import "pages/index";
+@use "base/index";
+@use "components/index" as index2;
+@use "layouts/index" as index3;
+@use "pages/index" as index4;

@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 .list {
 	&__item {
 		display: flex;
