@@ -163,9 +163,97 @@
 	color: $black;
 	padding: 8px;
 	transition: all 0.3s ease;
+	color: $primary;
 
 	&:hover {
 		color: $primary;
+	}
+}
+
+// Header Icons
+.header-icon {
+	font-size: 24px;
+	color: $primary;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+
+	&:hover {
+		color: $primary;
+	}
+
+	&.mobile-only {
+		display: none;
+	}
+}
+
+// Mobile Header Elements Container
+.mobile-header-elements {
+	display: none;
+	align-items: center;
+	gap: 16px;
+}
+
+// User Dropdown
+.user-dropdown-container {
+	position: relative;
+
+	.user-dropdown {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		background: $white;
+		box-shadow: 0 4px 20px rgba($black, 0.1);
+		border-radius: 8px;
+		padding: 16px;
+		min-width: 200px;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(10px);
+		transition: all 0.3s ease;
+		z-index: 1000;
+
+		&.show {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+
+		.user-name {
+			font-weight: 600;
+			color: $primary;
+			padding-bottom: 12px;
+			border-bottom: 1px solid rgba($black, 0.1);
+			margin-bottom: 12px;
+		}
+
+		.user-menu-list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+
+			li a {
+				color: $black;
+				text-decoration: none;
+				font-size: 14px;
+				transition: color 0.3s ease;
+				display: block;
+				padding: 4px 0;
+
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
 	}
 }
 
@@ -223,33 +311,38 @@
 			&__list {
 				position: fixed;
 				top: 70px;
-				right: -100%;
-				width: 100%;
+				left: -100%; // Changed from right to left for sidebar effect
+				width: 280px; // Fixed width for sidebar
 				height: calc(100vh - 70px);
-				background-color: $primary;
+				background-color: $white; // Changed to white for sidebar look
+				box-shadow: 4px 0 20px rgba($black, 0.1);
 				flex-direction: column;
 				justify-content: flex-start;
 				padding: 40px 20px;
-				gap: 32px;
-				transition: right 0.3s ease;
+				gap: 24px;
+				transition: left 0.3s ease;
 				z-index: 998;
 
 				&.show-menu {
-					right: 0;
+					left: 0; // Slide in from left
 				}
 
 				li a {
-					color: $white;
-					font-size: 18px;
+					color: $black; // Dark text for sidebar
+					font-size: 16px;
+					display: block;
+					width: 100%;
+					padding: 12px 0;
+					border-bottom: 1px solid rgba($black, 0.05);
 
 					&::after {
-						background-color: $white;
+						display: none; // Remove underline effect
 					}
 
 					&:hover,
 					&:focus,
 					&.active {
-						color: $white;
+						color: $primary;
 					}
 				}
 			}
@@ -261,6 +354,27 @@
 	}
 
 	.hamburger-menu {
+		display: block; // Keep it visible but handled in mobile-header-elements
+	}
+
+	// Mobile Header Layout Adjustments
+	.site__navbar {
+		justify-content: space-between;
+	}
+
+	.mobile-header-elements {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	.header-icon.mobile-only,
+	.user-dropdown-container.mobile-only {
 		display: block;
+	}
+
+	// Hide desktop cart icon
+	.site__menu--auth .cart-icon {
+		display: none;
 	}
 }

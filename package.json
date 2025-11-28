@@ -4,7 +4,7 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "npm-run-all --parallel astro:dev watch",
-		"astro:dev": "astro dev --port 1000 --watch",
+		"astro:dev": "astro dev --port 1000 --host --watch",
 		"watch": "sass --watch public/Themes/Thrivewellrx.Theme.Slimout/assets/scss/styles.scss:public/Themes/Thrivewellrx.Theme.Slimout/assets/css/style.css",
 		"build": "astro build",
 		"preview": "astro preview",

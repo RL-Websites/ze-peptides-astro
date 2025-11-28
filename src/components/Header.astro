@@ -28,6 +28,9 @@ const isHome = Astro.url.pathname === "/";
 
 			<!-- CTA Buttons -->
 			<div class="site__menu--auth">
+				<a href="/cart" class="header-icon cart-icon">
+					<i class="icon-cart"></i>
+				</a>
 				<button
 					type="button"
 					class="theme-btn theme-btn__outline theme-btn__outline--primary"
@@ -37,12 +40,34 @@ const isHome = Astro.url.pathname === "/";
 				<button type="button" class="theme-btn theme-btn__primary">
 					Get Started
 				</button>
+				
 			</div>
 
-			<!-- Mobile Hamburger Menu -->
-			<button class="hamburger-menu" id="hamburger-menu">
-				<i class="icon-hamburger-menu"></i>
-			</button>
+			<!-- Mobile Header Elements -->
+			<div class="mobile-header-elements">
+				
+				
+				<a href="/cart" class="header-icon cart-icon mobile-only">
+					<i class="icon-cart"></i>
+				</a>
+
+				<div class="user-dropdown-container mobile-only">
+					<button class="header-icon user-icon" id="user-menu-btn">
+						<i class="icon-user"></i>
+					</button>
+					<div class="user-dropdown" id="user-dropdown">
+						<div class="user-name">User Name</div>
+						<ul class="user-menu-list">
+							<li><a href="/profile">Profile</a></li>
+							<li><a href="/orders">Orders</a></li>
+							<li><a href="/logout">Logout</a></li>
+						</ul>
+					</div>
+				</div>
+				<button class="hamburger-menu" id="hamburger-menu">
+					<i class="icon-hamburger-menu fw-bold"></i>
+				</button>
+			</div>
 		</div>
 	</div>
 </header>
@@ -65,5 +90,21 @@ const isHome = Astro.url.pathname === "/";
 	hamburger?.addEventListener("click", () => {
 		menuList?.classList.toggle("show-menu");
 		header?.classList.toggle("menu-open");
+	});
+
+	// User dropdown toggle
+	const userBtn = document.getElementById("user-menu-btn");
+	const userDropdown = document.getElementById("user-dropdown");
+
+	userBtn?.addEventListener("click", (e) => {
+		e.stopPropagation();
+		userDropdown?.classList.toggle("show");
+	});
+
+	// Close dropdown when clicking outside
+	document.addEventListener("click", (e) => {
+		if (!userDropdown?.contains(e.target as Node) && !userBtn?.contains(e.target as Node)) {
+			userDropdown?.classList.remove("show");
+		}
 	});
 </script>
