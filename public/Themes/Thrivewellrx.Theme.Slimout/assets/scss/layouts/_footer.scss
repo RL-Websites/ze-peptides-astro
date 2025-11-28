@@ -1,0 +1,128 @@
+.site {
+	&__footer {
+		padding: 100px 0;
+		background-color: #F5B48C;
+
+		&__form {
+			margin-top: 30px;
+			background-color: $light;
+			display: flex;
+
+			border-radius: 50px;
+			border: 4px solid $light;
+		}
+
+		&__input {
+			width: 100%;
+			height: 70px;
+			padding: 10px 20px;
+			outline: 0;
+			box-shadow: none;
+			border: none;
+			background-color: transparent;
+
+			&::placeholder {
+				font-weight: 700;
+			}
+		}
+
+		&__menu {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+
+			li {
+				a {
+					text-decoration: none;
+					color: $secondary;
+					font-size: 22px;
+					line-height: 1;
+					font-weight: 500;
+				}
+			}
+		}
+
+		&__bottom {
+			display: flex;
+			gap: 20px;
+			align-items: center;
+			margin-top: 70px;
+		}
+
+		&__social {
+			display: flex;
+			gap: 15px;
+
+			li {
+				a {
+					font-size: $fs-40;
+					color: $secondary;
+				}
+			}
+		}
+
+		&__content-frame {
+			width: 100%;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.site {
+		&__footer {
+			padding: 70px 0;
+
+			&__input {
+				padding: 5px 15px;
+				height: 50px;
+			}
+
+			&__menu {
+				li {
+					a {
+						font-size: 18px;
+					}
+				}
+			}
+
+			&__bottom {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.site {
+		&__footer {
+			padding: 50px 0;
+
+			&__form {
+				margin-top: 20px;
+
+			}
+
+			&__input {
+				height: 50px;
+			}
+
+			&__content-frame {
+				display: none;
+			}
+
+			&__menu {
+				gap: 20px;
+
+				li {
+					a {
+						font-size: $fs-16;
+					}
+				}
+			}
+		}
+	}
+}

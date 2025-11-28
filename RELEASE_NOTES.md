@@ -1,0 +1,6 @@
+# Release Notes
+
+## [0.0.1] - 2025-11-28
+
+- Initial release.
+- Cloned from SlimOut.Site.Html.

@@ -1,0 +1,107 @@
+---
+const isHome = Astro.url.pathname === "/";
+---
+
+<header class={`site__header ${isHome ? "site__header__main" : ""}`}>
+	<div class="container">
+		<div class="site__navbar">
+			<div class="site__logo">
+				<a href="/">
+					<img
+						class="site__logo--img"
+						src={isHome
+							? "Themes/Thrivewellrx.Theme.Slimout/assets/img/logo-alt.svg"
+							: "Themes/Thrivewellrx.Theme.Slimout/assets/img/logo-main.svg"}
+						data-logo-default={isHome
+							? "Themes/Thrivewellrx.Theme.Slimout/assets/img/logo-alt.svg"
+							: "Themes/Thrivewellrx.Theme.Slimout/assets/img/logo-main.svg"}
+						data-logo-sticky="Themes/Thrivewellrx.Theme.Slimout/assets/img/logo-main.svg"
+						alt="NexGen Logo"
+					/>
+				</a>
+			</div>
+			<div class="site__menu">
+				<ul class={`site__menu__list ${isHome ? "site__menu__list__alt" : ""}`}>
+					<li> <a class="active" href="/">Home</a></li>
+					<li> <a href="/about">About Us</a></li>
+					<li> <a href="/faq">FAQ</a></li>
+					<li> <a href="/contact-us">Contact</a></li>
+					<li class="hide-in-mobile">
+						<a
+							href="/"
+							class="cart d-inline-block"
+							data-toggle="modal"
+							data-target="#couponModal"
+						>
+							<i class="icon-cart"></i>
+							<span class="cart__badge text-center">4</span>
+						</a>
+					</li>
+					<!-- <li>
+						<button
+							class="theme-btn theme-btn__outline theme-btn__outline--primary"
+						>
+							Log In
+						</button>
+					</li>
+					<li>
+						<button class="theme-btn theme-btn__primary"> Sign Up </button>
+					</li> -->
+					<li>
+						<button
+							type="button"
+							class={`theme-btn theme-btn__outline theme-btn__outline--primary cursor-pointer ${isHome ? "theme-btn__outline--white" : ""}`}
+							>Get Started</button
+						>
+					</li>
+				</ul>
+				<ul class="site__menu--auth d-none d-inline-flex">
+					<li>
+						<a
+							href="/"
+							class="cart d-inline-block"
+							data-toggle="modal"
+							data-target="#couponModal"
+						>
+							<i class="icon-cart"></i>
+							<span class="cart__badge text-center">4</span>
+						</a>
+					</li>
+
+					<div class="dropdown">
+						<button
+							class=`nav-link dropdown-toggle dropdown-text  nav-link__user theme-btn theme-btn__outline theme-btn__outline--primary cursor-pointer ${isHome ? "theme-btn__outline--white" : ""}`
+							type="button"
+							id="dropdownMenu3"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							Jack <i class="icon-down_arrow dropdown-icon"></i>
+						</button>
+						<ul
+							class="site__dropdown-items list-none dropdown-menu site__menu__list--dropdown"
+							aria-labelledby="dropdownMenu3"
+						>
+							<li>
+								<a href="#">Account Information</a>
+							</li>
+							<li>
+								<a href="#">My Order</a>
+							</li>
+							<li>
+								<a href="#">Change Password</a>
+							</li>
+							<li>
+								<a href="#">Logout</a>
+							</li>
+						</ul>
+					</div>
+				</ul>
+
+				<button class="hamburger-menu">
+					<i class="icon-hamburger-menu"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+</header>

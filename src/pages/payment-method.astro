@@ -1,0 +1,1070 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Toast from "../components/Toast.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- =====|| Main Section Start ||====== -->
+	<main class="page">
+		<div class="page__wrapper page__wrapper--alt">
+			<!-- ==|| Cart Hero Section Start ||== -->
+			<section class="cart-hero">
+				<div class="container">
+					<h1 class="site__heading-four text-md-center fw-extrabold"
+						>Payment Method</h1
+					>
+				</div>
+			</section>
+			<!-- ==|| Cart Hero Section End ||== -->
+
+			<!-- ==|| Payment List Section Start ||== -->
+			<section class="payment__card">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-lg-8">
+							<div
+								class="payment-card__body cart-card payment__card--cart-summary"
+							>
+								<div class="cart-card__header">
+									<h3 class="fs-md-24 fs-20 fw-bold">Payment Details</h3>
+								</div>
+								<div
+									class="payment__form payment__form--body"
+									id="payment-form"
+								>
+									<!-- Used to display form errors. -->
+									<p
+										class="fs-md-20 fs-sm-18 fs-16"
+										id="card-errors"
+										role="alert">Your card number is incomplete.</p
+									>
+									<div>
+										<label class="custom-check">
+											<span class="custom-check__input">
+												<input type="checkbox" />
+												<span></span>
+											</span>
+
+											<span class="custom-check__label">
+												By selecting this you are confirming that you have read,
+												understood and agree to the
+												<a
+													class="text-primary"
+													data-toggle="modal"
+													data-target="#termCodition">terms & conditions</a
+												>.
+											</span>
+										</label>
+									</div>
+									<!--</form>-->
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4 payment__card--right">
+							<div class="cart-card">
+								<div class="cart-card__header">
+									<h3 class="fs-md-24 fs-20 fw-bold">Cart Total</h3>
+								</div>
+								<div class="cart-card__body">
+									<div class="pricing__basic">
+										<div class="pricing__item">
+											<p class="pricing__item--name">Subtotal</p>
+											<p class="pricing__item--value">$150.50</p>
+										</div>
+										<div class="pricing__item">
+											<p class="pricing__item--name">Shipping</p>
+											<p class="pricing__item--value">$30.50</p>
+										</div>
+										<div class="pricing__item">
+											<p class="pricing__item--name">Consultancy Fee</p>
+											<p class="pricing__item--value">$30.50</p>
+										</div>
+									</div>
+
+									<div class="pricing__total">
+										<div class="pricing__item">
+											<p class="pricing__item--name">Discount</p>
+											<p class="pricing__item--value text-dark-red-2">
+												-$5.50
+											</p>
+										</div>
+
+										<div class="pricing__total-item">
+											<p class="pricing__total--name">Total</p>
+											<p class="pricing__total--value">$175.87</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="attention mt-20">
+								<div class="attention__box">
+									<!-- <p class="attention__title">
+													<i class="icon-alert"></i>
+													<span>Attention: This is not the final charge</span>
+												</p> -->
+
+									<div class="attention__title">
+										<i class="icon-alert text-secondary"></i>
+										<p
+											>Attention:
+											<span>Final Dosage Determined by Doctor</span></p
+										>
+									</div>
+
+									<!-- <p class="attention__price-desc">
+													<span>$150.50</span> + <span>Shipping</span> +
+													<span>Consultation fee</span>
+												</p> -->
+
+									<p class="attention__text">
+										The highest dosage price is only a credit card hold until
+										the doctor consultation. The final price will be adjusted
+										based on the prescribed dosage.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-12 col-lg-8">
+							<div
+								class="payment-card__body cart-card payment__card--cart-summary"
+							>
+								<div class="cart-card__header">
+									<h3 class="fs-md-24 fs-20 fw-bold">Payment Details</h3>
+								</div>
+								<div
+									class="payment__form payment__form--body payment__form--card"
+									id="payment-form"
+								>
+									<div class="form-group">
+										<label class="fw-bold mb-5" for="cardNumber"
+											>Card Number</label
+										>
+										<div class="payment__form--card-variation">
+											<input
+												class="basic-input"
+												type="text"
+												id="cardNumber"
+												placeholder="1234 1234 1234 1234"
+											/>
+											<div class="card-icons">
+												<img
+													src="Themes/Thrivewellrx.Theme.Slimout/assets/img/payment/visa.png"
+													alt="Visa"
+												/>
+												<img
+													src="Themes/Thrivewellrx.Theme.Slimout/assets/img/payment/master.png"
+													alt="Mastercard"
+												/>
+												<img
+													src="Themes/Thrivewellrx.Theme.Slimout/assets/img/payment/amex.png"
+													alt="AMEX"
+												/>
+												<img
+													src="Themes/Thrivewellrx.Theme.Slimout/assets/img/payment/jcb.png"
+													alt="JCB"
+												/>
+											</div>
+										</div>
+									</div>
+
+									<div class="payment__form--inline-fields mt-20">
+										<div class="form-group">
+											<label class="fw-bold mb-5" for="expiry"
+												>Expiration Date</label
+											>
+											<input
+												class="basic-input"
+												type="text"
+												id="expiry"
+												placeholder="MM/YY"
+											/>
+										</div>
+										<div class="form-group">
+											<label class="fw-bold mb-5" for="cvc">Security Code</label
+											>
+											<input
+												class="basic-input"
+												type="text"
+												id="cvc"
+												placeholder="CVC"
+											/>
+										</div>
+									</div>
+
+									<div class="select__items mb-0 mt-20">
+										<label class="fw-bold mb-5" for="country">Country</label>
+										<select
+											class="select__options text-secondary fw-normal"
+											name="country"
+											id="country"
+										>
+											<option value="">Select a country</option>
+											<option value="Afghanistan">Bangladesh</option>
+											<option value="Albania">India</option>
+											<option value="Algeria">Pakistan</option>
+											<option value="Andorra">USA</option>
+											<option value="Angola">Canada</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4 payment__card--right">
+							<div class="cart-card">
+								<div class="cart-card__header">
+									<h3 class="fs-md-24 fs-20 fw-bold">Cart Total</h3>
+								</div>
+								<div class="cart-card__body">
+									<div class="pricing__basic">
+										<div class="pricing__item">
+											<p class="pricing__item--name">Subtotal</p>
+											<p class="pricing__item--value">$150.50</p>
+										</div>
+										<div class="pricing__item">
+											<p class="pricing__item--name">Shipping</p>
+											<p class="pricing__item--value">$30.50</p>
+										</div>
+										<div class="pricing__item">
+											<p class="pricing__item--name">Consultancy Fee</p>
+											<p class="pricing__item--value">$30.50</p>
+										</div>
+									</div>
+
+									<div class="pricing__total">
+										<div class="pricing__item">
+											<p class="pricing__item--name">Discount</p>
+											<p class="pricing__item--value text-dark-red-2">
+												-$5.50
+											</p>
+										</div>
+
+										<div class="pricing__total-item">
+											<p class="pricing__total--name">Total</p>
+											<p class="pricing__total--value">$175.87</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="attention mt-20">
+								<div class="attention__box">
+									<!-- <p class="attention__title">
+													<i class="icon-alert"></i>
+													<span>Attention: This is not the final charge</span>
+												</p> -->
+
+									<div class="attention__title">
+										<i class="icon-alert text-secondary"></i>
+										<p
+											>Attention:
+											<span>Final Dosage Determined by Doctor</span></p
+										>
+									</div>
+
+									<!-- <p class="attention__price-desc">
+													<span>$150.50</span> + <span>Shipping</span> +
+													<span>Consultation fee</span>
+												</p> -->
+
+									<p class="attention__text">
+										The highest dosage price is only a credit card hold until
+										the doctor consultation. The final price will be adjusted
+										based on the prescribed dosage.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ==|| Payment List Section End ||== -->
+
+			<!-- ==|| Shipping info Section Start ||== -->
+			<section>
+				<div class="container">
+					<div class="payment__card payment__card__variant2">
+						<div class="payment__header">
+							<h3 class="fs-md-24 fs-20 fw-bold">Payment Details</h3>
+
+							<div>
+								<label class="custom-check d-flex align-items-center">
+									<span class="custom-check__input custom-check__input--alt">
+										<input type="checkbox" />
+										<span class="black-icon"></span>
+									</span>
+									<span class="custom-check__label">
+										Save this Information
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="payment__body">
+							<div class="payment__form">
+								<form>
+									<div class="payment__wrapper">
+										<div class="payment__input">
+											<label class="basic-label" for="shippingName"
+												>Name <span class="icon-ellipse"></span></label
+											>
+											<input
+												class="basic-input"
+												type="text"
+												name="shippingName"
+												id="shippingName"
+											/>
+											<p class="basic-error">Shipping name is required</p>
+										</div>
+										<div class="payment__input">
+											<label class="basic-label" for="shippingAddress"
+												>Address <span class="icon-ellipse"></span></label
+											>
+											<input
+												class="basic-input"
+												type="email"
+												name="shippingAddress"
+												id="shippingAddress"
+											/>
+										</div>
+										<div class="payment__input">
+											<label class="basic-label" for="shippingAddress"
+												>State <span class="icon-ellipse"></span></label
+											>
+
+											<div class="select__wrapper select__wrapper--alt">
+												<select
+													class="select__options select__options--padding fs-16 text-secondary"
+												>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+												</select>
+											</div>
+										</div>
+										<div class="payment__input">
+											<label class="basic-label" for="shippingAddress"
+												>City <span class="icon-ellipse"></span></label
+											>
+											<input
+												class="basic-input"
+												type="email"
+												name="shippingAddress"
+												id="shippingAddress"
+											/>
+										</div>
+										<div class="payment__input">
+											<label class="basic-label" for="shippingZipCode"
+												>Zip Code <span class="icon-ellipse"></span></label
+											>
+											<input
+												class="basic-input"
+												type="text"
+												name="shippingZipCode"
+												id="shippingZipCode"
+											/>
+										</div>
+										<div class="payment__input">
+											<label class="basic-label" for="shippingEmail"
+												>Email Address <span class="icon-ellipse"></span></label
+											>
+											<input
+												class="basic-input"
+												type="email"
+												name="shippingEmail"
+												id="shippingEmail"
+											/>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ==|| Shipping info Section End ||== -->
+
+			<!-- ==|| Billing Section Start ||== -->
+			<section class="payment__billing">
+				<div class="container">
+					<div class="payment__card payment__card__variant3">
+						<div class="payment__header">
+							<h3 class="fs-md-24 fs-20 fw-bold">Billing Info</h3>
+
+							<div>
+								<label class="custom-check">
+									<span class="custom-check__input custom-check__input--alt">
+										<input type="checkbox" />
+										<span class="black-icon"></span>
+									</span>
+									<span class="custom-check__label">
+										Same as shipping Information
+									</span>
+								</label>
+								<label class="custom-check ml-20">
+									<span class="custom-check__input custom-check__input--alt">
+										<input type="checkbox" />
+										<span class="black-icon"></span>
+									</span>
+									<span class="custom-check__label">
+										Save this Information
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="payment__body">
+							<div class="payment__form">
+								<form>
+									<div class="payment__wrapper">
+										<div class="payment__input">
+											<label class="basic-label" for="shippingName"
+												>Name <span class="icon-ellipse"></span></label
+											>
+											<input
+												class="basic-input"
+												type="text"
+												name="shippingName"
+												id="shippingName"
+											/>
+										</div>
+										<div class="payment__input">
+											<label class="basic-label" for="shippingAddress"
+												>Address <span class="icon-ellipse"></span></label
+											>
+											<input
+												class="basic-input"
+												type="email"
+												name="shippingAddress"
+												id="shippingAddress"
+											/>
+										</div>
+										<div class="payment__input">
+											<label class="basic-label" for="shippingAddress"
+												>State <span class="icon-ellipse"></span></label
+											>
+											<div class="select__wrapper select__wrapper--alt">
+												<select
+													class="select__options select__options--padding fs-16 text-secondary"
+												>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+												</select>
+											</div>
+										</div>
+										<div class="payment__input">
+											<label class="basic-label" for="shippingAddress"
+												>City <span class="icon-ellipse"></span></label
+											>
+											<input
+												class="basic-input"
+												type="email"
+												name="shippingAddress"
+												id="shippingAddress"
+											/>
+										</div>
+										<div class="payment__input">
+											<label class="basic-label" for="shippingZipCode"
+												>Zip Code <span class="icon-ellipse"></span></label
+											>
+											<input
+												class="basic-input"
+												type="text"
+												name="shippingZipCode"
+												id="shippingZipCode"
+											/>
+										</div>
+										<div class="payment__input">
+											<label class="basic-label" for="shippingEmail"
+												>Email Address <span class="icon-ellipse"></span></label
+											>
+											<input
+												class="basic-input"
+												type="email"
+												name="shippingEmail"
+												id="shippingEmail"
+											/>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="condition__highlight mt-20">
+						<p class="mb-0 text-white"
+							>This product is not dispensed without intake review and provider
+							clearance.</p
+						>
+					</div>
+
+					<div class="step-btn text-end mt-40">
+						<button
+							type="button"
+							class="theme-btn theme-btn__outline theme-btn__outline--primary cursor-pointer theme-btn__min-w-210"
+						>
+							Go Back
+						</button>
+						<button
+							type="button"
+							class="theme-btn theme-btn__primary theme-btn__min-w-210 theme-btn__primary--signin theme-btn--with-loader"
+							data-bs-toggle="modal"
+							data-bs-target="#payment"
+						>
+							Next
+
+							<span class="theme-btn__loader spin"></span>
+						</button>
+					</div>
+				</div>
+			</section>
+			<!-- ==|| Billing Section End ||== -->
+		</div>
+	</main>
+	<!-- =====|| Main Section End ||====== -->
+
+	<!-- =====|| Payment Successful Modal Start ||====== -->
+	<div
+		id="payment"
+		class="modal fade payment-modal confirm-modal"
+		tabindex="-1"
+		aria-labelledby="payment"
+		aria-hidden="true"
+	>
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<!-- <button type="button" class="btn-close" data-dismiss="modal">
+					<i class="icon-cross_filled"></i>
+				</button> -->
+
+				<div class="modal-body">
+					<div class="modal__icon">
+						<i class="icon-tick-outlined"></i>
+					</div>
+					<div class="modal__text">
+						<h5 class="site__heading-five fw-bold text-secondary text-center"
+							>Payment Successful
+						</h5>
+					</div>
+
+					<p
+						class="text-blue-6 text-center mb-20 fs-md-18 fs-16 mt-md-30 mt-10"
+					>
+						Thank you for your payment. Your order is now being processed. If
+						necessary, a prescriber will contact you to discuss the next steps
+						in your treatment.
+					</p>
+					<p class="modal__highlight-text">
+						This product requires a lab test for proper evaluation. We will send
+						you a lab test kit, or you can choose to visit our nearest lab for
+						testing. Once the test results are available, we will proceed with
+						the next steps in your treatment.
+					</p>
+
+					<div class="modal__actions">
+						<button
+							class="modal__action modal__action--outline"
+							type="button"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						>
+							I Will Do It Later
+						</button>
+						<button class="modal__action modal__action--primary" type="button">
+							Upload Documents
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- =====|| Payment Successful Modal End ||====== -->
+
+	<!-- =====|| Toast Start ||====== -->
+	<Toast />
+	<!-- =====|| Toast Start ||====== -->
+
+	<!-- Terms & Condition Modal Start -->
+	<div
+		id="termCodition"
+		class="modal fade terms-condition-modal"
+		tabindex="-1"
+		role="dialog"
+	>
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-dismiss="modal">
+					<i class="icon-cross_filled"></i>
+				</button>
+
+				<div class="modal-header">
+					<h2 class="section__title"> Terms and Conditions </h2>
+				</div>
+
+				<div class="modal-body">
+					<div class="">
+						<p class="fs-md-18 fs-16 fw-600"
+							>NEXGEN Weight Loss, Wellness and Recovery.™</p
+						>
+						<p class="fs-md-18 fs-16 fw-600 mt-20"
+							>(DBA: Nexgen Weight Loss™) (DBA: NEXGEN MD 360™)</p
+						>
+						<p class="fs-md-18 fs-16 fw-400 mt-20"
+							>WE ARE NOT A REPLACEMENT FOR EMERGENCY MEDICAL SERVICES. IF YOU
+							HAVE A MEDICAL EMERGENCY SEEK EMERGENCY MEDICAL CARE IMMEDIATELY
+							IN-PERSON OR DIAL 911 OR YOUR LOCAL EMERGENCY NUMBER.
+						</p>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							Acceptance of the Terms and Conditions Herein
+						</p>
+
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							By clicking "I Agree", checking a related box, or accessing these
+							services (so defined below), you acknowledge that you have read,
+							understood, accepted, and agreed to be bound by this agreement. If
+							you do not agree to these terms and conditions or do not
+							understand these terms and conditions, you are not allowed to use
+							and/or access these services and if so. You hereby grant agency
+							authority to any party who clicks the "I agree" button or
+							otherwise accepts these terms and conditions on your behalf.
+						</p>
+
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							Binding Arbitration Notice: You agree that disputes between you
+							and us (non-exhaustively: the company and/or our agents,
+							contractors employees, officers, shareholders), and/or you and any
+							affiliated individuals or groups (non-exhaustively: medical
+							providers, nursing providers, and/or any other affiliated
+							third-party), arising out of or in relation to these terms and
+							conditions and/or the service will be resolved by binding,
+							individual arbitration and you waive your rights to a jury trial
+							and/or to participate in a class-action lawsuit or class-wide
+							arbitration, so explained below.
+						</p>
+
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							This agreement is subject to changes as explained below.
+						</p>
+
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							We may change these terms at any time and as required by law. This
+							may include changing, adding, or removing terms. We may do this in
+							response to legal, business, competitive. environment or other
+							reasons not listed here.
+						</p>
+
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							NEXGEN Weight Loss, Wellness & Recovery and/or its subsidiaries
+							(collectively, "NEXGEN Weight Loss, Wellness & Recover and/or
+							Nexgen MD 360," "we," or "us") owns and operates websites located
+							at www.nexgenmd360.com & www.nexgen-wellness.com (collectively,
+							the "Platform"). Your access and/or use of the Platform, or
+							anything associated with it (non-exhaustively: any products,
+							services, websites, software applications, mobile applications,
+							content generated by Us and/or any affiliated third-party, the
+							"Service") are governed by these Terms and Conditions (the "Terms
+							and Conditions" or the "Agreement").
+						</p>
+
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							Please read this Agreement carefully as it establishes the
+							important terms you need to know about the Services you are
+							agreeing to. In this agreement, the use of the terms, "you",
+							"yours", and such similar phrasing refer to the person or entity
+							using the Service.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Consent to Telehealth</h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							Telehealth uses electronic communications to connect patients and
+							providers for the remote delivery of healthcare services. Though
+							Telehealth carries potential benefits, like any medical procedure
+							it also carries potential risks. Specifically but
+							non-exhaustively: Telehealth is not a substitute for in-person
+							medical care for all cases or all conditions. If you do not accept
+							the risks associated with using Telehealth, you should seek
+							in-person care. As part of the on-boarding process you are offered
+							the opportunity to agree to a Medical Consent form that Includes
+							consent to telehealth treatment. By using the Services you agree
+							and acknowledge that NEXGEN Weight Loss, Wellness & Recovery is a
+							third-party beneficiary of the Medical Consent and has the right
+							to enforce it against you.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Use By Minors</h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							The Service is not intended for use by anyone under the age of
+							eighteen (18) and anyone under the age of eighteen (18) is
+							prohibited from using any part of the Service and/or the Platform,
+							except as to read these Terms and Conditions.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Your Relationship with Us</h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							As part of the Service we make available certain products and
+							services sold and/or offered by us and by third-party providers
+							(medical and/or nursing care), pharmacies, diagnostics
+							laboratories, and other vendors via our Service.
+						</p>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							We provide prescription fulfillment services via 3rd Party
+							Inedepent Pharmacies (the "Pharmacies") and laboratory services
+							via Quest Diagnostics and/or LabCorp (the "Labs"). We may also
+							provide you with access to a network of independent third-party
+							providers and/or medical groups (the "Providers"). These providers
+							offer certain independent medical and/or nursing services. By
+							accepting these Terms and Conditions, you acknowledge and agree
+							that any services or products received from the aforementioned
+							individuals and/or groups are also bound by this Agreement and
+							that they are third-party beneficiaries of this Agreement.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>No Medical–Relationship</h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							NEXGEN Weight Loss, Wellness & Recovery has no control or
+							interference with the practice of medicine, nursing, or any other
+							such care by any providers. All providers are individually and
+							solely responsible for managing the medical care and/or any
+							treatments they provide to you. By accepting this Agreement, you
+							understand and agree that NEXGEN Weight Loss, Wellness & Recovery
+							is not acting as a healthcare provider and that you are not
+							entering into a patient-provider relationship with us. By
+							accepting this Agreement, you understand and agree that you may be
+							entering into a patient-provider relationship or other such
+							relationship with any one or more Providers.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>No Pharmacy–Relationship</h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							By accepting this Agreement, you understand and agree that NEXGEN
+							Weight Loss, Wellness & Recovery, along with third-party Providers
+							and Pharmacies may receive messages regarding your treatment, and
+							respond to you via email, text messages (SMS/MMS), phone calls,
+							and voicemails (collectively, "Communications"). You acknowledge
+							and accept that NEXGEN Weight Loss, Wellness & Recovery and it's
+							affiliates are not responsible for the contents or security of any
+							of those means of communications. These communications may contain
+							important information about your health and treatment. You
+							acknowledge that the receipt and reading of any such messages is
+							solely your responsibility and that you agree to hold-harmless
+							NEXGEN Weight Loss, Wellness & Recovery and any of it's employees,
+							officers, or affiliated entities (providers, pharmacies, etc.)
+							regarding the receipt and reading of any such communications. You
+							also accept that some or all of the Communications may be
+							unrelated to your treatment, such as marketing and advertising
+							Communications.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Consent to the Use of Messaging</h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							By accepting this Agreement, you understand and agree that NEXGEN
+							Weight Loss, Wellness & Recovery, along with third-party Providers
+							and Pharmacies may receive messages regarding your treatment, and
+							respond to you via email, text messages (SMS/MMS), phone calls,
+							and voicemails (collectively, “Communications”). You acknowledge
+							and accept that NEXGEN Weight Loss, Wellness & Recovery and it’s
+							affiliates are not responsible for the contents or security of any
+							of those means of communications. These communications may contain
+							important information about your health and treatment. You
+							acknowledge that the receipt and reading of any such messages is
+							solely your responsibility and that you agree to hold–harmless
+							NEXGEN Weight Loss, Wellness & Recovery and any of it’s employees,
+							officers, or affiliated entities (providers, pharmacies, etc.)
+							regarding the receipt and contents of such communications. You
+							also accept that some or all of the Communications may be
+							unrelated to your treatment, such as promotional and advertising
+							Communications.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Consent to Pay for Services</h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							NEXGEN Weight Loss, Wellness & Recovery and/or its subsidiaries
+							are not currently enrolled with, accepting, or participating in
+							any state, local, of federal healthcare and/or health insurance
+							programs (non-exhaustively: Medicare, Medicaid, etcetera). You
+							acknowledge and accept that NEXGEN Weight Loss, Wellness &
+							Recovery, the Providers, the Pharmacies, and yourself may receive
+							payment from any such programs for any of the services or products
+							provided by NEXGEN Weight Loss, Wellness & Recovery, or any
+							affiliated entities. By engaging with NEXGEN Weight Loss, Wellness
+							& Recovery and using the Services, you are choosing to obtain
+							service solely on a cash-basis. As such, you have sole financial
+							responsibility for paying the costs associated with the Services.
+						</p>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							By clicking "I Agree", checking a related box, or accessing these
+							services you agree that you are exclusively choosing to access
+							these services on a cash-basis and are solely responsibility for
+							any costs incurred, and that neither you, nor NEXGEN Weight Loss,
+							Wellness & Recovery, the Providers, the Labs, nor the Pharmacies
+							will submit any claims for reimbursement to any state, local, of
+							federal healthcare and/or health insurance programs
+							(non-exhaustively: Medicare, Medicaid, etcetera).
+						</p>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							NEXGEN Weight Loss, Wellness & Recovery does not provide
+							Superbills or other medically coded-invoices for services. Regular
+							invoices are provided upon request.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Consent to Subscription Billing</h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							Some but not all services available for purchase through NEXGEN
+							Weight Loss, Wellness & Recovery are offered on an automatically
+							renewing subscription basis. Your payment method will be charged
+							automatically every month (or at any other agreed-upon interval as
+							displayed during the onboarding process) until you cancel your
+							subscription plan (the "Charges"). You may cancel your future
+							subscription at any time before your payment is processed <em
+								>“if all medication received by client/patient is paid for”</em
+							> by emailing <a
+								class="text-blue-6"
+								href="mailto:info@nexgen-wellness.com"
+								>info@nexgen-wellness.com</a
+							> directly requesting a cancellation. At that time, any outstanding
+							invoices will be charged via your payment method and your subscription
+							will be canceled.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Three Month Program Billing</h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							The 3 month program is a subscription service billed out monthly.
+							We will ship out 12 weeks of medication after the telehealth
+							appointment with our licensed medical provider. If more medication
+							is needed in the first 3 months, it will be shipped out per
+							approval of the licensed medical provider. After the three months,
+							medication will ship out monthly per our licensed medical
+							providers review. Billing may be adjusted per your authorization <em
+								>after the initial three month period is complete</em
+							> based on quantity and strength of medication. To cancel your subscription
+							<em>after initial three month period is paid for</em>, please
+							email <a
+								class="text-blue-6"
+								href="mailto:info@nexgen-wellness.com"
+								>info@nexgen-wellness.com</a
+							> or call/text us at <a
+								class="text-blue-6"
+								href="tel:469-902-9450">469-902-9450</a
+							>.
+						</p>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							<em
+								>*If the program is canceled and the payment balance of
+								medication received by customer/client/patient is not paid in
+								full, your credit card on file will be charged for the remaining
+								balance owed. If payment is more that 15 days late, your account
+								will be cancelled and turned over to our 3rd party collections
+								agency. Delinquent account information will be reported to
+								credit reporting agencies.</em
+							>
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Prescription Only Products</h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							Some of the Products and Services offered via the Platform require
+							a valid prescription. Payment does not guarantee the writing or
+							dispensing of any prescription medications. You will not be
+							offered a prescription unless you have completed a medical intake
+							form, have established a patient–provider relationship with a
+							Provider, have completed a medical consultation with said
+							Provider, and have an established medical need for said
+							prescription (as determined in the Provider’s professional
+							judgment). If you choose to have an affiliated Pharmacy fulfill
+							that Product, the charges associated with said Product will be
+							bundled into the Charges.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Risks and Disclosures</h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							You agree that you have read, understood the information provided
+							about any prescribed medications available from the FDA, or on <a
+								class="text-blue-6"
+								href="https://www.nexgenmd-scientific.com"
+								target="_blank">www.nexgenmd-scientific.com</a
+							>. Your use of any prescription medication, reliance on any
+							provider, or reliance on any treatment or health decision
+							delivered by the Providers via the Platform, is solely and
+							exclusively at your own risk and you assume full responsibility
+							for all risks associated herewith.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Mediation and Binding Arbitration</h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							If a dispute arises from or relates to this contract or the breach
+							thereof, and if the dispute cannot be settled through direct
+							discussions, the parties agree to endeavor first to settle the
+							dispute by mediation administered by the American Arbitration
+							Association under its Healthcare Payor Provider Mediation
+							Procedures before resorting to arbitration. The parties further
+							agree that any unresolved controversy or claim arising out of or
+							relating to this contract, or breach thereof, shall be settled by
+							arbitration administered by the American Arbitration Association
+							in accordance with its Healthcare Payor Provider Arbitration Rules
+							and judgment on the award rendered by the arbitrator(s) may be
+							entered in any court having jurisdiction thereof.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Indemnification </h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							Both Parties shall indemnify and hold the other Party and its
+							respective directors, officers, and employees (each an
+							"Indemnified Party", as applicable), harmless from and against any
+							and all costs, expenses and/or any other liabilities incurred by
+							the Indemnified Part(y)(ies) (including, but not limited to, costs
+							of investigation and defense, including, without limitation court
+							costs and reasonable attorney and other third-party fees, and, to
+							the extent permitted by applicable law, any fines, penalties, and
+							forfeitures in connection with any proceedings. against an
+							Indemnified Party) in connection with this Agreement and directly
+							or indirectly caused by the acts or omissions, negligent or
+							otherwise, or willful misconduct of Either Party, or an agent of
+							Either Party, or an employee of either of them, be it active or
+							passive, except where such loss, cost, expense and/or liability
+							arises from the negligence or willful misconduct of an Indemnified
+							Party.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Class-Action Waiver </h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							You hereby waive, with respect to any dispute, the right to
+							participate in a class action, private attorney general action, or
+							other representative action in court or group-arbitration either
+							as a class representative or class member, and hereby waive the
+							right to join or consolidate claims with the claims of any other
+							person or group; as allowed by law.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Severability of Terms </h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							If a provision of this Agreement is or becomes illegal,
+							unenforceable, or invalid in any jurisdiction, it shall not affect
+							the enforceability or validity in that jurisdiction of any other
+							provision of this Agreement, and/or the enforceability or validity
+							in other jurisdictions of that or any other provision of this
+							Agreement.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Assignment of Rights</h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							This agreement is solely between you and NEXGEN Weight Loss,
+							Wellness & Recovery. No portion of your rights or agreed upon
+							terms may be assigned to anyone else and any attempt to do so is
+							null and void. NEXGEN Weight Loss, Wellness & Recovery may, at any
+							time and in our sole discretion, assign, transfer, or other such
+							action, without your additional consent or notice, this entire
+							Agreement or any part of this Agreement, to any third-party of our
+							choice.
+						</p>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Choice of Law</h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							THIS AGREEMENT SHALL BE GOVERNED BY THE LAWS OF THE STATE OF
+							TEXAS, WITHOUT GIVING EFFECT TO ANY PRINCIPLES REGARDING CONFLICT
+							OF LAWS.
+						</p>
+					</div>
+					<div class="divider">
+						<span class="divider__line"></span>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<h6>Terms & Conditions Acknowledgment</h6>
+						<p class="fs-md-18 fs-16 fw-400 mt-20">
+							By proceeding with this purchase, I confirm that I have read,
+							understood, and agree to the Terms & Conditions governing the use
+							of GLP-1 medications and related products offered by Nexgen
+							Scientific.
+						</p>
+						<p class="fs-md-18 fs-16 fw-400 mt-20"> I acknowledge that: </p>
+						<ul class="list-disc pl-20">
+							<li
+								>I have completed the required medical quiz and intake form
+								truthfully to the best of my knowledge.</li
+							>
+							<li
+								>I understand that my treatment is subject to provider review
+								and may be declined based on medical eligibility.</li
+							>
+							<li
+								>I agree that these products are not a replacement for
+								professional medical advice and will be used under appropriate
+								guidance.</li
+							>
+						</ul>
+					</div>
+
+					<div class="mt-md-40 mt-20">
+						<p class="mb-0"
+							>Customer Full Name: <span class="fw-600">John H. Smith</span></p
+						>
+						<p>Date: <span class="fw-600"> 05/16/2025</span></p>
+					</div>
+
+					<div
+						class="modal__actions modal__action__justify modal__actions__equal"
+					>
+						<button
+							class="modal__action modal__action--outline"
+							type="button"
+							data-dismiss="modal"
+						>
+							Cancel
+						</button>
+						<button
+							class="modal__action modal__action--primary"
+							type="button"
+							style="width: unset;"
+						>
+							I agree to the terms & conditions.
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Terms & Condition Modal End -->
+
+	<Footer />
+</Layout>

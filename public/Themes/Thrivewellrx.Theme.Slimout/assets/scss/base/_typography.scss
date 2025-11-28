@@ -1,0 +1,124 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-family: "CabinetGrotesk", sans-serif;
+	color: $secondary;
+}
+
+p {
+	font-family: "DM Sans", sans-serif;
+	color: $secondary;
+}
+
+.site {
+	&__heading {
+		&-one {
+			font-size: $fs-140;
+			font-weight: 700;
+			line-height: 1;
+		}
+
+		&-two {
+			font-size: $fs-90;
+			font-weight: 700;
+			line-height: 1;
+		}
+
+		&-three {
+			font-size: $fs-70;
+			font-weight: 700;
+			line-height: 1.2;
+		}
+
+		&-four {
+			font-size: $fs-48;
+			font-weight: 700;
+			line-height: 1;
+		}
+
+		&-five {
+			font-size: $fs-40;
+			font-weight: 300;
+			line-height: 1;
+		}
+
+		&-six {
+			font-size: $fs-32;
+			font-weight: 800;
+			line-height: 1;
+		}
+
+		&-img {
+			max-width: 330px;
+		}
+	}
+}
+
+.font-cabinet-grotesk {
+	font-family: "CabinetGrotesk", sans-serif;
+}
+
+.font-playfair {
+	font-family: "Playfair Display", serif;
+}
+
+@media only screen and (max-width: 992px) {
+	.site {
+		&__heading {
+			&-one {
+				font-size: $fs-48;
+			}
+
+			&-two {
+				font-size: $fs-40;
+			}
+
+			&-three {
+				font-size: $fs-36;
+			}
+
+			&-four {
+				font-size: $fs-36;
+			}
+
+			&-five {
+				font-size: $fs-28;
+			}
+
+			&-six {
+				font-size: $fs-24;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.site {
+		&__heading {
+			&-one {
+				font-size: $fs-36;
+			}
+
+			&-two {
+				font-size: $fs-32;
+			}
+
+			&-three {
+				font-size: $fs-32;
+			}
+
+			&-four {
+				font-size: $fs-28;
+			}
+
+			&-five {
+				font-size: $fs-20;
+			}
+
+		}
+	}
+}

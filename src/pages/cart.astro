@@ -1,0 +1,725 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- =====|| Main Section Start ||====== -->
+	<main class="page">
+		<div class="page__wrapper page__wrapper--alt">
+			<!-- ==|| Cart Hero Section Start ||== -->
+			<section class="cart-hero">
+				<div class="container">
+					<h2 class="site__heading-four text-secondary text-center">
+						Complete Your Order
+					</h2>
+
+					<!-- <div class="text-center">
+						<p class="cart-hero__text">
+							Need Assistance? Contact us at info@nexgen-wellness.com
+						</p>
+					</div> -->
+				</div>
+			</section>
+			<!-- ==|| Cart Hero Section End ||== -->
+
+			<!--==|| Product Cart Items Status Start ||== -->
+			<section class="cart-flash">
+				<div class="container">
+					<div class="cart-flash__box">
+						<!-- <div class="cart-flash__message">
+							<div class="cart-flash__icon">
+								<i class="icon-checked"></i>
+							</div>
+
+							<p class="cart-flash__text">
+								"Tadalafil" has been added to your cart
+							</p>
+						</div> -->
+
+						<button
+							type="button"
+							class="theme-btn theme-btn__accent text-secondary fw-normal"
+						>
+							Continue Shopping
+						</button>
+					</div>
+				</div>
+			</section>
+			<!--==|| Product Cart Items Status End ||== -->
+
+			<!--==|| Empty Cart Status Start ||== -->
+			<section class="cart-view pt-md-60 pb-md-80 pt-50 pb-50 d-none">
+				<div class="container">
+					<div class="row">
+						<div class="text-center">
+							<img
+								src="Themes/Thrivewellrx.Theme.Slimout/assets/img/empty-cart.svg"
+								alt=""
+							/>
+							<p
+								class="font-cabinet-grotesk fs-md-24 fs-20 text-secondary fw-extrabold mt-20"
+								>Your cart is currently empty!</p
+							>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--==|| Empty Cart Status End ||== -->
+
+			<!--==|| Cart Information Status Start ||== -->
+			<section class="cart-view">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-7">
+							<div class="cart__items">
+								<div class="cart__item">
+									<div class="cart__product">
+										<div class="cart__thumbnail cart__thumbnail--purple">
+											<img
+												src="Themes/Thrivewellrx.Theme.Slimout/assets/img/products/product-1.png"
+												alt="Product Image"
+											/>
+										</div>
+
+										<div class="cart__details">
+											<p class="cart__item-name">Finasteride 1mg Tablet</p>
+											<p class="cart__item-price">
+												$39.99/month and a $30.00 physician <span>Consult</span>
+											</p>
+											<!-- <p class="cart__item-type">
+												<span>.5mg</span>
+												<span class="px-2">|</span>
+												<span>Consult</span>
+											</p> -->
+										</div>
+									</div>
+
+									<div class="cart__action">
+										<button
+											class="theme-btn theme-btn__icon-only"
+											data-toggle="modal"
+											data-target="#confirm"
+										>
+											<i class="icon-delete"></i>
+										</button>
+									</div>
+								</div>
+
+								<div class="cart__item">
+									<div class="cart__product">
+										<div class="cart__thumbnail cart__thumbnail--pink">
+											<img
+												src="Themes/Thrivewellrx.Theme.Slimout/assets/img/products/product-2.png"
+												alt="Product Image"
+											/>
+										</div>
+
+										<div class="cart__details">
+											<p class="cart__item-name">Finasteride 1mg Tablet</p>
+											<p class="cart__item-price">
+												$39.99/month and a $30.00 physician <span>Consult</span>
+											</p>
+											<!-- <p class="cart__item-type">
+												<span>.5mg</span>
+												<span class="px-2">|</span>
+											</p> -->
+										</div>
+									</div>
+
+									<div class="cart__action">
+										<button class="theme-btn theme-btn__icon-only">
+											<i class="icon-delete"></i>
+										</button>
+									</div>
+								</div>
+
+								<div class="cart__item">
+									<div class="cart__product">
+										<div class="cart__thumbnail cart__thumbnail--green">
+											<img
+												src="Themes/Thrivewellrx.Theme.Slimout/assets/img/products/product-3.png"
+												alt="Product Image"
+											/>
+										</div>
+
+										<div class="cart__details">
+											<p class="cart__item-name">Finasteride 1mg Tablet</p>
+											<p class="cart__item-price">
+												$39.99/month and a $30.00 physician <span>Consult</span>
+											</p>
+											<!-- <p class="cart__item-type">
+												<span>.5mg</span>
+												<span class="px-2">|</span>
+											</p> -->
+										</div>
+									</div>
+
+									<div class="cart__action">
+										<button class="theme-btn theme-btn__icon-only">
+											<i class="icon-delete"></i>
+										</button>
+									</div>
+								</div>
+
+								<div class="cart__item">
+									<div class="cart__product">
+										<div class="cart__thumbnail cart__thumbnail--blue-light">
+											<img
+												src="Themes/Thrivewellrx.Theme.Slimout/assets/img/products/product-4.png"
+												alt="Product Image"
+											/>
+										</div>
+
+										<div class="cart__details">
+											<p class="cart__item-name">Finasteride 1mg Tablet</p>
+											<p class="cart__item-price">
+												$39.99/month and a $30.00 physician <span>Consult</span>
+											</p>
+											<!-- <p class="cart__item-type">
+												<span>.5mg</span>
+												<span class="px-2">|</span>
+											</p> -->
+										</div>
+									</div>
+
+									<div class="cart__action">
+										<button class="theme-btn theme-btn__icon-only">
+											<i class="icon-delete"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="promo">
+								<div class="promo__form">
+									<input
+										type="text"
+										placeholder="Coupon code"
+										class="promo__input"
+									/>
+									<button
+										class="theme-btn theme-btn__danger theme-btn__outline--danger fs-md-18 fs-16 fw-bold"
+									>
+										Apply Coupon
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-5">
+							<div class="cart-card">
+								<div class="cart-card__header">
+									<p class="fs-24 fw-extrabold mb-0 font-cabinet-grotesk"
+										>Cart Total</p
+									>
+								</div>
+								<div class="cart-card__body">
+									<div class="pricing__basic">
+										<div class="pricing__item">
+											<p class="pricing__item--name">Subtotal</p>
+											<p class="pricing__item--value">$150.50</p>
+										</div>
+										<div class="pricing__item">
+											<p class="pricing__item--name">Shipping</p>
+											<p class="pricing__item--value">$30.50</p>
+										</div>
+									</div>
+
+									<div class="coupon pricing__coupon">
+										<p class="coupon__label">Coupon Code</p>
+										<div class="theme-tag">
+											<i class="icon-promo-code theme-tag__icon"></i>
+											<span class="theme-tag__text">VRIC2024</span>
+											<button class="theme-tag__btn">
+												<i class="icon-cross"></i>
+											</button>
+										</div>
+									</div>
+
+									<div class="pricing__total">
+										<div class="pricing__item">
+											<p class="pricing__item--name">Discount</p>
+											<p class="pricing__item--value text-dark-red-2">
+												-$5.50
+											</p>
+										</div>
+
+										<div class="pricing__total-item">
+											<p class="pricing__total--name">Total</p>
+											<p class="pricing__total--value">$175.87</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row d-none">
+						<div class="col-sm-12">
+							<div class="cart-empty">
+								<div class="cart-empty__graphic">
+									<img
+										class="cart-empty__img"
+										src="Themes/Thrivewellrx.Theme.Slimout/assets/img/cart-empty.png"
+										alt="Empty Cart"
+									/>
+								</div>
+
+								<p class="cart-empty__text">Your cart is currently empty!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--==|| Cart Information Status End ||== -->
+
+			<!-- ==|| Category Suggestion Section Start ||== -->
+			<section class="products pb-100">
+				<div class="container">
+					<div class="attention">
+						<div class="attention__box">
+							<div class="attention__title">
+								<i class="icon-info-circle text-secondary"></i>
+								<p>Attention: <span>Final Dosage Determined by Doctor</span></p>
+							</div>
+							<p class="attention__price-desc">
+								<span>Price:</span>
+								<span>$150.50</span> +
+								<span>Shipping</span> +
+								<span>Consultation fee</span>
+							</p>
+
+							<p class="attention__text">
+								The dosage you selected is not final and will be determined by
+								the doctor during your consultation. The doctor will assess your
+								intake form and appointment details to prescribe the appropriate
+								dosage. The final price will be adjusted based on the prescribed
+								dosage after the consultation.
+							</p>
+						</div>
+					</div>
+					<div
+						class="panel-group faq__lg faq--alternate mt-50"
+						id="accordion"
+						role="tablist"
+						aria-multiselectable="true"
+					>
+						<div class="panel panel-default faq__item">
+							<div
+								class="panel-heading faq__lg__heading"
+								role="tab"
+								id="headingOne"
+							>
+								<p
+									class="recommended__text text-secondary"
+									role="button"
+									data-toggle="collapse"
+									data-parent="#accordion"
+									href="#collapseOne"
+									aria-expanded="true"
+									aria-controls="collapseOne"
+								>
+									Lose the weight, not the glow! Add our skin-firming bundle to
+									support tight, hydrated skin during your GLP-1 journey?</p
+								>
+							</div>
+							<div
+								id="collapseOne"
+								class="panel-collapse collapse in"
+								role="tabpanel"
+								aria-labelledby="headingOne"
+							>
+								<div class="faq__lg__body">
+									<div class="recommended__row">
+										<div class="product__card-extended">
+											<!-- <div class="product__tag">Recurring Plan</div> -->
+											<div class="product__identity">
+												<div class="item-1">
+													<img
+														src="Themes/Thrivewellrx.Theme.Slimout/assets/img/products/product-2.png"
+														alt="Product Thumb"
+													/>
+												</div>
+												<div class="item-2">
+													<h2 class="product-title">
+														Compounded Semaglutide (GLP-1) Injection
+													</h2>
+													<p class="text-orange mt-10">
+														<span class="">$39.99</span>/per month
+													</p>
+
+													<div class="product__action mt-24 d-flex gap-16">
+														<button
+															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
+														>
+															<i class="icon-link"></i>
+														</button>
+														<button
+															type="button"
+															class="theme-btn theme-btn-size-lg theme-btn__secondary"
+														>
+															<i class="icon-cart-plus-new"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="product__card-extended">
+											<!-- <div class="product__tag">Recurring Plan</div> -->
+											<div class="product__identity">
+												<div class="item-1">
+													<img
+														src="Themes/Thrivewellrx.Theme.Slimout/assets/img/products/product-4.png"
+														alt="Product Thumb"
+													/>
+												</div>
+												<div class="item-2">
+													<h2 class="product-title">
+														Compounded Semaglutide (GLP-1) Injection
+													</h2>
+													<p class="text-orange mt-10">
+														<span class="">$39.99</span>/per month
+													</p>
+
+													<div class="product__action mt-24 d-flex gap-16">
+														<button
+															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
+														>
+															<i class="icon-link"></i>
+														</button>
+														<button
+															type="button"
+															class="theme-btn theme-btn-size-lg theme-btn__secondary"
+														>
+															<i class="icon-cart-plus-new"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="product__card-extended">
+											<!-- <div class="product__tag">Recurring Plan</div> -->
+											<div class="product__identity">
+												<div class="item-1">
+													<img
+														src="Themes/Thrivewellrx.Theme.Slimout/assets/img/products/product-5.png"
+														alt="Product Thumb"
+													/>
+												</div>
+												<div class="item-2">
+													<h2 class="product-title">
+														Compounded Semaglutide (GLP-1) Injection
+													</h2>
+													<p class="text-orange mt-10">
+														<span class="">$39.99</span>/per month
+													</p>
+
+													<div class="product__action mt-24 d-flex gap-16">
+														<button
+															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
+														>
+															<i class="icon-link"></i>
+														</button>
+														<button
+															type="button"
+															class="theme-btn theme-btn-size-lg theme-btn__secondary"
+														>
+															<i class="icon-cart-plus-new"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="product__card-extended">
+											<!-- <div class="product__tag">Recurring Plan</div> -->
+											<div class="product__identity">
+												<div class="item-1">
+													<img
+														src="Themes/Thrivewellrx.Theme.Slimout/assets/img/products/product-5.png"
+														alt="Product Thumb"
+													/>
+												</div>
+												<div class="item-2">
+													<h2 class="product-title">
+														Compounded Semaglutide (GLP-1) Injection
+													</h2>
+													<p class="text-orange mt-10">
+														<span class="">$39.99</span>/per month
+													</p>
+
+													<div class="product__action mt-24 d-flex gap-16">
+														<button
+															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
+														>
+															<i class="icon-link"></i>
+														</button>
+														<button
+															type="button"
+															class="theme-btn theme-btn-size-lg theme-btn__secondary"
+														>
+															<i class="icon-cart-plus-new"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="product__card-extended">
+											<!-- <div class="product__tag">Recurring Plan</div> -->
+											<div class="product__identity">
+												<div class="item-1">
+													<img
+														src="Themes/Thrivewellrx.Theme.Slimout/assets/img/products/product-5.png"
+														alt="Product Thumb"
+													/>
+												</div>
+												<div class="item-2">
+													<h2 class="product-title">
+														Compounded Semaglutide (GLP-1) Injection
+													</h2>
+													<p class="text-orange mt-10">
+														<span class="">$39.99</span>/per month
+													</p>
+
+													<div class="product__action mt-24 d-flex gap-16">
+														<button
+															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
+														>
+															<i class="icon-link"></i>
+														</button>
+														<button
+															type="button"
+															class="theme-btn theme-btn-size-lg theme-btn__secondary"
+														>
+															<i class="icon-cart-plus-new"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--FAQ Item End-->
+						<div class="panel panel-default faq__item">
+							<div
+								class="panel-heading faq__lg__heading"
+								role="tab"
+								id="headingTwo"
+							>
+								<p
+									class="collapsed recommended__text"
+									role="button"
+									data-toggle="collapse"
+									data-parent="#accordion"
+									href="#collapseTwo"
+									aria-expanded="false"
+									aria-controls="collapseTwo"
+								>
+									<span>Should I expect any side effects?</span>
+								</p>
+							</div>
+							<div
+								id="collapseTwo"
+								class="panel-collapse collapse"
+								role="tabpanel"
+								aria-labelledby="headingTwo"
+							>
+								<div class="faq__lg__body">
+									<div class="recommended__row">
+										<div class="product__card-extended">
+											<!-- <div class="product__tag">Recurring Plan</div> -->
+											<div class="product__identity">
+												<div class="item-1">
+													<img
+														src="Themes/Thrivewellrx.Theme.Slimout/assets/img/products/product-2.png"
+														alt="Product Thumb"
+													/>
+												</div>
+												<div class="item-2">
+													<h2 class="product-title">
+														Compounded Semaglutide (GLP-1) Injection
+													</h2>
+													<p class="text-orange mt-10">
+														<span class="">$39.99</span>/per month
+													</p>
+
+													<div class="product__action mt-24 d-flex gap-16">
+														<button
+															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
+														>
+															<i class="icon-link"></i>
+														</button>
+														<button
+															type="button"
+															class="theme-btn theme-btn-size-lg theme-btn__secondary"
+														>
+															<i class="icon-cart-plus-new"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="product__card-extended">
+											<!-- <div class="product__tag">Recurring Plan</div> -->
+											<div class="product__identity">
+												<div class="item-1">
+													<img
+														src="Themes/Thrivewellrx.Theme.Slimout/assets/img/products/product-4.png"
+														alt="Product Thumb"
+													/>
+												</div>
+												<div class="item-2">
+													<h2 class="product-title">
+														Compounded Semaglutide (GLP-1) Injection
+													</h2>
+													<p class="text-orange mt-10">
+														<span class="">$39.99</span>/per month
+													</p>
+
+													<div class="product__action mt-24 d-flex gap-16">
+														<button
+															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
+														>
+															<i class="icon-link"></i>
+														</button>
+														<button
+															type="button"
+															class="theme-btn theme-btn-size-lg theme-btn__secondary"
+														>
+															<i class="icon-cart-plus-new"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="product__card-extended">
+											<!-- <div class="product__tag">Recurring Plan</div> -->
+											<div class="product__identity">
+												<div class="item-1">
+													<img
+														src="Themes/Thrivewellrx.Theme.Slimout/assets/img/products/product-5.png"
+														alt="Product Thumb"
+													/>
+												</div>
+												<div class="item-2">
+													<h2 class="product-title">
+														Compounded Semaglutide (GLP-1) Injection
+													</h2>
+													<p class="text-orange mt-10">
+														<span class="">$39.99</span>/per month
+													</p>
+
+													<div class="product__action mt-24 d-flex gap-16">
+														<button
+															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
+														>
+															<i class="icon-link"></i>
+														</button>
+														<button
+															type="button"
+															class="theme-btn theme-btn-size-lg theme-btn__secondary"
+														>
+															<i class="icon-cart-plus-new"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="product__card-extended">
+											<!-- <div class="product__tag">Recurring Plan</div> -->
+											<div class="product__identity">
+												<div class="item-1">
+													<img
+														src="Themes/Thrivewellrx.Theme.Slimout/assets/img/products/product-5.png"
+														alt="Product Thumb"
+													/>
+												</div>
+												<div class="item-2">
+													<h2 class="product-title">
+														Compounded Semaglutide (GLP-1) Injection
+													</h2>
+													<p class="text-orange mt-10">
+														<span class="">$39.99</span>/per month
+													</p>
+
+													<div class="product__action mt-24 d-flex gap-16">
+														<button
+															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
+														>
+															<i class="icon-link"></i>
+														</button>
+														<button
+															type="button"
+															class="theme-btn theme-btn-size-lg theme-btn__secondary"
+														>
+															<i class="icon-cart-plus-new"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--FAQ Item End-->
+					</div>
+
+					<div class="text-center mt-30">
+						<button class="theme-btn theme-btn__primary px-50">
+							Proceed to Checkout
+						</button>
+					</div>
+				</div>
+			</section>
+			<!-- ==| Category Suggestion Section End ||== -->
+		</div>
+	</main>
+	<!-- =====|| Main Section End ||====== -->
+</Layout>
+
+<Footer />
+
+<!-- Confirm Modal Start -->
+<div id="confirm" class="modal fade confirm-modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<!-- <button type="button" class="btn-close" data-dismiss="modal">
+				<i class="icon-cross_filled"></i>
+			</button> -->
+
+			<div class="modal-body">
+				<div class="modal__icon">
+					<i class="icon-alert"></i>
+				</div>
+				<div class="modal__title">
+					<p>Please Confirm</p>
+				</div>
+
+				<div class="modal__text">
+					<p>Do you want to delete this item?</p>
+				</div>
+
+				<div class="modal__actions">
+					<button
+						class="modal__action modal__action--primary"
+						type="button"
+						data-dismiss="modal"
+					>
+						No
+					</button>
+					<button class="modal__action modal__action--outline" type="button">
+						Yes
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Confirm Modal End -->

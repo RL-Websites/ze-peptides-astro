@@ -1,0 +1,78 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- =====|| Main Section Start ||====== -->
+	<main class="page">
+		<div class="page__wrapper page__wrapper--alt">
+			<!-- ==|| Login Section Start ||== -->
+			<section class="login">
+				<div class="container">
+					<div class="login__wrapper">
+						<h4 class="site__heading-four">Returning Customer</h4>
+						<p class="login__subtitle">Log in to confirm your journey</p>
+						<form class="needs-validation mt-md-20 mt-10">
+							<div class="form-group">
+								<label for="username" class="basic-label">Email Address:</label>
+								<input
+									id="username"
+									type="text"
+									class="login__input"
+									placeholder="Username"
+									required=""
+								/>
+							</div>
+							<div class="form-group mt-4">
+								<label for="password" class="basic-label">Password:</label>
+								<div class="login__password">
+									<input
+										id="password"
+										type="password"
+										name="Password"
+										placeholder="Password"
+										required=""
+										class="login__input"
+									/>
+									<button type="button" class="login__toggle-btn">
+										<i class="icon-password-decrypt"></i>
+										<!-- <i class="icon-password-encrypt"></i> -->
+									</button>
+								</div>
+							</div>
+
+							<div class="form-check mt-20">
+								<input id="remember" type="checkbox" class="form-check-input" />
+								<label for="remember" class="form-label">Remember Login</label>
+							</div>
+
+							<div class="text-center">
+								<button class="theme-btn theme-btn__primary login__btn mt-md-20"
+									>Login</button
+								>
+								<a
+									href="/forgot-password"
+									class="theme-btn theme-btn__accent text-secondary fw-normal mt-md-20 mt-10 d-inline-block"
+								>
+									Forgot yOU Password?
+								</a>
+								<p class="mt-md-30 mt-20 fs-md-18 fs-16"
+									>First-time Visitor? <a
+										href="signup"
+										class="fw-bold fs-md-20 fs-18 text-primary text-decoration-none"
+									>
+										Create an account</a
+									></p
+								>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<!-- ==|| Login Section End ||== -->
+		</div>
+	</main>
+</Layout>

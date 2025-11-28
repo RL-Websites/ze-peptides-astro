@@ -1,0 +1,93 @@
+.product {
+
+	&__card {
+		padding: 40px;
+		text-align: center;
+		border-radius: 40px;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		&--purple {
+			background: url(/Themes/Thrivewellrx.Theme.Slimout/assets/img/bg/purple-bg.svg);
+		}
+
+		&--pink {
+			background: url(/Themes/Thrivewellrx.Theme.Slimout/assets/img/bg/pink-bg.svg);
+		}
+
+		&--green {
+			background: url(/Themes/Thrivewellrx.Theme.Slimout/assets/img/bg/green-bg.svg);
+		}
+
+		&--blue-light {
+			background: url(/Themes/Thrivewellrx.Theme.Slimout/assets/img/bg/blue-light-bg.svg);
+		}
+	}
+
+	&__img {
+		img {
+			height: 300px;
+		}
+	}
+
+	&__content {
+		margin-top: 30px;
+	}
+
+	&__wrapper {
+		padding-top: 80px;
+		position: relative;
+	}
+
+	&__navigation {
+		position: absolute;
+		top: 0px;
+		right: 0;
+		display: flex;
+		gap: 15px;
+		z-index: 10;
+
+		.prev-arrow,
+		.next-arrow {
+			width: 50px;
+			height: 50px;
+			background-color: transparent;
+			color: $secondary;
+			font-size: 25px;
+			border: 1px solid $secondary;
+			border-radius: 50%;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			transition: .3s;
+
+			&:hover {
+				background-color: $secondary;
+				color: white;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.product {
+		&__card {
+			padding: 20px;
+		}
+
+		&__navigation {
+
+			.prev-arrow,
+			.next-arrow {
+				width: 40px;
+				height: 40px;
+				font-size: 20px;
+			}
+		}
+
+		&__wrapper {
+			padding-top: 50px;
+		}
+	}
+}
