@@ -16,6 +16,18 @@ $(document).ready(function () {
 		}
 	});
 
+	$("#user-menu-btn").click(function () {
+		$("#user-dropdown").toggleClass("show");
+	});
+
+	// Close dropdown when clicking outside
+	// Close dropdown when clicking outside
+	$(document).on("click", function (e) {
+		if (!$(e.target).closest("#user-menu-btn").length && !$(e.target).closest("#user-dropdown").length) {
+			$("#user-dropdown").removeClass("show");
+		}
+	});
+
 	function updateHeader() {
 		const header = document.querySelector(".site__header");
 		if (!header) return;

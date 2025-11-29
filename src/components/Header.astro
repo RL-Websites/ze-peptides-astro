@@ -28,8 +28,9 @@ const isHome = Astro.url.pathname === "/";
 
 			<!-- CTA Buttons -->
 			<div class="site__menu--auth">
-				<a href="/cart" class="header-icon cart-icon">
+				<a href="/cart" class="header-icon cart-icon mr-14">
 					<i class="icon-cart"></i>
+					<span class="cart__badge text-center">4</span>
 				</a>
 				<button
 					type="button"
@@ -49,6 +50,7 @@ const isHome = Astro.url.pathname === "/";
 				
 				<a href="/cart" class="header-icon cart-icon mobile-only">
 					<i class="icon-cart"></i>
+					<span class="cart__badge text-center">99</span>
 				</a>
 
 				<div class="user-dropdown-container mobile-only">
@@ -71,40 +73,3 @@ const isHome = Astro.url.pathname === "/";
 		</div>
 	</div>
 </header>
-
-<script>
-	// Sticky header on scroll
-	const header = document.querySelector(".site__header");
-	const hamburger = document.getElementById("hamburger-menu");
-	const menuList = document.querySelector(".site__menu__list");
-
-	window.addEventListener("scroll", () => {
-		if (window.scrollY > 50) {
-			header?.classList.add("sticky");
-		} else {
-			header?.classList.remove("sticky");
-		}
-	});
-
-	// Mobile menu toggle
-	hamburger?.addEventListener("click", () => {
-		menuList?.classList.toggle("show-menu");
-		header?.classList.toggle("menu-open");
-	});
-
-	// User dropdown toggle
-	const userBtn = document.getElementById("user-menu-btn");
-	const userDropdown = document.getElementById("user-dropdown");
-
-	userBtn?.addEventListener("click", (e) => {
-		e.stopPropagation();
-		userDropdown?.classList.toggle("show");
-	});
-
-	// Close dropdown when clicking outside
-	document.addEventListener("click", (e) => {
-		if (!userDropdown?.contains(e.target as Node) && !userBtn?.contains(e.target as Node)) {
-			userDropdown?.classList.remove("show");
-		}
-	});
-</script>

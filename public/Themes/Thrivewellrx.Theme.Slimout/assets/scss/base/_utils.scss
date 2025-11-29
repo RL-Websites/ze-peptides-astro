@@ -51,6 +51,7 @@ $spacing-list: (
 	"5": 5px,
 	"10": 10px,
 	"12": 12px,
+	"14": 14px,
 	"15": 15px,
 	"16": 16px,
 	"18": 18px,
@@ -169,16 +170,88 @@ $spacing-list: (
 		margin-left: $margin !important;
 	}
 
+	.ml {
+		&-lg {
+			@media all and (min-width: 992px) {
+				&-#{$key} {
+					margin-left: $margin !important;
+				}
+			}
+		}
+
+		&-md {
+			@media all and (min-width: 768px) {
+				&-#{$key} {
+					margin-left: $margin !important;
+				}
+			}
+		}
+	}
+
 	.mr-#{$key} {
 		margin-right: $margin !important;
+	}
+
+	.mr {
+		&-lg {
+			@media all and (min-width: 992px) {
+				&-#{$key} {
+					margin-right: $margin !important;
+				}
+			}
+		}
+
+		&-md {
+			@media all and (min-width: 768px) {
+				&-#{$key} {
+					margin-right: $margin !important;
+				}
+			}
+		}
 	}
 
 	.my-#{$key} {
 		margin-block: $margin !important;
 	}
 
+	.my {
+		&-lg {
+			@media all and (min-width: 992px) {
+				&-#{$key} {
+					margin-block: $margin !important;
+				}
+			}
+		}
+
+		&-md {
+			@media all and (min-width: 768px) {
+				&-#{$key} {
+					margin-block: $margin !important;
+				}
+			}
+		}
+	}
+
 	.mx-#{$key} {
 		margin-inline: $margin !important;
+	}
+
+	.mx {
+		&-lg {
+			@media all and (min-width: 992px) {
+				&-#{$key} {
+					margin-inline: $margin !important;
+				}
+			}
+		}
+
+		&-md {
+			@media all and (min-width: 768px) {
+				&-#{$key} {
+					margin-inline: $margin !important;
+				}
+			}
+		}
 	}
 
 	.p-#{$key} {
