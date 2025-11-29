@@ -1,24 +1,41 @@
 @use "variables" as *;
 
-// All color code & name
+// All color code & name (kept in sync with _variables.scss)
 $color-list: (
+	"primary": $primary,
+	"primary-light": $primary-light,
+	"primary-lighter": $primary-lighter,
+	"primary-lightest": $primary-lightest,
+
+	"black": $black,
+	"white": $white,
 	"light": $light,
+	"gray-dark": $gray-dark,
+	"gray-light": $gray-light,
+	"gray": $gray,
+
+	"secondary": $secondary,
 	"background-1": $background-1,
 	"background-2": $background-2,
 	"background-3": $background-3,
-	"primary": $primary,
-	"secondary": $secondary,
-	"gray": $gray,
+
 	"red": $red,
+	"red-light": $red-light,
 	"yellow": $yellow,
-	"purple": $purple,
+
+	"green": $green,
+	"green-light": $green-light,
 	"green-1": $green-1,
 	"green-2": $green-2,
+
 	"blue-1": $blue-1,
 	"blue-2": $blue-2,
 	"blue-3": $blue-3,
+
 	"pink-1": $pink-1,
 	"pink-2": $pink-2,
+
+	"purple": $purple,
 	"success": $success,
 	"warning": $warning,
 );
@@ -63,6 +80,7 @@ $spacing-list: (
 	"38": 38px,
 	"40": 40px,
 	"50": 50px,
+	"52": 52px,
 	"60": 60px,
 	"80": 80px,
 	"100": 100px,
@@ -80,6 +98,9 @@ $spacing-list: (
 
 	.text-#{$key} {
 		color: $color !important;
+	}
+	.border-#{$key} {
+		border-color: $color !important;
 	}
 }
 

@@ -2,188 +2,190 @@
 
 //Width
 .mw-400 {
-  max-width: 380px;
+	max-width: 380px;
 }
 
 .fw-extrabold {
-  font-weight: 800;
+	font-weight: 800;
+}
+
+.border {
+	&-dashed {
+		border-style: dashed;
+	}
 }
 
 .ebook {
-  &__download {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 15px;
-    z-index: 100;
-    text-align: center;
+	&__download {
+		position: fixed;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 15px;
+		z-index: 100;
+		text-align: center;
 
-    &__btn {
-      margin: 0 auto;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #FFECBA;
-      border-radius: 16px;
-      border: 1px solid #A1530A1A;
-      box-shadow: 0px 4px 9px 0px #7E65201A;
-      outline: none;
-      transition: 0.3s;
-      padding: 0;
+		&__btn {
+			margin: 0 auto;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #ffecba;
+			border-radius: 16px;
+			border: 1px solid #a1530a1a;
+			box-shadow: 0px 4px 9px 0px #7e65201a;
+			outline: none;
+			transition: 0.3s;
+			padding: 0;
+		}
 
-    }
+		&__img {
+			background: $yellow;
+			padding: 7px;
+			border-radius: 16px 0 0 16px;
+		}
 
-    &__img {
-      background: $yellow;
-      padding: 7px;
-      border-radius: 16px 0 0 16px;
-    }
-
-    &__content {
-      padding: 10px;
-      display: inline-block;
-      font-weight: 700;
-    }
-  }
+		&__content {
+			padding: 10px;
+			display: inline-block;
+			font-weight: 700;
+		}
+	}
 }
 
 .nav {
-  &-pills {
-    &__custom {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      width: 100%;
-      margin-top: 50px;
-      justify-content: space-around;
-      position: relative;
-      padding-bottom: 10px;
+	&-pills {
+		&__custom {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 100%;
+			margin-top: 50px;
+			justify-content: space-around;
+			position: relative;
+			padding-bottom: 10px;
 
-      &::after {
-        position: absolute;
-        content: '';
-        background-color: rgba($red, 0.5);
-        height: 3px;
-        width: 100%;
-        bottom: 0;
-        border-radius: 2px;
-      }
+			&::after {
+				position: absolute;
+				content: "";
+				background-color: rgba($red, 0.5);
+				height: 3px;
+				width: 100%;
+				bottom: 0;
+				border-radius: 2px;
+			}
 
-      .nav-link {
-        text-align: center;
-        font-weight: 700;
-        position: relative;
-        color: #1F4A6380;
-        padding: 0;
-        width: 100%;
-      }
+			.nav-link {
+				text-align: center;
+				font-weight: 700;
+				position: relative;
+				color: #1f4a6380;
+				padding: 0;
+				width: 100%;
+			}
 
-      .nav-link.active {
-        background-color: transparent;
-        color: $secondary;
+			.nav-link.active {
+				background-color: transparent;
+				color: $secondary;
 
-        &::after {
-          position: absolute;
-          content: '';
-          background-color: $red;
-          height: 5px;
-          width: 100%;
-          bottom: -11px;
-          left: 0;
-          border-radius: 2.5px;
-        }
-      }
-    }
-  }
+				&::after {
+					position: absolute;
+					content: "";
+					background-color: $red;
+					height: 5px;
+					width: 100%;
+					bottom: -11px;
+					left: 0;
+					border-radius: 2.5px;
+				}
+			}
+		}
+	}
 }
 
 .tab {
-  &-pills {
-    display: flex;
-    gap: 20px;
-    overflow-x: scroll;
-    padding-bottom: 20px;
+	&-pills {
+		display: flex;
+		gap: 20px;
+		overflow-x: scroll;
+		padding-bottom: 20px;
 
-    &__single {
-      padding: 10px 15px;
-      min-width: 130px;
-      border: 2px solid #DBD1B4;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      border-radius: 50px;
-    }
-  }
+		&__single {
+			padding: 10px 15px;
+			min-width: 130px;
+			border: 2px solid #dbd1b4;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+			border-radius: 50px;
+		}
+	}
 }
 
 .common {
-
-  &__banner {
-    margin-top: 110px;
-    background: url(/Themes/Thrivewellrx.Theme.Slimout/assets/img/bg/common-bg-alt.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    padding: 80px 0 80px;
-    background-color: $blue-3;
-
-  }
+	&__banner {
+		margin-top: 110px;
+		background: url(/Themes/Thrivewellrx.Theme.Slimout/assets/img/bg/common-bg-alt.svg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		padding: 80px 0 80px;
+		background-color: $blue-3;
+	}
 }
 
 @media only screen and (max-width: 992px) {
-  .ebook {
-    &__download {
-      bottom: 10px;
+	.ebook {
+		&__download {
+			bottom: 10px;
 
-      &__btn {
-        border-radius: 10px;
-      }
+			&__btn {
+				border-radius: 10px;
+			}
 
-      &__img {
-        border-radius: 10px 0 0 10px;
+			&__img {
+				border-radius: 10px 0 0 10px;
 
-        img {
-          width: 30px;
+				img {
+					width: 30px;
+				}
+			}
 
-        }
-      }
+			&__content {
+				font-size: 14px;
+				text-wrap: nowrap;
+			}
+		}
+	}
 
-      &__content {
-        font-size: 14px;
-        text-wrap: nowrap;
-      }
-    }
-  }
-
-  .common {
-    &__banner {
-      padding: 50px 0 50px;
-      margin-top: 110px;
-      background-size: cover;
-      background-position: center center;
-    }
-  }
+	.common {
+		&__banner {
+			padding: 50px 0 50px;
+			margin-top: 110px;
+			background-size: cover;
+			background-position: center center;
+		}
+	}
 }
 
 @media only screen and (max-width: 768px) {
-  .tab {
-    &-pills {
-      padding-bottom: 10px;
-      gap: 10px;
+	.tab {
+		&-pills {
+			padding-bottom: 10px;
+			gap: 10px;
 
-      &__single {
-        padding: 5px 8px;
-        min-width: 80px;
-      }
-    }
-  }
+			&__single {
+				padding: 5px 8px;
+				min-width: 80px;
+			}
+		}
+	}
 
-  .common {
-    &__banner {
-      padding: 30px 0 30px;
-      margin-top: 70px;
-      background-size: cover;
-      background-position: center center;
-    }
-  }
+	.common {
+		&__banner {
+			padding: 30px 0 30px;
+			margin-top: 70px;
+			background-size: cover;
+			background-position: center center;
+		}
+	}
 }

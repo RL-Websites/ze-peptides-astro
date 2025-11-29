@@ -3,6 +3,7 @@ import ClientFeedback from "../components/ClientFeedback.astro";
 import Faq from "../components/Faq.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import Homehero from "../components/homePage/homehero.astro";
 import HowWorks from "../components/HowWorks.astro";
 import ProductCard from "../components/ProductCard.astro";
 import Toast from "../components/Toast.astro";
@@ -14,48 +15,9 @@ import Layout from "../layouts/Layout.astro";
 	<main class="page">
 		<!--===|| Banner Section Start ||===-->
 		<Header />
-		<section class="home__hero home__hero__header">
-		</section>
-		<section class="home__hero">
-			<div class="home__banner">
-				<div class="container">
-					<h5 class="site__heading-five text-white">Not Just Another</h5>
-					<h1 class="site__heading-one text-md-center text-start text-white"
-						>Weight Loss Brand</h1
-					>
-					<h4 class="site__heading-four text-end text-white"
-						>We’re the Upgrade.</h4
-					>
-					<div class="home__banner__img">
-						<img
-							src="Themes/Thrivewellrx.Theme.Slimout/assets/img/hero-img.png"
-							alt=""
-						/>
-					</div>
-				</div>
-
-				<div class="container">
-					<div class="home__banner--bottom">
-						<p class="fs-lg-22 fs-md-18 fs-16 text-white">
-							From fast shipping to trusted medications and lifelong support —
-							Slim Out is built for people serious about change.
-						</p>
-						<button
-							class="theme-btn theme-btn__secondary d-flex align-items-center gap-2 mx-auto"
-							>Take the Free Assessment <i class="icon-arrow fw-bold fs-20"
-							></i></button
-						>
-					</div>
-				</div>
-
-				<div class="home__banner__foreground">
-					<img
-						src="Themes/Thrivewellrx.Theme.Slimout/assets/img/gradient.png"
-						alt="Hero Foreground"
-					/>
-				</div>
-			</div>
-		</section>
+		<!-- <section class="home__hero home__hero__header">
+		</section> -->
+		<Homehero />
 		<!--===|| Banner Section End ||===-->
 
 		<!-- <div class="ebook__download">
