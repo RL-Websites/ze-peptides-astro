@@ -24,7 +24,7 @@
 			}
 		}
 		background: url("/Themes/Thrivewellrx.Theme.Slimout/assets/img/bg/home-hero-bg.jpg") no-repeat center top / auto 100%;
-		background-attachment: fixed;
+		background-attachment: scroll;
 		@media all and (max-width: 768px) {
 			align-items: start;
 		}
@@ -32,7 +32,6 @@
 
 	&__banner {
 		position: relative;
-		padding-top: 60px;
 
 		// Alert pill used in hero banner
 		.alert-pill {
