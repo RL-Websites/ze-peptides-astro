@@ -39,10 +39,16 @@ ul {
 
 // Bootstrap Reset
 .container {
-	width: 1200px;
-	max-width: 100%;
-	margin: 0 auto;
+	// width: 1200px;
+	// max-width: 100%;
+	// margin: 0 auto;
 	padding: 0 15px;
+}
+
+@media all and (min-width: 1400px) {
+	.container {
+		max-width: 1200px;
+	}
 }
 
 .index {
@@ -156,21 +162,9 @@ ul {
 	cursor: auto !important;
 }
 
-@media only screen and (max-width: 1170px) {
-	.container {
-		padding: 0 15px;
-	}
-}
-
 @media only screen and (max-width: 992px) {
 	br {
 		display: none;
-	}
-
-	.container {
-		max-width: 100%;
-		margin: 0 auto;
-		padding: 0 15px;
 	}
 
 	body {

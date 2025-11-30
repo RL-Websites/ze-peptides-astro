@@ -5811,12 +5811,14 @@ ul li a:hover, ul li a:focus {
 }
 
 .container {
-  width: 1200px;
-  max-width: 100%;
-  margin: 0 auto;
   padding: 0 15px;
 }
 
+@media all and (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
 .index {
   position: relative;
   z-index: 10;
@@ -5912,19 +5914,9 @@ ul li a:hover, ul li a:focus {
   cursor: auto !important;
 }
 
-@media only screen and (max-width: 1170px) {
-  .container {
-    padding: 0 15px;
-  }
-}
 @media only screen and (max-width: 992px) {
   br {
     display: none;
-  }
-  .container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
   }
   body.header-open {
     height: 100vh;
@@ -8804,7 +8796,7 @@ textarea.form-control::placeholder {
     color: #ffffff;
   }
   .site__header.menu-open .mobile-header-elements .cart-icon .cart__badge {
-    z-index: 0;
+    color: #5607c5;
   }
   .site__navbar {
     gap: 16px;
@@ -9366,6 +9358,10 @@ body.header-open {
   position: relative;
   min-height: 100vh;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .home__hero__header {
   padding: 40px 40px 0;
@@ -9375,6 +9371,15 @@ body.header-open {
 }
 .home__hero__header .sticky .hamburger-menu {
   color: #2d2d2d;
+}
+.home__hero {
+  background: url("/Themes/Thrivewellrx.Theme.Slimout/assets/img/bg/home-hero-bg.jpg") no-repeat center top/auto 100%;
+  background-attachment: fixed;
+}
+@media all and (max-width: 768px) {
+  .home__hero {
+    align-items: start;
+  }
 }
 .home__banner {
   position: relative;
@@ -9404,6 +9409,7 @@ body.header-open {
   }
   .home__banner .alert-pill span {
     font-size: 14px;
+    line-height: 1em;
   }
 }
 .home__banner--bottom {
