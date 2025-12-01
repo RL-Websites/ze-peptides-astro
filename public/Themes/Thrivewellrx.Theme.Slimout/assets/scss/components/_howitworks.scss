@@ -14,8 +14,13 @@ $transition-bg: background-color 0.3s ease;
   font-family: "sfuidisplay", sans-serif;
   font-size: 20px;
   font-weight: 500;
+  font-style: bold;
   line-height: 160%;
   color: #525252;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 
 }
 
@@ -25,6 +30,10 @@ $transition-bg: background-color 0.3s ease;
   font-size: 70px;
   font-weight: 700;
   font-style: bold;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
 
 }
 
