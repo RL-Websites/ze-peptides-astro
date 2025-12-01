@@ -20,15 +20,17 @@ const {
 	alignment = "left",
 } = Astro.props;
 
-const dotClass = isActive ? "timeline-dot active" : "timeline-dot";
-const titleColor = isActive ? "color: #7c3aed;" : "";
-const numberClass = isActive ? "step-number purple" : "step-number";
+// Use simple base classes here, JavaScript will handle the 'active' state on view
+const dotClass = "timeline-dot";
+const numberClass = "step-number";
 ---
 
-<div class="timeline-step"
-	><div class={dotClass}></div>{
+<div class="timeline-step" data-observed>
+	<div class={dotClass}></div>
+
+	{
 		alignment === "left" ? (
-			<div class="row align-items-start justify-center">
+			<div class="row align-items-center justify-center">
 				<div class="col-6 pe-5">
 					<div class="timeline-img" style="width: 370px;">
 						<img src={imageSrc} alt={imageAlt} />
@@ -36,12 +38,10 @@ const numberClass = isActive ? "step-number purple" : "step-number";
 				</div>
 
 				<div class="col-6 ps-5 pt-4">
-					<h3 class="h5 fw-bold mb-3" style={titleColor}>
-						{title}
-					</h3>
+					<h3 class="step-title h5 fw-bold mb-3">{title}</h3>
 
 					<div class="d-flex align-items-center">
-						<div class={numberClass}>{stepNumber}</div>     
+						<div class={numberClass}>{stepNumber}</div>
 						<p
 							class="timeline-description small text-muted pt-3 mb-0 ms-3"
 							style="line-height: 1.6;"
@@ -54,9 +54,7 @@ const numberClass = isActive ? "step-number purple" : "step-number";
 		) : (
 			<div class="row align-items-start">
 				<div class="col-6 text-start pe-5 pt-4">
-					<h3 class="step-title h5 fw-bold mb-3" style={titleColor}>
-						{title}
-					</h3>
+					<h3 class="step-title h5 fw-bold mb-3">{title}</h3>
 
 					<div class="d-flex align-items-center justify-content-start gap-3">
 						<div class={numberClass}>{stepNumber}</div>
@@ -78,3 +76,44 @@ const numberClass = isActive ? "step-number purple" : "step-number";
 		)
 	}
 </div>
+
+<script>
+	// This script will run on the client-side
+	const steps = document.querySelectorAll(".timeline-step[data-observed]");
+
+	const options = {
+		root: null,
+		// The element will be considered "in view" when 50% of it is visible
+		threshold: 0.9,
+		rootMargin: "0px",
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			const step = entry.target;
+
+			// Cast querySelector results to HTMLElement to resolve TypeScript error
+			const dot = step.querySelector(".timeline-dot") as HTMLElement | null;
+			const stepNumber = step.querySelector(
+				".step-number"
+			) as HTMLElement | null;
+			const title = step.querySelector(".step-title") as HTMLElement | null;
+
+			if (entry.isIntersecting) {
+				// ADD ACTIVE CLASSES
+				dot?.classList.add("active");
+				stepNumber?.classList.add("purple");
+				title?.classList.add("active-title"); // Use a class for CSS color change
+			} else {
+				// REMOVE ACTIVE CLASSES
+				dot?.classList.remove("active");
+				stepNumber?.classList.remove("purple");
+				title?.classList.remove("active-title");
+			}
+		});
+	}, options);
+
+	steps.forEach((step) => {
+		observer.observe(step);
+	});
+</script>

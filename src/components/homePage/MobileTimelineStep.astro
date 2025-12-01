@@ -15,22 +15,17 @@ const {
 	title,
 	description,
 	imageSrc,
-	imageAlt,
-	isActive = false,
+	imageAlt, // Removed isActive from destructuring as it's no longer used for state
 	isLast = false,
 } = Astro.props;
 
-const titleColor = isActive ? "color: #7c3aed;" : "";
-const numberClass = isActive
-	? "mobile-step-number purple"
-	: "mobile-step-number";
-const dotClass = isActive ? "mobile-dot active" : "mobile-dot";
+// Use base classes only, JS will add the 'active' and 'purple' classes
+const dotClass = "mobile-dot";
+const numberClass = "mobile-step-number";
 ---
 
-<div class="mobile-timeline-step">
-	<!-- Timeline content -->
+<div class="mobile-timeline-step" data-observed>
 	<div class="d-flex items-start gap-4">
-		<!-- Left column: Dot and connecting line -->
 		<div
 			class="d-flex flex-column align-items-center"
 			style="position: relative;"
@@ -38,20 +33,19 @@ const dotClass = isActive ? "mobile-dot active" : "mobile-dot";
 			<div class={dotClass}></div>
 		</div>
 
-		<!-- Right column: Number and description -->
 		<div class="d-flex align-items-start gap-3">
 			<div class="d-flex flex-column">
-				<!-- Title -->
-				<h3 class="h6 fw-bold mb-3" style={titleColor}>
+				<h3 class="mobile-step-title h6 fw-bold mb-3">
 					{title}
 				</h3>
 
 				<div class="d-flex gap-3">
-					<!-- Step number -->
 					<div class={numberClass}>{stepNumber}</div>
 
-					<!-- Description -->
 					<div class="flex-grow-1">
+						<div class="mobile-img mb-3">
+							<img src={imageSrc} alt={imageAlt} hidden />
+						</div>
 						<p
 							class="small text-muted mb-0"
 							style="line-height: 1.5; font-size: 0.875rem;"
@@ -64,3 +58,48 @@ const dotClass = isActive ? "mobile-dot active" : "mobile-dot";
 		</div>
 	</div>
 </div>
+
+<script>
+	// Define the script to run on the client
+	const mobileSteps = document.querySelectorAll(
+		".mobile-timeline-step[data-observed]"
+	);
+
+	const options = {
+		root: null,
+		// The element will be considered "in view" when 50% of it is visible
+		threshold: 0.8,
+		rootMargin: "0px",
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			const step = entry.target;
+
+			// Cast querySelector results to HTMLElement to resolve TypeScript error
+			const dot = step.querySelector(".mobile-dot") as HTMLElement | null;
+			const stepNumber = step.querySelector(
+				".mobile-step-number"
+			) as HTMLElement | null;
+			const title = step.querySelector(
+				".mobile-step-title"
+			) as HTMLElement | null;
+
+			if (entry.isIntersecting) {
+				// ADD ACTIVE CLASSES
+				dot?.classList.add("active");
+				stepNumber?.classList.add("purple");
+				title?.classList.add("active-title"); // New class for title color
+			} else {
+				// REMOVE ACTIVE CLASSES
+				dot?.classList.remove("active");
+				stepNumber?.classList.remove("purple");
+				title?.classList.remove("active-title");
+			}
+		});
+	}, options);
+
+	mobileSteps.forEach((step) => {
+		observer.observe(step);
+	});
+</script>

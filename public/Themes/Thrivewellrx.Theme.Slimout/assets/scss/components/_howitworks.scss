@@ -60,16 +60,16 @@ body {
   }
 
   // Hover effect for step number
-  &:hover {
-    .timeline-dot {
-      background-color: $purple-primary;
-      transform: translateX(-50%) scale(1.25);
-    }
+  // &:hover {
+  //   .timeline-dot {
+  //     background-color: $purple-primary;
+  //     transform: translateX(-50%) scale(1.25);
+  //   }
 
-    .step-number {
-      color: $purple-primary;
-    }
-  }
+  //   .step-number {
+  //     color: $purple-primary;
+  //   }
+  // }
 }
 
 // Center Dot
@@ -92,11 +92,11 @@ body {
 
 // Step Number
 .step-number {
-  font-family: "BebasNeue";
+  font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-size: 140px;
   line-height: 100%;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   color: $black;
   line-height: 1;
   transition: $transition-color;
@@ -144,19 +144,19 @@ body {
   margin-bottom: 3rem;
 
   // Hover effects
-  &:hover {
-    .mobile-step-number {
-      color: $purple-primary;
-    }
+  // &:hover {
+  //   .mobile-step-number {
+  //     color: $purple-primary;
+  //   }
 
-    .mobile-dot {
-      background-color: $purple-primary;
+  //   .mobile-dot {
+  //     background-color: $purple-primary;
 
-      &::after {
-        background-color: $purple-primary;
-      }
-    }
-  }
+  //     &::after {
+  //       background-color: $purple-primary;
+  //     }
+  //   }
+  // }
 
   // Remove line from last step
   &:last-child {
