@@ -10,6 +10,15 @@ $transition-default: all 0.3s ease;
 $transition-color: color 0.3s ease;
 $transition-bg: background-color 0.3s ease;
 
+.how-it-works-title {
+
+  font-family: "sfuidisplay";
+  font-size: 70px;
+  font-weight: 700;
+  font-style: bold;
+
+}
+
 // Body
 body {
   background-color: $gray-light;

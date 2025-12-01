@@ -109,9 +109,6 @@
 	font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-/* <--- CORRECTED BEBAS NEUE IMPORT */
 @font-face {
 	font-family: "CabinetGrotesk";
 	src: url("/Themes/Thrivewellrx.Theme.Slimout/assets/fonts/cabinet-grotesk/CabinetGroteskExtralight.eot") format("embedded-opentype"),
@@ -309,3 +306,5 @@
 	font-weight: 900;
 	font-style: italic;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
