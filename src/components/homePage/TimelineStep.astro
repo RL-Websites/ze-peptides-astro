@@ -81,39 +81,76 @@ const numberClass = "step-number";
 	// This script will run on the client-side
 	const steps = document.querySelectorAll(".timeline-step[data-observed]");
 
-	const options = {
-		root: null,
-		// The element will be considered "in view" when 50% of it is visible
-		threshold: 0.9,
-		rootMargin: "0px",
-	};
-
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			const step = entry.target;
-
-			// Cast querySelector results to HTMLElement to resolve TypeScript error
+	// Function to remove active class from all steps
+	const deactivateAllSteps = () => {
+		steps.forEach((step) => {
 			const dot = step.querySelector(".timeline-dot") as HTMLElement | null;
 			const stepNumber = step.querySelector(
 				".step-number"
 			) as HTMLElement | null;
 			const title = step.querySelector(".step-title") as HTMLElement | null;
 
-			if (entry.isIntersecting) {
-				// ADD ACTIVE CLASSES
-				dot?.classList.add("active");
-				stepNumber?.classList.add("purple");
-				title?.classList.add("active-title"); // Use a class for CSS color change
-			} else {
-				// REMOVE ACTIVE CLASSES
-				dot?.classList.remove("active");
-				stepNumber?.classList.remove("purple");
-				title?.classList.remove("active-title");
+			dot?.classList.remove("active");
+			stepNumber?.classList.remove("purple");
+			title?.classList.remove("active-title");
+		});
+	};
+
+	// Function to activate a specific step
+	const activateStep = (step: Element) => {
+		const dot = step.querySelector(".timeline-dot") as HTMLElement | null;
+		const stepNumber = step.querySelector(".step-number") as HTMLElement | null;
+		const title = step.querySelector(".step-title") as HTMLElement | null;
+
+		dot?.classList.add("active");
+		stepNumber?.classList.add("purple");
+		title?.classList.add("active-title");
+	};
+
+	// Function to find and activate the most centered step
+	const updateActiveStep = () => {
+		let mostCenteredStep = null;
+		let minDistance = Infinity;
+
+		steps.forEach((step) => {
+			const rect = step.getBoundingClientRect();
+			const elementCenter = rect.top + rect.height / 2;
+			const viewportCenter = window.innerHeight / 2;
+			const distance = Math.abs(elementCenter - viewportCenter);
+
+			// Check if element is in viewport
+			if (rect.top < window.innerHeight && rect.bottom > 0) {
+				if (distance < minDistance) {
+					minDistance = distance;
+					mostCenteredStep = step;
+				}
 			}
 		});
-	}, options);
 
-	steps.forEach((step) => {
-		observer.observe(step);
-	});
+		// Deactivate all steps first
+		deactivateAllSteps();
+
+		// Activate only the most centered step
+		if (mostCenteredStep) {
+			activateStep(mostCenteredStep);
+		}
+	};
+
+	// Use scroll event with throttling for better performance
+	let ticking = false;
+	const handleScroll = () => {
+		if (!ticking) {
+			window.requestAnimationFrame(() => {
+				updateActiveStep();
+				ticking = false;
+			});
+			ticking = true;
+		}
+	};
+
+	// Initial check
+	updateActiveStep();
+
+	// Listen to scroll events
+	window.addEventListener("scroll", handleScroll);
 </script>

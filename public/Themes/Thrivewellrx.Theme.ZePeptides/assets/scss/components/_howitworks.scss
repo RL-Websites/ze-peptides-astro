@@ -49,6 +49,28 @@ body {
   font-size: 30px;
 }
 
+.step-title.active-title {
+  color: $purple-primary;
+  /* Replace with your brand color */
+}
+
+.mobile-step-title.active-title {
+  color: $purple-primary;
+
+}
+
+.mobile-number-description.active-title {
+  color: $purple-primary;
+
+}
+
+.mobile-number-description {
+  /* For vertical alignment */
+
+
+
+}
+
 .timeline-description {
   font-family: 'sfuidisplay', serif;
   font-size: 16px;
