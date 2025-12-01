@@ -101,12 +101,32 @@
 						data-bs-toggle="modal"
 						data-bs-target="#doses">Learn more</button
 					>
-					<button
+					<!-- <button
 						type="button"
 						class="theme-btn theme-btn__primary"
 						data-bs-toggle="modal"
 						data-bs-target="#doses">Add to Cart</button
-					>
+					> -->
+
+					<div class="input-group product-action__cart product-action__cart--primary w-50">
+						<span class="input-group-btn">
+							<button class="btn" type="button">
+								<i class="icon-minus"></i>
+							</button>
+						</span>
+						<input
+							type="text"
+							inputmode="numeric"
+							class="form-control"
+							id="quantity"
+							value="1"
+						/>
+						<span class="input-group-btn">
+							<button class="btn" type="button">
+								<i class="icon-plus1"></i>
+							</button>
+						</span>
+					</div>
 				</div>
 			</div>
 		</div>
