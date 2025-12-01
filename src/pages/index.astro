@@ -1,5 +1,5 @@
 ---
-import ClientFeedback from "../components/ClientFeedback.astro";
+import Client from "../components/Client.astro";
 import Faq from "../components/Faq.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
@@ -15,7 +15,7 @@ import Layout from "../layouts/Layout.astro";
 	<!--=====|| Main Section Start ||=====-->
 	<main class="page">
 		<!--===|| Banner Section Start ||===-->
-		
+
 		<!-- <section class="home__hero home__hero__header">
 		</section> -->
 		<Homehero />
@@ -37,15 +37,20 @@ import Layout from "../layouts/Layout.astro";
 		<section class="product">
 			<div class="container">
 				<h1 class="site__heading-one text-center">
-          Our  
-					<span class="text-primary-grad-1">Products</span>             
-        </h1>
+					Our
+					<span class="text-primary-grad-1">Products</span>
+				</h1>
 				<p class="text-center mt-20 mt-md-24">
-					High-quality research peptides for laboratory use — verified for purity and quality
+					High-quality research peptides for laboratory use — verified for
+					purity and quality
 				</p>
-				<div class="d-flex justify-content-center gap-3 align-items-center mt-20 mt-md-24 text-red">
-						<i class="icon-alert"></i>
-						<span class="text-md-body4 lh-1">For Research Purposes Only — Not for Human Consumption</span>
+				<div
+					class="d-flex justify-content-center gap-3 align-items-center mt-20 mt-md-24 text-red"
+				>
+					<i class="icon-alert"></i>
+					<span class="text-md-body4 lh-1"
+						>For Research Purposes Only — Not for Human Consumption</span
+					>
 				</div>
 
 				<ProductCard />
@@ -56,10 +61,6 @@ import Layout from "../layouts/Layout.astro";
 		<!--===|| How it Works Section Start ||===-->
 		<HowWorks />
 		<!--===|| How it Works Section End ||===-->
-
-		<!--===|| Client Feedback Section Start ||===-->
-		<ClientFeedback />
-		<!--===|| Client Feedback Section End ||===-->
 
 		<!--===|| Faq Section Start ||===-->
 		<section class="faq">
@@ -137,6 +138,10 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 		<!--===|| CTA Section End ||===-->
+
+		<!--===|| Client Feedback Section Start ||===-->
+		<Client />
+		<!--===|| Client Feedback Section End ||===-->
 
 		<!--=====|| Main Section End ||=====-->
 	</main>
