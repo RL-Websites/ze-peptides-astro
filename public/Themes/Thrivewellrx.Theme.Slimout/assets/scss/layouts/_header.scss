@@ -139,39 +139,31 @@
 }
 
 // Button styles for header
-.theme-btn {
-	padding: 12px 24px;
-	cursor: pointer;
-	font-size: 16px;
-	font-weight: 600;
-	border-radius: 8px;
-	transition: all 0.3s ease;
-	border: none;
-	outline: none;
+// .theme-btn {
 
-	&__primary {
-		color: $white;
-		border: 1px solid $primary;
-		&:hover {
-			background-color: darken($primary, 10%);
-			border-color: darken($primary, 10%);
-			box-shadow: 0 4px 12px rgba($primary, 0.3);
-			color: $white;
-		}
-	}
+// 	&__primary {
+// 		color: $white;
+// 		border: 1px solid $primary;
+// 		&:hover {
+// 			background-color: darken($primary, 10%);
+// 			border-color: darken($primary, 10%);
+// 			box-shadow: 0 4px 12px rgba($primary, 0.3);
+// 			color: $white;
+// 		}
+// 	}
 
-	&__outline {
-		background-color: transparent;
-		border: 1px solid $primary;
-		&--primary {
-			&:hover {
-				background-color: $primary;
-				color: $white;
-				box-shadow: 0 4px 12px rgba($primary, 0.3);
-			}
-		}
-	}
-}
+// 	&__outline {
+// 		background-color: transparent;
+// 		border: 1px solid $primary;
+// 		&--primary {
+// 			&:hover {
+// 				background-color: $primary;
+// 				color: $white;
+// 				box-shadow: 0 4px 12px rgba($primary, 0.3);
+// 			}
+// 		}
+// 	}
+// }
 
 // Hamburger menu (mobile)
 .hamburger-menu {
