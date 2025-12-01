@@ -25,7 +25,7 @@
 			}
 		}
 
-		background: url("/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/home-hero-bg.jpg") no-repeat center top / cover;
+		background: url("/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/home-hero-bg.png") no-repeat center top / cover;
 		background-attachment: fixed;
 
 		@media all and (max-width: 768px) {
@@ -270,12 +270,6 @@
 			max-width: unset;
 			text-align: center;
 		}
-
-		&__img {
-			img {
-				height: 250px;
-			}
-		}
 	}
 
 	.client {
@@ -327,12 +321,6 @@
 
 	.product {
 		padding: 50px 0;
-
-		&__img {
-			img {
-				height: 200px;
-			}
-		}
 
 		&__navigation {
 			gap: 10px;
