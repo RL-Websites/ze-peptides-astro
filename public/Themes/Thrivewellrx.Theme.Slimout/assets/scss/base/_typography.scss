@@ -18,6 +18,9 @@ p {
 	color: $secondary;
 }
 
+span {
+	font-family: "sfuidisplay", sans-serif;
+}
 // H1 - 70px Bold, 120% line-height
 h1 {
 	font-size: 70px;
@@ -94,6 +97,18 @@ h5 {
 	letter-spacing: 0;
 }
 
+.text-md-body4 {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 110%;
+	letter-spacing: 0;
+	@media all and (min-width: 768px) {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 160%;
+		letter-spacing: 0;
+	}
+}
 // Small - 12px Bold, 160% line-height
 small,
 .text-small {
@@ -151,6 +166,13 @@ small,
 
 .font-playfair {
 	font-family: "Playfair Display", serif;
+}
+
+.text-primary-grad-1 {
+	background: linear-gradient(90deg, #5100c2 0%, #b07bfa 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 // Responsive typography

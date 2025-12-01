@@ -1,73 +1,47 @@
 @use "../base/variables" as *;
 
 .product {
-
 	&__card {
-		padding: 40px;
-		text-align: center;
-		border-radius: 40px;
-		background-size: cover;
-		background-repeat: no-repeat;
-
-		&--purple {
-			background: url(/Themes/Thrivewellrx.Theme.Slimout/assets/img/bg/purple-bg.svg);
-		}
-
-		&--pink {
-			background: url(/Themes/Thrivewellrx.Theme.Slimout/assets/img/bg/pink-bg.svg);
-		}
-
-		&--green {
-			background: url(/Themes/Thrivewellrx.Theme.Slimout/assets/img/bg/green-bg.svg);
-		}
-
-		&--blue-light {
-			background: url(/Themes/Thrivewellrx.Theme.Slimout/assets/img/bg/blue-light-bg.svg);
-		}
+		width: 100%;
+		padding: 20px 20px 0px 20px;
+		border-radius: 20px;
+		border: 1px solid $primary-light;
+		box-shadow: 0px 0px 30px 0px #27005d14;
 	}
 
 	&__img {
+		width: 100%;
+		height: 197px;
+		border-radius: 10px;
+		background: linear-gradient(90deg, #d2b3ff 0%, #ede0ff 100%);
+		padding: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		img {
-			height: 300px;
+			height: 100%;
+			max-width: 100%;
 		}
 	}
-
-	&__content {
-		margin-top: 30px;
-	}
-
-	&__wrapper {
-		padding-top: 80px;
-		position: relative;
-	}
-
-	&__navigation {
-		position: absolute;
-		top: 0px;
-		right: 0;
+	&__meta {
+		margin-top: 12px;
+		padding-bottom: 16px;
 		display: flex;
-		gap: 15px;
-		z-index: 10;
-
-		.prev-arrow,
-		.next-arrow {
-			width: 50px;
-			height: 50px;
-			background-color: transparent;
-			color: $secondary;
-			font-size: 25px;
-			border: 1px solid $secondary;
-			border-radius: 50%;
-			display: inline-flex;
-			justify-content: center;
-			align-items: center;
-			transition: .3s;
-
-			&:hover {
-				background-color: $secondary;
-				color: white;
-				border-radius: 50%;
-			}
+		justify-content: space-between;
+		align-items: end;
+		&--price {
+			margin-bottom: -6px;
+		}
+	}
+	&__actions {
+		display: flex;
+		align-items: center;
+		border-top: 1px solid #e6d4ff;
+		margin: 0 -20px;
+		padding: 12px 20px;
+		gap: 8px;
+		button {
+			width: 50%;
 		}
 	}
 }
@@ -75,21 +49,14 @@
 @media only screen and (max-width: 992px) {
 	.product {
 		&__card {
-			padding: 20px;
+			padding: 12px 12px 0px 12px;
 		}
-
-		&__navigation {
-
-			.prev-arrow,
-			.next-arrow {
-				width: 40px;
-				height: 40px;
-				font-size: 20px;
-			}
+		&__meta {
+			margin-top: 16px;
 		}
-
-		&__wrapper {
-			padding-top: 50px;
+		&__actions {
+			margin: 0 -12px;
+			padding: 12px;
 		}
 	}
 }

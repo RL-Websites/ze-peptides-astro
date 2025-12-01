@@ -25,8 +25,8 @@
 			}
 		}
 
-		background: url("/Themes/Thrivewellrx.Theme.Slimout/assets/img/bg/home-hero-bg.jpg") no-repeat center top / auto 100%;
-		background-attachment: scroll;
+		background: url("/Themes/Thrivewellrx.Theme.Slimout/assets/img/bg/home-hero-bg.jpg") no-repeat center top / cover;
+		background-attachment: fixed;
 
 		@media all and (max-width: 768px) {
 			align-items: start;
