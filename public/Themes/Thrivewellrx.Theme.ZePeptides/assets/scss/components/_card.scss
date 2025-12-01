@@ -55,15 +55,38 @@
 
 	&__table-mobile {
 		display: none;
-
 	}
 }
 
 .info {
 	&__card {
-		background-color: $blue-2;
-		padding: 16px 12px;
+		background-color: $white;
+		padding: 40px 16px 36px 16px;
 		border-radius: 12px;
+		border-radius: 20px;
+		border: 1px solid #e6d4ff;
+		box-shadow: 0px 0px 30px 0px #27005d14;
+		&--icon {
+			width: 70px;
+			height: 70px;
+			border-radius: 70px;
+			background: $primary-lighter;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto;
+			i {
+				font-size: 36px;
+				color: $primary;
+			}
+		}
+		&--content {
+			width: 100%;
+			@media all and (min-width: 768px) {
+				max-width: 330px;
+				margin: 0 auto;
+			}
+		}
 	}
 }
 
