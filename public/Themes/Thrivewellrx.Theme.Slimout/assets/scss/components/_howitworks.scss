@@ -15,6 +15,13 @@ body {
   background-color: $gray-light;
 }
 
+.step-title {
+  font-family: "sfuidisplay";
+  font-weight: 700;
+  font-style: bold;
+  font-size: 30px;
+}
+
 // Desktop Timeline
 .timeline-desktop {
   position: relative;
@@ -39,13 +46,14 @@ body {
   line-height: 160%;
   font-size: 16px;
   font-weight: 500;
-  font-family: "SF UI Display";
+  font-family: "sfuidisplay";
 }
 
 // Timeline Step
 .timeline-step {
   position: relative;
   margin-bottom: 8rem;
+
 
   &:last-child {
     margin-bottom: 0;
@@ -84,8 +92,11 @@ body {
 
 // Step Number
 .step-number {
-  font-size: 6rem;
-  font-weight: bold;
+  font-family: "BebasNeue";
+  font-weight: 400;
+  font-size: 140px;
+  line-height: 100%;
+  text-transform: uppercase;
   color: $black;
   line-height: 1;
   transition: $transition-color;

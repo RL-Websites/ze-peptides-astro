@@ -3,6 +3,7 @@
 ## [0.0.1] - 2025-12-1
 
 - How it works section ongoing progress
+- How it works components complete with responsive
 
 ## [0.0.1] - 2025-11-28
 
