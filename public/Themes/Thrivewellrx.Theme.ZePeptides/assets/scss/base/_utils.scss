@@ -66,6 +66,7 @@ $fs-list: (
 $spacing-list: (
 	"auto": auto,
 	"0": 0px,
+	"4": 4px,
 	"5": 5px,
 	"10": 10px,
 	"12": 12px,
@@ -373,6 +374,14 @@ $spacing-list: (
 	.py {
 		&-lg {
 			@media all and (min-width: 992px) {
+				&-#{$key} {
+					padding-top: $margin !important;
+					padding-bottom: $margin !important;
+				}
+			}
+		}
+		&-md {
+			@media all and (min-width: 768px) {
 				&-#{$key} {
 					padding-top: $margin !important;
 					padding-bottom: $margin !important;
