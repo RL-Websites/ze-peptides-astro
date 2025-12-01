@@ -1,0 +1,41 @@
+@use "../base/variables" as *;
+
+.page {
+	&__wrapper {
+		background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/common-bg.svg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	&__common {
+		background-image: none;
+		padding: 200px 0 100px;
+
+		&__title {
+			margin-top: 30px;
+			font-size: $fs-24;
+			font-weight: 700;
+		}
+	}
+
+	&__alt {
+		min-height: unset;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.page {
+		&__common {
+			padding: 150px 0 80px;
+		}
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.page {
+		&__common {
+			padding: 120px 0 60px;
+		}
+	}
+}

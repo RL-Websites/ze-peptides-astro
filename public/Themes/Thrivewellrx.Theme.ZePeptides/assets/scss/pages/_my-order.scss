@@ -1,0 +1,341 @@
+@use "../base/variables" as *;
+
+.my-order {
+	padding: 180px 0 100px;
+
+	// &__title,
+	// &__title a {
+	// 	// font-size: $fs-;
+	// 	// line-height: 1;
+	// 	font-weight: 500;
+	// 	color: white;
+	// 	text-decoration: none;
+	// 	margin-bottom: 30px;
+
+	// 	text-align: center;
+	// 	gap: 10px;
+
+	// 	i {
+	// 		font-size: 44px;
+	// 	}
+
+	// 	&:active {
+	// 		text-decoration: none;
+	// 	}
+	// }
+
+	.order-list {
+		&.table {
+			thead {
+				th {
+					padding: 15px 12px !important;
+					font-size: $fs-18;
+					font-weight: 600;
+					color: white;
+
+					&:first-child {
+						padding-left: 20px !important;
+					}
+
+					&:last-child {
+						padding-right: 20px !important;
+					}
+				}
+			}
+		}
+	}
+
+	.list-table .table tbody td {
+		padding: 20px 12px !important;
+	}
+}
+
+.view-button {
+	border: 0;
+	background-color: transparent !important;
+	font-weight: 400;
+	color: white;
+	display: inline-block;
+	font-size: 16px;
+	white-space: nowrap;
+}
+
+.order {
+	padding: 20px 20px;
+
+	&__info {
+		display: flex;
+		gap: 30px;
+		margin-bottom: 20px;
+	}
+
+	&__label {
+		font-size: $fs-18;
+		font-weight: 600;
+		color: white;
+		display: flex;
+		gap: 8px;
+	}
+
+	&__status {
+		padding: 30px 26px;
+		padding-bottom: 0;
+	}
+
+	&__track {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+
+		.tracker {
+			position: absolute;
+			top: -6px;
+			width: 100%;
+
+			&__single {
+				height: 2px;
+				width: 24.6%;
+				background-color: $blue-3;
+				display: inline-block;
+
+				&.active {
+					background: $primary;
+				}
+			}
+		}
+	}
+
+	&__step {
+		width: 20px;
+		height: 20px;
+		background-color: white;
+		border-radius: 50%;
+		position: relative;
+		z-index: 2;
+
+		&.active {
+			border-color: $primary;
+			background: $primary;
+		}
+	}
+
+	&__step-label {
+		font-size: 14px;
+		display: block;
+		position: absolute;
+		top: -30px;
+		left: 50%;
+		transform: translateX(-50%);
+		color: $blue-3;
+		white-space: nowrap;
+
+		&.active {
+			color: white;
+		}
+	}
+}
+
+.medicine-info,
+.document-info {
+	padding: 28px 20px 50px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+
+	&__item {
+		display: flex;
+		align-items: start;
+		justify-content: start;
+
+		p {
+			margin: 0;
+			line-height: 1;
+		}
+	}
+
+	&__label {
+		min-width: 154px;
+		color: white;
+		font-weight: 600;
+	}
+}
+
+.medicine-info {
+	&__states {
+		display: flex;
+		align-items: start;
+		justify-content: start;
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+}
+
+.document-info {
+	height: 100%;
+
+	&__label {
+		min-width: 170px;
+	}
+}
+
+.order-details {
+	padding: 180px 0 100px;
+}
+
+.col-equal-height {
+	display: flex;
+
+	.col-md-6 {
+		flex: 1;
+
+		.card-basic {
+			height: 100%;
+		}
+	}
+}
+
+// .table-striped>tbody>tr:nth-of-type(odd) {
+// 	background-color: transparent !important;
+// }
+
+@media only screen and (max-width: 992px) {
+	.my-order {
+		padding: 150px 0 80px;
+
+		&__title,
+		&__title a {
+			font-size: $fs-40;
+			line-height: 1.2;
+			margin-bottom: 15px;
+		}
+	}
+
+	.order {
+		&__track {
+			.tracker {
+				top: -7px;
+
+				&__single {
+					width: 24.6%;
+				}
+			}
+		}
+
+		&__step {
+			width: 15px;
+			height: 15px;
+		}
+
+		.order-details {
+			padding: 150px 0 80px;
+		}
+	}
+
+	.order-details {
+		padding: 150px 0 80px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.my-order {
+		padding: 100px 0 50px;
+
+		&__title,
+		&__title a {
+			font-size: $fs-30;
+			line-height: 1;
+
+			i {
+				font-size: $fs-30;
+			}
+		}
+
+		.col-equal-height {
+			margin-top: 20px !important;
+
+			.col-md-6 {
+				&:nth-child(2) {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+
+	.order {
+		&__track {
+			.tracker {
+				&__single {
+					width: 24.4%;
+				}
+			}
+		}
+
+		&__step-label {
+			font-size: $fs-14;
+			gap: 5px;
+		}
+	}
+
+	.medicine-info,
+	.document-info {
+		padding: 15px;
+		gap: 10px;
+	}
+
+	.order-details {
+		padding: 100px 0 50px;
+
+		.col-equal-height {
+			flex-direction: column;
+		}
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.order {
+		overflow-x: scroll;
+
+		&__track {
+			.tracker {
+				&__single {
+					width: 24.1%;
+				}
+			}
+		}
+
+		&__label {
+			font-size: 14px;
+		}
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.order {
+		&__info {
+			gap: 20px;
+		}
+
+		&__track {
+			width: 400px;
+
+			.tracker__single {
+				width: 24%;
+			}
+		}
+
+		&__label {
+			font-size: 12px;
+			text-wrap: nowrap;
+		}
+
+		&__step-label {
+			font-size: 10px;
+		}
+	}
+
+	.medicine-info__label,
+	.document-info__label {
+		min-width: 120px;
+	}
+}
