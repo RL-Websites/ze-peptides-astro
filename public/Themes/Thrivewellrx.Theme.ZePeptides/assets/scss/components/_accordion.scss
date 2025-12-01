@@ -1,0 +1,102 @@
+@use "../base/variables" as *;
+
+.accordion {
+	&-button {
+		background-color: transparent !important;
+		box-shadow: none !important;
+		font-size: $fs-22 !important;
+		line-height: 1.6 !important;
+		font-weight: 500 !important;
+		gap: 20px;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+
+		&:not(.collapsed) {
+			color: $secondary !important;
+
+			&::after {
+				background-image: none;
+				content: '\e922';
+				font-family: "icomoon";
+				font-size: $fs-18;
+				color: white;
+				width: 36px;
+				height: 36px;
+				background-color: $secondary;
+				text-align: center;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+
+		&::after {
+			background-image: none;
+			content: '\e927';
+			font-family: "icomoon";
+			font-size: $fs-18;
+			color: white;
+			width: 36px;
+			height: 36px;
+			background-color: $secondary;
+			text-align: center;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&__alt {
+			font-size: $fs-32 !important;
+			font-weight: 700 !important;
+
+		}
+	}
+
+	&-body {
+		padding: 0;
+
+		&--alt {
+			padding-bottom: 20px;
+		}
+	}
+
+	&-item {
+		background-color: transparent !important;
+		border: 0 !important;
+		padding: 0 !important;
+
+		&--alt {
+			border-bottom: 1px solid $gray !important;
+			padding: 0 !important;
+
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.accordion {
+		&-button {
+			font-size: $fs-18 !important;
+
+			&:after {
+				width: 30px;
+				height: 30px;
+				font-size: 16px;
+				line-height: 1.9;
+			}
+
+			&:not(.collapsed)::after {
+				width: 30px;
+				height: 30px;
+				font-size: 16px;
+				line-height: 1.9;
+			}
+
+			&__alt {
+				font-size: $fs-22 !important;
+			}
+		}
+	}
+}
