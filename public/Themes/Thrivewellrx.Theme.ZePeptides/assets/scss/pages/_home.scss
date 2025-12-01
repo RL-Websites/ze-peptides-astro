@@ -10,6 +10,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
 		&__header {
 			padding: 40px 40px 0;
 
@@ -23,8 +24,10 @@
 				}
 			}
 		}
+
 		background: url("/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/home-hero-bg.png") no-repeat center top / cover;
 		background-attachment: fixed;
+
 		@media all and (max-width: 768px) {
 			align-items: start;
 		}
@@ -56,6 +59,7 @@
 			@media only screen and (max-width: 768px) {
 				padding: 12px 20px;
 				gap: 8px;
+
 				span {
 					font-size: $fs-14;
 					line-height: 1em;
@@ -93,84 +97,84 @@
 
 //Product CSS End
 
-.how-works {
-	padding: 100px 0;
-	background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/how-works-bg.svg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-color: $yellow;
+// .how-works {
+// 	padding: 100px 0;
+// 	background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/how-works-bg.svg);
+// 	background-size: cover;
+// 	background-repeat: no-repeat;
+// 	background-position: center center;
+// 	background-color: $yellow;
 
-	.step {
-		max-width: 800px;
-		margin: 0 auto;
-		display: flex;
-		justify-content: space-between;
-		position: relative;
+// 	.step {
+// 		max-width: 800px;
+// 		margin: 0 auto;
+// 		display: flex;
+// 		justify-content: space-between;
+// 		position: relative;
 
-		&__one,
-		&__two,
-		&__three {
-			width: 90px;
-			height: 90px;
-			border: 1.5px solid $red;
-			border-radius: 50%;
-			display: inline-flex;
-			justify-content: center;
-			align-items: center;
-			background-color: $yellow;
-			position: relative;
-			z-index: 10;
+// 		&__one,
+// 		&__two,
+// 		&__three {
+// 			width: 90px;
+// 			height: 90px;
+// 			border: 1.5px solid $red;
+// 			border-radius: 50%;
+// 			display: inline-flex;
+// 			justify-content: center;
+// 			align-items: center;
+// 			background-color: $yellow;
+// 			position: relative;
+// 			z-index: 10;
 
-			span {
-				font-size: $fs-32;
-				color: $red;
-				font-weight: 600;
-			}
+// 			span {
+// 				font-size: $fs-32;
+// 				color: $red;
+// 				font-weight: 600;
+// 			}
 
-			&__fill {
-				background-color: $red;
+// 			&__fill {
+// 				background-color: $red;
 
-				span {
-					color: white;
-				}
-			}
-		}
+// 				span {
+// 					color: white;
+// 				}
+// 			}
+// 		}
 
-		&__border {
-			border: 2px dashed red;
-			width: 100%;
-			position: absolute;
-			z-index: 0;
-			width: 100%;
-			top: 50%;
-			transform: translateY(-50%);
-		}
-	}
+// 		&__border {
+// 			border: 2px dashed red;
+// 			width: 100%;
+// 			position: absolute;
+// 			z-index: 0;
+// 			width: 100%;
+// 			top: 50%;
+// 			transform: translateY(-50%);
+// 		}
+// 	}
 
-	&__items {
-		margin-top: 40px;
-	}
+// 	&__items {
+// 		margin-top: 40px;
+// 	}
 
-	&__card {
-		background-color: $background-2;
-		padding: 30px 30px 0 30px;
-		border-radius: 16px;
-		text-align: center;
-		box-shadow: 0px 4px 40px 0px #fff6e0;
-		overflow: hidden;
+// 	&__card {
+// 		background-color: $background-2;
+// 		padding: 30px 30px 0 30px;
+// 		border-radius: 16px;
+// 		text-align: center;
+// 		box-shadow: 0px 4px 40px 0px #fff6e0;
+// 		overflow: hidden;
 
-		&__img {
-			max-width: 240px;
-			position: relative;
-			bottom: -2px;
+// 		&__img {
+// 			max-width: 240px;
+// 			position: relative;
+// 			bottom: -2px;
 
-			img {
-				width: 100%;
-			}
-		}
-	}
-}
+// 			img {
+// 				width: 100%;
+// 			}
+// 		}
+// 	}
+// }
 
 //How it Works CSS End
 
@@ -243,8 +247,7 @@
 	background-color: $blue-3;
 }
 
-@media only screen and (max-width: 1170px) {
-}
+@media only screen and (max-width: 1170px) {}
 
 @media only screen and (max-width: 992px) {
 	.home {

@@ -1,0 +1,78 @@
+---
+import workImg from "../../../public/Themes/Thrivewellrx.Theme.Slimout/assets/img/howitworks/works.png";
+import MobileTimelineStep from "./MobileTimelineStep.astro";
+import TimelineStep from "./TimelineStep.astro";
+---
+
+<section class="how-works">
+	<div class="container py-5">
+		<div class="text-center mb-5">
+			<h2 class="how-it-works-title display-4 fw-bold mb-3">
+				How It <span class="text-primary-grad-1">Works</span>
+			</h2>
+			<p
+				class="how-it-works-p text-muted small mx-auto"
+				style="max-width: 500px; margin-bottom: 110px;"
+			>
+				High-quality research peptides for laboratory use — verified for purity
+				and quality
+			</p>
+		</div>
+
+		<div class="timeline-desktop d-none d-md-block">
+			<TimelineStep
+				stepNumber={1}
+				title="Consultation & Assessment"
+				description="Your transformation begins with a free, no-obligation consultation. We'll learn about your goals, review your health background, and determine whether GLP-1 therapy is right for you. Our team will explain how the medication works, what to expect, and answer all your questions about treatment, cost, and results."
+				imageSrc={workImg.src}
+				imageAlt="Doctor consultation"
+				alignment="left"
+			/>
+
+			<TimelineStep
+				stepNumber={2}
+				title="Doctor Evaluation & Prescription"
+				description="Once you're ready, your health profile is securely submitted to our licensed medical team through Doseward. A state-certified physician reviews your information and schedules a teleconsultation at your convenience. During this call, you can discuss any medical concerns before the doctor finalizes your personalized prescription."
+				imageSrc={workImg.src}
+				imageAlt="Doctor evaluation"
+				alignment="right"
+			/>
+
+			<TimelineStep
+				stepNumber={3}
+				title="Medication Compounding & Delivery"
+				description="After your prescription is approved, our FDA-compliant 503A partner pharmacy compounds your customized medication. Your order is then shipped directly to your home in discreet packaging, along with easy-to-follow administration instructions, nutritional guidance, and lifestyle tips."
+				imageSrc={workImg.src}
+				imageAlt="Medication delivery"
+				alignment="left"
+			/>
+		</div>
+
+		<div class="d-md-none">
+			<MobileTimelineStep
+				stepNumber={1}
+				title="Consultation & Assessment"
+				description="Your transformation begins with a free, no-obligation consultation. We'll learn about your goals, review your health background, and determine whether GLP-1 therapy is right for you. Our team will explain how the medication works, what to expect, and answer all your questions about treatment, cost, and results."
+				imageSrc={workImg.src}
+				imageAlt="Doctor consultation"
+			/>
+
+			<MobileTimelineStep
+				stepNumber={2}
+				title="Doctor Evaluation & Prescription"
+				description="Once you're ready, your health profile is securely submitted to our licensed medical team through Doseward. A state-certified physician reviews your information and schedules a teleconsultation at your convenience. During this call, you can discuss any medical concerns before the doctor finalizes your personalized prescription."
+				imageSrc={workImg.src}
+				imageAlt="Doctor evaluation"
+			/>
+
+			<MobileTimelineStep
+				stepNumber={3}
+				title="Medication Compounding & Delivery"
+				description="After your prescription is approved, our FDA-compliant 503A partner pharmacy compounds your customized medication. Your order is then shipped directly to your home in discreet packaging, along with easy-to-follow administration instructions, nutritional guidance, and lifestyle tips."
+				imageSrc={workImg.src}
+				imageAlt="Medication delivery"
+				isLast={true}
+			/>
+		</div>
+	</div>
+</section>
