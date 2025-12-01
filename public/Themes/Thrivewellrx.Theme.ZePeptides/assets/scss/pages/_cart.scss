@@ -40,13 +40,12 @@
 }
 
 .cart-flash {
-	margin-bottom: 40px;
+
 	padding: 20px 0 0 0;
 
 	&__box {
 		padding: 20px 0;
-		// border-top: 3px solid rgba($secondary, $alpha: 0.2);
-		// border-bottom: 3px solid rgba($secondary, $alpha: 0.2);
+
 		display: flex;
 		align-items: center;
 		justify-content: end;
@@ -180,29 +179,29 @@
 		background-color: $blue-3;
 
 		&--purple {
-			background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/purple-bg.svg);
+			background: linear-gradient(to right, #D2B3FF, #EDE0FF);
 			background-size: cover;
 		}
 
 		&--pink {
-			background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/pink-bg.svg);
+			background: linear-gradient(to right, #D2B3FF, #db2c52);
 			background-size: cover;
 		}
 
 		&--green {
-			background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/green-bg.svg);
+			background: linear-gradient(to right, #D2B3FF, #32dd2c);
 			background-size: cover;
 		}
 
 		&--blue-light {
-			background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/blue-light-bg.svg);
+			background: linear-gradient(to right, #D2B3FF, #7f4ec4);
 			background-size: cover;
 		}
 
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border: 0.39px solid $blue-3;
+
 		border-radius: 4px;
 
 		img {
