@@ -15,11 +15,10 @@ const {
 	title,
 	description,
 	imageSrc,
-	imageAlt, // Removed isActive from destructuring as it's no longer used for state
+	imageAlt,
 	isLast = false,
 } = Astro.props;
 
-// Use base classes only, JS will add the 'active' and 'purple' classes
 const dotClass = "mobile-dot";
 const numberClass = "mobile-step-number";
 ---
@@ -31,6 +30,8 @@ const numberClass = "mobile-step-number";
 			style="position: relative;"
 		>
 			<div class={dotClass}></div>
+			<!-- Add line element that will be toggled -->
+			<div class="mobile-dot-line"></div>
 		</div>
 
 		<div class="d-flex align-items-start gap-3">
@@ -60,14 +61,12 @@ const numberClass = "mobile-step-number";
 </div>
 
 <script>
-	// Define the script to run on the client
 	const mobileSteps = document.querySelectorAll(
 		".mobile-timeline-step[data-observed]"
 	);
 
 	const options = {
 		root: null,
-		// The element will be considered "in view" when 50% of it is visible
 		threshold: 0.8,
 		rootMargin: "0px",
 	};
@@ -75,31 +74,36 @@ const numberClass = "mobile-step-number";
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
 			const step = entry.target;
-
-			// Cast querySelector results to HTMLElement to resolve TypeScript error
-			const dot = step.querySelector(".mobile-dot") as HTMLElement | null;
-			const stepNumber = step.querySelector(
-				".mobile-step-number"
-			) as HTMLElement | null;
-			const title = step.querySelector(
-				".mobile-step-title"
-			) as HTMLElement | null;
+			const dot = step.querySelector(".mobile-dot");
+			const stepNumber = step.querySelector(".mobile-step-number");
+			const title = step.querySelector(".mobile-step-title");
+			const line = step.querySelector(".mobile-dot-line");
 
 			if (entry.isIntersecting) {
-				// ADD ACTIVE CLASSES
 				dot?.classList.add("active");
 				stepNumber?.classList.add("purple");
-				title?.classList.add("active-title"); // New class for title color
+				title?.classList.add("active-title");
+				// Animate line when step becomes active
+				if (line) {
+					line.style.height = "var(--line-height)";
+				}
 			} else {
-				// REMOVE ACTIVE CLASSES
 				dot?.classList.remove("active");
 				stepNumber?.classList.remove("purple");
 				title?.classList.remove("active-title");
+				// Reset line when step leaves view
+				if (line) {
+					line.style.height = "0";
+				}
 			}
 		});
 	}, options);
 
 	mobileSteps.forEach((step) => {
 		observer.observe(step);
+
+		// Set CSS custom properties
+		step.style.setProperty("--dot-gap", "2rem"); // Gap between dots
+		step.style.setProperty("--line-height", "calc(100% - 14px)"); // Line height minus dot size
 	});
 </script>
