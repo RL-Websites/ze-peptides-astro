@@ -1,5 +1,9 @@
 # Release Notes
 
+## [0.0.1] - 2025-12-1
+
+- How it works section ongoing progress
+
 ## [0.0.1] - 2025-11-28
 
 - Initial release.

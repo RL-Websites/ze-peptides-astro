@@ -1,0 +1,80 @@
+---
+// TimelineStep.astro
+interface Props {
+	stepNumber: number;
+	title: string;
+	description: string;
+	imageSrc: string;
+	imageAlt: string;
+	isActive?: boolean;
+	alignment?: "left" | "right";
+}
+
+const {
+	stepNumber,
+	title,
+	description,
+	imageSrc,
+	imageAlt,
+	isActive = false,
+	alignment = "left",
+} = Astro.props;
+
+const dotClass = isActive ? "timeline-dot active" : "timeline-dot";
+const titleColor = isActive ? "color: #7c3aed;" : "";
+const numberClass = isActive ? "step-number purple" : "step-number";
+---
+
+<div class="timeline-step"
+	><div class={dotClass}></div>{
+		alignment === "left" ? (
+			<div class="row align-items-start justify-center">
+				<div class="col-6 pe-5">
+					<div class="timeline-img" style="width: 370px;">
+						<img src={imageSrc} alt={imageAlt} />
+					</div>
+				</div>
+
+				<div class="col-6 ps-5 pt-4">
+					<h3 class="h5 fw-bold mb-3" style={titleColor}>
+						{title}
+					</h3>
+
+					<div class="d-flex align-items-center">
+						<div class={numberClass}>{stepNumber}</div>     
+						<p
+							class="timeline-description small text-muted pt-3 mb-0 ms-3"
+							style="line-height: 1.6;"
+						>
+							{description}
+						</p>
+					</div>
+				</div>
+			</div>
+		) : (
+			<div class="row align-items-start">
+				<div class="col-6 text-start pe-5 pt-4">
+					<h3 class="h5 fw-bold mb-3" style={titleColor}>
+						{title}
+					</h3>
+
+					<div class="d-flex align-items-center justify-content-start gap-3">
+						<div class={numberClass}>{stepNumber}</div>
+						<p
+							class="timeline-description small text-muted pt-3 mb-0 me-3"
+							style="line-height: 1.6;"
+						>
+							{description}
+						</p>
+					</div>
+				</div>
+
+				<div class="col-6 ps-5 d-flex align-items-start justify-content-center gap-3">
+					<div class="timeline-img" style="width: 370px;">
+						<img src={imageSrc} alt={imageAlt} />
+					</div>
+				</div>
+			</div>
+		)
+	}
+</div>

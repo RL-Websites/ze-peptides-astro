@@ -1,0 +1,66 @@
+---
+// MobileTimelineStep.astro
+interface Props {
+	stepNumber: number;
+	title: string;
+	description: string;
+	imageSrc: string;
+	imageAlt: string;
+	isActive?: boolean;
+	isLast?: boolean;
+}
+
+const {
+	stepNumber,
+	title,
+	description,
+	imageSrc,
+	imageAlt,
+	isActive = false,
+	isLast = false,
+} = Astro.props;
+
+const titleColor = isActive ? "color: #7c3aed;" : "";
+const numberClass = isActive
+	? "mobile-step-number purple"
+	: "mobile-step-number";
+const dotClass = isActive ? "mobile-dot active" : "mobile-dot";
+---
+
+<div class="mobile-timeline-step">
+	<!-- Timeline content -->
+	<div class="d-flex items-start gap-4">
+		<!-- Left column: Dot and connecting line -->
+		<div
+			class="d-flex flex-column align-items-center"
+			style="position: relative;"
+		>
+			<div class={dotClass}></div>
+		</div>
+
+		<!-- Right column: Number and description -->
+		<div class="d-flex align-items-start gap-3">
+			<div class="d-flex flex-column">
+				<!-- Title -->
+				<h3 class="h6 fw-bold mb-3" style={titleColor}>
+					{title}
+				</h3>
+
+				<div class="d-flex gap-3">
+					<!-- Step number -->
+					<div class={numberClass}>{stepNumber}</div>
+
+					<!-- Description -->
+					<div class="flex-grow-1">
+						<p
+							class="small text-muted mb-0"
+							style="line-height: 1.5; font-size: 0.875rem;"
+						>
+							{description}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
