@@ -49,6 +49,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: end;
+
+		@media (max-width: 767px) {
+
+			padding: 0px;
+
+		}
 	}
 
 	&__message {
@@ -169,8 +175,12 @@
 		display: flex;
 		flex: 1 1 auto;
 
+
 		@media only screen and (max-width: 768px) {
 			flex-direction: column;
+			padding: 14px;
+
+
 		}
 	}
 
@@ -224,7 +234,8 @@
 		margin-left: 20px;
 		display: flex;
 		flex-direction: column;
-		gap: 16px;
+
+		padding: 14px;
 
 		p {
 			color: $secondary;
@@ -445,6 +456,8 @@
 .icon-delete {
 	color: #5607C5;
 
+
+
 }
 
 .attention {
@@ -626,6 +639,13 @@
 		}
 	}
 
+	.theme-btn {
+		font-size: 24px;
+
+	}
+
+
+
 	.recommended {
 		&__row {
 			grid-template-columns: repeat(2, 1fr);
@@ -660,6 +680,8 @@
 			padding: 12px 16px !important;
 		}
 	}
+
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -683,6 +705,8 @@
 			width: 30px;
 			height: 30px;
 			border-radius: 20px;
+
+
 		}
 	}
 
@@ -697,6 +721,8 @@
 	}
 }
 
+
+
 @media only screen and (max-width: 576px) {
 	.cart__thumbnail {
 		// width: 70px;
@@ -705,6 +731,8 @@
 		// img {
 		// 	height: 55px;
 		// }
+
+
 	}
 
 	.cart {
@@ -715,8 +743,8 @@
 		}
 
 		&__thumbnail {
-			width: 65px;
-			height: 65px;
+			width: 112px;
+			height: 100px;
 			padding: 5px;
 
 			img {
