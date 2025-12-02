@@ -127,6 +127,7 @@
 			flex-direction: column;
 			gap: 16px;
 			border: 0;
+			
 		}
 	}
 
@@ -414,7 +415,7 @@
 
 		&--name {
 			@media all and (max-width: 767px) {
-				font-size: 20px;
+				font-size: 18px;
 			}
 		}
 	}
@@ -448,10 +449,10 @@
 }
 
 .attention {
-	background: $background-3;
+	background: #F2FFEF;
 	color: $blue-2;
 	padding: 20px;
-	border: 2px dashed #E6D4FF;
+	border: 2px dashed #BDDCB6;
 	border-radius: 10px;
 
 	// &__box {
@@ -464,7 +465,7 @@
 	&__title {
 		display: flex;
 		align-items: center;
-		justify-content: start;
+		justify-content: center;
 		color: $blue-2;
 		font-size: $fs-18;
 		line-height: 1.4;

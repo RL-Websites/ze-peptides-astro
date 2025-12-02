@@ -79,7 +79,7 @@ ul {
 		z-index: 99;
 
 		&::after {
-			content: "\e911";
+			content: "\e920";
 			font-family: "icomoon";
 			position: absolute;
 			z-index: -1;
@@ -89,7 +89,7 @@ ul {
 			font-size: 20px;
 			font-weight: 700;
 			line-height: 1;
-			color: $red;
+			color: #AEAEAE;
 		}
 	}
 
