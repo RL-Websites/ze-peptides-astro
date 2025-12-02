@@ -82,4 +82,10 @@ $(document).ready(function () {
 	// 			const modalDialog = $(this).find(".modal-dialog");
 	// 			modalDialog.removeClass("animate-bounceIn");
 	// 		});
+
+	// Product page Js
+	$("#readMore").on("click", function () {
+		$(this).parents(".product-hero__details").toggleClass("show");
+		$(this).text("Read Less");
+	});
 });
