@@ -88,8 +88,6 @@
 }
 
 .product {
-	padding: 100px 0;
-
 	&__title {
 		max-width: 400px;
 	}
@@ -204,8 +202,7 @@
 //Client CSS End
 
 .faq {
-	padding: 100px 0;
-	background: linear-gradient(to right, $blue-2 0%, $blue-2 45%, #f9f9f9 45%, #f9f9f9 100%);
+	// background: linear-gradient(to right, $blue-2 0%, $blue-2 45%, #f9f9f9 45%, #f9f9f9 100%);
 
 	&__main {
 		background: none;
@@ -247,7 +244,8 @@
 	background-color: $blue-3;
 }
 
-@media only screen and (max-width: 1170px) {}
+@media only screen and (max-width: 1170px) {
+}
 
 @media only screen and (max-width: 992px) {
 	.home {
@@ -325,8 +323,6 @@
 	}
 
 	.product {
-		padding: 50px 0;
-
 		&__navigation {
 			gap: 10px;
 		}
