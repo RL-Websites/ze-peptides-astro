@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?oi6v99');
-  src:  url('fonts/icomoon.eot?oi6v99#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.woff2?oi6v99') format('woff2'),
-    url('fonts/icomoon.ttf?oi6v99') format('truetype'),
-    url('fonts/icomoon.woff?oi6v99') format('woff'),
-    url('fonts/icomoon.svg?oi6v99#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?s2v9mz');
+  src:  url('fonts/icomoon.eot?s2v9mz#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?s2v9mz') format('woff2'),
+    url('fonts/icomoon.ttf?s2v9mz') format('truetype'),
+    url('fonts/icomoon.woff?s2v9mz') format('woff'),
+    url('fonts/icomoon.svg?s2v9mz#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,14 +26,29 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-linkedin:before {
+  content: "\e901";
+}
+.icon-instagram:before {
+  content: "\e903";
+}
+.icon-facebook:before {
+  content: "\e914";
+}
+.icon-certified-icon:before {
+  content: "\e915";
+}
+.icon-alert:before {
+  content: "\e93e";
+}
+.icon-lab-icon:before {
+  content: "\e93f";
+}
 .icon-question:before {
   content: "\e954";
 }
 .icon-tick-outlined:before {
   content: "\e961";
-}
-.icon-alert:before {
-  content: "\e953";
 }
 .icon-phone1:before {
   content: "\e951";
@@ -213,12 +228,6 @@
 .icon-cross-rizz:before {
   content: "\e913";
 }
-.icon-facebook-new:before {
-  content: "\e914";
-}
-.icon-instagram:before {
-  content: "\e915";
-}
 .icon-star:before {
   content: "\e916";
 }
@@ -231,14 +240,8 @@
 .icon-vimeo:before {
   content: "\e900";
 }
-.icon-linkedin:before {
-  content: "\e901";
-}
 .icon-x:before {
   content: "\e902";
-}
-.icon-facebook:before {
-  content: "\e903";
 }
 .icon-location:before {
   content: "\e904";
@@ -275,15 +278,6 @@
 }
 .icon-twitter:before {
   content: "\e93d";
-}
-.icon-facebook1:before {
-  content: "\e93e";
-}
-.icon-instagram1:before {
-  content: "\e93f";
-}
-.icon-linkedin1:before {
-  content: "\e940";
 }
 .icon-info-circle:before {
   content: "\e93c";

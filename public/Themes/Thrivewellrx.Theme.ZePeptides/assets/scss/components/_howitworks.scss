@@ -1,0 +1,288 @@
+// Variables
+$purple-primary: #7c3aed;
+$purple-dark: #6d28d9;
+$gray-light: #f8f9fa;
+$gray-border: #dee2e6;
+$gray-text: #6c757d;
+$black: #1a1a1a;
+
+$transition-default: all 0.3s ease;
+$transition-color: color 0.3s ease;
+$transition-bg: background-color 0.3s ease;
+
+.how-it-works-p {
+  font-family: "sfuidisplay", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: bold;
+  line-height: 160%;
+  color: #525252;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+}
+
+.how-it-works-title {
+
+  font-family: "sfuidisplay";
+  font-size: 70px;
+  font-weight: 700;
+  font-style: bold;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
+
+}
+
+// Body
+body {
+  background-color: $gray-light;
+}
+
+.step-title {
+  font-family: "sfuidisplay";
+  font-weight: 700;
+  font-style: bold;
+  font-size: 30px;
+}
+
+.step-title.active-title {
+  color: $purple-primary;
+  /* Replace with your brand color */
+}
+
+.mobile-step-title.active-title {
+  color: $purple-primary;
+
+}
+
+.mobile-number-description.active-title {
+  color: $purple-primary;
+
+}
+
+.mobile-number-description {
+  /* For vertical alignment */
+
+
+
+}
+
+.timeline-description {
+  font-family: 'sfuidisplay', serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 160%;
+  width: 370px;
+  color: #525252;
+}
+
+// Desktop Timeline
+.timeline-desktop {
+  position: relative;
+
+  // Remove the single vertical line
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   left: 50%;
+  //   top: 4rem;
+  //   bottom: calc(100vh - 16rem);
+  //   width: 1px;
+  //   background-color: $gray-border;
+  //   transform: translateX(-50%);
+  // }
+}
+
+// Timeline Step
+.timeline-step {
+  position: relative;
+  margin-bottom: 8rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  // Add connecting line AFTER each dot (except the last one)
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 2rem; // Start from the dot (2rem is dot's top position)
+    height: calc(100% - 2rem); // Full height minus dot's top position
+    width: 1px;
+    background-color: $gray-border;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  // Alternative: Add gap in the line
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 4rem; // Start below the dot (12px dot + some gap)
+    height: calc(100% + 50px); // Height minus starting position
+    width: 1px;
+    background-color: $gray-border;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}
+
+// Center Dot - updated for better positioning
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: $gray-border;
+  border-radius: 50%;
+  z-index: 10; // Make sure dot is above the line
+  transition: $transition-default;
+
+  &.active {
+    background-color: $purple-primary;
+    transform: translateX(-50%) scale(1.25);
+  }
+}
+
+// Step Number
+.step-number {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 140px;
+  line-height: 100%;
+  // text-transform: uppercase;
+  color: $black;
+  line-height: 1;
+  transition: $transition-color;
+  flex-shrink: 0;
+
+  &.purple {
+    color: $purple-primary;
+  }
+}
+
+// Images
+.timeline-img {
+  width: 270px;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  position: relative;
+
+  &::after {
+    content: attr(data-size);
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5a67d8;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+// Mobile Timeline
+.mobile-timeline-step {
+  position: relative;
+  margin-bottom: 3rem;
+
+  // Hover effects
+  // &:hover {
+  //   .mobile-step-number {
+  //     color: $purple-primary;
+  //   }
+
+  //   .mobile-dot {
+  //     background-color: $purple-primary;
+
+  //     &::after {
+  //       background-color: $purple-primary;
+  //     }
+  //   }
+  // }
+
+  // Remove line from last step
+
+  &:last-child {
+    margin-bottom: 0;
+
+    .mobile-dot::after {
+      display: none;
+    }
+  }
+}
+
+// Mobile Step Number
+.mobile-step-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: $black;
+  line-height: 1;
+  transition: $transition-color;
+  flex-shrink: 0;
+
+  &.purple {
+    color: $purple-primary;
+  }
+}
+
+// Mobile Dot
+.mobile-dot {
+  width: 10px;
+  height: 10px;
+  background-color: $gray-border;
+  border-radius: 50%;
+  position: relative;
+  transition: $transition-default;
+  margin-top: 4px;
+
+  &.active {
+    background-color: $purple-primary;
+  }
+
+  // Vertical connecting line
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 230px;
+    background-color: $gray-border;
+    transition: $transition-bg;
+  }
+}
+
+// Mobile Image
+.mobile-img {
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+
+  img {
+    width: 100%;
+    height: 128px;
+    object-fit: cover;
+  }
+}

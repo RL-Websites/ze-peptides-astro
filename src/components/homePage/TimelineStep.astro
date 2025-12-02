@@ -1,0 +1,156 @@
+---
+// TimelineStep.astro
+interface Props {
+	stepNumber: number;
+	title: string;
+	description: string;
+	imageSrc: string;
+	imageAlt: string;
+	isActive?: boolean;
+	alignment?: "left" | "right";
+}
+
+const {
+	stepNumber,
+	title,
+	description,
+	imageSrc,
+	imageAlt,
+	isActive = false,
+	alignment = "left",
+} = Astro.props;
+
+// Use simple base classes here, JavaScript will handle the 'active' state on view
+const dotClass = "timeline-dot";
+const numberClass = "step-number";
+---
+
+<div class="timeline-step" data-observed>
+	<div class={dotClass}></div>
+
+	{
+		alignment === "left" ? (
+			<div class="row align-items-center justify-center">
+				<div class="col-6 pe-5">
+					<div class="timeline-img" style="width: 370px;">
+						<img src={imageSrc} alt={imageAlt} />
+					</div>
+				</div>
+
+				<div class="col-6 ps-5 pt-4">
+					<h3 class="step-title h5 fw-bold mb-3">{title}</h3>
+
+					<div class="d-flex align-items-center justify-center gap-4">
+						<div class={numberClass}>{stepNumber}</div>
+						<p
+							class="timeline-description small   mb-0 "
+							style="line-height: 1.6;"
+						>
+							{description}
+						</p>
+					</div>
+				</div>
+			</div>
+		) : (
+			<div class="row align-items-start">
+				<div class="col-6 text-start pe-5 pt-4">
+					<h3 class="step-title h5 fw-bold mb-3">{title}</h3>
+
+					<div class="d-flex align-items-center justify-center gap-4">
+						<div class={numberClass}>{stepNumber}</div>
+						<p
+							class="timeline-description small  pt-3 mb-0 "
+							style="line-height: 1.6;"
+						>
+							{description}
+						</p>
+					</div>
+				</div>
+
+				<div class="col-6 ps-5 d-flex align-items-start justify-center gap-4">
+					<div class="timeline-img" style="width: 370px;">
+						<img src={imageSrc} alt={imageAlt} />
+					</div>
+				</div>
+			</div>
+		)
+	}
+</div>
+
+<script>
+	// This script will run on the client-side
+	const steps = document.querySelectorAll(".timeline-step[data-observed]");
+
+	// Function to remove active class from all steps
+	const deactivateAllSteps = () => {
+		steps.forEach((step) => {
+			const dot = step.querySelector(".timeline-dot") as HTMLElement | null;
+			const stepNumber = step.querySelector(
+				".step-number"
+			) as HTMLElement | null;
+			const title = step.querySelector(".step-title") as HTMLElement | null;
+
+			dot?.classList.remove("active");
+			stepNumber?.classList.remove("purple");
+			title?.classList.remove("active-title");
+		});
+	};
+
+	// Function to activate a specific step
+	const activateStep = (step: Element) => {
+		const dot = step.querySelector(".timeline-dot") as HTMLElement | null;
+		const stepNumber = step.querySelector(".step-number") as HTMLElement | null;
+		const title = step.querySelector(".step-title") as HTMLElement | null;
+
+		dot?.classList.add("active");
+		stepNumber?.classList.add("purple");
+		title?.classList.add("active-title");
+	};
+
+	// Function to find and activate the most centered step
+	const updateActiveStep = () => {
+		let mostCenteredStep = null;
+		let minDistance = Infinity;
+
+		steps.forEach((step) => {
+			const rect = step.getBoundingClientRect();
+			const elementCenter = rect.top + rect.height / 2;
+			const viewportCenter = window.innerHeight / 2;
+			const distance = Math.abs(elementCenter - viewportCenter);
+
+			// Check if element is in viewport
+			if (rect.top < window.innerHeight && rect.bottom > 0) {
+				if (distance < minDistance) {
+					minDistance = distance;
+					mostCenteredStep = step;
+				}
+			}
+		});
+
+		// Deactivate all steps first
+		deactivateAllSteps();
+
+		// Activate only the most centered step
+		if (mostCenteredStep) {
+			activateStep(mostCenteredStep);
+		}
+	};
+
+	// Use scroll event with throttling for better performance
+	let ticking = false;
+	const handleScroll = () => {
+		if (!ticking) {
+			window.requestAnimationFrame(() => {
+				updateActiveStep();
+				ticking = false;
+			});
+			ticking = true;
+		}
+	};
+
+	// Initial check
+	updateActiveStep();
+
+	// Listen to scroll events
+	window.addEventListener("scroll", handleScroll);
+</script>
