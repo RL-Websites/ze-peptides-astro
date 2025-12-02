@@ -120,6 +120,7 @@
 	&__items {
 		border-radius: 10px;
 		border: 1px solid #e6d4ff;
+		padding-bottom: 32px;
 
 		@media all and (max-width: 767px) {
 			margin-bottom: 16px;
@@ -226,8 +227,10 @@
 		margin-left: 20px;
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 
-		padding: 14px;
+
+
 
 
 

@@ -14,7 +14,10 @@
 }
 
 .highlight__text--lime {
-  background-color: #eef6ee;
+  background-color: #F2FFEF;
+  border: 2px solid #BDDCB6;
+  border-radius: 10px;
+  border-style: dashed;
 }
 
 .text-gray-700 {
@@ -59,7 +62,10 @@
   border-radius: 16px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   /* Subtle lift */
-  padding: 20px;
+  padding: 0px;
+
+
+
 
 
 }
@@ -74,34 +80,59 @@
 }
 
 .card-basic__title {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 700;
   /* Slightly heavier title */
+  font-family: "sfuidisplay", serif;
   color: #333;
 }
 
 /* 📝 Document Info (Labels and Values) */
-.document-info__item {
+.document-info__item_tu {
   display: flex;
-  justify-content: space-between;
-  /* Using a little more space between lines */
-  margin-bottom: 12px;
+  align-items: baseline;
+  margin-bottom: 16px;
   font-size: 16px;
+  gap: 20px;
+
+  /* Gap between label and value */
+  /* --- Responsive styles (Kept) --- */
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 /* Applying new label style (lighter grey, standard weight) */
-.document-info__label_tu {
-  font-weight: 400;
-  /* Regular weight */
-  color: #777777;
-  /* Light grey for labels */
+.document-info__label__tu {
+  font-weight: 600;
+  /* Medium weight for labels */
+  color: #333333;
+  /* Darker color like in image */
+  flex-shrink: 0;
+  /* Prevent label from shrinking */
+  text-align: left;
+  margin: 0;
+  /* Remove default margin */
+  min-width: 160px;
+  /* Fixed width so all labels take same space */
 }
 
-.document-info__item p:not(.document-info__label_tu) {
-  /* Default text (the value) should be darker and potentially bolder */
+.document-info__item_tu p:not(.document-info__label__tu) {
   color: #333333;
-  font-weight: 500;
-  /* Slightly bolder for values */
+  font-weight: 400;
+  /* Regular weight for values */
+  text-align: left;
+  margin: 0;
+  /* Remove default margin */
+  flex-grow: 1;
+  /* Take remaining space */
+}
+
+
+
+/* Remove margin from last item */
+.document-info__item_tu:last-child {
+  margin-bottom: 0;
 }
 
 /* 🛒 Product Details */
