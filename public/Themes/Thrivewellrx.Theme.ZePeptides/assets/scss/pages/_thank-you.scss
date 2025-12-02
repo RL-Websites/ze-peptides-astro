@@ -1,63 +1,345 @@
+/* --- Color Variables (Kept from last iteration) --- */
+.text-purple {
+  color: #800080;
+}
+
+.text-primary-grad-1 {
+  /* Assuming this class is meant to apply the main purple color */
+  color: #800080;
+}
+
+.text-purple-disclaimer {
+  color: #800080;
+  font-weight: 500;
+}
+
+.highlight__text--lime {
+  background-color: #F2FFEF;
+  border: 2px solid #BDDCB6;
+  border-radius: 10px;
+  border-style: dashed;
+}
+
+.text-gray-700 {
+  color: #333333;
+}
+
+.text-gray-600 {
+  color: #666666;
+}
+
+/* --- Layout & General Styles (Kept for overall structure) --- */
 .thank-you {
   padding-top: 200px;
   padding-bottom: 100px;
+}
 
-  &__actions {
-    max-width: 430px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 40px auto 0;
-  }
+.thank-you__actions {
+  max-width: 430px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px auto 0;
+}
 
-  p {
-    font-size: 18px;
+.thank-you p {
+  font-size: 18px;
+}
+
+.highlight__text {
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* 💳 Card Styles: Match the new clean design */
+.card-basic {
+  border-radius: 10px;
+  /* Slight roundness */
+  /* Removing border and using a very subtle box-shadow */
+  border: 1px solid #E6D4FF;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  /* Subtle lift */
+  padding: 0px;
+
+
+
+
+
+}
+
+.card-basic__header {
+  /* Header separator is a thin light line */
+  border-bottom: 1px solid #E6D4FF;
+  padding: 20px 20px 10px 20px;
+  /* Padding for header content */
+  width: 100%;
+
+}
+
+.card-basic__title {
+  font-size: 30px;
+  font-weight: 700;
+  /* Slightly heavier title */
+  font-family: "sfuidisplay", serif;
+  color: #333;
+}
+
+/* 📝 Document Info (Labels and Values) */
+.document-info__item_tu {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 16px;
+  font-size: 16px;
+  gap: 20px;
+
+  /* Gap between label and value */
+  /* --- Responsive styles (Kept) --- */
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
   }
 }
 
+
+.product-section {
+
+  border: 1px solid #e6d4ff;
+  padding: 24px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+
+
+
+  @media all and (max-width: 767px) {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 0;
+    padding-bottom: 0px;
+  }
+}
+
+/* Applying new label style (lighter grey, standard weight) */
+.document-info__label__tu {
+  font-family: "sfuidisplay";
+  font-weight: 700;
+  font-style: bold;
+  /* Medium weight for labels */
+  color: #2D2D2D;
+  /* Darker color like in image */
+  flex-shrink: 0;
+  /* Prevent label from shrinking */
+  text-align: left;
+  margin: 0;
+  /* Remove default margin */
+  min-width: 160px;
+  /* Fixed width so all labels take same space */
+}
+
+.document-info__item_tu p:not(.document-info__label__tu) {
+  color: #333333;
+  font-weight: 400;
+  /* Regular weight for values */
+  text-align: left;
+  margin: 0;
+  /* Remove default margin */
+  flex-grow: 1;
+  /* Take remaining space */
+}
+
+
+
+/* Remove margin from last item */
+.document-info__item_tu:last-child {
+  margin-bottom: 0;
+}
+
+/* 🛒 Product Details */
+.cart__item {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+/* Implementing solid line separator for Product Details */
+.cart__item:not(:last-child) {
+  /* Changed from dotted to solid line */
+  border-bottom: 1px solid #eeeeee;
+}
+
+.cart__item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.cart__product {
+  display: flex;
+  gap: 15px;
+}
+
+.cart__thumbnail img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.cart__details {
+  flex-grow: 1;
+}
+
+.cart__item__tu {
+  border-bottom: 1px solid #E6D4FF;
+  padding: 16px;
+  margin: 0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.cart__item__tu-name {
+  color: #333;
+  margin-bottom: 10px;
+  font-family: "sfuidisplay";
+  font-size: 18px;
+  font-weight: 700;
+  font-style: bold;
+
+
+
+}
+
+
+
+// /* --- Button Styles (Kept) --- */
+// .theme-btn {
+//   padding: 10px 20px;
+//   border-radius: 8px;
+//   font-weight: 500;
+//   cursor: pointer;
+//   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+//   text-transform: none;
+// }
+
+// .theme-btn__purple {
+//   background-color: #800080;
+//   color: white;
+//   border: 1px solid #800080;
+// }
+
+// .theme-btn__purple:hover {
+//   background-color: #660066;
+// }
+
+// .theme-btn__outline--purple {
+//   background-color: white;
+//   color: #800080;
+//   border: 1px solid #800080;
+// }
+
+// .theme-btn__outline--purple:hover {
+//   background-color: #f7f3ff;
+// }
+
+/* --- Responsive styles (Kept) --- */
 @media only screen and (max-width: 992px) {
   .thank-you {
     padding-bottom: 80px;
-
-    p {
-      font-size: 16px;
-    }
   }
 
-
+  .thank-you p {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .thank-you {
     padding-top: 120px;
     padding-bottom: 60px;
+  }
 
-    &__actions {
-      margin-top: 20px;
-      gap: 10px;
-    }
+  .thank-you__actions {
+    margin-top: 20px;
+    gap: 10px;
+    flex-direction: column;
+  }
 
-    p {
-      font-size: 14px;
-    }
-
-    .card-basic {
-      background-color: transparent;
-
-      .cart {
-        &__items {
-          padding: 15px 15px 0 15px;
-        }
-      }
-    }
-
+  .thank-you p {
+    font-size: 14px;
   }
 }
 
 @media only screen and (max-width: 576px) {
-
   .thank-you p {
     font-size: 12px;
   }
+}
+
+/* Add padding to card body */
+
+/* Mobile responsive styles */
+@media only screen and (max-width: 768px) {
+  .document-info__item_tu {
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 20px;
+  }
+
+  .document-info__label__tu {
+    min-width: auto;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666666;
+  }
+
+  .document-info__item_tu p:not(.document-info__label__tu) {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+
+
+
+  }
+
+  .cart__item__tu {
+    border-radius: 10px;
+    border-bottom: 1px solid #E6D4FF;
+    padding-bottom: 32px;
+
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+
+    @media all and (max-width: 767px) {
+      border-radius: 0px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-left: 0;
+      padding-right: 0;
+
+    }
+
+
+
+    .product-section {
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border: 0;
+      padding-bottom: 0;
+    }
+  }
+
+
 
 }
