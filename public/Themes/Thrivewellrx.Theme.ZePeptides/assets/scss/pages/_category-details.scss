@@ -25,9 +25,11 @@
 			gap: 50px;
 		}
 	}
+
 	.category-hero__left {
 		width: 50%;
 	}
+
 	.category-hero__right {
 		width: 50%;
 		display: none;
@@ -48,12 +50,14 @@
 		&__thumb {
 			position: absolute;
 			inset: 0;
+
 			img {
 				height: 100%;
 				width: 100%;
 			}
 		}
 	}
+
 	&__left {
 		padding: 10px 0 80px 0;
 	}
@@ -62,10 +66,12 @@
 		font-size: $fs-16;
 		font-weight: 400;
 		line-height: $lh-30;
+
 		@media all and (min-width: 992px) {
 			font-size: $fs-20;
 		}
 	}
+
 	&__thumb {
 		width: 100%;
 	}
@@ -74,9 +80,11 @@
 .category-nav {
 	background-color: rgba($blue-5, 0.3);
 	margin-top: 50px;
+
 	@media all and (min-width: 992px) {
 		margin-top: 80px;
 	}
+
 	&__links {
 		display: flex;
 		align-items: center;
@@ -93,6 +101,7 @@
 	}
 
 	&__link {
+
 		&:link,
 		&:visited {
 			font-size: $fs-22;
@@ -106,6 +115,7 @@
 
 .category-features {
 	padding-bottom: 120px;
+
 	&__margin {
 		margin-top: -100px;
 	}
@@ -118,9 +128,11 @@
 	background-image: url(../../img/catefory-details-bg.png);
 	background-size: 50% 100%;
 	background-repeat: no-repeat;
+
 	@media all and (min-width: 992px) {
 		height: 910px;
 	}
+
 	@media all and (max-width: 991px) {
 		display: flex;
 		flex-direction: column;
@@ -132,21 +144,26 @@
 		right: 0;
 		width: 100%;
 		order: 2;
+
 		@media all and (min-width: 992px) {
 			position: absolute;
 			order: 1;
 		}
+
 		video {
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
 		}
+
 		@media all and (min-width: 992px) {
 			width: 50%;
 		}
 	}
+
 	.container {
 		order: 1;
+
 		@media all and (min-width: 992px) {
 			order: 2;
 		}
@@ -158,6 +175,7 @@
 	padding: 100px 0 180px;
 	position: relative;
 	overflow: hidden;
+
 	.container {
 		position: relative;
 		z-index: 1;
@@ -172,12 +190,14 @@
 			color: $red-3;
 		}
 	}
+
 	&__content {
 		display: flex;
 		gap: 15px;
 		align-items: center;
 		font-size: $fs-18;
 		color: $grey-1;
+
 		&__icon {
 			width: 22px;
 			height: 22px;
@@ -244,9 +264,11 @@
 		padding-top: 500px;
 		padding-bottom: 80px;
 		min-height: unset;
+
 		&__right {
 			display: none !important;
 		}
+
 		.category-hero__left {
 			width: 100%;
 			padding: 0;
@@ -272,9 +294,11 @@
 
 	.safety__info {
 		padding: 100px 0;
+
 		&__title {
 			line-height: 62px;
 		}
+
 		&__img {
 			width: 300px;
 		}
@@ -290,6 +314,7 @@
 		padding-top: 500px;
 		padding-bottom: 80px;
 	}
+
 	.category-nav {
 		&__links {
 			gap: 15px;
@@ -300,6 +325,7 @@
 	.category-features {
 		padding-bottom: 60px;
 	}
+
 	.category-details {
 		padding-bottom: 60px;
 	}
@@ -307,17 +333,20 @@
 	.safety__info {
 		padding: 60px 0;
 		height: unset;
+
 		&__title {
 			font-size: $fs-34;
 			line-height: 35px;
 			padding-top: unset;
 		}
+
 		&__content {
 			display: flex;
 			gap: 15px;
 			align-items: center;
 			font-size: $fs-18;
 			color: $grey-1;
+
 			&__icon {
 				width: 22px;
 				height: 22px;
@@ -330,6 +359,7 @@
 				border-radius: 50px;
 			}
 		}
+
 		&__img {
 			width: 200px;
 		}
