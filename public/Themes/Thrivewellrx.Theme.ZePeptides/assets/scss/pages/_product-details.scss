@@ -15,7 +15,7 @@
 			// }
 
 			&--green {
-				background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/green-bg.svg);
+				background: url("../img/bg/green-bg.svg");
 				background-repeat: no-repeat;
 				background-size: cover;
 			}
@@ -41,7 +41,7 @@
 	}
 
 	&__benifits {
-		background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/pdetails-common-bg.svg);
+		background: url("../img/bg/pdetails-common-bg.svg");
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: top center;
@@ -65,7 +65,7 @@
 
 	&__solution {
 		padding: 100px 0;
-		background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/pdetails-blue-bg.svg);
+		background: url("../img/bg/pdetails-blue-bg.svg");
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: center bottom;

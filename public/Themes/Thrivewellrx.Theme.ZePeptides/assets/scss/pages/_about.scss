@@ -5,7 +5,7 @@
 
 	&__banner {
 		padding: 100px;
-		background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/about-bg.svg);
+		background: url("../img/bg/about-bg.svg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center center;
@@ -40,7 +40,7 @@
 }
 
 .our-values {
-	background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/our-values.svg);
+	background: url("../img/bg/our-values.svg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -51,19 +51,19 @@
 
 	&__item {
 		&__one {
-			background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/our-values1.jpg);
+			background: url("../img/our-values1.jpg");
 		}
 
 		&__two {
-			background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/our-values2.jpg);
+			background: url("../img/our-values2.jpg");
 		}
 
 		&__three {
-			background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/our-values3.jpg);
+			background: url("../img/our-values3.jpg");
 		}
 
 		&__four {
-			background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/our-values4.jpg);
+			background: url("../img/our-values4.jpg");
 		}
 
 		background-repeat: no-repeat;
@@ -117,7 +117,7 @@
 
 .serving {
 	padding: 100px 0;
-	background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/serving.svg);
+	background: url("../img/bg/serving.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
