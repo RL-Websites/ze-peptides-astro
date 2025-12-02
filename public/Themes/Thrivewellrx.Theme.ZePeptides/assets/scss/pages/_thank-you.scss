@@ -102,11 +102,36 @@
   }
 }
 
+
+.product-section {
+
+  border: 1px solid #e6d4ff;
+  padding: 24px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+
+
+
+  @media all and (max-width: 767px) {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 0;
+    padding-bottom: 0px;
+  }
+}
+
 /* Applying new label style (lighter grey, standard weight) */
 .document-info__label__tu {
-  font-weight: 600;
+  font-family: "sfuidisplay";
+  font-weight: 700;
+  font-style: bold;
   /* Medium weight for labels */
-  color: #333333;
+  color: #2D2D2D;
   /* Darker color like in image */
   flex-shrink: 0;
   /* Prevent label from shrinking */
@@ -167,45 +192,59 @@
   flex-grow: 1;
 }
 
-.cart__item-name {
-  font-weight: 600;
+.cart__item__tu {
+  border-bottom: 1px solid #E6D4FF;
+  padding: 16px;
+  margin: 0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.cart__item__tu-name {
   color: #333;
   margin-bottom: 10px;
+  font-family: "sfuidisplay";
+  font-size: 18px;
+  font-weight: 700;
+  font-style: bold;
+
+
+
 }
 
-.mb-30 {
-  margin-bottom: 30px !important;
-}
 
-/* --- Button Styles (Kept) --- */
-.theme-btn {
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  text-transform: none;
-}
 
-.theme-btn__purple {
-  background-color: #800080;
-  color: white;
-  border: 1px solid #800080;
-}
+// /* --- Button Styles (Kept) --- */
+// .theme-btn {
+//   padding: 10px 20px;
+//   border-radius: 8px;
+//   font-weight: 500;
+//   cursor: pointer;
+//   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+//   text-transform: none;
+// }
 
-.theme-btn__purple:hover {
-  background-color: #660066;
-}
+// .theme-btn__purple {
+//   background-color: #800080;
+//   color: white;
+//   border: 1px solid #800080;
+// }
 
-.theme-btn__outline--purple {
-  background-color: white;
-  color: #800080;
-  border: 1px solid #800080;
-}
+// .theme-btn__purple:hover {
+//   background-color: #660066;
+// }
 
-.theme-btn__outline--purple:hover {
-  background-color: #f7f3ff;
-}
+// .theme-btn__outline--purple {
+//   background-color: white;
+//   color: #800080;
+//   border: 1px solid #800080;
+// }
+
+// .theme-btn__outline--purple:hover {
+//   background-color: #f7f3ff;
+// }
 
 /* --- Responsive styles (Kept) --- */
 @media only screen and (max-width: 992px) {
@@ -239,4 +278,68 @@
   .thank-you p {
     font-size: 12px;
   }
+}
+
+/* Add padding to card body */
+
+/* Mobile responsive styles */
+@media only screen and (max-width: 768px) {
+  .document-info__item_tu {
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 20px;
+  }
+
+  .document-info__label__tu {
+    min-width: auto;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666666;
+  }
+
+  .document-info__item_tu p:not(.document-info__label__tu) {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+
+
+
+  }
+
+  .cart__item__tu {
+    border-radius: 10px;
+    border-bottom: 1px solid #E6D4FF;
+    padding-bottom: 32px;
+
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+
+    @media all and (max-width: 767px) {
+      border-radius: 0px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-left: 0;
+      padding-right: 0;
+
+    }
+
+
+
+    .product-section {
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border: 0;
+      padding-bottom: 0;
+    }
+  }
+
+
+
 }
