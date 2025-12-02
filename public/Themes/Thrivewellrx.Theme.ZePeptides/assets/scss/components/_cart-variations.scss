@@ -66,6 +66,17 @@
 			// 	}
 			// }
 		}
+		&--lg {
+			&.input-group {
+				.form-control {
+					height: 70px;
+				}
+				.input-group-btn {
+					height: 70px;
+					width: 74px;
+				}
+			}
+		}
 		&--primary {
 			&.input-group {
 				background-color: $primary;
@@ -101,12 +112,12 @@
 	&__btn {
 		display: flex;
 		align-items: center;
-		flex-direction: row;
 		gap: 20px;
 
 		.theme-btn {
 			flex-grow: 1;
 			flex-basis: 0;
+			height: 47px;
 		}
 	}
 }
