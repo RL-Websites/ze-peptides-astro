@@ -7,16 +7,14 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
 	<Header />
 
-	<!-- =====|| Main Section Start ||====== -->
 	<main class="page">
-		<!-- =====||Thank You Section Start ||====== -->
 		<section class="thank-you">
 			<div class="container">
 				<div class="">
-					<h1 class="hero__title text-center"
-						>Thank <span class="text-gold-gradient-1">You!</span></h1
+					<h1 class="hero__title text-center text-purple"
+						>Thank <span class="text-primary-grad-1">You!</span></h1
 					>
-					<p class="text-center mt-30"
+					<p class="text-center mt-30 text-gray-700"
 						>Alright, let's get you set up! We've just sent you an email with a
 						link to a quick health questionnaire. It's your order's official
 						starting line - so please give it a click and fill 'er out! Just a
@@ -27,8 +25,8 @@ import Layout from "../layouts/Layout.astro";
 						your spam/junk folder!
 					</p>
 
-					<div class="highlight__text">
-						<p
+					<div class="highlight__text highlight__text--lime">
+						<p class="text-gray-700"
 							>Your order includes medication(s) that require a lab report to
 							ensure safe and effective prescribing. We have sent you an email
 							containing detailed information on how to complete the required
@@ -40,16 +38,16 @@ import Layout from "../layouts/Layout.astro";
 							prompt attention to this matter.
 						</p>
 					</div>
-					<p class="text-orange text-center"
+					<p class="text-purple-disclaimer text-center"
 						>*Please note that by completing your purchase, you consent to
-						receive email and text message communications from Nexgenmd
-						Scientific and its subsidiaries regarding your order, account
+						receive email and text message communications from **Rizzp**
+						**Pharma** and its subsidiaries regarding your order, account
 						updates, and promotional offers.
 					</p>
 
 					<div class="row">
 						<div class="col-md-6">
-							<div class="card-basic h-100">
+							<div class="card-basic h-80">
 								<div class="card-basic__header">
 									<p class="card-basic__title">Customer Information</p>
 								</div>
@@ -57,58 +55,59 @@ import Layout from "../layouts/Layout.astro";
 								<div class="card-basic__body">
 									<div class="document-info">
 										<div class="document-info__item">
-											<p class="document-info__label">Name:</p>
+											<p class="document-info__label__tu">Name:</p>
 											<p>Iris Cruz</p>
 										</div>
 										<div class="document-info__item">
-											<p class="document-info__label">Transaction ID: </p>
+											<p class="document-info__label__tu">Transaction ID: </p>
 											<p>#RP20250400004</p>
 										</div>
 										<div class="document-info__item">
-											<p class="document-info__label">Shipping Address:</p>
+											<p class="document-info__label__tu">Shipping Address:</p>
 											<p>911 E McDonald Dr, Pilot Point, TX</p>
 										</div>
 										<div class="document-info__item">
-											<p class="document-info__label">Shipping State:</p>
+											<p class="document-info__label__tu">Shipping State:</p>
 											<p>Texas</p>
 										</div>
 										<div class="document-info__item">
-											<p class="document-info__label">Shipping City:</p>
+											<p class="document-info__label__tu">Shipping City:</p>
 											<p>Pilot Point</p>
 										</div>
 										<div class="document-info__item">
-											<p class="document-info__label">Shipping Zipcode:</p>
+											<p class="document-info__label__tu">Shipping Zipcode:</p>
 											<p>76258</p>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+
 						<div class="col-md-6">
-							<div class="card-basic h-100">
+							<div class="card-basic mb-30">
 								<div class="card-basic__header">
 									<p class="card-basic__title">Product Details</p>
 								</div>
 
 								<div class="card-basic__body">
 									<div class="cart__items">
-										<div class="cart__item">
+										<div class="cart__item cart__item--dotted">
 											<div class="cart__product">
 												<div class="cart__thumbnail">
 													<img
-														src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-1.png"
-														alt="Product Image"
+														src="/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/tirzepatide_injection.png"
+														alt="Tirzepatide Injection"
 													/>
 												</div>
 
 												<div class="cart__details">
-													<p class="cart__item-name">Finasteride 1mg Tablet</p>
+													<p class="cart__item-name">Tirzepatide Injection</p>
 													<div class="document-info__item">
-														<p class="document-info__label">Quantity:</p>
+														<p class="document-info__label__tu">Quantity:</p>
 														<p>2</p>
 													</div>
 													<div class="document-info__item">
-														<p class="document-info__label">Order Value</p>
+														<p class="document-info__label__tu">Order Value</p>
 														<p>$300</p>
 													</div>
 												</div>
@@ -118,41 +117,19 @@ import Layout from "../layouts/Layout.astro";
 											<div class="cart__product">
 												<div class="cart__thumbnail">
 													<img
-														src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-1.png"
-														alt="Product Image"
+														src="/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/semaglutide_tablet.png"
+														alt="Semaglutide Oral Tablet"
 													/>
 												</div>
 
 												<div class="cart__details">
-													<p class="cart__item-name">Finasteride 1mg Tablet</p>
+													<p class="cart__item-name">Semaglutide Oral Tablet</p>
 													<div class="document-info__item">
-														<p class="document-info__label">Quantity:</p>
+														<p class="document-info__label__tu">Quantity:</p>
 														<p>2</p>
 													</div>
 													<div class="document-info__item">
-														<p class="document-info__label">Order Value</p>
-														<p>$300</p>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="cart__item">
-											<div class="cart__product">
-												<div class="cart__thumbnail">
-													<img
-														src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-1.png"
-														alt="Product Image"
-													/>
-												</div>
-
-												<div class="cart__details">
-													<p class="cart__item-name">Finasteride 1mg Tablet</p>
-													<div class="document-info__item">
-														<p class="document-info__label">Quantity:</p>
-														<p>2</p>
-													</div>
-													<div class="document-info__item">
-														<p class="document-info__label">Order Value</p>
+														<p class="document-info__label__tu">Order Value</p>
 														<p>$300</p>
 													</div>
 												</div>
@@ -161,9 +138,7 @@ import Layout from "../layouts/Layout.astro";
 									</div>
 								</div>
 							</div>
-							<!--Product details card end-->
-
-							<div class="card-basic h-100">
+							<div class="card-basic">
 								<div class="card-basic__header">
 									<p class="card-basic__title">Order Summary</p>
 								</div>
@@ -171,39 +146,39 @@ import Layout from "../layouts/Layout.astro";
 								<div class="card-basic__body">
 									<div class="document-info">
 										<div class="document-info__item">
-											<p class="document-info__label">Total Product Price:</p>
+											<p class="document-info__label__tu"
+												>Total Product Price:</p
+											>
 											<p>$567</p>
 										</div>
 										<div class="document-info__item">
-											<p class="document-info__label">Total Amount:</p>
+											<p class="document-info__label__tu">Total Amount:</p>
 											<p>$567</p>
 										</div>
 										<div class="document-info__item">
-											<p class="document-info__label">Currency:</p>
-											<p>Pilot Point</p>
+											<p class="document-info__label__tu">Currency:</p>
+											<p>USD</p>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+
 					<div class="thank-you__actions">
 						<button
 							type="button"
-							class="theme-btn theme-btn__outline theme-btn__outline--primary"
+							class="theme-btn theme-btn__outline theme-btn__outline--purple"
 						>
-							I Will Do It Later
+							View My Orders
 						</button>
-						<button type="button" class="theme-btn theme-btn__primary fw-400">
-							Upload Documents
+						<button type="button" class="theme-btn theme-btn__purple fw-400">
+							Continue Shopping
 						</button>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- =====||Thank You Section end ||====== -->
 	</main>
-	<!-- =====|| Main Section End ||====== -->
-
 	<Footer />
 </Layout>
