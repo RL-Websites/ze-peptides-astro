@@ -40,6 +40,9 @@
   justify-content: center;
   gap: 20px;
   margin: 40px auto 0;
+
+
+
 }
 
 .thank-you p {
@@ -143,7 +146,7 @@
 }
 
 .document-info__item_tu p:not(.document-info__label__tu) {
-  color: #333333;
+  color: #2D2D2D;
   font-weight: 400;
   /* Regular weight for values */
   text-align: left;
@@ -266,7 +269,7 @@
   .thank-you__actions {
     margin-top: 20px;
     gap: 10px;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .thank-you p {
@@ -276,7 +279,7 @@
 
 @media only screen and (max-width: 576px) {
   .thank-you p {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
@@ -292,15 +295,13 @@
 
   .document-info__label__tu {
     min-width: auto;
-    font-size: 14px;
-    font-weight: 600;
-    color: #666666;
+
   }
 
   .document-info__item_tu p:not(.document-info__label__tu) {
     font-size: 16px;
     font-weight: 400;
-    color: #333333;
+    color: #525252;
 
 
 
