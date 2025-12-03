@@ -76,10 +76,10 @@
 		}
 
 		&--cart-summary {
-			border: 1px solid $red;
+			border: 1px solid #AEAEAE;
 
 			.cart-card__header {
-				border-bottom: 1px solid $red;
+				border-bottom: 1px solid #AEAEAE;
 			}
 
 			.pricing {
@@ -200,7 +200,7 @@
 
 		&--card {
 			.basic-input {
-				border: 0.5px solid $red;
+				border: 0.5px solid #AEAEAE;
 
 				&::placeholder {
 					color: $secondary;
@@ -213,7 +213,7 @@
 			padding: 20px;
 			height: 56px;
 			border-radius: 10px;
-			border: 1px solid $red;
+			border: 1px solid #AEAEAE;
 
 			.basic-input {
 				border: 0;
@@ -298,14 +298,39 @@
 	}
 }
 
+.attention__box{
+	text-align: center;
+}
+
+.attention__title p{
+	text-align: center;
+}
 .condition {
 	&__highlight {
-		background: $green-1;
+		background: $green-light;
 		color: $blue-2;
 		padding: 20px;
-		border: 2px dashed #07A996;
+		border: 2px dashed #BDDCB6;
 		border-radius: 10px;
+
+		p{
+			text-align: center;
+			font-size: 18px;
+			color: #2D2D2D;
+			font-weight: bold;
+		}
 	}
+}
+
+.basic-input{
+	border: 1px solid #AEAEAE !important;
+}
+.select__options{
+	border: 1px solid #AEAEAE !important;
+}
+
+.card-input{
+	border: none !important;
 }
 
 // Medium Device media Query
@@ -361,6 +386,11 @@
 
 //Small Device media Query
 @media all and (max-width: 767px) {
+	.cart-card {
+		&__header{
+		border-bottom: 1px solid #E6D4FF !important;
+		}
+	}
 	.payment {
 		padding: 60px 0;
 
