@@ -7,6 +7,7 @@
 	.table {
 		margin-bottom: 0;
 		vertical-align: baseline;
+		background-color: #FBF9FF;
 
 		thead {
 			vertical-align: baseline;
@@ -29,11 +30,11 @@
 				vertical-align: top !important;
 				font-size: $fs-16;
 				line-height: 1.4;
-				border-top: 1px solid rgba($primary-light, 0.6);
+				border-top: 1px solid $gray-light;
 			}
 
 			tr {
-				border-bottom: 1px solid rgba(white, 0.5);
+				border-bottom: 1px solid $gray-light;
 				min-height: 70px;
 				background-color: transparent;
 
@@ -45,8 +46,8 @@
 					background-color: transparent !important;
 				}
 
-				&:last-child {
-					border-bottom: 0;
+				td:last-child {
+					border-bottom: 0 !important;
 				}
 			}
 		}
@@ -109,6 +110,15 @@
 	}
 }
 
+// .table-striped>tbody>tr:nth-of-type(odd){
+// 	background-color: #DADADA !important;
+// }
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    --bs-table-accent-bg: unset;
+    color: var(--bs-table-striped-color);
+}
+
 .table-striped>tbody>tr:nth-of-type(odd) {
 	background-color: transparent !important;
 }
@@ -132,7 +142,7 @@
 			border: 0;
 			background-color: transparent;
 			font-weight: 400;
-			color: white;
+			color: #2D2D2D;
 			text-decoration: underline;
 			display: inline-block;
 			font-size: 16px;
@@ -151,15 +161,16 @@
 	}
 }
 
-.order-table {
+.card-basic {
+	border-color: #DADADA !important;
 	p {
 		margin-bottom: 0;
 	}
 
 	&__row {
 		padding: 20px;
-		display: flex;
-		border-bottom: 1px solid $primary-light;
+		// display: flex;
+		// border-bottom: 1px solid $primary-light;
 	}
 
 	&__title {
@@ -195,16 +206,40 @@
 			}
 		}
 	}
+
+	.order-table {
+		&__row {
+			padding: 16px 24px;
+			border-bottom: 1px solid #DADADA;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+
+		&__title {
+			width: 100;
+		}
+		&__data {
+			width: 100%;
+			margin-top: 8px;
+		}
+	}
 }
 
 @media only screen and (max-width: 576px) {
 	.order-table {
+		background-color: #FBF9FF;
 		&__row {
-			padding: 12px;
+			padding: 16px 24px;
 		}
 
 		&__title {
-			width: 40%;
+			width: 100;
+		}
+		&__data {
+			width: 100%;
+			margin-top: 8px;
 		}
 	}
 }

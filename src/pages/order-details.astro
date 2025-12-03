@@ -14,13 +14,96 @@ import Layout from "../layouts/Layout.astro";
 			<section class="order-details">
 				<div class="container">
 					<div>
-						<h1 class="hero__title"
-							>Order <span class="text-gold-gradient-1">Details</span></h1
-						>
-						<div class="card-basic">
+						<div class="order-heading">
+							<i class="icon-back text-primary-grad-1" data-bind="click: function() { goToOrderList() }"></i>
+						<h1 class="hero__title text-primary-grad-1 fs-30 fs-md-48">Order Details</h1>
+						</div>
+						<div class="row col-equal-height mt-20">
+						<div class="col-md-6">
+							<div class="card-basic h-100">
+								<div class="card-basic__header">
+									<p class="card-basic__title">Shipping Information</p>
+								</div>
+
+								<div class="card-basic__body">
+									<div class="medicine-info">
+										<div class="medicine-info__item">
+											<p class="medicine-info__label">Name:</p>
+											<p class="medicine-info__text" data-bind="text:ShippingName">Mike Scott</p>
+										</div>
+
+										<div class="medicine-info__item">
+											<p class="medicine-info__label">Address:</p>
+											<p class="medicine-info__text" data-bind="text:ShippingAddress">221B Baker Street</p>
+										</div>
+
+										<div class="medicine-info__item">
+											<p class="medicine-info__label">State:</p>
+											<p class="medicine-info__text" data-bind="text:ShippingState">Alaska </p>
+										</div>
+
+										<div class="medicine-info__item">
+											<p class="medicine-info__label">City:</p>
+											<p class="medicine-info__text" data-bind="text:ShippingCity">Nebraska</p>
+										</div>
+										<div class="medicine-info__item">
+											<p class="medicine-info__label">Zip Code:</p>
+											<p class="medicine-info__text" data-bind="text: ShippingZipcode">1209</p>
+										</div>
+										<div class="medicine-info__item">
+											<p class="medicine-info__label">Email Address:</p>
+											<p class="medicine-info__text" data-bind="text: ShippingEmailAddress">mike@gmail.com</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="card-basic h-100">
+									<div class="card-basic__header">
+										<p class="card-basic__title">Billing Information</p>
+									</div>
+
+									<div class="card-basic__body">
+										<div class="medicine-info">
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Name:</p>
+												<p class="medicine-info__text" data-bind="text: BillingName">Mike Scott</p>
+											</div>
+
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Address:</p>
+												<p class="medicine-info__text" data-bind="text: BillingAddress">221B Baker Street</p>
+											</div>
+
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">State:</p>
+												<p class="medicine-info__text" data-bind="text: BillingState">Alaska</p>
+											</div>
+
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">City:</p>
+												<p class="medicine-info__text" data-bind="text: BillingCity">Nebraska</p>
+											</div>
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Zip Code:</p>
+												<p class="medicine-info__text" data-bind="text: BillingZipcode">1209</p>
+											</div>
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Email Address:</p>
+												<p class="medicine-info__text" data-bind="text: BillingEmailAddress">mike@gmail.com</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+							<div class="card-basic mt-60">
 							<div class="card-basic__header">
 								<p class="card-basic__title">Shipping tracking number</p>
 							</div>
+							
 
 							<div class="card-basic__body">
 								<div class="order">
@@ -147,7 +230,7 @@ import Layout from "../layouts/Layout.astro";
 							</div>
 
 							<div class="col-md-6">
-								<div class="card-basic h-100">
+								<!-- <div class="card-basic h-100">
 									<div class="card-basic__header">
 										<p class="card-basic__title">Document Information</p>
 									</div>
@@ -187,7 +270,7 @@ import Layout from "../layouts/Layout.astro";
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
