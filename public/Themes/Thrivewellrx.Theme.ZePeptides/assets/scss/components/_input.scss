@@ -65,7 +65,7 @@
 		display: none;
 	}
 
-	&__input:checked + &__label {
+	&__input:checked+&__label {
 		background-color: $blue-1;
 		color: $blue-2;
 		font-weight: 400;
@@ -143,6 +143,8 @@
 	line-height: 1.6;
 }
 
+
+
 .rounded-input {
 	width: 445px;
 	margin: 20px 0;
@@ -174,7 +176,7 @@
 
 .form {
 	&-control {
-		color: white;
+		// color: white;
 
 		&::placeholder {
 			color: rgba(white, 0.6);
