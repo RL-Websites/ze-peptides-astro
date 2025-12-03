@@ -1,7 +1,7 @@
 @use "../base/variables" as *;
 
 .my-order {
-	padding: 180px 0 100px;
+	padding: 120px 0 100px;
 
 	// &__title,
 	// &__title a {
@@ -31,7 +31,7 @@
 					padding: 15px 12px !important;
 					font-size: $fs-18;
 					font-weight: 600;
-					color: white;
+					color: #2D2D2D;
 
 					&:first-child {
 						padding-left: 20px !important;
@@ -54,10 +54,27 @@
 	border: 0;
 	background-color: transparent !important;
 	font-weight: 400;
-	color: white;
+	color: $black;
 	display: inline-block;
 	font-size: 16px;
 	white-space: nowrap;
+	text-decoration: underline;
+}
+
+.status-pill{
+	color: #2D2D2D;
+}
+
+.status-pill--default{
+	background-color: #E7F3FF;
+}
+
+.status-pill--warning{
+	background-color: #FFD4DD;
+}
+
+.status-pill--success{
+	background-color: #EAFFE7;
 }
 
 .order {
@@ -195,8 +212,8 @@
 	}
 }
 
-// .table-striped>tbody>tr:nth-of-type(odd) {
-// 	background-color: transparent !important;
+// .table-striped>tbody> {
+// 	background-color: #DADADA !important;
 // }
 
 @media only screen and (max-width: 992px) {
