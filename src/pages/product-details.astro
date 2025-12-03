@@ -1,9 +1,10 @@
 ---
-import ClientFeedback from "../components/ClientFeedback.astro";
+import Client from "../components/Client.astro";
 import Faq from "../components/Faq.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import HowWorks from "../components/HowWorks.astro";
+import HowItWorks from "../components/homePage/HowItWorks.astro";
+import WhyChooseUs from "../components/homePage/WhyChooseUs.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -11,55 +12,32 @@ import Layout from "../layouts/Layout.astro";
 	<Header />
 	<!-- =====|| Main Section Start ||====== -->
 	<main class="page">
-		<div class="page__wrapper page__wrapper--alt">
 			<!-- ==|| Product Hero Section Start ||== -->
-			<section class="product-hero">
-				<div class="container-fluid px-0">
-					<div class="row">
-						<div class="col-lg-5 col-md-6 product-hero__left-col">
-							<div class="product-hero__left product-hero__left--green">
-								<div class="product-hero__img">
-									<img
-										src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-3.png"
-										alt="Product"
-									/>
-								</div>
+			<section class="product-hero bg-white">
+				<div class="container">
+					<div class="row align-items-start">
+						<div class="col-xl-5 col-md-6 product-hero__left-col">
+							<div class="product-hero__left">
+								<img
+									src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-2.png"
+									class="product-hero__img"
+									alt="Product"
+								/>
 							</div>
 						</div>
-						<div class="col-lg-7 col-md-6 product-hero__right-col">
+						<div class="col-xl-7 col-md-6">
 							<div class="product-hero__right">
-								<h4 class="site__heading-four"> Semaglutide Oral Tablets</h4>
-								<h6 class="site__heading-six mt-20">About the Product:</h6>
-								<ul class="d-flex flex-column gap-20 mt-20">
-									<li class="list__item__alt">
-										<i class="icon-checked list__item__alt-icon text-white"></i>
-										Doctors Appointment, Prescription and Medications Included
-									</li>
-									<li class="list__item__alt">
-										<i class="icon-checked list__item__alt-icon text-white"></i>
-										Fast Shipping
-									</li>
-									<li class="list__item__alt">
-										<i class="icon-checked list__item__alt-icon text-white"></i>
-										All Supplies Included
-									</li>
-									<li class="list__item__alt">
-										<i class="icon-checked list__item__alt-icon text-white"></i>
-										Unlimited Weight Loss Program Support
-									</li>
-									<li class="list__item__alt">
-										<i class="icon-checked list__item__alt-icon text-white"></i>
-										Bypass Insurance – No Insurance Needed
-									</li>
-									<li class="list__item__alt">
-										<i class="icon-checked list__item__alt-icon text-white"></i>
-										No Hidden Fees
-									</li>
-								</ul>
+								<h2 class="">NAD+ Nasal Spray</h2>
+								<h3 class="mt-12 text-primary">$450</h3>
+								<h5 class="mt-12 text-gray-dark">Purity: 99.9%</h5>
+								<div class="alert-pill mt-20 mt-md-24">
+									<i class="icon-alert"></i>
+									<span>For Research Purposes Only — Not for Human Consumption</span>
+								</div>
 
-								<div class="product-hero__cart mt-30">
+								<div class="product-hero__cart mt-24">
 									<div class="product-action">
-										<div class="input-group product-action__cart">
+										<div class="input-group product-action__cart product-action__cart--lg">
 											<span class="input-group-btn">
 												<button class="btn" type="button">
 													<i class="icon-minus"></i>
@@ -78,13 +56,13 @@ import Layout from "../layouts/Layout.astro";
 											</span>
 										</div>
 
-										<div class="product-action__btn">
+										<div class="product-action__btn mt-24">
 											<!-- <button
-             type="button"
-             class="theme-btn theme-btn__primary theme-btn__primary--uppercase"
-            >
-             Out Of Stock
-            </button> -->
+											type="button"
+											class="theme-btn theme-btn__primary theme-btn__primary--uppercase"
+											>
+											Out Of Stock
+											</button> -->
 											<button
 												type="button"
 												class="theme-btn theme-btn__outline theme-btn__outline--primary"
@@ -101,94 +79,19 @@ import Layout from "../layouts/Layout.astro";
 									</div>
 								</div>
 
-								<ul
-									class="nav nav-pills nav-pills__custom mb-3"
-									id="pills-tab"
-									role="tablist"
-								>
-									<li class="nav-item" role="presentation">
-										<button
-											class="nav-link active"
-											id="pills-home-tab"
-											data-bs-toggle="pill"
-											data-bs-target="#pills-home"
-											type="button"
-											role="tab"
-											aria-controls="pills-home"
-											aria-selected="true"
-										>
-											1 Month Program
-										</button>
-									</li>
-									<li class="nav-item" role="presentation">
-										<button
-											class="nav-link"
-											id="pills-profile-tab"
-											data-bs-toggle="pill"
-											data-bs-target="#pills-profile"
-											type="button"
-											role="tab"
-											aria-controls="pills-profile"
-											aria-selected="false">3 Month Program</button
-										>
-									</li>
-								</ul>
-								<div
-									class="tab-content tab-content__custom"
-									id="pills-tabContent"
-								>
-									<div
-										class="tab-pane fade show active"
-										id="pills-home"
-										role="tabpanel"
-										aria-labelledby="pills-home-tab"
-									>
-										<div class="tab-pills">
-											<div class="tab-pills__single">
-												<span class="fs-md-18 fs-sm-16 fs-14 lh-1 fw-bold"
-													>.50mg</span
-												>
-												<span class="fs-md-16 fs-sm-14 fs-12 lh-1">$299</span>
-											</div>
-											<div class="tab-pills__single">
-												<span class="fs-md-18 fs-sm-16 fs-14 lh-1 fw-bold"
-													>500mg</span
-												>
-												<span class="fs-md-16 fs-sm-14 fs-12 lh-1">$1099</span>
-											</div>
-											<div class="tab-pills__single">
-												<span class="fs-md-18 fs-sm-16 fs-14 lh-1 fw-bold"
-													>.50mg</span
-												>
-												<span class="fs-md-16 fs-sm-14 fs-12 lh-1">$299</span>
-											</div>
-											<div class="tab-pills__single">
-												<span class="fs-md-18 fs-sm-16 fs-14 lh-1 fw-bold"
-													>.50mg</span
-												>
-												<span class="fs-md-16 fs-sm-14 fs-12 lh-1">$299</span>
-											</div>
-											<div class="tab-pills__single">
-												<span class="fs-md-18 fs-sm-16 fs-14 lh-1 fw-bold"
-													>.50mg</span
-												>
-												<span class="fs-md-16 fs-sm-14 fs-12 lh-1">$299</span>
-											</div>
-											<div class="tab-pills__single">
-												<span class="fs-md-18 fs-sm-16 fs-14 lh-1 fw-bold"
-													>.50mg</span
-												>
-												<span class="fs-md-16 fs-sm-14 fs-12 lh-1">$299</span>
-											</div>
-										</div>
+								<div class="text-body3 text-gray-dark mt-20 mt-md-24 product-hero__details">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+									<div class="read-more">
+										<span id="readMore" class="text-body3">
+											Read More
+										</span>
 									</div>
-									<div
-										class="tab-pane fade"
-										id="pills-profile"
-										role="tabpanel"
-										aria-labelledby="pills-profile-tab">..3.</div
-									>
-								</div>
+								</p>
+
+								
 							</div>
 						</div>
 					</div>
@@ -196,237 +99,40 @@ import Layout from "../layouts/Layout.astro";
 			</section>
 			<!-- ==|| Product Section End ||== -->
 
-			<!-- ==|| Benifits of Medicine Section Start ||== -->
-			<section class="product product__benifits">
-				<div class="container">
-					<div class="section__title d-md-flex align-items-center gap-3">
-						<h2 class="site__heading-two text-secondary text-capitalize"
-							>Benefits of <br /> the medicine</h2
-						>
-						<div class="d-md-block d-none">
-							<img
-								src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/frame/frame-with-title-green.svg"
-								alt="frame "
-							/>
-						</div>
-					</div>
+			<!--===|| How it Works Section Start ||===-->
 
-					<div class="product__benifits__items mt-md-80 mt-30">
-						<div class="row">
-							<div class="col-md-4">
-								<div class="product__benifits__item">
-									<div class="product__benifits__img">
-										<img
-											src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/benifit-1.png"
-											alt="Product Benifit"
-										/>
-									</div>
-									<div class="product__benifits__content">
-										<h6 class="site__heading-six">Enhanced <br /> Absorption</h6
-										>
-										<p class="mt-10"
-											>Doctors will conduct an online medical consultation,
-											which may include a video call or phone conversation.</p
-										>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="product__benifits__item">
-									<div class="product__benifits__img">
-										<img
-											src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/benifit-1.png"
-											alt="Product Benifit"
-										/>
-									</div>
-									<div class="product__benifits__content">
-										<h6 class="site__heading-six">Personalized <br /> Dosing</h6
-										>
-										<p class="mt-10"
-											>Doctors will conduct an online medical consultation,
-											which may include a video call or phone conversation.</p
-										>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="product__benifits__item">
-									<div class="product__benifits__img">
-										<img
-											src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/benifit-1.png"
-											alt="Product Benifit"
-										/>
-									</div>
-									<div class="product__benifits__content">
-										<h6 class="site__heading-six"
-											>Comprehensive <br /> Support</h6
-										>
-										<p class="mt-10"
-											>Doctors will conduct an online medical consultation,
-											which may include a video call or phone conversation.</p
-										>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- ==|| Benifits of Medicine Section End ||== -->
+		<HowItWorks />
 
-			<!-- ==|| Our Solution Section Start ||== -->
-			<div class="product__solution">
-				<div class="container">
-					<div class="section__title d-md-flex align-items-center gap-3">
-						<h2 class="site__heading-two text-white text-capitalize"
-							>How our solution <br /> differs from others</h2
-						>
-						<div class="d-md-block d-none">
-							<img
-								class="site__heading-img"
-								src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/frame/frame-with-title-blue.svg"
-								alt="frame "
-							/>
-						</div>
-					</div>
+		<!--===|| How it Works Section End ||===-->
 
-					<div class="row">
-						<div class="col-md-5 pr-md-30">
-							<p class="fs-16 text-white mt-20"
-								>Every day is the right time to begin building a life and body
-								that feels powerful. Fortify Testosterone Booster is a potent,
-								expertly designed blend developed to elevate your strength and
-								vitality.</p
-							>
-						</div>
-						<div class="col-md-7 mt-md-60">
-							<div class="product__card--normal">
-								<h6 class="site__heading-six">Exceptional Enhancement</h6>
-								<p class="mt-10"
-									>This proprietary blend was crafted by pharmacists to deliver
-									a powerful impact you won’t find elsewhere. Discover Fortify</p
-								>
-							</div>
+		<!-- Why Choose Us ZePeptides Section Start -->
+		<WhyChooseUs />
+		<!-- Why Choose Us ZePeptides Section End -->
 
-							<div class="product__card--normal mt-20">
-								<h6 class="site__heading-six">Sharpened Focus</h6>
-								<p class="mt-10"
-									>Balanced testosterone supports increased stamina, resilience,
-									cognitive clarity, stress balance, and improved memory.</p
-								>
-							</div>
-							<div class="product__card--normal mt-20">
-								<h6 class="site__heading-six">Mental Optimization</h6>
-								<p class="mt-10"
-									>Balanced testosterone supports increased stamina, resilience,
-									cognitive clarity, stress balance, and improved memory.</p
-								>
-							</div>
-							<div class="product__card--normal mt-20">
-								<h6 class="site__heading-six">Boost Reproductive Health</h6>
-								<p class="mt-10"
-									>Balanced testosterone supports increased stamina, resilience,
-									cognitive clarity, stress balance, and improved memory.</p
-								>
-							</div>
-						</div>
+		<!--===|| Faq Section Start ||===-->
+		<section class="faq py-50 py-md-100">
+			<div class="container faq__wrapper">				
+				<div class="row">					
+					<div class="col-lg-12 faq__items">
+						<Faq />
 					</div>
 				</div>
 			</div>
-			<!-- ==|| Our Solution Section End ||== -->
+		</section>
+		<!--===|| Faq Section End ||===-->
 
-			<!--===|| How it Works Section Start ||===-->
-			<HowWorks />
-			<!--===|| How it Works Section End ||===-->
+		
+		<!--===|| Client Feedback Section Start ||===-->
+		<Client />
+		<!--===|| Client Feedback Section End ||===-->
 
-			<!--===|| Client Feedback Section Start ||===-->
-			<ClientFeedback />
-			<!--===|| Client Feedback Section End ||===-->
-
-			<!--===|| Faq Section Start ||===-->
-			<section class="faq">
-				<div class="container faq__wrapper">
-					<div class="faq__frame--left">
-						<img
-							src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/frame/left-curve.svg"
-							alt=""
-						/>
-					</div>
-					<div class="faq__frame--tree">
-						<img
-							src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/frame/tree-frame.svg"
-							alt=""
-						/>
-					</div>
-					<div class="row">
-						<div class="col-lg-5 faq__title">
-							<div class="section__title d-lg-flex align-items-center gap-3">
-								<h3
-									class="site__heading-three text-secondary client__title text-capitalize text-lg-start text-center"
-									>answers to popular questions</h3
-								>
-							</div>
-						</div>
-						<div class="col-lg-6 offset-lg-1 faq__items">
-							<Faq />
-						</div>
-					</div>
-				</div>
-			</section>
-			<!--===|| Faq Section End ||===-->
-
-			<!--===|| CTA Section Start ||===-->
-			<section class="cta">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-5 order-md-0 order-1 mt-md-0 mt-30">
-							<img
-								class="w-100"
-								src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/cta.png"
-								alt="CTA"
-							/>
-						</div>
-						<div class="col-md-6 offset-md-1 order-md-1 order-0">
-							<div class="cta__content-frame">
-								<img
-									class="img-fluid"
-									src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/frame/frame-with-title-blue.svg"
-									alt="frame"
-								/>
-							</div>
-							<h3
-								class="site__heading-three text-white mt-10 text-md-start text-center"
-								>100% Guranteed</h3
-							>
-							<p
-								class="text-white fs-md-18 fs-sm-16 fs-14 fw-bold pr-md-60 pr-0 text-md-start text-center mt-md-20 mt-10"
-								>Getting started is simple. Our process is designed to be
-								smooth, transparent, and hassle-free—so you can focus on what
-								matters most.</p
-							>
-							<div
-								class="d-flex justify-content-md-start justify-content-center"
-							>
-								<button
-									type="button"
-									class="theme-btn theme-btn__light"
-									data-bs-toggle="modal"
-									data-bs-target="#unableProceed"
-									class="theme-btn theme-btn__primary theme-btn__primary--icon mt-lg-40 mt-10"
-									>Get Started <i class="icon-arrow"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!--===|| CTA Section End ||===-->
+		<!--=====|| Main Section End ||=====-->
 		</div>
 	</main>
 	<!-- =====|| Main Section End ||====== -->
+	<Footer />
 </Layout>
 
-<Footer />
 
 <!-- Dose Modal Start -->
 <div id="doses" class="modal fade dose-modal" tabindex="-1" role="dialog">

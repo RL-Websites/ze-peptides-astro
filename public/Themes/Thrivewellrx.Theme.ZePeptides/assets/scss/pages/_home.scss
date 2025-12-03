@@ -25,7 +25,7 @@
 			}
 		}
 
-		background: url("/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/home-hero-bg.png") no-repeat center top / cover;
+		background: url("../img/bg/home-hero-bg.png") no-repeat center top / cover;
 		background-attachment: fixed;
 
 		@media all and (max-width: 768px) {
@@ -37,35 +37,6 @@
 		position: relative;
 
 		// Alert pill used in hero banner
-		.alert-pill {
-			display: inline-flex;
-			align-items: center;
-			gap: 12px;
-			background-color: $red-light;
-			padding: 16px 52px;
-			border: 2px dashed $pink-1;
-			border-radius: 9999px;
-			color: $red;
-
-			i.icon-alert {
-				font-size: $fs-20;
-				line-height: 1;
-			}
-
-			span {
-				font-size: $fs-16;
-			}
-
-			@media only screen and (max-width: 768px) {
-				padding: 12px 20px;
-				gap: 8px;
-
-				span {
-					font-size: $fs-14;
-					line-height: 1em;
-				}
-			}
-		}
 
 		&--bottom {
 			max-width: 820px;
@@ -86,7 +57,35 @@
 		}
 	}
 }
+.alert-pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	background-color: $red-light;
+	padding: 16px 52px;
+	border: 2px dashed $pink-1;
+	border-radius: 9999px;
+	color: $red;
 
+	i.icon-alert {
+		font-size: $fs-20;
+		line-height: 1;
+	}
+
+	span {
+		font-size: $fs-16;
+	}
+
+	@media only screen and (max-width: 768px) {
+		padding: 12px 20px;
+		gap: 8px;
+
+		span {
+			font-size: $fs-14;
+			line-height: 1em;
+		}
+	}
+}
 .product {
 	&__title {
 		max-width: 400px;
@@ -97,7 +96,7 @@
 
 // .how-works {
 // 	padding: 100px 0;
-// 	background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/how-works-bg.svg);
+// 	background: url("../img/bg/how-works-bg.svg");
 // 	background-size: cover;
 // 	background-repeat: no-repeat;
 // 	background-position: center center;
@@ -179,7 +178,7 @@
 .client {
 	padding: 100px 0;
 	overflow: hidden;
-	background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/pdetails-common-bg.svg);
+	background: url("../img/bg/pdetails-common-bg.svg");
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: top center;
@@ -237,7 +236,7 @@
 
 .cta {
 	padding: 100px 0;
-	background: url(/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/cta-bg.svg);
+	background: url("../img/bg/cta-bg.svg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;

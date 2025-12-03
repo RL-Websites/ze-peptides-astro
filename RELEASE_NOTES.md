@@ -1,5 +1,10 @@
 # Release Notes
 
+## [0.0.1] - 2025-12-2
+
+- Completed Cart responsive
+- fixed padding issues on cart
+
 ## [0.0.1] - 2025-12-1
 
 - How it works section ongoing progress
