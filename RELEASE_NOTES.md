@@ -2,7 +2,9 @@
 
 ## [0.0.1] - 2025-12-3
 
-- Login page completed: there might be some minor issues left
+- Login page completed: with responsive
+- Forgot password page complete with responsive
+- Thank you page and cart page complete
 
 ## [0.0.1] - 2025-12-2
 
