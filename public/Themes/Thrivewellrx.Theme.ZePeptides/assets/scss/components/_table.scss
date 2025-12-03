@@ -161,7 +161,8 @@
 	}
 }
 
-.order-table {
+.card-basic {
+	border-color: #DADADA !important;
 	p {
 		margin-bottom: 0;
 	}
@@ -209,7 +210,11 @@
 	.order-table {
 		&__row {
 			padding: 16px 24px;
-			border-bottom: 1px solid #E6D4FF;
+			border-bottom: 1px solid #DADADA;
+
+			&:last-child {
+				border-bottom: 0;
+			}
 		}
 
 		&__title {
@@ -224,6 +229,7 @@
 
 @media only screen and (max-width: 576px) {
 	.order-table {
+		background-color: #FBF9FF;
 		&__row {
 			padding: 16px 24px;
 		}
