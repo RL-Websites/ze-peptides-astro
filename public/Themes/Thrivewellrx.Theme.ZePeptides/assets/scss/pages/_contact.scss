@@ -1,17 +1,17 @@
 @use "../base/variables" as *;
 
 .contact {
-	padding: 180px 0 100px;
+	padding: 130px 0 100px;
 
 	&__banner {
 		margin-top: 50px;
-		padding: 14px 24px;
+		padding: 21px 24px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border: 1px solid rgba($color: $red, $alpha: 0.5);
+		// border: 1px solid rgba($color: $red, $alpha: 0.5);
 		border-radius: 8px;
-		background: $background-2;
+		background: $primary-lighter;
 
 		button {
 			font-weight: 600;
@@ -55,6 +55,12 @@
 	.map {
 		margin-top: 80px;
 	}
+}
+
+.email-text{
+	font-size: $fs-16;
+	font-weight: 700;
+	font-family: 'poppins', sans-serif;
 }
 
 @media only screen and (max-width: 992px) {

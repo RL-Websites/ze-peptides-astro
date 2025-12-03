@@ -88,7 +88,7 @@
 		padding: 10px 24px;
 		font-size: 18px;
 		color: $light;
-		border: 1px solid $red;
+		border: 1px solid #AEAEAE;
 		border-radius: 10px;
 		outline: 0;
 		box-shadow: none;
@@ -137,7 +137,7 @@
 
 .basic-error {
 	font-size: $fs-16;
-	color: $primary;
+	color: $red;
 	font-weight: 300;
 	margin-top: 4px;
 	line-height: 1.6;

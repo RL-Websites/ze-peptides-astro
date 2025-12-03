@@ -14,7 +14,7 @@ import Layout from "../layouts/Layout.astro";
 			<!-- ==|| Cart Hero Section Start ||== -->
 			<section class="cart-hero">
 				<div class="container">
-					<h1 class="site__heading-four text-md-center fw-extrabold"
+					<h1 class="site__heading-four text-md-center fw-extrabold fs-30 fs-md-70 text-primary-grad-1 text-center"
 						>Payment Method</h1
 					>
 				</div>
@@ -25,110 +25,7 @@ import Layout from "../layouts/Layout.astro";
 			<section class="payment__card">
 				<div class="container">
 					<div class="row">
-						<div class="col-12 col-lg-8">
-							<div
-								class="payment-card__body cart-card payment__card--cart-summary"
-							>
-								<div class="cart-card__header">
-									<h3 class="fs-md-24 fs-20 fw-bold">Payment Details</h3>
-								</div>
-								<div
-									class="payment__form payment__form--body"
-									id="payment-form"
-								>
-									<!-- Used to display form errors. -->
-									<p
-										class="fs-md-20 fs-sm-18 fs-16"
-										id="card-errors"
-										role="alert">Your card number is incomplete.</p
-									>
-									<div>
-										<label class="custom-check">
-											<span class="custom-check__input">
-												<input type="checkbox" />
-												<span></span>
-											</span>
-
-											<span class="custom-check__label">
-												By selecting this you are confirming that you have read,
-												understood and agree to the
-												<a
-													class="text-primary"
-													data-toggle="modal"
-													data-target="#termCodition">terms & conditions</a
-												>.
-											</span>
-										</label>
-									</div>
-									<!--</form>-->
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-lg-4 payment__card--right">
-							<div class="cart-card">
-								<div class="cart-card__header">
-									<h3 class="fs-md-24 fs-20 fw-bold">Cart Total</h3>
-								</div>
-								<div class="cart-card__body">
-									<div class="pricing__basic">
-										<div class="pricing__item">
-											<p class="pricing__item--name">Subtotal</p>
-											<p class="pricing__item--value">$150.50</p>
-										</div>
-										<div class="pricing__item">
-											<p class="pricing__item--name">Shipping</p>
-											<p class="pricing__item--value">$30.50</p>
-										</div>
-										<div class="pricing__item">
-											<p class="pricing__item--name">Consultancy Fee</p>
-											<p class="pricing__item--value">$30.50</p>
-										</div>
-									</div>
-
-									<div class="pricing__total">
-										<div class="pricing__item">
-											<p class="pricing__item--name">Discount</p>
-											<p class="pricing__item--value text-dark-red-2">
-												-$5.50
-											</p>
-										</div>
-
-										<div class="pricing__total-item">
-											<p class="pricing__total--name">Total</p>
-											<p class="pricing__total--value">$175.87</p>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="attention mt-20">
-								<div class="attention__box">
-									<!-- <p class="attention__title">
-													<i class="icon-alert"></i>
-													<span>Attention: This is not the final charge</span>
-												</p> -->
-
-									<div class="attention__title">
-										<i class="icon-alert text-secondary"></i>
-										<p
-											>Attention:
-											<span>Final Dosage Determined by Doctor</span></p
-										>
-									</div>
-
-									<!-- <p class="attention__price-desc">
-													<span>$150.50</span> + <span>Shipping</span> +
-													<span>Consultation fee</span>
-												</p> -->
-
-									<p class="attention__text">
-										The highest dosage price is only a credit card hold until
-										the doctor consultation. The final price will be adjusted
-										based on the prescribed dosage.
-									</p>
-								</div>
-							</div>
-						</div>
+						
 					</div>
 
 					<div class="row">
@@ -137,7 +34,7 @@ import Layout from "../layouts/Layout.astro";
 								class="payment-card__body cart-card payment__card--cart-summary"
 							>
 								<div class="cart-card__header">
-									<h3 class="fs-md-24 fs-20 fw-bold">Payment Details</h3>
+									<h3 class="fs-md-24 fs-18 fw-bold">Payment Details</h3>
 								</div>
 								<div
 									class="payment__form payment__form--body payment__form--card"
@@ -149,7 +46,7 @@ import Layout from "../layouts/Layout.astro";
 										>
 										<div class="payment__form--card-variation">
 											<input
-												class="basic-input"
+												class="basic-input card-input"
 												type="text"
 												id="cardNumber"
 												placeholder="1234 1234 1234 1234"
@@ -220,7 +117,7 @@ import Layout from "../layouts/Layout.astro";
 						<div class="col-12 col-lg-4 payment__card--right">
 							<div class="cart-card">
 								<div class="cart-card__header">
-									<h3 class="fs-md-24 fs-20 fw-bold">Cart Total</h3>
+									<h3 class="fs-md-24 fs-20 fw-bold">Cart Total <span class="fs-16 fw-normal">(4 items)</span></h3>
 								</div>
 								<div class="cart-card__body">
 									<div class="pricing__basic">
@@ -235,6 +132,14 @@ import Layout from "../layouts/Layout.astro";
 										<div class="pricing__item">
 											<p class="pricing__item--name">Consultancy Fee</p>
 											<p class="pricing__item--value">$30.50</p>
+										</div>
+									</div>
+
+									<div class="coupon pricing__coupon">
+										<p class="coupon__label">Coupon Code</p>
+										<div class="dnn-tag">
+											<i class="icon-promo-code dnn-tag__icon"></i>
+											<span class="dnn-tag__text" data-bind="text: billDiscountCode()"></span>
 										</div>
 									</div>
 
@@ -253,13 +158,14 @@ import Layout from "../layouts/Layout.astro";
 									</div>
 								</div>
 							</div>
+							
 
-							<div class="attention mt-20">
+							<!-- <div class="attention mt-20">
 								<div class="attention__box">
-									<!-- <p class="attention__title">
+									<p class="attention__title">
 													<i class="icon-alert"></i>
 													<span>Attention: This is not the final charge</span>
-												</p> -->
+												</p>
 
 									<div class="attention__title">
 										<i class="icon-alert text-secondary"></i>
@@ -269,10 +175,10 @@ import Layout from "../layouts/Layout.astro";
 										>
 									</div>
 
-									<!-- <p class="attention__price-desc">
+									<p class="attention__price-desc">
 													<span>$150.50</span> + <span>Shipping</span> +
 													<span>Consultation fee</span>
-												</p> -->
+												</p>
 
 									<p class="attention__text">
 										The highest dosage price is only a credit card hold until
@@ -280,19 +186,51 @@ import Layout from "../layouts/Layout.astro";
 										based on the prescribed dosage.
 									</p>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
+					<!-- ALert section start -->
+					<div class="attention pb-40 mt-40">
+												<div class="attention__box">
+
+													<div class="attention__title">
+														<!-- <i class="icon-alert"></i> -->
+														<p>GLP-1, Peptides, TRT/HRT, and Other Prescription Treatments</p>
+													</div>
+
+													<p class="attention__text">
+														Your card will not be charged at checkout. 
+														We securely store your payment information 
+														and only process the charge once a doctor 
+														reviews your intake form and issues your 
+														prescription. If you are not approved, you 
+														will not be charged.
+													</p>
+													<div class="attention__title">
+														<!-- <i class="icon-alert"></i> -->
+														<p>DotFit, Skin Care & Pain Relief Products (Non-Prescription)</p>
+													</div>
+
+													<p class="attention__text">
+														These items do not require a doctor review or intake form. 
+														Your card will be charged immediately at checkout, and your 
+														order will proceed directly to fulfillment.
+													</p>
+												</div>
+											</div>
+					<!-- ALert section end -->
 				</div>
 			</section>
 			<!-- ==|| Payment List Section End ||== -->
+
+			
 
 			<!-- ==|| Shipping info Section Start ||== -->
 			<section>
 				<div class="container">
 					<div class="payment__card payment__card__variant2">
 						<div class="payment__header">
-							<h3 class="fs-md-24 fs-20 fw-bold">Payment Details</h3>
+							<h3 class="fs-md-24 fs-18 fw-bold">Shipping Info</h3>
 
 							<div>
 								<label class="custom-check d-flex align-items-center">
@@ -499,12 +437,48 @@ import Layout from "../layouts/Layout.astro";
 						</div>
 					</div>
 
-					<div class="condition__highlight mt-20">
-						<p class="mb-0 text-white"
+					<div class="condition__highlight mt-50">
+						<p class="mb-0"
 							>This product is not dispensed without intake review and provider
 							clearance.</p
 						>
 					</div>
+					<div class="mt-30">
+						<label class="custom-check mt-15">
+							<span class="custom-check__input">
+								<input type="checkbox" data-bind="checked: hasAnsweredTruthfully" />
+								<span></span>
+							</span>
+
+							<span class="custom-check__label">
+								I confirm that all information associated with my treatment is accurate and that I
+								understand these medications must be used only under the supervision of a licensed
+								healthcare provider.
+							</span>
+						</label>
+						<p class="basic-error"
+							data-bind="visible: isSubmitted, validationMessage: hasAnsweredTruthfully"></p>
+					</div>
+
+					<div>
+						<label class="custom-check mt-15">
+							<span class="custom-check__input">
+								<!--<input type="checkbox" data-bind="checked: agreedToTermsAndConditions" />-->
+								<input type="checkbox"
+									data-bs-toggle="modal"
+                   data-bs-target="#termCodition" />
+								<span></span>
+							</span>
+
+							<span class="custom-check__label">
+								Please read the terms & conditions—purchase cannot be completed without your acknowledgment.
+
+							</span>
+						</label>
+						<p class="basic-error" data-bind="visible: isSubmitted, validationMessage: agreedToTermsAndConditions"></p>
+
+					</div>
+
 
 					<div class="step-btn text-end mt-40">
 						<button
