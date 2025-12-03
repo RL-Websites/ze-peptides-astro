@@ -1,5 +1,9 @@
 # Release Notes
 
+## [0.0.1] - 2025-12-3
+
+- Login page completed: there might be some minor issues left
+
 ## [0.0.1] - 2025-12-2
 
 - Completed Cart responsive
