@@ -305,6 +305,10 @@
 .attention__title p{
 	text-align: center;
 }
+
+.custom-check__label{
+	line-height: 1.5 !important;
+}
 .condition {
 	&__highlight {
 		background: $green-light;

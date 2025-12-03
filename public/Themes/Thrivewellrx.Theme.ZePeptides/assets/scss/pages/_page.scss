@@ -34,8 +34,8 @@
 			line-height: 1.6 !important;
 		}
 		&__heading{
-			p{
-				font-size: 30px !important;
+			p.collapsed-heading{
+				
 				font-weight: 700 !important;
 				&::after{
 					background-color: #712ad5 !important;
