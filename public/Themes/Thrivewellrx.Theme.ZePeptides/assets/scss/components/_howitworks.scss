@@ -1,46 +1,6 @@
-// Variables
-$purple-primary: #7c3aed;
-$purple-dark: #6d28d9;
-$gray-light: #f8f9fa;
-$gray-border: #dee2e6;
-$gray-text: #6c757d;
-$black: #1a1a1a;
+@import "../base/variables";
 
-$transition-default: all 0.3s ease;
-$transition-color: color 0.3s ease;
-$transition-bg: background-color 0.3s ease;
 
-.how-it-works-p {
-  font-family: "sfuidisplay", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  font-style: bold;
-  line-height: 160%;
-  color: #525252;
-
-  @media (max-width: 768px) {
-    font-size: 16px;
-  }
-
-}
-
-.how-it-works-title {
-
-  font-family: "sfuidisplay";
-  font-size: 70px;
-  font-weight: 700;
-  font-style: bold;
-
-  @media (max-width: 768px) {
-    font-size: 36px;
-  }
-
-}
-
-// Body
-body {
-  background-color: $gray-light;
-}
 
 .step-title {
   font-family: "sfuidisplay";
@@ -50,26 +10,21 @@ body {
 }
 
 .step-title.active-title {
-  color: $purple-primary;
+  color: $primary;
   /* Replace with your brand color */
 }
 
 .mobile-step-title.active-title {
-  color: $purple-primary;
+  color: $primary;
 
 }
 
 .mobile-number-description.active-title {
-  color: $purple-primary;
+  color: $primary;
 
 }
 
-.mobile-number-description {
-  /* For vertical alignment */
 
-
-
-}
 
 .timeline-description {
   font-family: 'sfuidisplay', serif;
@@ -144,10 +99,10 @@ body {
   background-color: $gray-border;
   border-radius: 50%;
   z-index: 10; // Make sure dot is above the line
-  transition: $transition-default;
+  transition: all 0.3s ease;
 
   &.active {
-    background-color: $purple-primary;
+    background-color: $primary;
     transform: translateX(-50%) scale(1.25);
   }
 }
@@ -161,11 +116,11 @@ body {
   // text-transform: uppercase;
   color: $black;
   line-height: 1;
-  transition: $transition-color;
+  transition: color 0.3s ease;
   flex-shrink: 0;
 
   &.purple {
-    color: $purple-primary;
+    color: $primary;
   }
 }
 
@@ -208,14 +163,14 @@ body {
   // Hover effects
   // &:hover {
   //   .mobile-step-number {
-  //     color: $purple-primary;
+  //     color: primary;
   //   }
 
   //   .mobile-dot {
-  //     background-color: $purple-primary;
+  //     background-color: primary;
 
   //     &::after {
-  //       background-color: $purple-primary;
+  //       background-color: primary;
   //     }
   //   }
   // }
@@ -237,11 +192,11 @@ body {
   font-weight: bold;
   color: $black;
   line-height: 1;
-  transition: $transition-color;
+  transition: color 0.3s ease;
   flex-shrink: 0;
 
   &.purple {
-    color: $purple-primary;
+    color: $primary;
   }
 }
 
@@ -252,11 +207,11 @@ body {
   background-color: $gray-border;
   border-radius: 50%;
   position: relative;
-  transition: $transition-default;
+  transition: all 0.3s ease;
   margin-top: 4px;
 
   &.active {
-    background-color: $purple-primary;
+    background-color: $primary;
   }
 
   // Vertical connecting line
@@ -269,7 +224,7 @@ body {
     width: 1px;
     height: 230px;
     background-color: $gray-border;
-    transition: $transition-bg;
+    transition: background-color 0.3s ease;
   }
 }
 

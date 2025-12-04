@@ -128,7 +128,7 @@
 			flex-direction: column;
 			gap: 16px;
 			border: 0;
-			
+
 		}
 	}
 
@@ -186,6 +186,7 @@
 		flex-grow: 0;
 		background-size: cover;
 		background-color: $blue-3;
+		padding: 15px 15px 15px 15px;
 
 		&--purple {
 			background: linear-gradient(to right, #d2b3ff, #ede0ff);

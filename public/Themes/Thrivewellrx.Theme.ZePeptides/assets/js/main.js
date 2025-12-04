@@ -23,7 +23,10 @@ $(document).ready(function () {
 	// Close dropdown when clicking outside
 	// Close dropdown when clicking outside
 	$(document).on("click", function (e) {
-		if (!$(e.target).closest("#user-menu-btn").length && !$(e.target).closest("#user-dropdown").length) {
+		if (
+			!$(e.target).closest("#user-menu-btn").length &&
+			!$(e.target).closest("#user-dropdown").length
+		) {
 			$("#user-dropdown").removeClass("show");
 		}
 	});
@@ -103,9 +106,15 @@ $(document).ready(function () {
 
 	// If coming from anchor link (#products) on non-home pages, redirect and scroll
 	$(window).on("load", function () {
-		if (window.location.hash === "#products" && window.location.pathname !== "/") {
+		if (
+			window.location.hash === "#products" &&
+			window.location.pathname !== "/"
+		) {
 			window.location.pathname = "/";
-		} else if (window.location.hash === "#products" && window.location.pathname === "/") {
+		} else if (
+			window.location.hash === "#products" &&
+			window.location.pathname === "/"
+		) {
 			setTimeout(function () {
 				$("html, body").animate(
 					{
@@ -135,3 +144,77 @@ $(document).ready(function () {
 		$(this).text("Read Less");
 	});
 });
+// how it works script
+// This script will run on the client-side
+const steps = document.querySelectorAll(".timeline-step[data-observed]");
+
+// Function to remove active class from all steps
+const deactivateAllSteps = () => {
+	steps.forEach((step) => {
+		const dot = step.querySelector(".timeline-dot");
+		const stepNumber = step.querySelector(".step-number");
+		const title = step.querySelector(".step-title");
+
+		dot?.classList.remove("active");
+		stepNumber?.classList.remove("purple");
+		title?.classList.remove("active-title");
+	});
+};
+
+// Function to activate a specific step
+const activateStep = (step) => {
+	const dot = step.querySelector(".timeline-dot");
+	const stepNumber = step.querySelector(".step-number");
+	const title = step.querySelector(".step-title");
+
+	dot?.classList.add("active");
+	stepNumber?.classList.add("purple");
+	title?.classList.add("active-title");
+};
+
+// Function to find and activate the most centered step
+const updateActiveStep = () => {
+	let mostCenteredStep = null;
+	let minDistance = Infinity;
+
+	steps.forEach((step) => {
+		const rect = step.getBoundingClientRect();
+		const elementCenter = rect.top + rect.height / 2;
+		const viewportCenter = window.innerHeight / 2;
+		const distance = Math.abs(elementCenter - viewportCenter);
+
+		// Check if element is in viewport
+		if (rect.top < window.innerHeight && rect.bottom > 0) {
+			if (distance < minDistance) {
+				minDistance = distance;
+				mostCenteredStep = step;
+			}
+		}
+	});
+
+	// Deactivate all steps first
+	deactivateAllSteps();
+
+	// Activate only the most centered step
+	if (mostCenteredStep) {
+		activateStep(mostCenteredStep);
+	}
+};
+
+// Use scroll event with throttling for better performance
+let ticking = false;
+const handleScroll = () => {
+	if (!ticking) {
+		window.requestAnimationFrame(() => {
+			updateActiveStep();
+			ticking = false;
+		});
+		ticking = true;
+	}
+};
+
+// Initial check
+updateActiveStep();
+
+// Listen to scroll events
+window.addEventListener("scroll", handleScroll);
