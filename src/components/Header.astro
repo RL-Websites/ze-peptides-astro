@@ -20,8 +20,8 @@ const isHome = Astro.url.pathname === "/";
 			<nav class="site__menu">
 				<ul class="site__menu__list">
 					<li><a href="/#products">Home</a></li>
-					<li><a href="/#how-it-works">About Us</a></li>
-					<li><a href="/#why-choose-us">Contact</a></li>
+					<li><a href="/about">About Us</a></li>
+					<li><a href="/contact-us">Contact</a></li>
 					<!-- <li><a href="/faq">FAQ</a></li> -->
 				</ul>
 			</nav>
@@ -32,13 +32,14 @@ const isHome = Astro.url.pathname === "/";
 					<i class="icon-cart"></i>
 					<span class="cart__badge text-center">4</span>
 				</a>
-				<button
+				<a
 					type="button"
+					href="/login"
 					class="theme-btn theme-btn__outline theme-btn__outline--primary px-20"
 				>
 					Login
-				</button>
-				<button type="button" class="theme-btn theme-btn__primary px-20">
+				</a>
+				<button type="button" class="theme-btn theme-btn__primary px-20" id="getStartedBtn">
 					Get Started
 				</button>
 				
@@ -60,7 +61,7 @@ const isHome = Astro.url.pathname === "/";
 					<div class="user-dropdown" id="user-dropdown">
 						<div class="user-name">User Name</div>
 						<ul class="user-menu-list">
-							<li><a href="/profile">Profile</a></li>
+							<li><a href="/my-profile">Profile</a></li>
 							<li><a href="/orders">Orders</a></li>
 							<li><a href="/logout">Logout</a></li>
 						</ul>
