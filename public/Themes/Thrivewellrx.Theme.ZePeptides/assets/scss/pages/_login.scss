@@ -4,7 +4,7 @@
   max-width: 656px;
   margin: 120px auto;
   width: 100%; // ← Crucial: let it shrink
-  padding: 0 24px; // ← Replace huge 82px side padding
+
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -15,20 +15,6 @@
     text-align: center;
   }
 
-  .title {
-    font-size: 60px;
-    font-family: "sfuidisplay";
-    font-weight: 700;
-
-    background-clip: text;
-    color: transparent;
-  }
-
-  .subtitle {
-    color: #6b46c1;
-    font-weight: 700;
-    font-size: 30px;
-  }
 
   form {
     width: 100% !important; // ← Override any fixed width
@@ -68,26 +54,10 @@
     color: #333;
   }
 
-  .form-control-lg {
-    font-size: 1rem; // Prevents iOS zoom
-  }
 
-  .form-check-label {
-    font-weight: 500;
-    font-size: 16px;
-  }
 
-  .theme-btn {
-    background-color: #6b46c1;
-    border: none;
-    padding: 0.875rem 1rem;
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
 
-  .theme-btn:hover {
-    background-color: #553c9a;
-  }
+
 
   .form-check-input:checked {
     background-color: #6b46c1;
@@ -119,14 +89,6 @@
       margin-top: 70px;
     }
 
-    .title {
-      font-size: 2.5rem; // ~40px
-      line-height: 1.2;
-    }
-
-    .subtitle {
-      font-size: 1.125rem; // 18px
-    }
   }
 }
 
@@ -143,8 +105,5 @@
     margin: 20px auto;
     padding: 0 16px;
 
-    .title {
-      font-size: 2rem; // 32px – fits perfectly
-    }
   }
 }

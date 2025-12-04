@@ -31,7 +31,11 @@
 	&-header {
 		display: flex;
 		align-items: center;
-		border-bottom: 2px solid $blue-3;
+		border-bottom: 2px solid $primary-light;
+
+		h2{
+			font-size: $fs-30;
+		}
 	}
 
 	&-body {
@@ -409,6 +413,12 @@
 	.modal {
 		&__primary-text {
 			font-size: 14px;
+		}
+
+		&-header {
+			h2{
+				font-size: $fs-18;
+			}
 		}
 
 		&__actions {
