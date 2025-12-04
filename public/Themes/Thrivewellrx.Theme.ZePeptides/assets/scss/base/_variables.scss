@@ -41,8 +41,13 @@ $pink-1: #d47186; // Legacy pink-1
 $pink-2: #ffe0eb; // Legacy pink-2
 
 
+$anim-delay: 1.8s;
+$anim-delay-discover: 1s;
+$anim-delay-footer: 0s;
 
-
+$transition-default: all 0.3s ease;
+$transition-color: color 0.3s ease;
+$transition-bg: background-color 0.3s ease;
 // ==== Font Sizes
 $fs-10: 10px;
 $fs-12: 12px;

@@ -12,6 +12,7 @@
 		backdrop-filter: blur(8px);
 		-webkit-backdrop-filter: blur(8px);
 		box-shadow: 0 2px 10px rgba($black, 0.05);
+		animation: slideInRight 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 
 		&.sticky {
 			box-shadow: 0 4px 20px rgba($black, 0.1);
@@ -39,6 +40,7 @@
 			color: $primary;
 			position: relative;
 		}
+
 		.cart__badge {
 			position: absolute;
 			z-index: 1;
@@ -89,6 +91,7 @@
 			margin: 0;
 			padding: 0;
 			list-style: none;
+
 			@media all and (min-width: 992px) {
 				margin-left: 220px;
 			}
@@ -304,13 +307,16 @@
 	.site {
 		&__header {
 			padding: 16px 0;
+
 			.cart__badge {
 				top: 0px;
 			}
+
 			&.menu-open {
 				.hamburger-menu {
 					color: $white;
 				}
+
 				.mobile-header-elements {
 					.cart-icon .cart__badge {
 						color: $primary;

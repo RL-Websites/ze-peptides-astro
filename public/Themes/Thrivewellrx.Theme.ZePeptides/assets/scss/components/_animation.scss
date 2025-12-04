@@ -1,0 +1,174 @@
+$anim-delay: 1.8s;
+$anim-delay-discover: 1s;
+$anim-delay-footer: 0s;
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+// Smooth fade-up animation with slight blur (like Heva)
+@keyframes fadeUpBlur {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Gentle scale and fade (for emphasis)
+@keyframes scaleInSmooth {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Letter-by-letter reveal effect
+@keyframes letterReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) rotateX(90deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+// Smooth slide from left with fade
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-200%) translateX(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%) translateX(-50%);
+    ;
+  }
+}
+
+
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes mushroomGrow {
+  0% {
+    opacity: 0;
+    transform: translateY(150%) scale(0.3);
+    transform-origin: bottom center;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes wormEmerge {
+  0% {
+    opacity: 1;
+    clip-path: inset(100% -50px 0 0);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    clip-path: inset(0 -50px 0 0);
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeUpBlur 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-scale-in {
+  opacity: 0;
+  animation: scaleInSmooth 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-slide-left {
+  opacity: 0;
+  animation: slideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+// Delay utilities
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}

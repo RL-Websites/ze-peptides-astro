@@ -6,6 +6,9 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center center;
+	animation: wormEmerge 3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+	animation-delay: $anim-delay-discover + 0.1s; // 1.4s    transform: translateY(30px);
+	opacity: 0;
 
 	&__alt {
 		padding-bottom: 100px;

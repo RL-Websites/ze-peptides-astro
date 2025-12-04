@@ -10,23 +10,29 @@ h6 {
 	margin: 0;
 	font-family: "sfuidisplay", sans-serif;
 	color: $secondary;
+	opacity: 0;
+	animation: slideInLeft 3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+	animation-delay: $anim-delay-discover + 0.4s; // 1.4s    transform: translateY(30px);
 }
 
 p {
 	margin: 0;
 	font-family: "sfuidisplay", sans-serif;
 	color: $secondary;
+
 }
 
 span {
 	font-family: "sfuidisplay", sans-serif;
 }
+
 // H1 - 70px Bold, 120% line-height
 h1 {
 	font-size: 70px;
 	font-weight: 700;
 	line-height: 120%;
 	letter-spacing: 0;
+
 }
 
 // H2 - 30px Bold, 100% line-height
@@ -86,6 +92,7 @@ h5 {
 	font-weight: 500;
 	line-height: 160%;
 	letter-spacing: 0;
+	animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 
 // Body4 - 16px Medium, 160% line-height
@@ -95,6 +102,7 @@ h5 {
 	font-weight: 500;
 	line-height: 160%;
 	letter-spacing: 0;
+	animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 
 .text-md-body4 {
@@ -102,6 +110,8 @@ h5 {
 	font-weight: 500;
 	line-height: 110%;
 	letter-spacing: 0;
+	animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+
 	@media all and (min-width: 768px) {
 		font-size: 16px;
 		font-weight: 500;
@@ -109,6 +119,7 @@ h5 {
 		letter-spacing: 0;
 	}
 }
+
 // Small - 12px Bold, 160% line-height
 small,
 .text-small {
@@ -116,6 +127,7 @@ small,
 	font-weight: 700;
 	line-height: 160%;
 	letter-spacing: 0;
+	animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 
 // Legacy utility classes (keeping for backward compatibility)
@@ -125,34 +137,40 @@ small,
 			font-size: 70px;
 			font-weight: 700;
 			line-height: 120%;
+			animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 		}
 
 		&-two {
 			font-size: 30px;
 			font-weight: 700;
 			line-height: 100%;
+			animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 		}
 
 		&-three {
 			font-size: 24px;
 			font-weight: 700;
 			line-height: 160%;
+			animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 		}
 
 		&-four {
 			font-size: 18px;
 			font-weight: 700;
 			line-height: 160%;
+			animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 		}
 
 		&-five {
 			font-size: 16px;
 			font-weight: 600;
 			line-height: 160%;
+			animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 		}
 
 		&-img {
 			max-width: 330px;
+
 		}
 	}
 }
@@ -160,6 +178,7 @@ small,
 .font-sfui {
 	font-family: "sfuidisplay", sans-serif;
 }
+
 .font-cabinet-grotesk {
 	font-family: "CabinetGrotesk", sans-serif;
 }

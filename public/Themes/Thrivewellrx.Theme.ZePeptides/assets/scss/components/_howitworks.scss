@@ -1,14 +1,5 @@
-// Variables
-$purple-primary: #7c3aed;
-$purple-dark: #6d28d9;
-$gray-light: #f8f9fa;
-$gray-border: #dee2e6;
-$gray-text: #6c757d;
-$black: #1a1a1a;
+@use "../base/variables" as *;
 
-$transition-default: all 0.3s ease;
-$transition-color: color 0.3s ease;
-$transition-bg: background-color 0.3s ease;
 
 .how-it-works-p {
   font-family: "sfuidisplay", sans-serif;
@@ -17,6 +8,7 @@ $transition-bg: background-color 0.3s ease;
   font-style: bold;
   line-height: 160%;
   color: #525252;
+  animation: slideInRight 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 
   @media (max-width: 768px) {
     font-size: 16px;
@@ -30,6 +22,7 @@ $transition-bg: background-color 0.3s ease;
   font-size: 70px;
   font-weight: 700;
   font-style: bold;
+  animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 
   @media (max-width: 768px) {
     font-size: 36px;
@@ -47,29 +40,25 @@ body {
   font-weight: 700;
   font-style: bold;
   font-size: 30px;
+  animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 
 .step-title.active-title {
-  color: $purple-primary;
+  color: $primary;
   /* Replace with your brand color */
+
 }
 
 .mobile-step-title.active-title {
-  color: $purple-primary;
+  color: $primary;
 
 }
 
 .mobile-number-description.active-title {
-  color: $purple-primary;
+  color: $primary;
 
 }
 
-.mobile-number-description {
-  /* For vertical alignment */
-
-
-
-}
 
 .timeline-description {
   font-family: 'sfuidisplay', serif;
@@ -78,6 +67,21 @@ body {
   line-height: 160%;
   width: 370px;
   color: #525252;
+  animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.timeline-desktop>* {
+  animation: scaleInSmooth 1.4s ease-out forwards;
+  opacity: 0;
+
+  // Apply delays to each card
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      animation-delay: ($anim-delay-discover - 0.4s) + ($i * 0.3s);
+    }
+
+
+  }
 }
 
 // Desktop Timeline
@@ -101,6 +105,7 @@ body {
 .timeline-step {
   position: relative;
   margin-bottom: 8rem;
+  animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 
   &:last-child {
     margin-bottom: 0;
@@ -114,7 +119,7 @@ body {
     top: 2rem; // Start from the dot (2rem is dot's top position)
     height: calc(100% - 2rem); // Full height minus dot's top position
     width: 1px;
-    background-color: $gray-border;
+    background-color: $gray-medium;
     transform: translateX(-50%);
     z-index: 1;
   }
@@ -127,7 +132,7 @@ body {
     top: 4rem; // Start below the dot (12px dot + some gap)
     height: calc(100% + 50px); // Height minus starting position
     width: 1px;
-    background-color: $gray-border;
+    background-color: $gray-medium;
     transform: translateX(-50%);
     z-index: 1;
   }
@@ -136,18 +141,19 @@ body {
 // Center Dot - updated for better positioning
 .timeline-dot {
   position: absolute;
-  left: 50%;
+  left: 49.2%;
   top: 2rem;
   transform: translateX(-50%);
-  width: 12px;
-  height: 12px;
-  background-color: $gray-border;
+  width: 20px;
+  height: 20px;
+  background-color: $gray-medium;
   border-radius: 50%;
   z-index: 10; // Make sure dot is above the line
   transition: $transition-default;
+  animation: wormEmerge 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 
   &.active {
-    background-color: $purple-primary;
+    background-color: $primary;
     transform: translateX(-50%) scale(1.25);
   }
 }
@@ -163,9 +169,10 @@ body {
   line-height: 1;
   transition: $transition-color;
   flex-shrink: 0;
+  animation: wormEmerge 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 
   &.purple {
-    color: $purple-primary;
+    color: $primary;
   }
 }
 
@@ -177,6 +184,7 @@ body {
   overflow: hidden;
 
   position: relative;
+  animation: fadeUpBlur 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 
   &::after {
     content: attr(data-size);
@@ -204,6 +212,7 @@ body {
 .mobile-timeline-step {
   position: relative;
   margin-bottom: 3rem;
+  animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 
   // Hover effects
   // &:hover {
@@ -239,9 +248,10 @@ body {
   line-height: 1;
   transition: $transition-color;
   flex-shrink: 0;
+  animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 
   &.purple {
-    color: $purple-primary;
+    color: $primary;
   }
 }
 
@@ -249,14 +259,15 @@ body {
 .mobile-dot {
   width: 10px;
   height: 10px;
-  background-color: $gray-border;
+  background-color: $gray-medium;
   border-radius: 50%;
   position: relative;
   transition: $transition-default;
   margin-top: 4px;
+  animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 
   &.active {
-    background-color: $purple-primary;
+    background-color: $primary;
   }
 
   // Vertical connecting line
@@ -268,7 +279,7 @@ body {
     transform: translateX(-50%);
     width: 1px;
     height: 230px;
-    background-color: $gray-border;
+    background-color: $gray-medium;
     transition: $transition-bg;
   }
 }
@@ -279,6 +290,7 @@ body {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin-bottom: 0.75rem;
+  animation: slideInLeft 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 
   img {
     width: 100%;

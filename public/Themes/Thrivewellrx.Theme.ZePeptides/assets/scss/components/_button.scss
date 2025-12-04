@@ -11,6 +11,7 @@
 	outline: 0;
 	box-shadow: none;
 	transition: 0.3s;
+	animation: wormEmerge 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 
 	&__primary {
 		background-color: $primary;
@@ -108,11 +109,13 @@
 		font-size: $fs-16;
 		background-color: transparent;
 		border-radius: 8px;
+
 		&:hover,
 		&:focus {
 			background-color: $primary;
 			border-color: $primary;
 		}
+
 		&--primary {
 			border: 1px solid $primary;
 			color: $primary;
@@ -267,6 +270,7 @@
 	.theme-btn {
 		padding: 15px 30px;
 		font-size: $fs-14;
+
 
 		&__outline {
 			font-size: $fs-14;

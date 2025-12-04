@@ -57,6 +57,7 @@
 		}
 	}
 }
+
 .alert-pill {
 	display: inline-flex;
 	align-items: center;
@@ -66,6 +67,7 @@
 	border: 2px dashed $pink-1;
 	border-radius: 9999px;
 	color: $red;
+	animation: slideInRight 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 
 	i.icon-alert {
 		font-size: $fs-20;
@@ -86,6 +88,7 @@
 		}
 	}
 }
+
 .product {
 	&__title {
 		max-width: 400px;
@@ -198,6 +201,7 @@
 	max-width: 472px;
 	margin: 0 auto;
 }
+
 //Client CSS End
 
 .faq {
@@ -243,8 +247,7 @@
 	background-color: $blue-3;
 }
 
-@media only screen and (max-width: 1170px) {
-}
+@media only screen and (max-width: 1170px) {}
 
 @media only screen and (max-width: 992px) {
 	.home {

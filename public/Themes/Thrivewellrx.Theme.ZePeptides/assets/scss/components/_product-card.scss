@@ -1,5 +1,19 @@
 @use "../base/variables" as *;
 
+.product__card__container>* {
+	animation: scaleInSmooth 1.4s ease-out forwards;
+	opacity: 0;
+
+	// Apply delays to each card
+	@for $i from 1 through 10 {
+		&:nth-child(#{$i}) {
+			animation-delay: ($anim-delay-discover - 0.4s) + ($i * 0.3s);
+		}
+
+
+	}
+}
+
 .product {
 	&__card {
 		width: 100%;
@@ -7,6 +21,7 @@
 		border-radius: 20px;
 		border: 1px solid $primary-light;
 		box-shadow: 0px 0px 30px 0px #27005d14;
+
 	}
 
 	&__img {
