@@ -15,48 +15,72 @@ import Layout from "../layouts/Layout.astro";
 				<div class="container">
 					<div>
 						<div class="order-heading">
-							<i class="icon-back text-primary-grad-1" data-bind="click: function() { goToOrderList() }"></i>
-						<h1 class="hero__title text-primary-grad-1 fs-30 fs-md-48">Order Details</h1>
+							<i
+								class="icon-back text-primary-grad-1"
+								data-bind="click: function() { goToOrderList() }"></i>
+							<h1 class="hero__title text-primary-grad-1 fs-30 fs-md-48"
+								>Order Details</h1
+							>
 						</div>
 						<div class="row col-equal-height mt-20">
-						<div class="col-md-6">
-							<div class="card-basic h-100">
-								<div class="card-basic__header">
-									<p class="card-basic__title">Shipping Information</p>
-								</div>
+							<div class="col-md-6">
+								<div class="card-basic h-100">
+									<div class="card-basic__header">
+										<p class="card-basic__title">Shipping Information</p>
+									</div>
 
-								<div class="card-basic__body">
-									<div class="medicine-info">
-										<div class="medicine-info__item">
-											<p class="medicine-info__label">Name:</p>
-											<p class="medicine-info__text" data-bind="text:ShippingName">Mike Scott</p>
-										</div>
+									<div class="card-basic__body">
+										<div class="medicine-info">
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Name:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text:ShippingName">Mike Scott</p
+												>
+											</div>
 
-										<div class="medicine-info__item">
-											<p class="medicine-info__label">Address:</p>
-											<p class="medicine-info__text" data-bind="text:ShippingAddress">221B Baker Street</p>
-										</div>
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Address:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text:ShippingAddress">221B Baker Street</p
+												>
+											</div>
 
-										<div class="medicine-info__item">
-											<p class="medicine-info__label">State:</p>
-											<p class="medicine-info__text" data-bind="text:ShippingState">Alaska </p>
-										</div>
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">State:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text:ShippingState"
+													>Alaska
+												</p>
+											</div>
 
-										<div class="medicine-info__item">
-											<p class="medicine-info__label">City:</p>
-											<p class="medicine-info__text" data-bind="text:ShippingCity">Nebraska</p>
-										</div>
-										<div class="medicine-info__item">
-											<p class="medicine-info__label">Zip Code:</p>
-											<p class="medicine-info__text" data-bind="text: ShippingZipcode">1209</p>
-										</div>
-										<div class="medicine-info__item">
-											<p class="medicine-info__label">Email Address:</p>
-											<p class="medicine-info__text" data-bind="text: ShippingEmailAddress">mike@gmail.com</p>
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">City:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text:ShippingCity">Nebraska</p
+												>
+											</div>
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Zip Code:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: ShippingZipcode">1209</p
+												>
+											</div>
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Email Address:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: ShippingEmailAddress"
+													>mike@gmail.com</p
+												>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
 							</div>
 
 							<div class="col-md-6">
@@ -69,41 +93,59 @@ import Layout from "../layouts/Layout.astro";
 										<div class="medicine-info">
 											<div class="medicine-info__item">
 												<p class="medicine-info__label">Name:</p>
-												<p class="medicine-info__text" data-bind="text: BillingName">Mike Scott</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: BillingName">Mike Scott</p
+												>
 											</div>
 
 											<div class="medicine-info__item">
 												<p class="medicine-info__label">Address:</p>
-												<p class="medicine-info__text" data-bind="text: BillingAddress">221B Baker Street</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: BillingAddress">221B Baker Street</p
+												>
 											</div>
 
 											<div class="medicine-info__item">
 												<p class="medicine-info__label">State:</p>
-												<p class="medicine-info__text" data-bind="text: BillingState">Alaska</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: BillingState">Alaska</p
+												>
 											</div>
 
 											<div class="medicine-info__item">
 												<p class="medicine-info__label">City:</p>
-												<p class="medicine-info__text" data-bind="text: BillingCity">Nebraska</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: BillingCity">Nebraska</p
+												>
 											</div>
 											<div class="medicine-info__item">
 												<p class="medicine-info__label">Zip Code:</p>
-												<p class="medicine-info__text" data-bind="text: BillingZipcode">1209</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: BillingZipcode">1209</p
+												>
 											</div>
 											<div class="medicine-info__item">
 												<p class="medicine-info__label">Email Address:</p>
-												<p class="medicine-info__text" data-bind="text: BillingEmailAddress">mike@gmail.com</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: BillingEmailAddress"
+													>mike@gmail.com</p
+												>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-							<div class="card-basic mt-60">
+						<div class="card-basic mt-60">
 							<div class="card-basic__header">
 								<p class="card-basic__title">Shipping tracking number</p>
 							</div>
-							
 
 							<div class="card-basic__body">
 								<div class="order">
@@ -141,6 +183,11 @@ import Layout from "../layouts/Layout.astro";
 											</div>
 											<div class="order__step">
 												<span class="order__step-label">Shipped</span>
+												<a
+													class="order__step-label order__step-label--bottom"
+													style="text-decoration:underline; font-size:15px;"
+													target="_blank">Track_ID_HG-003</a
+												>
 											</div>
 											<div class="order__step">
 												<span class="order__step-label">Delivered</span>
