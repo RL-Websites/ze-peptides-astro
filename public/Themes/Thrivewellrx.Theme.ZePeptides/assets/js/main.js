@@ -218,3 +218,29 @@ updateActiveStep();
 
 // Listen to scroll events
 window.addEventListener("scroll", handleScroll);
+
+// reset-password script
+function togglePassword(inputId, iconId) {
+	var input = document.getElementById(inputId);
+	var icon = document.getElementById(iconId);
+
+	if (!input || !icon) return;
+
+	var isPassword = input.type === "password";
+	input.type = isPassword ? "text" : "password";
+
+	icon.classList.toggle("icon-StateOff", !isPassword);
+	icon.classList.toggle("icon-StateOn", isPassword);
+}
+
+document
+	.getElementById("toggleNewPassword")
+	?.addEventListener("click", function () {
+		togglePassword("new_password", "toggleNewPassword");
+	});
+
+document
+	.getElementById("toggleConfirmPassword")
+	?.addEventListener("click", function () {
+		togglePassword("confirm_password", "toggleConfirmPassword");
+	});
