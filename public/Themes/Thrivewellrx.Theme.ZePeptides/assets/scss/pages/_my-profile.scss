@@ -1,47 +1,41 @@
 @use "../base/variables" as *;
 
 .my-profile {
-    padding-top: 120px;
-    padding-bottom: 100px;
-    max-width: 564px;
-    display: flex;
-    margin: auto;
+	padding-top: 120px;
+	padding-bottom: 100px;
+	max-width: 564px;
+	display: flex;
+	margin: auto;
 }
 
 .rounded-10 {
-    border-radius: 10px !important;
+	border-radius: 10px !important;
 }
 
-.form-field{
-    background-color: #FBF9FF;
-    padding: 20px 40px 40px;
+.form-field {
+	background-color: #fbf9ff;
+	padding: 20px 40px 40px;
 }
 
-.site__heading-four {
-    font-size: 70px;
-    text-align: center;
-    border-bottom: 2px solid #AEAEAE;
+.sub-heading {
+	font-weight: 700;
 }
 
-.sub-heading{
-    font-weight: 700;
+.buttons {
+	display: flex;
+	justify-content: end;
+	margin-bottom: 22px;
+
+	a {
+		color: #5b0ec7;
+		font-weight: 500;
+	}
 }
 
-.buttons{
-    display: flex;
-    justify-content: end;
-    margin-bottom: 22px;
-    
-    a{
-        color: #5B0EC7;
-        font-weight: 500;
-    }
-}
+.form-group {
+	margin-bottom: 24px;
 
-.form-group{
-    margin-bottom: 24px;
-    
-    input{
-        border-color: #AEAEAE;
-    }
+	input {
+		border-color: #aeaeae;
+	}
 }

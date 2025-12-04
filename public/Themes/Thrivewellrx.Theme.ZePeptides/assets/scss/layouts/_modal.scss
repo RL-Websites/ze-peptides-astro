@@ -31,7 +31,11 @@
 	&-header {
 		display: flex;
 		align-items: center;
-		border-bottom: 2px solid $blue-3;
+		border-bottom: 2px solid $primary-light;
+
+		h2{
+			font-size: $fs-30;
+		}
 	}
 
 	&-body {
@@ -219,8 +223,6 @@
 		&__justify {
 			justify-content: end;
 		}
-
-
 	}
 
 	&-backdrop {
@@ -270,8 +272,6 @@
 			color: white;
 		}
 	}
-
-
 }
 
 .confirm-modal {
@@ -385,13 +385,11 @@
 			font-size: $fs-14;
 			color: $secondary;
 			margin-bottom: 0;
-
 		}
 	}
 }
 
 .terms-condition-modal {
-
 	.modal-body,
 	.modal-header {
 		padding: 20px;
@@ -401,10 +399,8 @@
 		margin: 20px 0;
 
 		&__line {
-
 			border: 1px dashed $blue-3;
 			display: block;
-
 		}
 	}
 
@@ -414,10 +410,15 @@
 }
 
 @media only screen and (max-width: 768px) {
-
 	.modal {
 		&__primary-text {
 			font-size: 14px;
+		}
+
+		&-header {
+			h2{
+				font-size: $fs-18;
+			}
 		}
 
 		&__actions {
@@ -429,16 +430,11 @@
 				width: unset;
 			}
 
-
-
 			.min-w-206 {
 				width: 50% !important;
 				min-width: unset !important;
 			}
-
 		}
-
-
 	}
 
 	.dose-modal {
@@ -450,9 +446,7 @@
 			padding: 10px;
 		}
 	}
-
 }
-
 
 @media only screen and (max-width: 576px) {
 	.modal {

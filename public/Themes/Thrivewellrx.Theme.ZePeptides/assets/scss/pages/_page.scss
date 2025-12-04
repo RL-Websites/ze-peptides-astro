@@ -2,7 +2,6 @@
 
 .page {
 	&__wrapper {
-
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: center center;
@@ -24,35 +23,33 @@
 	}
 }
 
-.faq-section{
-		margin-bottom: 30px;
-	}
-.faq{
-	&__lg{
-		&__body{
+.faq-section {
+	margin-bottom: 30px;
+}
+.faq {
+	&__lg {
+		&__body {
 			color: $black !important;
 			line-height: 1.6 !important;
 		}
-		&__heading{
-			p.collapsed-heading{
-				
+		&__heading {
+			p.collapsed-heading {
 				font-weight: 700 !important;
-				&::after{
+				&::after {
 					background-color: #712ad5 !important;
 					color: $white !important;
 				}
 			}
 		}
 	}
-	&__show-more{
+	&__show-more {
 		margin-top: 20px;
-		a{
-			font-family: 'SF UI Display', sans-serif;
+		a {
+			font-family: "SF UI Display", sans-serif;
 			font-weight: 700;
 			font-size: 18px;
 			color: $primary;
 		}
-		
 	}
 }
 
@@ -61,7 +58,7 @@
 // 	font-weight: 700 !important;
 // }
 
-.faq-subtitle{
+.faq-subtitle {
 	background-color: $green-light;
 	border: 1px dashed $green;
 	font-size: 22px;
@@ -69,13 +66,12 @@
 	margin-top: 30px !important;
 	padding: 20px;
 
-	a{
+	a {
 		text-decoration: none;
 		color: $black !important;
 		cursor: pointer;
 	}
 }
-
 
 @media only screen and (max-width: 768px) {
 	.page {
@@ -84,36 +80,30 @@
 		}
 	}
 
-
-	.faq{
-		&__show-more{
+	.faq {
+		&__show-more {
 			text-align: center;
 		}
-		&__lg{
-			&__body{
+		&__lg {
+			&__body {
 				font-size: $fs-16 !important;
 				line-height: 1.6 !important;
 			}
 		}
-		&__heading{
-			p{
+		&__heading {
+			p {
 				font-size: 18px !important;
 			}
 		}
 	}
-	.faq-subtitle{
+	.faq-subtitle {
 		padding: 12px;
 		font-size: 16px;
 	}
 
-	.faq-section{
+	.faq-section {
 		margin-bottom: 30px;
 	}
-	.text-primary-grad-1{
-		font-size: 30px !important;
-	}
-
-	
 }
 
 @media only screen and (max-width: 992px) {

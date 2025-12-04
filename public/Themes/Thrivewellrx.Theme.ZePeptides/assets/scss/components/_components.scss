@@ -362,28 +362,28 @@
 	white-space: nowrap;
 
 	&--default {
-		background-color: $green-1;
-		color: $blue-2;
+		background-color: $gray-normal;
+		color: $primary-deep;
 	}
 
 	&--success {
-		background-color: $green-2;
-		color: $blue-2;
+		background-color: $green-lighter;
+		color: $primary-deep;
 	}
 
 	&--warning {
-		background-color: $green-1;
-		color: $blue-2;
+		background-color: $gray-light-2;
+		color: $primary-deep;
 	}
 
 	&--danger {
 		background-color: $red;
-		color: $blue-2;
+		color: $white;
 	}
 
 	&--state {
-		background-color: white;
-		color: $blue-2;
+		background-color: $gray-lighter;
+		color: $black-deep;
 	}
 }
 

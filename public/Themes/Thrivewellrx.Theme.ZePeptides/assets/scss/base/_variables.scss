@@ -1,14 +1,21 @@
 // ==== Colors
 // Primary Brand Colors
-$primary: #5607C5; // Primary Purple
+$primary-deep: #141a33; // Deep Dark Blue
+$primary: #5607c5; // Primary Purple
 $primary-light: #e6d4ff; // Light Purple
 $primary-lighter: #f6efff; // Very Light Purple
 $primary-lightest: #fbf9ff; // Off White Purple
 // Neutrals
 $black: #2d2d2d; // Dark Gray/Black
+$black-deep: #1f1f1f; // Deep Black
 $gray-dark: #525252; // Medium Gray
+$gray-medium2: #878CA8;
 $gray-medium: #868686;
+$gray-normal: #e7f3ff; // Normal Gray
 $gray-light: #dadada; // Light Gray
+$gray-aeae: #dadada; // Light Gray
+$gray-light-2: #ffd4dd; // Light Gray
+$gray-lighter: #ffe9e9; // Light Gray
 $white: #ffffff; // Pure White
 $gray-border: #dee2e6;
 // Accent Colors
@@ -16,7 +23,8 @@ $red: #ed3131; // Red Accent
 $red-light: #ffeee8; // Light Red/Pink
 $green: #8ddcb6; // Medium Green
 $green-light: #f2ffef; // Light Green
-$orange: #F3BE11; // Orange Accent
+$green-lighter: #fffcdb; // Lighter Green
+$orange: #f3be11; // Orange Accent
 
 // Legacy color mappings (for backward compatibility)
 $secondary: $black; // Map to new black
@@ -38,9 +46,6 @@ $blue-2: #9bd0e3; // Legacy blue-2
 $blue-3: #9790d4; // Legacy blue-3
 $pink-1: #d47186; // Legacy pink-1
 $pink-2: #ffe0eb; // Legacy pink-2
-
-
-
 
 // ==== Font Sizes
 $fs-10: 10px;
