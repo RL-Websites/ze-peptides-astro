@@ -1,7 +1,7 @@
 @use "../base/variables" as *;
 
 .cart-hero {
-	padding-top: 100px;
+	padding-top: 130px;
 
 	&__heading {
 		font-size: $fs-30;
@@ -40,7 +40,7 @@
 	padding: 20px 0 0 0;
 
 	&__box {
-		padding: 20px 0;
+		padding: 24px 0 12px;
 
 		display: flex;
 		align-items: center;
@@ -120,15 +120,15 @@
 	&__items {
 		border-radius: 10px;
 		border: 1px solid #e6d4ff;
-		padding-bottom: 32px;
+		max-height: 447px;
+		overflow-y: auto;
 
 		@media all and (max-width: 767px) {
-			margin-bottom: 16px;
 			display: flex;
 			flex-direction: column;
 			gap: 16px;
 			border: 0;
-			
+			max-height: unset;
 		}
 	}
 
@@ -143,7 +143,6 @@
 			border-radius: 10px;
 			// border-radius: 10px;
 			padding: 14px;
-
 		}
 
 		&:first-child {
@@ -173,15 +172,12 @@
 	&__product {
 		display: flex;
 
-
 		@media only screen and (max-width: 768px) {
 			flex-direction: column;
-
 		}
 	}
 
 	&__thumbnail {
-
 		flex-shrink: 0;
 		flex-grow: 0;
 		background-size: cover;
@@ -210,14 +206,16 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
-		border-radius: 4px;
+		border-radius: 8px;
+		padding: 15px;
+		height: 100px;
+		width: 112px;
 
 		img {
-			height: 100px;
-			width: 112px;
+			height: 100%;
+			max-width: 100%;
+			width: auto;
 			object-fit: contain;
-
 		}
 
 		@media all and (max-width: 767px) {
@@ -232,16 +230,9 @@
 		flex-direction: column;
 		align-items: flex-start;
 
-
-
-
-
-
 		p {
 			color: $secondary;
 			margin-bottom: 0;
-
-
 		}
 	}
 
@@ -254,9 +245,7 @@
 		color: $secondary;
 		font-family: "sfuidisplay", sans-serif;
 		font-weight: 700;
-		color: #2D2D2D;
-
-
+		color: #2d2d2d;
 	}
 
 	&_action {
@@ -266,7 +255,6 @@
 	@media all and (max-width: 767px) {
 		&__details {
 			margin-left: 12px;
-			gap: 24px;
 
 			p {
 				font-size: $fs-14;
@@ -281,7 +269,6 @@
 		}
 
 		&__item-price {
-
 			font-size: 16px !important;
 			line-height: 1.6;
 			font-weight: 600 !important;
@@ -370,13 +357,11 @@
 		}
 
 		&__btn {
-			padding: 2.5px 19px;
-			font-family: "sfuidisplay";
-			font-weight: 500;
-			color: #5607C5;
-			font-size: $fs-14;
-			height: 47px;
-
+			padding: 2.5px 6px;
+			color: #5607c5;
+			height: 42px;
+			font-size: 12px;
+			min-width: 100px;
 		}
 	}
 }
@@ -454,7 +439,6 @@
 		}
 
 		&__item {
-
 			&--name,
 			&--value {
 				font-size: $fs-14;
@@ -476,10 +460,10 @@
 }
 
 .attention {
-	background: #F2FFEF;
+	background: #f2ffef;
 	color: $blue-2;
 	padding: 20px;
-	border: 2px dashed #BDDCB6;
+	border: 2px dashed #bddcb6;
 	border-radius: 10px;
 
 	// &__box {
@@ -580,7 +564,6 @@
 		gap: 12px;
 
 		@media only screen and (max-width: 768px) {
-
 			.products__filter-btn.products__filter-left,
 			.products__filter-btn.products__filter-right {
 				display: none !important;
@@ -660,8 +643,6 @@
 	.cart-delete-btn {
 		font-size: 24px;
 		font-weight: 700;
-
-
 	}
 
 	.recommended {
@@ -753,7 +734,6 @@
 		}
 
 		&__thumbnail {
-
 			padding: 5px;
 
 			img {

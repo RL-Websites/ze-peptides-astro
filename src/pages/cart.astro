@@ -13,9 +13,9 @@ import Layout from "../layouts/Layout.astro";
 			<!-- ==|| Cart Hero Section Start ||== -->
 			<section class="cart-hero">
 				<div class="container">
-					<h2 class="site__heading-one text-center">
-						<span class="text-primary-grad-1"> Complete Your Order</span>
-					</h2>
+					<h1 class="text-center text-primary-grad-1">
+						Complete Your Order
+					</h1>
 
 					<!-- <div class="text-center">
 						<p class="cart-hero__text">
@@ -55,7 +55,7 @@ import Layout from "../layouts/Layout.astro";
 			<section class="cart-view">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-7">
+						<div class="col-lg-7">
 							<div class="cart__items">
 								<div class="cart__item">
 									<div class="cart__product">
@@ -68,10 +68,10 @@ import Layout from "../layouts/Layout.astro";
 
 										<div class="cart__details">
 											<p class="cart__item-name">Finasteride 1mg Tablet</p>
-											<p class="cart__item-price">
+											<p class="cart__item-price mt-10">
 												$39.99/month and a $30.00 physician <span>Consult</span>
 											</p>
-											<p class="fw-600 pt-2"
+											<p class="fw-600 mt-10"
 												>Qty: <span data-bind="text: product.Quantity">1</span
 												></p
 											>
@@ -94,56 +94,58 @@ import Layout from "../layouts/Layout.astro";
 										</button>
 									</div>
 								</div>
-
 								<div class="cart__item">
 									<div class="cart__product">
 										<div class="cart__thumbnail cart__thumbnail--purple">
 											<img
-												src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-2.png"
+												src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-1.png"
 												alt="Product Image"
 											/>
 										</div>
 
 										<div class="cart__details">
 											<p class="cart__item-name">Finasteride 1mg Tablet</p>
-											<p class="cart__item-price">
+											<p class="cart__item-price mt-10">
 												$39.99/month and a $30.00 physician <span>Consult</span>
 											</p>
-											<!-- <p class="cart__item-type">
-												<span>.5mg</span>
-												<span class="px-2">|</span>
-											</p> -->
-											<p class="fw-600 pt-2"
+											<p class="fw-600 mt-10"
 												>Qty: <span data-bind="text: product.Quantity">1</span
 												></p
 											>
+
+											<!-- <p class="cart__item-type">
+												<span>.5mg</span>
+												<span class="px-2">|</span>
+												<span>Consult</span>
+											</p> -->
 										</div>
 									</div>
 
 									<div class="cart__action">
 										<button
 											class="theme-btn theme-btn__icon-only cart-delete-btn"
+											data-toggle="modal"
+											data-target="#confirm"
 										>
 											<i class="icon-delete"></i>
 										</button>
 									</div>
 								</div>
-
 								<div class="cart__item">
 									<div class="cart__product">
 										<div class="cart__thumbnail cart__thumbnail--purple">
 											<img
-												src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-3.png"
+												src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-1.png"
 												alt="Product Image"
 											/>
 										</div>
 
 										<div class="cart__details">
 											<p class="cart__item-name">Finasteride 1mg Tablet</p>
-											<p class="cart__item-price">
+											<p class="cart__item-price mt-10">
 												$39.99/month and a $30.00 physician <span>Consult</span>
 											</p>
-											<p class="fw-600 pt-2"
+											<p class="fw-600 mt-10"
 												>Qty: <span data-bind="text: product.Quantity">1</span
 												></p
 											>
@@ -151,6 +153,7 @@ import Layout from "../layouts/Layout.astro";
 											<!-- <p class="cart__item-type">
 												<span>.5mg</span>
 												<span class="px-2">|</span>
+												<span>Consult</span>
 											</p> -->
 										</div>
 									</div>
@@ -158,27 +161,28 @@ import Layout from "../layouts/Layout.astro";
 									<div class="cart__action">
 										<button
 											class="theme-btn theme-btn__icon-only cart-delete-btn"
+											data-toggle="modal"
+											data-target="#confirm"
 										>
 											<i class="icon-delete"></i>
 										</button>
 									</div>
 								</div>
-
 								<div class="cart__item">
 									<div class="cart__product">
 										<div class="cart__thumbnail cart__thumbnail--purple">
 											<img
-												src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-4.png"
+												src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-1.png"
 												alt="Product Image"
 											/>
 										</div>
 
 										<div class="cart__details">
 											<p class="cart__item-name">Finasteride 1mg Tablet</p>
-											<p class="cart__item-price">
+											<p class="cart__item-price mt-10">
 												$39.99/month and a $30.00 physician <span>Consult</span>
 											</p>
-											<p class="fw-600 pt-2"
+											<p class="fw-600 mt-10"
 												>Qty: <span data-bind="text: product.Quantity">1</span
 												></p
 											>
@@ -186,6 +190,7 @@ import Layout from "../layouts/Layout.astro";
 											<!-- <p class="cart__item-type">
 												<span>.5mg</span>
 												<span class="px-2">|</span>
+												<span>Consult</span>
 											</p> -->
 										</div>
 									</div>
@@ -193,6 +198,8 @@ import Layout from "../layouts/Layout.astro";
 									<div class="cart__action">
 										<button
 											class="theme-btn theme-btn__icon-only cart-delete-btn"
+											data-toggle="modal"
+											data-target="#confirm"
 										>
 											<i class="icon-delete"></i>
 										</button>
@@ -208,15 +215,14 @@ import Layout from "../layouts/Layout.astro";
 										class="promo__input"
 									/>
 									<button
-										class="theme-btn theme-btn__danger theme-btn__outline--primary promo__btn fs-md-18 fs-14 fw-bold"
+										class="theme-btn theme-btn__danger theme-btn__outline--primary promo__btn fs-md-18 fw-bold"
 									>
 										Apply Coupon
 									</button>
 								</div>
 							</div>
 						</div>
-
-						<div class="col-sm-5">
+						<div class="col-lg-5 ">
 							<div class="cart-card">
 								<div class="cart-card__header">
 									<p class="fs-24 fw-extrabold mb-0 font-cabinet-grotesk"
@@ -279,14 +285,8 @@ import Layout from "../layouts/Layout.astro";
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-			<!--==|| Cart Information Status End ||== -->
 
-			<!-- ==|| Category Suggestion Section Start ||== -->
-			<section class="products pb-100">
-				<div class="container">
-					<div class="attention">
+					<div class="attention mt-40">
 						<div class="attention__box">
 							<div class="attention__title">
 								<i class="icon-info-circle text-secondary"></i>
@@ -308,373 +308,6 @@ import Layout from "../layouts/Layout.astro";
 							</p>
 						</div>
 					</div>
-					<div
-						class="panel-group faq__lg faq--alternate mt-50"
-						id="accordion"
-						role="tablist"
-						aria-multiselectable="true"
-					>
-						<div class="panel panel-default faq__item">
-							<div
-								class="panel-heading faq__lg__heading"
-								role="tab"
-								id="headingOne"
-							>
-								<p
-									class="recommended__text text-secondary"
-									role="button"
-									data-toggle="collapse"
-									data-parent="#accordion"
-									href="#collapseOne"
-									aria-expanded="true"
-									aria-controls="collapseOne"
-								>
-									Lose the weight, not the glow! Add our skin-firming bundle to
-									support tight, hydrated skin during your GLP-1 journey?</p
-								>
-							</div>
-							<div
-								id="collapseOne"
-								class="panel-collapse collapse in"
-								role="tabpanel"
-								aria-labelledby="headingOne"
-							>
-								<div class="faq__lg__body">
-									<div class="recommended__row">
-										<div class="product__card-extended">
-											<!-- <div class="product__tag">Recurring Plan</div> -->
-											<div class="product__identity">
-												<div class="item-1">
-													<img
-														src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-2.png"
-														alt="Product Thumb"
-													/>
-												</div>
-												<div class="item-2">
-													<h2 class="product-title">
-														Compounded Semaglutide (GLP-1) Injection
-													</h2>
-													<p class="text-orange mt-10">
-														<span class="">$39.99</span>/per month
-													</p>
-
-													<div class="product__action mt-24 d-flex gap-16">
-														<button
-															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
-														>
-															<i class="icon-link"></i>
-														</button>
-														<button
-															type="button"
-															class="theme-btn theme-btn-size-lg theme-btn__secondary"
-														>
-															<i class="icon-cart-plus-new"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="product__card-extended">
-											<!-- <div class="product__tag">Recurring Plan</div> -->
-											<div class="product__identity">
-												<div class="item-1">
-													<img
-														src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-4.png"
-														alt="Product Thumb"
-													/>
-												</div>
-												<div class="item-2">
-													<h2 class="product-title">
-														Compounded Semaglutide (GLP-1) Injection
-													</h2>
-													<p class="text-orange mt-10">
-														<span class="">$39.99</span>/per month
-													</p>
-
-													<div class="product__action mt-24 d-flex gap-16">
-														<button
-															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
-														>
-															<i class="icon-link"></i>
-														</button>
-														<button
-															type="button"
-															class="theme-btn theme-btn-size-lg theme-btn__secondary"
-														>
-															<i class="icon-cart-plus-new"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="product__card-extended">
-											<!-- <div class="product__tag">Recurring Plan</div> -->
-											<div class="product__identity">
-												<div class="item-1">
-													<img
-														src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-5.png"
-														alt="Product Thumb"
-													/>
-												</div>
-												<div class="item-2">
-													<h2 class="product-title">
-														Compounded Semaglutide (GLP-1) Injection
-													</h2>
-													<p class="text-orange mt-10">
-														<span class="">$39.99</span>/per month
-													</p>
-
-													<div class="product__action mt-24 d-flex gap-16">
-														<button
-															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
-														>
-															<i class="icon-link"></i>
-														</button>
-														<button
-															type="button"
-															class="theme-btn theme-btn-size-lg theme-btn__secondary"
-														>
-															<i class="icon-cart-plus-new"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="product__card-extended">
-											<!-- <div class="product__tag">Recurring Plan</div> -->
-											<div class="product__identity">
-												<div class="item-1">
-													<img
-														src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-5.png"
-														alt="Product Thumb"
-													/>
-												</div>
-												<div class="item-2">
-													<h2 class="product-title">
-														Compounded Semaglutide (GLP-1) Injection
-													</h2>
-													<p class="text-orange mt-10">
-														<span class="">$39.99</span>/per month
-													</p>
-
-													<div class="product__action mt-24 d-flex gap-16">
-														<button
-															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
-														>
-															<i class="icon-link"></i>
-														</button>
-														<button
-															type="button"
-															class="theme-btn theme-btn-size-lg theme-btn__secondary"
-														>
-															<i class="icon-cart-plus-new"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="product__card-extended">
-											<!-- <div class="product__tag">Recurring Plan</div> -->
-											<div class="product__identity">
-												<div class="item-1">
-													<img
-														src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-5.png"
-														alt="Product Thumb"
-													/>
-												</div>
-												<div class="item-2">
-													<h2 class="product-title">
-														Compounded Semaglutide (GLP-1) Injection
-													</h2>
-													<p class="text-orange mt-10">
-														<span class="">$39.99</span>/per month
-													</p>
-
-													<div class="product__action mt-24 d-flex gap-16">
-														<button
-															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
-														>
-															<i class="icon-link"></i>
-														</button>
-														<button
-															type="button"
-															class="theme-btn theme-btn-size-lg theme-btn__secondary"
-														>
-															<i class="icon-cart-plus-new"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!--FAQ Item End-->
-						<div class="panel panel-default faq__item">
-							<div
-								class="panel-heading faq__lg__heading"
-								role="tab"
-								id="headingTwo"
-							>
-								<p
-									class="collapsed recommended__text"
-									role="button"
-									data-toggle="collapse"
-									data-parent="#accordion"
-									href="#collapseTwo"
-									aria-expanded="false"
-									aria-controls="collapseTwo"
-								>
-									<span>Should I expect any side effects?</span>
-								</p>
-							</div>
-							<div
-								id="collapseTwo"
-								class="panel-collapse collapse"
-								role="tabpanel"
-								aria-labelledby="headingTwo"
-							>
-								<div class="faq__lg__body">
-									<div class="recommended__row">
-										<div class="product__card-extended">
-											<!-- <div class="product__tag">Recurring Plan</div> -->
-											<div class="product__identity">
-												<div class="item-1">
-													<img
-														src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-2.png"
-														alt="Product Thumb"
-													/>
-												</div>
-												<div class="item-2">
-													<h2 class="product-title">
-														Compounded Semaglutide (GLP-1) Injection
-													</h2>
-													<p class="text-orange mt-10">
-														<span class="">$39.99</span>/per month
-													</p>
-
-													<div class="product__action mt-24 d-flex gap-16">
-														<button
-															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
-														>
-															<i class="icon-link"></i>
-														</button>
-														<button
-															type="button"
-															class="theme-btn theme-btn-size-lg theme-btn__secondary"
-														>
-															<i class="icon-cart-plus-new"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="product__card-extended">
-											<!-- <div class="product__tag">Recurring Plan</div> -->
-											<div class="product__identity">
-												<div class="item-1">
-													<img
-														src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-4.png"
-														alt="Product Thumb"
-													/>
-												</div>
-												<div class="item-2">
-													<h2 class="product-title">
-														Compounded Semaglutide (GLP-1) Injection
-													</h2>
-													<p class="text-orange mt-10">
-														<span class="">$39.99</span>/per month
-													</p>
-
-													<div class="product__action mt-24 d-flex gap-16">
-														<button
-															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
-														>
-															<i class="icon-link"></i>
-														</button>
-														<button
-															type="button"
-															class="theme-btn theme-btn-size-lg theme-btn__secondary"
-														>
-															<i class="icon-cart-plus-new"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="product__card-extended">
-											<!-- <div class="product__tag">Recurring Plan</div> -->
-											<div class="product__identity">
-												<div class="item-1">
-													<img
-														src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-5.png"
-														alt="Product Thumb"
-													/>
-												</div>
-												<div class="item-2">
-													<h2 class="product-title">
-														Compounded Semaglutide (GLP-1) Injection
-													</h2>
-													<p class="text-orange mt-10">
-														<span class="">$39.99</span>/per month
-													</p>
-
-													<div class="product__action mt-24 d-flex gap-16">
-														<button
-															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
-														>
-															<i class="icon-link"></i>
-														</button>
-														<button
-															type="button"
-															class="theme-btn theme-btn-size-lg theme-btn__secondary"
-														>
-															<i class="icon-cart-plus-new"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="product__card-extended">
-											<!-- <div class="product__tag">Recurring Plan</div> -->
-											<div class="product__identity">
-												<div class="item-1">
-													<img
-														src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-5.png"
-														alt="Product Thumb"
-													/>
-												</div>
-												<div class="item-2">
-													<h2 class="product-title">
-														Compounded Semaglutide (GLP-1) Injection
-													</h2>
-													<p class="text-orange mt-10">
-														<span class="">$39.99</span>/per month
-													</p>
-
-													<div class="product__action mt-24 d-flex gap-16">
-														<button
-															class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary"
-														>
-															<i class="icon-link"></i>
-														</button>
-														<button
-															type="button"
-															class="theme-btn theme-btn-size-lg theme-btn__secondary"
-														>
-															<i class="icon-cart-plus-new"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!--FAQ Item End-->
-					</div>
 
 					<div class="text-center mt-30">
 						<button class="theme-btn theme-btn__primary px-50">
@@ -683,7 +316,7 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 				</div>
 			</section>
-			<!-- ==| Category Suggestion Section End ||== -->
+			<!--==|| Cart Information Status End ||== -->
 
 			<!--==|| Empty Cart Status Start ||== -->
 			<section class="cart-view pt-md-150 pb-md-80 pt-120 pb-50">
