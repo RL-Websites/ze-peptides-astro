@@ -61,6 +61,7 @@ $fs-list: (
 	"70": $fs-70,
 	"90": $fs-90,
 	"140": $fs-140,
+	"200": $fs-200,
 );
 
 $spacing-list: (
@@ -101,6 +102,7 @@ $spacing-list: (
 	.text-#{$key} {
 		color: $color !important;
 	}
+
 	.border-#{$key} {
 		border-color: $color !important;
 	}
@@ -380,6 +382,7 @@ $spacing-list: (
 				}
 			}
 		}
+
 		&-md {
 			@media all and (min-width: 768px) {
 				&-#{$key} {
@@ -406,9 +409,11 @@ $spacing-list: (
 		gap: 0 $margin !important;
 	}
 }
+
 $width-list: (
 	"full": 100%,
 );
+
 @each $key, $width in $width-list {
 	.w-#{$key} {
 		width: $width !important;
