@@ -11,6 +11,7 @@
 	outline: 0;
 	box-shadow: none;
 	transition: 0.3s;
+	text-decoration: none;
 
 	&__primary {
 		background-color: $primary;
@@ -20,11 +21,16 @@
 		&:hover {
 			background-color: lighten($primary, 20%);
 			border-color: lighten($primary, 20%);
-
 			&--icon {
 				i {
 					color: $secondary;
 				}
+			}
+		}
+
+		&--accent {
+			&:hover {
+				color: white;
 			}
 		}
 
@@ -42,6 +48,18 @@
 				font-size: 20px;
 				line-height: 1;
 				font-weight: 500;
+			}
+			&-box {
+				padding: 5px;
+				border-radius: 4px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: $primary-light;
+				width: 34px;
+				height: 34px;
+				color: $primary;
+				margin-right: -6px;
 			}
 		}
 	}
@@ -108,11 +126,13 @@
 		font-size: $fs-16;
 		background-color: transparent;
 		border-radius: 8px;
+
 		&:hover,
 		&:focus {
 			background-color: $primary;
 			border-color: $primary;
 		}
+
 		&--primary {
 			border: 1px solid $primary;
 			color: $primary;
@@ -120,6 +140,7 @@
 			&:hover,
 			&:focus {
 				background-color: $primary-light;
+				color: $primary;
 			}
 		}
 
