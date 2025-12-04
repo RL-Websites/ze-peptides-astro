@@ -23,7 +23,7 @@
 	}
 
 	&__card {
-		margin-top: 50px;
+		margin-top: 55px;
 
 		&__variant2 {
 			margin-top: 100px;
@@ -76,10 +76,10 @@
 		}
 
 		&--cart-summary {
-			border: 1px solid #AEAEAE;
+			border: 1px solid #aeaeae;
 
 			.cart-card__header {
-				border-bottom: 1px solid #AEAEAE;
+				border-bottom: 1px solid #aeaeae;
 			}
 
 			.pricing {
@@ -195,12 +195,12 @@
 		}
 
 		&--body {
-			padding: 24px;
+			padding: 20px 24px;
 		}
 
 		&--card {
 			.basic-input {
-				border: 0.5px solid #AEAEAE;
+				border: 0.5px solid #aeaeae;
 
 				&::placeholder {
 					color: $secondary;
@@ -213,7 +213,7 @@
 			padding: 20px;
 			height: 56px;
 			border-radius: 10px;
-			border: 1px solid #AEAEAE;
+			border: 1px solid #aeaeae;
 
 			.basic-input {
 				border: 0;
@@ -257,7 +257,7 @@
 			--webkit-appearance: none;
 
 			option {
-				background-color: #2A4668;
+				background-color: #2a4668;
 
 				&:disabled {
 					color: rgba(255, 255, 255, 0.7) !important;
@@ -298,15 +298,15 @@
 	}
 }
 
-.attention__box{
+.attention__box {
 	text-align: center;
 }
 
-.attention__title p{
+.attention__title p {
 	text-align: center;
 }
 
-.custom-check__label{
+.custom-check__label {
 	line-height: 1.5 !important;
 }
 .condition {
@@ -314,26 +314,26 @@
 		background: $green-light;
 		color: $blue-2;
 		padding: 20px;
-		border: 2px dashed #BDDCB6;
+		border: 2px dashed #bddcb6;
 		border-radius: 10px;
 
-		p{
+		p {
 			text-align: center;
 			font-size: 18px;
-			color: #2D2D2D;
+			color: #2d2d2d;
 			font-weight: bold;
 		}
 	}
 }
 
-.basic-input{
-	border: 1px solid #AEAEAE !important;
+.basic-input {
+	border: 1px solid #aeaeae !important;
 }
-.select__options{
-	border: 1px solid #AEAEAE !important;
+.select__options {
+	border: 1px solid #aeaeae !important;
 }
 
-.card-input{
+.card-input {
 	border: none !important;
 }
 
@@ -391,8 +391,8 @@
 //Small Device media Query
 @media all and (max-width: 767px) {
 	.cart-card {
-		&__header{
-		border-bottom: 1px solid #E6D4FF !important;
+		&__header {
+			border-bottom: 1px solid #e6d4ff !important;
 		}
 	}
 	.payment {
@@ -446,8 +446,6 @@
 						border-radius: 5px;
 					}
 				}
-
-
 			}
 		}
 	}
