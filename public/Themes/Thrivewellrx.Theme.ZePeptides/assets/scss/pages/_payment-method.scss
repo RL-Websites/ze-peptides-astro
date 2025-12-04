@@ -26,8 +26,6 @@
 		margin-top: 55px;
 
 		&__variant2 {
-			margin-top: 100px;
-
 			.payment-card__header {
 				padding: 0 0 20px 0;
 			}
@@ -157,7 +155,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border-bottom: 1px solid $gray;
+		border-bottom: 1px solid $gray-aeae;
 		padding-bottom: 15px;
 
 		.theme-btn__primary {
@@ -389,10 +387,20 @@
 }
 
 //Small Device media Query
-@media all and (max-width: 767px) {
+@media all and (max-width: 768px) {
 	.cart-card {
 		&__header {
 			border-bottom: 1px solid #e6d4ff !important;
+		}
+	}
+	.attention {
+		&__box {
+			text-align: left;
+		}
+		&__title {
+			p {
+				text-align: left;
+			}
 		}
 	}
 	.payment {
@@ -447,6 +455,12 @@
 					}
 				}
 			}
+		}
+	}
+	.condition {
+		&__highlight p {
+			font-weight: 500;
+			font-size: 14px;
 		}
 	}
 }

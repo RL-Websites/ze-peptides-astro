@@ -219,8 +219,6 @@
 		&__justify {
 			justify-content: end;
 		}
-
-
 	}
 
 	&-backdrop {
@@ -270,8 +268,6 @@
 			color: white;
 		}
 	}
-
-
 }
 
 .confirm-modal {
@@ -385,13 +381,11 @@
 			font-size: $fs-14;
 			color: $secondary;
 			margin-bottom: 0;
-
 		}
 	}
 }
 
 .terms-condition-modal {
-
 	.modal-body,
 	.modal-header {
 		padding: 20px;
@@ -401,10 +395,8 @@
 		margin: 20px 0;
 
 		&__line {
-
 			border: 1px dashed $blue-3;
 			display: block;
-
 		}
 	}
 
@@ -414,7 +406,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-
 	.modal {
 		&__primary-text {
 			font-size: 14px;
@@ -429,16 +420,11 @@
 				width: unset;
 			}
 
-
-
 			.min-w-206 {
 				width: 50% !important;
 				min-width: unset !important;
 			}
-
 		}
-
-
 	}
 
 	.dose-modal {
@@ -450,9 +436,7 @@
 			padding: 10px;
 		}
 	}
-
 }
-
 
 @media only screen and (max-width: 576px) {
 	.modal {
