@@ -25,3 +25,5 @@ pnpm-debug.log*
 .idea/
 /public/Themes/Thrivewellrx.Theme.ZePeptides/assets/css/style.css
 /public/Themes/Thrivewellrx.Theme.ZePeptides/assets/css/style.css.map
+.vscode
+.vscode/*

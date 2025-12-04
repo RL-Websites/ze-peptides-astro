@@ -1,5 +1,11 @@
 # Release Notes
 
+## [0.0.1] - 2025-12-4
+
+- get started button click fix
+- login page link created
+- home hero cta button UI fix
+
 ## [0.0.1] - 2025-12-3
 
 - Login page completed: with responsive
