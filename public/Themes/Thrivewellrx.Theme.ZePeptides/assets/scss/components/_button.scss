@@ -21,7 +21,6 @@
 		&:hover {
 			background-color: lighten($primary, 20%);
 			border-color: lighten($primary, 20%);
-
 			&--icon {
 				i {
 					color: $secondary;
@@ -141,6 +140,7 @@
 			&:hover,
 			&:focus {
 				background-color: $primary-light;
+				color: $primary;
 			}
 		}
 
@@ -266,8 +266,6 @@
 		min-width: 210px;
 	}
 }
-
-
 
 .oqtane-btn {
 	&__active {
