@@ -65,7 +65,7 @@
 		display: none;
 	}
 
-	&__input:checked + &__label {
+	&__input:checked+&__label {
 		background-color: $blue-1;
 		color: $blue-2;
 		font-weight: 400;
@@ -88,7 +88,7 @@
 		padding: 10px 24px;
 		font-size: 18px;
 		color: $light;
-		border: 1px solid $red;
+		border: 1px solid #AEAEAE;
 		border-radius: 10px;
 		outline: 0;
 		box-shadow: none;
@@ -137,11 +137,13 @@
 
 .basic-error {
 	font-size: $fs-16;
-	color: $primary;
+	color: $red;
 	font-weight: 300;
 	margin-top: 4px;
 	line-height: 1.6;
 }
+
+
 
 .rounded-input {
 	width: 445px;
@@ -174,7 +176,7 @@
 
 .form {
 	&-control {
-		color: white;
+		// color: white;
 
 		&::placeholder {
 			color: rgba(white, 0.6);

@@ -9,109 +9,142 @@ import Layout from "../layouts/Layout.astro";
 
 	<!--=====|| Main Section Start ||=====-->
 
-	<main class="page">
-		<div class="common__banner">
-			<div class="container">
-				<h4 class="site__heading-four text-white text-center">
-					Answers To Popular Questions
-				</h4>
-			</div>
-		</div>
-		<div class="page__wrapper">
+	<main class="page mt-80 mb-50">
+		<div class="page__wrapper page__wrapper--alt">
+			<!-- ==|| FAQ Hero Section Start ||== -->
+			<section class="pt-50 pb-md-100 pb-50 faq-section">
+				<div class="container">
+					<h2 class="hero__title text-center text-primary-grad-1"> Your Questions Answered! </h2>
+
+					<div class="text-center">
+						<p class="cart-hero__text faq-subtitle p-lg-20">
+							For any additional questions, please reach out to  <a
+								class="text-blue-2"
+								data-bind="attr: { href: 'mailto:' + siteEmail() }, text: siteEmail"
+							>info@zepeptides.com</a>
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- ==|| FAQ Hero Section End ||== -->
+
 			<!-- ==|| FAQ Section Start ||== -->
 			<section class="faq faq__main">
 				<div class="container">
-					<div class="accordion faq__lg" id="accordion">
-						<!-- FAQ Item 1 -->
-						<div class="accordion-item accordion-item--alt">
-							<h2 class="accordion-header faq__lg__heading" id="headingOne">
-								<button
-									class="accordion-button accordion-button__alt"
-									type="button"
+					<div
+						class="panel-group faq__lg"
+						id="accordion"
+						role="tablist"
+						aria-multiselectable="true"
+					>
+						<div class="panel panel-default faq__item">
+							<div
+								class="panel-heading faq__lg__heading"
+								role="tab"
+								id="headingOne"
+							>
+								<p
+									class="collapsed-heading"
+									role="button"
 									data-bs-toggle="collapse"
+									data-bs-parent="#accordion"
 									data-bs-target="#collapseOne"
 									aria-expanded="true"
 									aria-controls="collapseOne"
 								>
-									What is the difference between GLP-1 medications and GLP-1/GIP
-									medications?
-								</button>
-							</h2>
+									<span
+										>What is the difference between Semaglutide and Tirzepatide?</span
+									>
+								</p>
+							</div>
 							<div
 								id="collapseOne"
-								class="accordion-collapse collapse show"
+								class="panel-collapse collapse show"
+								role="tabpanel"
 								aria-labelledby="headingOne"
-								data-bs-parent="#accordion"
 							>
-								<div class="accordion-body accordion-body--alt faq__lg__body">
-									GLP-1 are receptor agonists, which mimics a hormone that helps
-									regulate blood sugar levels, slow down digestion, and reduce
-									appetite. GLP-1/GIP medications, on the other hand, are dual
-									GIP and GLP-1 receptor agonists, meaning it mimics two
-									hormones that regulate blood sugar and appetite. This dual
-									action can make weight loss programs with injections more
-									effective. By combining two hormonal effects, GLP-1/GIP
-									medication enhances the benefits of weight loss programs with
-									injections, offering better blood sugar control and greater
-									weight loss compared to using GLP-1 alone.
+								<div class="faq__lg__body">
+									Semaglutide is a Peptide receptor agonist, which mimics a hormone 
+									that helps regulate blood sugar levels, slow down digestion, and 
+									reduce appetite. Tirzepatide, on the other hand, is a dual GIP and 
+									Peptide receptor agonist, meaning it mimics two hormones that regulate 
+									blood sugar and appetite. This dual action can make weight loss programs
+									with injections more effective. By combining two hormonal effects, 
+									Tirzepatide enhances the benefits of weight loss programs with injections,
+									offering better blood sugar control and greater weight loss compared to using 
+									  Peptide alone.
 								</div>
 							</div>
 						</div>
+						<!--FAQ Item End-->
 
-						<!-- FAQ Item 2 -->
-						<div class="accordion-item accordion-item--alt">
-							<h2 class="accordion-header faq__lg__heading" id="headingTwo">
-								<button
-									class="accordion-button accordion-button__alt collapsed"
-									type="button"
+						<div class="panel panel-default faq__item">
+							<div
+								class="panel-heading faq__lg__heading"
+								role="tab"
+								id="headingTwo"
+							>
+								<p
+									class="collapsed collapsed-heading"
+									role="button"
 									data-bs-toggle="collapse"
+									data-bs-parent="#accordion"
 									data-bs-target="#collapseTwo"
 									aria-expanded="false"
 									aria-controls="collapseTwo"
 								>
-									Should I expect any side effects?
-								</button>
-							</h2>
+									<span>Should I expect any side effects?</span>
+								</p>
+							</div>
 							<div
 								id="collapseTwo"
-								class="accordion-collapse collapse"
+								class="panel-collapse collapse"
+								role="tabpanel"
 								aria-labelledby="headingTwo"
-								data-bs-parent="#accordion"
 							>
-								<div class="accordion-body accordion-body--alt faq__lg__body">
-									Many people who join our rapid weight Loss programs enjoy the
-									benefits of these medications with few or no side effects. And
-									with NexgenMD360’s approach to weight loss for men and women,
-									side effects are minimized through a gradual increase in
-									dosage. Should they occur, it can include nausea at first or
-									slight gastrointestinal discomfort. Staying hydrated and
-									eating small, frequent meals can help manage these issues
-									should you experience them.
+								<div class="faq__lg__body">
+									<p>
+										Many people who join our rapid weight Loss programs enjoy
+										the benefits of these medications with few or no side
+										effects. And with NexgenMD360’s approach to weight loss for
+										men and women, side effects are minimized through a gradual
+										increase in dosage. Should they occur, it can include nausea
+										at first or slight gastrointestinal discomfort. Staying
+										hydrated and eating small, frequent meals can help manage
+										these issues should you experience them.
+									</p>
 								</div>
 							</div>
 						</div>
+						<!--FAQ Item End-->
 
-						<!-- FAQ Item 3 -->
-						<div class="accordion-item accordion-item--alt">
-							<h2 class="accordion-header faq__lg__heading" id="headingThree">
-								<button
-									class="accordion-button accordion-button__alt collapsed"
-									type="button"
+						<div class="panel panel-default faq__item">
+							<div
+								class="panel-heading faq__lg__heading"
+								role="tab"
+								id="headingThree"
+							>
+								<p
+									class="collapsed collapsed-heading"
+									role="button"
 									data-bs-toggle="collapse"
+									data-bs-parent="#accordion"
 									data-bs-target="#collapseThree"
 									aria-expanded="false"
 									aria-controls="collapseThree"
 								>
-									Will any existing medical condition change my eligibility?
-								</button>
-							</h2>
+									<span>
+										Will any existing medical condition change my eligibility?
+									</span>
+								</p>
+							</div>
 							<div
 								id="collapseThree"
-								class="accordion-collapse collapse"
+								class="panel-collapse collapse"
+								role="tabpanel"
 								aria-labelledby="headingThree"
-								data-bs-parent="#accordion"
 							>
-								<div class="accordion-body accordion-body--alt faq__lg__body">
+								<div class="faq__lg__body">
 									For the vast majority of people, both medications will be safe
 									and effective. However, as with many medications, those with a
 									personal or family history of Medullary Thyroid Carcinoma
@@ -132,28 +165,33 @@ import Layout from "../layouts/Layout.astro";
 								</div>
 							</div>
 						</div>
+						<!--FAQ Item End-->
 
-						<!-- FAQ Item 4 -->
-						<div class="accordion-item accordion-item--alt">
-							<h2 class="accordion-header faq__lg__heading" id="headingFour">
-								<button
-									class="accordion-button accordion-button__alt collapsed"
-									type="button"
+						<div class="panel panel-default faq__item">
+							<div
+								class="panel-heading faq__lg__heading"
+								role="tab"
+								id="headingFour"
+							>
+								<p
+									class="collapsed collapsed-heading"
+									role="button"
 									data-bs-toggle="collapse"
+									data-bs-parent="#accordion"
 									data-bs-target="#collapseFour"
 									aria-expanded="false"
 									aria-controls="collapseFour"
 								>
-									How long before I should expect to see results?
-								</button>
-							</h2>
+									<span> How long before I should expect to see results? </span>
+								</p>
+							</div>
 							<div
 								id="collapseFour"
-								class="accordion-collapse collapse"
+								class="panel-collapse collapse"
+								role="tabpanel"
 								aria-labelledby="headingFour"
-								data-bs-parent="#accordion"
 							>
-								<div class="accordion-body accordion-body--alt faq__lg__body">
+								<div class="faq__lg__body">
 									Similar to GLP-1, improvements in blood sugar levels can be
 									observed within the first week of beginning GLP-1/GIP.
 									Appetite reduction usually begins within the first few weeks
@@ -173,82 +211,97 @@ import Layout from "../layouts/Layout.astro";
 								</div>
 							</div>
 						</div>
+						<!--FAQ Item End-->
 
-						<!-- FAQ Item 5 -->
-						<div class="accordion-item accordion-item--alt">
-							<h2 class="accordion-header faq__lg__heading" id="headingFive">
-								<button
-									class="accordion-button accordion-button__alt collapsed"
-									type="button"
+						<div class="panel panel-default faq__item">
+							<div
+								class="panel-heading faq__lg__heading"
+								role="tab"
+								id="headingFive"
+							>
+								<p
+									class="collapsed collapsed-heading"
+									role="button"
 									data-bs-toggle="collapse"
+									data-bs-parent="#accordion"
 									data-bs-target="#collapseFive"
 									aria-expanded="false"
 									aria-controls="collapseFive"
 								>
-									What kind of additional support do you offer?
-								</button>
-							</h2>
+									<span>What kind of additional support do you offer?</span>
+								</p>
+							</div>
 							<div
 								id="collapseFive"
-								class="accordion-collapse collapse"
+								class="panel-collapse collapse"
+								role="tabpanel"
 								aria-labelledby="headingFive"
-								data-bs-parent="#accordion"
 							>
-								<div class="accordion-body accordion-body--alt faq__lg__body">
-									Monthly follow-ups with our physician will be done to monitor
-									progress, adjust dosages if necessary, and manage any side
-									effects. In addition, you’ll receive a personalized
-									nutritionist plan for weight loss, tailored to your individual
-									health conditions and treatment plans to help you achieve the
-									best results.
+								<div class="faq__lg__body">
+									<p>
+										Monthly follow-ups with our physician will be done to
+										monitor progress, adjust dosages if necessary, and manage
+										any side effects. In addition, you’ll receive a personalized
+										nutritionist plan for weight loss, tailored to your
+										individual health conditions and treatment plans to help you
+										achieve the best results.
+									</p>
 								</div>
 							</div>
 						</div>
+						<!--FAQ Item End-->
 
-						<!-- FAQ Item 6 -->
-						<div class="accordion-item accordion-item--alt">
-							<h2 class="accordion-header faq__lg__heading" id="headingSix">
-								<button
-									class="accordion-button accordion-button__alt collapsed"
-									type="button"
+						<!--FAQ Item End-->
+						<div class="panel panel-default faq__item">
+							<div
+								class="panel-heading faq__lg__heading"
+								role="tab"
+								id="headingSix"
+							>
+								<p
+									class="collapsed collapsed-heading"
+									role="button"
 									data-bs-toggle="collapse"
+									data-bs-parent="#accordion"
 									data-bs-target="#collapseSix"
 									aria-expanded="false"
 									aria-controls="collapseSix"
 								>
-									What happens when I reach my ideal weight?
-								</button>
-							</h2>
+									<span>What happens when I reach my ideal weight?</span>
+								</p>
+							</div>
 							<div
 								id="collapseSix"
-								class="accordion-collapse collapse"
+								class="panel-collapse collapse"
+								role="tabpanel"
 								aria-labelledby="headingSix"
-								data-bs-parent="#accordion"
 							>
-								<div class="accordion-body accordion-body--alt faq__lg__body">
-									Reaching a goal weight with the help of GLP-1 or GLP-1/GIP
-									medications as part of our rapid weight loss programs is a
-									significant achievement. Maintaining that weight requires a
-									comprehensive plan, including medical supervision, lifestyle
-									changes, and possibly continued medication use at a
-									maintenance dose. Emphasizing healthy eating, regular physical
-									activity, and behavioral support is crucial for maintaining
-									weight loss. If you decide to discontinue the medication,
-									NexgenMD360’s physician will guide you through a gradual
-									process to minimize the risk of weight regain. This approach
-									supports weight loss for men and women in achieving lasting
-									results.
+								<div class="faq__lg__body">
+									<p>
+										Reaching a goal weight with the help of GLP-1 or GLP-1/GIP
+										medications as part of our rapid weight loss programs is a
+										significant achievement. Maintaining that weight requires a
+										comprehensive plan, including medical supervision, lifestyle
+										changes, and possibly continued medication use at a
+										maintenance dose. Emphasizing healthy eating, regular
+										physical activity, and behavioral support is crucial for
+										maintaining weight loss. If you decide to discontinue the
+										medication, NexgenMD360’s physician will guide you through a
+										gradual process to minimize the risk of weight regain. This
+										approach supports weight loss for men and women in achieving
+										lasting results.
+									</p>
 								</div>
 							</div>
 						</div>
+						<!--FAQ Item End-->
 					</div>
 
-					<!-- <div class="faq__show-more">
-						<a href="#" class="text-white">Show More</a>
-					</div> -->
+					<div class="faq__show-more">
+						<a href="" class="text-primary-show">Show More</a>
+					</div>
 				</div>
 			</section>
-
 			<!-- ==|| FAQ Section End ||== -->
 		</div>
 	</main>

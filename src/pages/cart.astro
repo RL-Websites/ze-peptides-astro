@@ -13,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
 			<!-- ==|| Cart Hero Section Start ||== -->
 			<section class="cart-hero">
 				<div class="container">
-					<h2 class="site__heading-one text-start text-md-center">
+					<h2 class="site__heading-one text-center">
 						<span class="text-primary-grad-1"> Complete Your Order</span>
 					</h2>
 
@@ -51,25 +51,6 @@ import Layout from "../layouts/Layout.astro";
 			</section>
 			<!--==|| Product Cart Items Status End ||== -->
 
-			<!--==|| Empty Cart Status Start ||== -->
-			<section class="cart-view pt-md-60 pb-md-80 pt-50 pb-50 d-none">
-				<div class="container">
-					<div class="row">
-						<div class="text-center">
-							<img
-								src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/empty-cart.svg"
-								alt=""
-							/>
-							<p
-								class="font-sfui fs-md-24 fs-20 text-secondary fw-extrabold mt-20"
-								>Your cart is currently empty!</p
-							>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!--==|| Empty Cart Status End ||== -->
-
 			<!--==|| Cart Information Status Start ||== -->
 			<section class="cart-view">
 				<div class="container">
@@ -90,6 +71,11 @@ import Layout from "../layouts/Layout.astro";
 											<p class="cart__item-price">
 												$39.99/month and a $30.00 physician <span>Consult</span>
 											</p>
+											<p class="fw-600 pt-2"
+												>Qty: <span data-bind="text: product.Quantity">1</span
+												></p
+											>
+
 											<!-- <p class="cart__item-type">
 												<span>.5mg</span>
 												<span class="px-2">|</span>
@@ -100,7 +86,7 @@ import Layout from "../layouts/Layout.astro";
 
 									<div class="cart__action">
 										<button
-											class="theme-btn theme-btn__icon-only"
+											class="theme-btn theme-btn__icon-only cart-delete-btn"
 											data-toggle="modal"
 											data-target="#confirm"
 										>
@@ -127,11 +113,17 @@ import Layout from "../layouts/Layout.astro";
 												<span>.5mg</span>
 												<span class="px-2">|</span>
 											</p> -->
+											<p class="fw-600 pt-2"
+												>Qty: <span data-bind="text: product.Quantity">1</span
+												></p
+											>
 										</div>
 									</div>
 
 									<div class="cart__action">
-										<button class="theme-btn theme-btn__icon-only">
+										<button
+											class="theme-btn theme-btn__icon-only cart-delete-btn"
+										>
 											<i class="icon-delete"></i>
 										</button>
 									</div>
@@ -151,6 +143,11 @@ import Layout from "../layouts/Layout.astro";
 											<p class="cart__item-price">
 												$39.99/month and a $30.00 physician <span>Consult</span>
 											</p>
+											<p class="fw-600 pt-2"
+												>Qty: <span data-bind="text: product.Quantity">1</span
+												></p
+											>
+
 											<!-- <p class="cart__item-type">
 												<span>.5mg</span>
 												<span class="px-2">|</span>
@@ -159,7 +156,9 @@ import Layout from "../layouts/Layout.astro";
 									</div>
 
 									<div class="cart__action">
-										<button class="theme-btn theme-btn__icon-only">
+										<button
+											class="theme-btn theme-btn__icon-only cart-delete-btn"
+										>
 											<i class="icon-delete"></i>
 										</button>
 									</div>
@@ -179,6 +178,11 @@ import Layout from "../layouts/Layout.astro";
 											<p class="cart__item-price">
 												$39.99/month and a $30.00 physician <span>Consult</span>
 											</p>
+											<p class="fw-600 pt-2"
+												>Qty: <span data-bind="text: product.Quantity">1</span
+												></p
+											>
+
 											<!-- <p class="cart__item-type">
 												<span>.5mg</span>
 												<span class="px-2">|</span>
@@ -187,7 +191,9 @@ import Layout from "../layouts/Layout.astro";
 									</div>
 
 									<div class="cart__action">
-										<button class="theme-btn theme-btn__icon-only">
+										<button
+											class="theme-btn theme-btn__icon-only cart-delete-btn"
+										>
 											<i class="icon-delete"></i>
 										</button>
 									</div>
@@ -202,7 +208,7 @@ import Layout from "../layouts/Layout.astro";
 										class="promo__input"
 									/>
 									<button
-										class="theme-btn theme-btn__danger theme-btn__outline--primary fs-md-18 fs-16 fw-bold"
+										class="theme-btn theme-btn__danger theme-btn__outline--primary promo__btn fs-md-18 fs-14 fw-bold"
 									>
 										Apply Coupon
 									</button>
@@ -678,6 +684,33 @@ import Layout from "../layouts/Layout.astro";
 				</div>
 			</section>
 			<!-- ==| Category Suggestion Section End ||== -->
+
+			<!--==|| Empty Cart Status Start ||== -->
+			<section class="cart-view pt-md-150 pb-md-80 pt-120 pb-50">
+				<div class="container">
+					<div class="row">
+						<div class="text-center">
+							<img
+								class="img-fluid"
+								src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/empty-cart.svg"
+								alt=""
+							/>
+							<p class="font-sfui fs-md-24 fs-20 text-secondary fw-bold mt-30"
+								>Your cart is currently empty!</p
+							>
+							<div class="mt-20">
+								<a
+									type="button"
+									class="theme-btn theme-btn__primary theme-btn__primary--accent px-20"
+								>
+									Continue Shopping
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--==|| Empty Cart Status End ||== -->
 		</div>
 	</main>
 	<!-- =====|| Main Section End ||====== -->
