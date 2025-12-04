@@ -184,6 +184,37 @@
 
 }
 
+.document-info-tu {
+  padding: 28px 20px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  &__item {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+
+    p {
+      margin: 0;
+      line-height: 1;
+    }
+  }
+
+  &__label {
+    min-width: 154px;
+    color: #2D2D2D;
+    font-weight: 700;
+  }
+}
+
+.tu_thumbnail {
+  background: linear-gradient(to right, #d2b3ff, #ede0ff);
+  padding: 15px 15px 15px 15px;
+  border-radius: 10px;
+
+}
+
 .tu_thumbnail img {
   width: 60px;
   height: 60px;
