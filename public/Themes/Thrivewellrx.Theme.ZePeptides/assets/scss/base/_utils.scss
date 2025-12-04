@@ -59,6 +59,7 @@ $fs-list: (
 	"44": $fs-44,
 	"48": $fs-48,
 	"70": $fs-70,
+	"80": $fs-80,
 	"90": $fs-90,
 	"140": $fs-140,
 	"200": $fs-200,
@@ -360,6 +361,24 @@ $spacing-list: (
 
 	.pb-#{$key} {
 		padding-bottom: $margin !important;
+	}
+
+	.pb {
+		&-lg {
+			@media all and (min-width: 992px) {
+				&-#{$key} {
+					padding-bottom: $margin !important;
+				}
+			}
+		}
+
+		&-md {
+			@media all and (min-width: 768px) {
+				&-#{$key} {
+					padding-bottom: $margin !important;
+				}
+			}
+		}
 	}
 
 	.pl-#{$key} {

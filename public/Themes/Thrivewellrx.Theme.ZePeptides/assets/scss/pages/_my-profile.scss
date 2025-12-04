@@ -1,6 +1,15 @@
-.login {
+@use "../base/variables" as *;
+
+.my-profile {
 	padding-top: 120px;
 	padding-bottom: 100px;
+	max-width: 564px;
+	display: flex;
+	margin: auto;
+}
+
+.rounded-10 {
+	border-radius: 10px !important;
 }
 
 .form-field {
