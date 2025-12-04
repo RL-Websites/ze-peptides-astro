@@ -26,7 +26,7 @@
 
 .card-basic {
 	// box-shadow: 2px 2px 24px 0px rgba(195, 195, 195, 0.2784313725);
-	border: 1px solid $blue-3;
+	border: 1px solid $primary-light;
 	border-radius: 10px;
 	overflow: hidden;
 	margin-top: 30px;
@@ -37,7 +37,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		border-bottom: 2px solid $blue-3;
+		border-bottom: 1px solid $primary-light;
 		text-transform: capitalize;
 	}
 
@@ -51,6 +51,10 @@
 
 	&--no-shadow {
 		box-shadow: none;
+	}
+
+	&__table {
+		border-color: #DADADA !important;
 	}
 
 	&__table-mobile {
