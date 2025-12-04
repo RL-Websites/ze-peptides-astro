@@ -226,7 +226,7 @@ small,
 
 @media only screen and (max-width: 768px) {
 	h1 {
-		font-size: 36px;
+		font-size: 30px;
 	}
 
 	h2 {
@@ -250,7 +250,7 @@ small,
 	.site {
 		&__heading {
 			&-one {
-				font-size: 36px;
+				font-size: 30px;
 			}
 
 			&-two {
@@ -269,5 +269,8 @@ small,
 				font-size: 16px;
 			}
 		}
+	}
+	.text-primary-grad-1 {
+		font-size: 30px !important;
 	}
 }
