@@ -43,6 +43,18 @@
 				line-height: 1;
 				font-weight: 500;
 			}
+			&-box {
+				padding: 5px;
+				border-radius: 4px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: $primary-light;
+				width: 34px;
+				height: 34px;
+				color: $primary;
+				margin-right: -6px;
+			}
 		}
 	}
 
