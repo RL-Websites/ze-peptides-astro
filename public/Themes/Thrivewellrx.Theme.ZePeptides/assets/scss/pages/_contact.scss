@@ -28,9 +28,22 @@
 		min-width: 143px;
 		border-radius: 10px;
 	}
+	&--widget {
+		&-title {
+			display: inline-flex;
+			height: 47px;
+			padding: 11px 38px;
+			justify-content: center;
+			align-items: center;
+			border-radius: 10px;
+			border: 1px solid $black;
+			font-size: 18px;
+			font-weight: 600;
+		}
+	}
 
 	&--text {
-		margin-top: 20px;
+		margin-top: 26px;
 		line-height: 26px;
 	}
 
@@ -57,10 +70,10 @@
 	}
 }
 
-.email-text{
+.email-text {
 	font-size: $fs-16;
 	font-weight: 700;
-	font-family: 'poppins', sans-serif;
+	font-family: "poppins", sans-serif;
 }
 
 @media only screen and (max-width: 992px) {
@@ -84,7 +97,7 @@
 
 @media only screen and (max-width: 768px) {
 	.contact {
-		padding: 100px 0 50px;
+		padding: 110px 0 50px;
 
 		&__single {
 			padding: 10px 0;
@@ -92,6 +105,12 @@
 
 		.map {
 			margin-top: 40px;
+		}
+
+		&__form {
+			&__btn {
+				width: 100%;
+			}
 		}
 	}
 }

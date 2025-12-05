@@ -21,6 +21,7 @@ p {
 span {
 	font-family: "sfuidisplay", sans-serif;
 }
+
 // H1 - 70px Bold, 120% line-height
 h1 {
 	font-size: 70px;
@@ -62,9 +63,9 @@ h5 {
 }
 
 h6 {
-    font-size: 20px;
-    line-height: 1.4;
-    font-weight: 600;
+	font-size: 20px;
+	line-height: 1.4;
+	font-weight: 600;
 }
 
 // Body1 - 22px Medium, 160% line-height
@@ -108,6 +109,7 @@ h6 {
 	font-weight: 500;
 	line-height: 110%;
 	letter-spacing: 0;
+
 	@media all and (min-width: 768px) {
 		font-size: 16px;
 		font-weight: 500;
@@ -115,6 +117,7 @@ h6 {
 		letter-spacing: 0;
 	}
 }
+
 // Small - 12px Bold, 160% line-height
 small,
 .text-small {
@@ -166,6 +169,7 @@ small,
 .font-sfui {
 	font-family: "sfuidisplay", sans-serif;
 }
+
 .font-cabinet-grotesk {
 	font-family: "CabinetGrotesk", sans-serif;
 }
@@ -276,7 +280,8 @@ small,
 			}
 		}
 	}
-	.text-primary-grad-1 {
-		font-size: 30px !important;
-	}
+
+	// .text-primary-grad-1 {
+	// 	font-size: 30px !important;
+	// }
 }

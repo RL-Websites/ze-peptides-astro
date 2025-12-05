@@ -12,39 +12,43 @@ import Layout from "../layouts/Layout.astro";
 	<main class="page">
 		<!-- ==|| Login Section Start ||== -->
 		<section class="login py-5">
-			<div class="container">
-				<div class="row justify-content-center mt-150 mt-sm-100 mx-0">
-				<div class="col-11 col-sm-10 col-md-8 col-lg-8 px-md-30 px-0 ">
-					<div class="login__header text-center mb-60">
-						<div class="col-12 text-center mb-4">
-							<h1 class="text-primary-grad-1 mb-0">Returning Customer</h1>
-						</div>
+			<div class="container p-0">
+				<div class="row justify-content-center mt-120 mt-sm-150 mx-0">
+					<div class="col-11 col-sm-10 col-md-8 col-lg-8">
+						<div class="login__header text-center mb-30">
+							<div class="col-12 text-center">
+								<h1 class="text-primary-grad-1 mb-0">Returning Customer</h1>
+							</div>
 
-						<!-- Heading Row 2 -->
-						<div class="col-12 text-center mb-20">
-							<h2 class="text-primary-grad-1">Log in to confirm your journey</h2
-							>
+							<!-- Heading Row 2 -->
+							<div class="col-12 text-center mb-20">
+								<h2 class="text-primary-grad-1"
+									>Log in to confirm your journey</h2
+								>
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<form>
-					<div class="row justify-content-center mx-0">
-						<div
-							class="col-11 col-sm-10 col-md-8 col-lg-5 px-md-30 px-0 "
-						>
-							<label for="email" class="basic-label">
-								Email Address <span class="icon-ellipse"> </span>
-								<input
-									type="email"
-									class="basic-input form-control"
-									id="email"
-									required
-								/>
-								<div class="invalid-feedback">Please enter a valid email.</div>
+					<form>
+						<div class="container p-0">
+							<div class="row justify-content-center mx-0">
+								<div class="col-11 col-sm-10 col-md-8 col-lg-6">
+									<label for="email" class="basic-label">
+										Email Address <span class="icon-ellipse"> </span></label
+									>
+									<input
+										type="email"
+										class="basic-input form-control"
+										id="email"
+										required
+									/>
+									<div class="invalid-feedback">Please enter a valid email.</div
+									>
 
-								<label for="password" class="basic-label">
-									Password<span class="icon-ellipse"> </span>
+									<label for="password" class="basic-label mt-24">
+										Password<span class="icon-ellipse"> </span></label
+									>
+
 									<input
 										type="password"
 										class="basic-input form-control"
@@ -53,14 +57,14 @@ import Layout from "../layouts/Layout.astro";
 									/>
 									<div class="invalid-feedback">Password must not be empty.</div
 									>
-									<div class="d-flex gap-2 p-2">
+									<div class="d-flex gap-2 p-2 mt-24">
 										<input
 											class="form-check-input"
 											type="checkbox"
 											id="remember"
 											checked
 										/>
-										<label class="basic-label" for="remember">
+										<label class="basic-label mb-24" for="remember">
 											Remember me
 										</label>
 									</div>
@@ -85,17 +89,15 @@ import Layout from "../layouts/Layout.astro";
 											>
 										</p>
 									</div>
-								</label>
-							</label>
+								</div>
+							</div>
 						</div>
-					</div>
-				</form>
-				<!-- ==|| Login Section End ||== -->
+					</form>
+				</div>
 			</div>
-			</div>
-			
-
-			<Footer />
+			<!-- ==|| Login Section End ||== -->
 		</section>
 	</main>
+
+	<Footer />
 </Layout>
