@@ -136,6 +136,12 @@ small,
 			line-height: 120%;
 		}
 
+		&-two-lg {
+			font-size: 48px;
+			font-weight: 700;
+			line-height: 100%;
+		}
+
 		&-two {
 			font-size: 30px;
 			font-weight: 700;
@@ -263,6 +269,10 @@ small,
 				font-size: 30px;
 			}
 
+			&-two-lg {
+				font-size: 30px;
+			}
+
 			&-two {
 				font-size: 24px;
 			}
@@ -281,7 +291,4 @@ small,
 		}
 	}
 
-	// .text-primary-grad-1 {
-	// 	font-size: 30px !important;
-	// }
 }

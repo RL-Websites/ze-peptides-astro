@@ -10,18 +10,11 @@
     margin: 40px auto 0;
   }
 
-  p {
-    font-size: 18px;
-  }
 }
 
 @media only screen and (max-width: 992px) {
   .thank-you {
     padding-bottom: 80px;
-
-    p {
-      font-size: 16px;
-    }
   }
 
 
@@ -37,10 +30,6 @@
       gap: 10px;
     }
 
-    p {
-      font-size: 14px;
-    }
-
     .card-basic {
       background-color: transparent;
 
@@ -54,10 +43,4 @@
   }
 }
 
-@media only screen and (max-width: 576px) {
-
-  .thank-you p {
-    font-size: 12px;
-  }
-
-}
+@media only screen and (max-width: 576px) {}

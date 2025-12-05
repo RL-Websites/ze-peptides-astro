@@ -33,9 +33,12 @@
 						font-size: $fs-28 !important;
 						font-weight: 600;
 						text-transform: capitalize;
+						position: relative;
 
 						&.collapsed::after {
-							top: 25px !important;
+							position: absolute;
+							top: 50%;
+							transform: translateY(-50%);
 							width: 48px;
 							height: 48px;
 							background-color: $white;
@@ -124,12 +127,16 @@
 	}
 
 	&__item {
-		margin-top: 20px !important;
+		margin-top: 20px;
 		padding: 30px 24px;
 		box-shadow: none;
 		background-color: $blue-2;
 		border: 0;
 		border-radius: 16px !important;
+
+		&--primary-lighter {
+			background-color: $primary-lighter;
+		}
 	}
 
 	&__lg {
@@ -200,8 +207,6 @@
 			padding: 16px 20px;
 			font-size: $fs-16;
 			border: 0;
-			background-color: $blue-3;
-			color: $white;
 			border-radius: 16px;
 			margin-top: 30px;
 
@@ -417,16 +422,16 @@
 
 							&::after {
 								top: 20px !important;
-								width: 40px;
-								height: 40px;
-								font-size: 24px;
+								width: 28px;
+								height: 28px;
+								font-size: 14px;
 							}
 
 							&.collapsed::after {
 								top: 20px !important;
-								width: 40px;
-								height: 40px;
-								font-size: 24px;
+								width: 28px;
+								height: 28px;
+								font-size: 14px;
 							}
 						}
 					}
@@ -434,7 +439,7 @@
 					&__body {
 						margin-top: 0;
 						padding-bottom: 20px;
-						font-size: $fs-18 !important;
+						font-size: $fs-16 !important;
 					}
 				}
 
@@ -500,7 +505,7 @@
 				&__lg {
 					&__heading {
 						p {
-							font-size: $fs-20 !important;
+							font-size: $fs-18 !important;
 						}
 					}
 				}
