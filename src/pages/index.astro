@@ -54,7 +54,23 @@ import Layout from "../layouts/Layout.astro";
 					>
 				</div>
 
+					<div class="zepeptides-search max-w-full mt-30 mt-md-24">
+						<div class="zepeptides-search__icon">
+							<i class="icon-search"></i>
+						</div>
+						<input type="text" class="zepeptides-search__input text-center" id="productSearch" placeholder="Search by product/treatment" data-bind="textInput: statSearch">
+						<div class="zepeptides-search__icon__right">
+							<i class="icon-cross1"></i>
+						</div>
+					</div>
+					<p class="mt-16 mt-md-20 fs-14 fs-md-18 mb-50 text-center">No results found for “<span>hello world</span>”. Check the spelling or use a different word or phrase.</p>
+
 				<ProductCard />
+
+				<!-- <div class="col-md-12">
+					<img class="img-fluid" src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/product-not-found.svg" alt="">
+				</div> -->
+
 			</div>
 		</section>
 		<!--===|| Product Section End ||===-->
