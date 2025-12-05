@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	AOS.init();
 	$(function () {
 		$('[data-toggle="tooltip"]').tooltip();
 	});
@@ -23,10 +24,7 @@ $(document).ready(function () {
 	// Close dropdown when clicking outside
 	// Close dropdown when clicking outside
 	$(document).on("click", function (e) {
-		if (
-			!$(e.target).closest("#user-menu-btn").length &&
-			!$(e.target).closest("#user-dropdown").length
-		) {
+		if (!$(e.target).closest("#user-menu-btn").length && !$(e.target).closest("#user-dropdown").length) {
 			$("#user-dropdown").removeClass("show");
 		}
 	});
@@ -106,15 +104,9 @@ $(document).ready(function () {
 
 	// If coming from anchor link (#products) on non-home pages, redirect and scroll
 	$(window).on("load", function () {
-		if (
-			window.location.hash === "#products" &&
-			window.location.pathname !== "/"
-		) {
+		if (window.location.hash === "#products" && window.location.pathname !== "/") {
 			window.location.pathname = "/";
-		} else if (
-			window.location.hash === "#products" &&
-			window.location.pathname === "/"
-		) {
+		} else if (window.location.hash === "#products" && window.location.pathname === "/") {
 			setTimeout(function () {
 				$("html, body").animate(
 					{
