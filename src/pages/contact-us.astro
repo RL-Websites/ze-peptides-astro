@@ -13,19 +13,19 @@ import Layout from "../layouts/Layout.astro";
 			<!-- ==|| Contact Section Start ||== -->
 			<section class="contact">
 				<div class="container">
-					<h2 class="site__heading-four fs-70 text-center text-primary-grad-1">
+					<h1 class="text-center text-primary-grad-1">
 						Contact Us!
-					</h2>
+					</h1>
 					<div class="contact__banner">
 						<p class="fs-22 fw-medium mb-0">Message us:</p>
 						<!-- <button class="theme-btn theme-btn__outline">Fastest</button> -->
 					</div>
-					<p class="my-30 text-center">Response typically under 24 hours.</p>
+					<p class="mt-20 mb-40 text-center">Response typically under 24 hours.</p>
 					<div class="row">
-						<div class="col-md-2">
+						<div class="d-none d-lg-flex col-lg-2">
 							<!-- <div class="contact__single">
 								<span
-									class="theme-btn theme-btn__outline theme-btn__outline--secondary contact--btn cursor-default fw-600"
+									class="contact--widget-title"
 								>
 									Call Us</span
 								>
@@ -35,10 +35,10 @@ import Layout from "../layouts/Layout.astro";
 								</p>
 							</div> -->
 						</div>
-						<div class="col-md-4">
+						<div class="col-sm-6 col-lg-4">
 							<div class="contact__single">
 								<span
-									class="theme-btn theme-btn__outline theme-btn__outline--secondary contact--btn cursor-default fs-18 fw-600"
+									class="contact--widget-title"
 								>
 									Write Us</span
 								>
@@ -50,10 +50,10 @@ import Layout from "../layouts/Layout.astro";
 							</div>
 						</div>
 						
-						<div class="col-md-4">
+						<div class="col-sm-6 col-lg-4">
 							<div class="contact__single">
 								<span
-									class="theme-btn theme-btn__outline theme-btn__outline--secondary contact--btn cursor-default fs-18 fw-600"
+									class="contact--widget-title"
 								>
 									Mail Us</span
 								>
@@ -62,7 +62,7 @@ import Layout from "../layouts/Layout.astro";
 								>
 							</div>
 						</div>
-						<div class="col-md-2"></div>
+						<div class="d-none d-lg-flex col-lg-2"></div>
 					</div>
 
 					<form class="contact__form">
@@ -106,11 +106,11 @@ import Layout from "../layouts/Layout.astro";
 								required
 								rows="8"></textarea>
 						</div>
-
-						<button
-							class="theme-btn theme-btn-size-lg theme-btn__primary contact__form__btn"
-							type="submit">Send</button
-						>
+						
+							<button
+								class="theme-btn theme-btn-size-lg theme-btn__primary contact__form__btn"
+								type="submit">Send</button
+							>
 					</form>
 				</div>
 			</section>
