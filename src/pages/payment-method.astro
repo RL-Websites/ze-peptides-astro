@@ -923,6 +923,7 @@ import Layout from "../layouts/Layout.astro";
 							class="modal__action modal__action--primary"
 							type="button"
 							style="width: unset;"
+							id="agreeTerms"
 						>
 							I agree to the terms & conditions.
 						</button>
@@ -935,3 +936,13 @@ import Layout from "../layouts/Layout.astro";
 
 	<Footer />
 </Layout>
+
+
+<script>
+
+$(document).ready(function () {
+		$("#agreeTerms").click(function(){
+			window.location = "/thank-you"
+		})
+	})
+</script>

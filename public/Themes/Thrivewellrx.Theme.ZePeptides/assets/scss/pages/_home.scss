@@ -92,6 +92,7 @@
 .product {
 	&__title {
 		max-width: 400px;
+		height: 58px;
 	}
 }
 
@@ -273,7 +274,6 @@
 
 		&__title {
 			max-width: unset;
-			text-align: center;
 		}
 	}
 
