@@ -21,6 +21,7 @@ p {
 span {
 	font-family: "sfuidisplay", sans-serif;
 }
+
 // H1 - 70px Bold, 120% line-height
 h1 {
 	font-size: 70px;
@@ -112,6 +113,7 @@ a {
 	font-weight: 500;
 	line-height: 110%;
 	letter-spacing: 0;
+
 	@media all and (min-width: 768px) {
 		font-size: 16px;
 		font-weight: 500;
@@ -119,6 +121,7 @@ a {
 		letter-spacing: 0;
 	}
 }
+
 // Small - 12px Bold, 160% line-height
 small,
 .text-small {
@@ -170,6 +173,7 @@ small,
 .font-sfui {
 	font-family: "sfuidisplay", sans-serif;
 }
+
 .font-cabinet-grotesk {
 	font-family: "CabinetGrotesk", sans-serif;
 }
@@ -280,7 +284,8 @@ small,
 			}
 		}
 	}
-	.text-primary-grad-1 {
-		font-size: 30px !important;
-	}
+
+	// .text-primary-grad-1 {
+	// 	font-size: 30px !important;
+	// }
 }

@@ -164,7 +164,7 @@ $spacing-list: (
 		}
 
 		&-sm {
-			@media all and (min-width: 0px) {
+			@media all and (min-width: 576px) {
 				&-#{$key} {
 					margin-top: $margin !important;
 				}
