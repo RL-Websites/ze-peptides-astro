@@ -418,6 +418,17 @@ $spacing-list: (
 		padding-inline: $margin !important;
 	}
 
+	.px {
+		&-md {
+			@media all and (min-width: 768px) {
+				&-#{$key} {
+					padding-left: $margin !important;
+					padding-right: $margin !important;
+				}
+			}
+		}
+	}
+
 	.gap-#{$key} {
 		gap: $margin !important;
 	}

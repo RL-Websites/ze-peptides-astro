@@ -11,83 +11,88 @@ import Layout from "../layouts/Layout.astro";
 
 	<main class="page">
 		<!-- ==|| Login Section Start ||== -->
-		<section class="login">
-			<div class="login-container rounded-4">
-				<div class="top-container text-center">
-					<h1 class="text-primary-grad-1">Returning Customer</h1>
-					<h2 class="text-primary-grad-1">Log in to confirm your journey</h2>
+		<section class="login py-5">
+			<div class="row justify-content-center mt-150 mt-sm-100 mx-0">
+				<div class="max-w-700">
+					<div class="login__header text-center mb-60">
+						<div class="col-12 text-center mb-4">
+							<h1 class="text-primary-grad-1 mb-0">Returning Customer</h1>
+						</div>
+
+						<!-- Heading Row 2 -->
+						<div class="col-12 text-center mb-60">
+							<h2 class="text-primary-grad-1">Log in to confirm your journey</h2
+							>
+						</div>
+					</div>
 				</div>
 
-				<form class="needs-validation" novalidate>
-					<div class="form-div w-full">
-						<label for="email" class="form-label">
-							Email Address <span class="text-dot" aria-hidden="true"> ● </span>
-						</label>
-						<input
-							type="email"
-							class="basic-input form-control"
-							id="email"
-							required
-						/>
-						<div class="invalid-feedback">Please enter a valid email.</div>
-					</div>
+				<form>
+					<div class="row justify-content-center mx-0">
+						<div
+							class="col-11 col-sm-10 col-md-8 col-lg-6 px-md-30 px-0 max-w-500"
+						>
+							<label for="email" class="basic-label">
+								Email Address <span class="icon-ellipse"> </span>
+								<input
+									type="email"
+									class="basic-input form-control"
+									id="email"
+									required
+								/>
+								<div class="invalid-feedback">Please enter a valid email.</div>
 
-					<div class="form-div w-full">
-						<label for="password" class="form-label">
-							Password <span class="text-dot" aria-hidden="true"> ● </span>
-						</label>
-						<input
-							type="password"
-							class="basic-input form-control"
-							id="password"
-							required
-						/>
-						<div class="invalid-feedback">Password must not be empty.</div>
-					</div>
+								<label for="password" class="basic-label">
+									Password<span class="icon-ellipse"> </span>
+									<input
+										type="password"
+										class="basic-input form-control"
+										id="password"
+										required
+									/>
+									<div class="invalid-feedback">Password must not be empty.</div
+									>
+									<div class="d-flex gap-2 p-2">
+										<input
+											class="form-check-input"
+											type="checkbox"
+											id="remember"
+											checked
+										/>
+										<label class="basic-label" for="remember">
+											Remember me
+										</label>
+									</div>
+									<button
+										type="submit"
+										class="theme-btn theme-btn__primary theme-btn__min-w-100 w-100 btn-lg mb-4"
+									>
+										Log In
+									</button>
 
-					<div
-						class="form-div d-flex align-items-center justify-content-start mb-4"
-					>
-						<div class="form-check">
-							<input
-								class="form-check-input"
-								type="checkbox"
-								id="remember"
-								checked
-							/>
-							<label class="form-check-label" for="remember">
-								Remember me
+									<div class="text-center mt-3">
+										<a
+											href="#"
+											class="d-block mb-3 text-link text-decoration-underline forgot-text"
+											>Forgot Password?</a
+										>
+										<p class="first-time-text">
+											First-time Visitor? <a
+												href="#"
+												class="text-link text-decoration-underline fw-medium"
+												>Create an account</a
+											>
+										</p>
+									</div>
+								</label>
 							</label>
 						</div>
 					</div>
-					<div class="btn-div">
-						<button
-							type="submit"
-							class="theme-btn theme-btn__primary theme-btn__min-w-100 w-100 btn-lg mb-4"
-						>
-							Log In
-						</button>
-
-						<div class="text-center mt-3">
-							<a
-								href="#"
-								class="d-block mb-3 text-link text-decoration-underline forgot-text"
-								>Forgot Password?</a
-							>
-							<p class="first-time-text">
-								First-time Visitor? <a
-									href="#"
-									class="text-link text-decoration-underline fw-medium"
-									>Create an account</a
-								>
-							</p>
-						</div></div
-					>
 				</form>
+				<!-- ==|| Login Section End ||== -->
 			</div>
+
+			<Footer />
 		</section>
 	</main>
-	<!-- ==|| Login Section End ||== -->
 </Layout>
-
-<Footer />

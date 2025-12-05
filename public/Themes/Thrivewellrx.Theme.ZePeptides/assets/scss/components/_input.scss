@@ -65,7 +65,7 @@
 		display: none;
 	}
 
-	&__input:checked + &__label {
+	&__input:checked+&__label {
 		background-color: $blue-1;
 		color: $blue-2;
 		font-weight: 400;
