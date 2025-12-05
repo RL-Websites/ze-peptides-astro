@@ -16,7 +16,7 @@
 	}
 
 	&__slider {
-		padding: 60px 0 !important;
+		padding: 60px 10px !important;
 	}
 
 	&__slide {
@@ -27,7 +27,7 @@
 		display: flex !important;
 		flex-direction: column;
 		border: 1px solid $primary-light;
-		box-shadow: 0px 0px 30px 0px #27005d14;
+		box-shadow: 0px 0px 15px 0px #27005d14;
 	}
 
 	&__client-info {
@@ -43,6 +43,7 @@
 			height: 60px;
 			border-radius: 50%;
 			object-fit: cover;
+			border: 3px solid $primary-light ;
 		}
 
 		p {
@@ -59,7 +60,7 @@
 
 		&__designation {
 			font-weight: 400;
-			color: $white !important;
+			color: $gray-dark !important;
 		}
 	}
 
@@ -114,6 +115,23 @@
 
 		.swiper-pagination-bullet-active {
 			width: 25px;
+		}
+	}
+}
+
+@media all and (max-width: 768px) {
+	.feedback {
+		&__slide {
+			padding: 20px;
+		}
+
+		&__slider {
+			padding: 30px 0 40px !important;
+		}
+
+		&__desc {
+			margin: 15px 0;
+			font-size: $fs-16;
 		}
 	}
 }

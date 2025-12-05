@@ -66,7 +66,7 @@
 			&::after {
 				position: absolute;
 				content: "";
-				background-color: rgba($red, 0.5);
+				background-color: $primary-light;
 				height: 3px;
 				width: 100%;
 				bottom: 0;
@@ -77,19 +77,20 @@
 				text-align: center;
 				font-weight: 700;
 				position: relative;
-				color: #1f4a6380;
+				color: rgba(45, 45, 45, 0.5);
 				padding: 0;
 				width: 100%;
 			}
 
 			.nav-link.active {
 				background-color: transparent;
-				color: $secondary;
+				color: $black;
 
 				&::after {
 					position: absolute;
+					z-index: 1;
 					content: "";
-					background-color: $red;
+					background-color: $primary;
 					height: 5px;
 					width: 100%;
 					bottom: -11px;
@@ -104,19 +105,19 @@
 .tab {
 	&-pills {
 		display: flex;
-		gap: 20px;
+		gap: 15px;
 		overflow-x: scroll;
 		padding-bottom: 20px;
 
 		&__single {
-			padding: 10px 15px;
+			padding: 8px 15px;
 			min-width: 130px;
-			border: 2px solid #dbd1b4;
+			border: 2px solid $primary-light;
 			text-align: center;
 			display: flex;
 			flex-direction: column;
 			gap: 5px;
-			border-radius: 50px;
+			border-radius: 12px;
 		}
 	}
 }

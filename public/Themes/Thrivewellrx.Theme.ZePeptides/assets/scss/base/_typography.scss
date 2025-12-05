@@ -68,6 +68,10 @@ h6 {
 	font-weight: 600;
 }
 
+a {
+	color: $primary;
+}
+
 // Body1 - 22px Medium, 160% line-height
 .body1,
 .text-body1 {
@@ -134,6 +138,12 @@ small,
 			font-size: 70px;
 			font-weight: 700;
 			line-height: 120%;
+		}
+
+		&-two-lg {
+			font-size: 48px;
+			font-weight: 700;
+			line-height: 100%;
 		}
 
 		&-two {
@@ -263,6 +273,10 @@ small,
 				font-size: 30px;
 			}
 
+			&-two-lg {
+				font-size: 30px;
+			}
+
 			&-two {
 				font-size: 24px;
 			}
@@ -281,7 +295,4 @@ small,
 		}
 	}
 
-	// .text-primary-grad-1 {
-	// 	font-size: 30px !important;
-	// }
 }

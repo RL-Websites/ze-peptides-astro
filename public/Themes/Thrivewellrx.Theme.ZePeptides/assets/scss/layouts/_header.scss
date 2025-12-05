@@ -39,6 +39,7 @@
 			color: $primary;
 			position: relative;
 		}
+
 		.cart__badge {
 			position: absolute;
 			z-index: 1;
@@ -89,6 +90,7 @@
 			margin: 0;
 			padding: 0;
 			list-style: none;
+
 			@media all and (min-width: 992px) {
 				margin-left: 220px;
 			}
@@ -304,13 +306,16 @@
 	.site {
 		&__header {
 			padding: 16px 0;
+
 			.cart__badge {
 				top: 0px;
 			}
+
 			&.menu-open {
 				.hamburger-menu {
 					color: $white;
 				}
+
 				.mobile-header-elements {
 					.cart-icon .cart__badge {
 						color: $primary;
@@ -364,8 +369,8 @@
 					font-size: 16px;
 					display: block;
 					width: 100%;
-					padding: 12px 0;
-					border-bottom: 1px solid rgba($white, 0.1);
+					padding: 5px 0;
+					border-bottom: 1px solid $primary-light;
 
 					&::after {
 						display: none;

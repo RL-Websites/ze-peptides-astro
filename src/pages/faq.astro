@@ -9,19 +9,22 @@ import Layout from "../layouts/Layout.astro";
 
 	<!--=====|| Main Section Start ||=====-->
 
-	<main class="page mt-80 mb-50">
+	<main class="page">
 		<div class="page__wrapper page__wrapper--alt">
 			<!-- ==|| FAQ Hero Section Start ||== -->
-			<section class="pt-50 pb-md-100 pb-50 faq-section">
+			<section class="pt-md-150 pt-120 pb-md-100 pb-50 faq-section">
 				<div class="container">
-					<h2 class="hero__title text-center text-primary-grad-1"> Your Questions Answered! </h2>
+					<h2 class="site__heading-two-lg text-center text-primary-grad-1">
+						Your Questions Answered!
+					</h2>
 
 					<div class="text-center">
 						<p class="cart-hero__text faq-subtitle p-lg-20">
-							For any additional questions, please reach out to  <a
+							For any additional questions, please reach out to <a
 								class="text-blue-2"
 								data-bind="attr: { href: 'mailto:' + siteEmail() }, text: siteEmail"
-							>info@zepeptides.com</a>
+								>info@zepeptides.com</a
+							>
 						</p>
 					</div>
 				</div>
@@ -47,7 +50,6 @@ import Layout from "../layouts/Layout.astro";
 									class="collapsed-heading"
 									role="button"
 									data-bs-toggle="collapse"
-									data-bs-parent="#accordion"
 									data-bs-target="#collapseOne"
 									aria-expanded="true"
 									aria-controls="collapseOne"
@@ -60,19 +62,20 @@ import Layout from "../layouts/Layout.astro";
 							<div
 								id="collapseOne"
 								class="panel-collapse collapse show"
-								role="tabpanel"
+								data-bs-parent="#accordion"
 								aria-labelledby="headingOne"
 							>
 								<div class="faq__lg__body">
-									Semaglutide is a Peptide receptor agonist, which mimics a hormone 
-									that helps regulate blood sugar levels, slow down digestion, and 
-									reduce appetite. Tirzepatide, on the other hand, is a dual GIP and 
-									Peptide receptor agonist, meaning it mimics two hormones that regulate 
-									blood sugar and appetite. This dual action can make weight loss programs
-									with injections more effective. By combining two hormonal effects, 
-									Tirzepatide enhances the benefits of weight loss programs with injections,
-									offering better blood sugar control and greater weight loss compared to using 
-									  Peptide alone.
+									Semaglutide is a Peptide receptor agonist, which mimics a
+									hormone that helps regulate blood sugar levels, slow down
+									digestion, and reduce appetite. Tirzepatide, on the other
+									hand, is a dual GIP and Peptide receptor agonist, meaning it
+									mimics two hormones that regulate blood sugar and appetite.
+									This dual action can make weight loss programs with injections
+									more effective. By combining two hormonal effects, Tirzepatide
+									enhances the benefits of weight loss programs with injections,
+									offering better blood sugar control and greater weight loss
+									compared to using Peptide alone.
 								</div>
 							</div>
 						</div>
@@ -88,7 +91,6 @@ import Layout from "../layouts/Layout.astro";
 									class="collapsed collapsed-heading"
 									role="button"
 									data-bs-toggle="collapse"
-									data-bs-parent="#accordion"
 									data-bs-target="#collapseTwo"
 									aria-expanded="false"
 									aria-controls="collapseTwo"
@@ -99,7 +101,7 @@ import Layout from "../layouts/Layout.astro";
 							<div
 								id="collapseTwo"
 								class="panel-collapse collapse"
-								role="tabpanel"
+								data-bs-parent="#accordion"
 								aria-labelledby="headingTwo"
 							>
 								<div class="faq__lg__body">
@@ -128,7 +130,6 @@ import Layout from "../layouts/Layout.astro";
 									class="collapsed collapsed-heading"
 									role="button"
 									data-bs-toggle="collapse"
-									data-bs-parent="#accordion"
 									data-bs-target="#collapseThree"
 									aria-expanded="false"
 									aria-controls="collapseThree"
@@ -141,7 +142,7 @@ import Layout from "../layouts/Layout.astro";
 							<div
 								id="collapseThree"
 								class="panel-collapse collapse"
-								role="tabpanel"
+								data-bs-parent="#accordion"
 								aria-labelledby="headingThree"
 							>
 								<div class="faq__lg__body">
@@ -177,7 +178,6 @@ import Layout from "../layouts/Layout.astro";
 									class="collapsed collapsed-heading"
 									role="button"
 									data-bs-toggle="collapse"
-									data-bs-parent="#accordion"
 									data-bs-target="#collapseFour"
 									aria-expanded="false"
 									aria-controls="collapseFour"
@@ -188,7 +188,7 @@ import Layout from "../layouts/Layout.astro";
 							<div
 								id="collapseFour"
 								class="panel-collapse collapse"
-								role="tabpanel"
+								data-bs-parent="#accordion"
 								aria-labelledby="headingFour"
 							>
 								<div class="faq__lg__body">
@@ -223,7 +223,6 @@ import Layout from "../layouts/Layout.astro";
 									class="collapsed collapsed-heading"
 									role="button"
 									data-bs-toggle="collapse"
-									data-bs-parent="#accordion"
 									data-bs-target="#collapseFive"
 									aria-expanded="false"
 									aria-controls="collapseFive"
@@ -234,7 +233,7 @@ import Layout from "../layouts/Layout.astro";
 							<div
 								id="collapseFive"
 								class="panel-collapse collapse"
-								role="tabpanel"
+								data-bs-parent="#accordion"
 								aria-labelledby="headingFive"
 							>
 								<div class="faq__lg__body">
@@ -252,7 +251,7 @@ import Layout from "../layouts/Layout.astro";
 						<!--FAQ Item End-->
 
 						<!--FAQ Item End-->
-						<div class="panel panel-default faq__item">
+						<div class="panel panel-default faq__item border-0">
 							<div
 								class="panel-heading faq__lg__heading"
 								role="tab"
@@ -262,7 +261,6 @@ import Layout from "../layouts/Layout.astro";
 									class="collapsed collapsed-heading"
 									role="button"
 									data-bs-toggle="collapse"
-									data-bs-parent="#accordion"
 									data-bs-target="#collapseSix"
 									aria-expanded="false"
 									aria-controls="collapseSix"
@@ -273,7 +271,7 @@ import Layout from "../layouts/Layout.astro";
 							<div
 								id="collapseSix"
 								class="panel-collapse collapse"
-								role="tabpanel"
+								data-bs-parent="#accordion"
 								aria-labelledby="headingSix"
 							>
 								<div class="faq__lg__body">
@@ -297,9 +295,9 @@ import Layout from "../layouts/Layout.astro";
 						<!--FAQ Item End-->
 					</div>
 
-					<div class="faq__show-more">
+					<!-- <div class="faq__show-more">
 						<a href="" class="text-primary-show">Show More</a>
-					</div>
+					</div> -->
 				</div>
 			</section>
 			<!-- ==|| FAQ Section End ||== -->

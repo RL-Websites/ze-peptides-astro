@@ -1,140 +1,129 @@
- ---
+---
+import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
-
 <Layout>
+	
+
 	<Header />
 
 	<!-- =====|| Main Section Start ||====== -->
 	<main class="page">
 		<div class="page__wrapper page__wrapper--alt">
 			<!-- ==|| My Profile Section Start ||== -->
-			<section class="my-profile"  id="profile">
+			<section class="my-profile" id="profile">
 				<div class="container">
-					<div class="my-profile__wrapper">
-						<div class="heading text-center">
-							<h4 class="site__heading-four text-primary-grad-1 text-center mb-50 p-24">My Profile</h4>
-							<p class="fs-18 fw-700 sub-heading mb-10">Email Address</p>
-							<p>Jhon_07@gmail.com</p>
+					<div class="row justify-content-center">
+						<div class="col col-md-7 col-lg-5">
+							<div class="login__header text-center mb-60">
+								<h1 class="text-primary-grad-1 mb-0">My Profile</h1>
+							</div>
+							<div class="heading text-center">
+								<p class="fs-18 fw-700 sub-heading mb-10">Email Address</p>
+								<p>Jhon_07@gmail.com</p>
+							</div>
+							<form class="mt-md-20 mt-50 mb-40 form-wrapper rounded-10">
+								<div class="d-flex justify-content-end mb-22">
+									<a href="#edit-profile">Edit</a>
+								</div>
+								<div class="form-group">
+									<label for="first-name" class="basic-label">First Name</label>
+									<p>Jhon</p>
+								</div>
+								<div class="form-group">
+									<label for="last-name" class="basic-label">Last Name</label>
+									<p>Smith</p>
+								</div>
+								<div class="form-group">
+									<label for="display-name" class="basic-label">Display Name</label>
+									<p>Smith</p>
+								</div>
+								<div class="form-group">
+									<label class="fw-bold mb-5" for="expiry">Date of Birth</label>
+									<p>MM-DD-YYYY</p>
+								</div>
+								<div class="form-group">
+									<label class="basic-label d-block mb-2">Gender</label>
+									<p>Male</p>
+								</div>
+								<div class="form-group">
+									<label for="phone-number" class="basic-label">Phone Number</label>
+									<p>0123456</p>
+								</div>
+							</form>
+
+							<form class="mt-md-20 mt-50 form-wrapper rounded-10" id="edit-profile">
+								<div class="d-flex justify-content-end mb-22">
+									<a href="#" class="mr-40">Cancel</a>
+									<a href="#profile">Save</a>
+								</div>
+								<div class="form-group">
+									<label for="first-name" class="basic-label">First Name</label>
+									<input
+										id="first-name"
+										type="text"
+										class="basic-input my-profile__input"
+										placeholder="First Name"
+										required />
+								</div>
+								<div class="form-group">
+									<label for="last-name" class="basic-label">Last Name</label>
+									<input
+										id="last-name"
+										type="text"
+										class="basic-input my-profile__input"
+										placeholder="Last Name"
+										required />
+								</div>
+								<div class="form-group">
+									<label for="display-name" class="basic-label">Display Name</label>
+									<input
+										id="display-name"
+										type="text"
+										class="basic-input my-profile__input"
+										placeholder="Display Name"
+										required />
+								</div>
+								<div class="form-group">
+									<label class="fw-bold mb-5" for="expiry">Date of Birth</label>
+									<input
+										class="basic-input"
+										type="text"
+										id="expiry"
+										placeholder="MM/YY" />
+								</div>
+								<div class="form-group">
+									<label class="basic-label d-block mb-2">Gender</label>
+
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" checked>
+										<label class="form-check-label" for="genderMale">Male</label>
+									</div>
+
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+										<label class="form-check-label" for="genderFemale">Female</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="phone-number" class="basic-label">Phone Number</label>
+									<input
+										id="phone-number"
+										type="number"
+										class="basic-input my-profile__input"
+										placeholder="Phone Number"
+										required />
+								</div>
+							</form>							
 						</div>
-
-						<form class="mt-md-20 mt-10 mb-40 form-field rounded-10">
-							<div class="buttons">
-								<a href="#edit-profile" class="mx-40">Edit</a>
-							</div>
-							<div class="form-group">
-								<label for="first-name" class="basic-label">First Name</label>
-								<p>Jhon</p>
-							</div>
-							<div class="form-group">
-								<label for="last-name" class="basic-label">Last Name</label>
-								<p>Smith</p>
-							</div>
-							<div class="form-group">
-								<label for="display-name" class="basic-label">Display Name</label>
-								<p>Smith</p>
-							</div>
-                            <div class="form-group">
-                                <label class="fw-bold mb-5" for="expiry"
-                                    >Date of Birth</label
-                                >
-                                <p>MM-DD-YYYY</p>
-                            </div>
-							<div class="form-group">
-							<label class="basic-label d-block mb-2">Gender</label>
-							<p>Male</p>
-							</div>
-							<div class="form-group">
-								<label for="phone-number" class="basic-label">Phone Number</label>
-								<p>0123456</p>
-							</div>
-						</form>
-						
-						<form class="mt-md-20 mt-10 form-field rounded-10"  id="edit-profile">
-							<div class="buttons">
-								<a href="#" class="mx-40">Cancel</a>
-								<a href="#profile">Save</a>
-							</div>
-							<!-- <div class="form-group">
-								<label for="email" class="basic-label">Email Address</label>
-								<input
-									id="email"
-									type="text"
-									class="basic-input my-profile__input"
-									placeholder="Email Address"
-									required=""
-								/>
-							</div> -->
-							<div class="form-group">
-								<label for="first-name" class="basic-label">First Name</label>
-								<input
-									id="first-name"
-									type="text"
-									class="basic-input my-profile__input"
-									placeholder="First Name"
-									required=""
-								/>
-							</div>
-							<div class="form-group">
-								<label for="last-name" class="basic-label">Last Name</label>
-								<input
-									id="last-name"
-									type="text"
-									class="basic-input my-profile__input"
-									placeholder="Last Name"
-									required=""
-								/>
-							</div>
-							<div class="form-group">
-								<label for="display-name" class="basic-label">Display Name</label>
-								<input
-									id="display-name"
-									type="text"
-									class="basic-input my-profile__input"
-									placeholder="Display Name"
-									required=""
-								/>
-							</div>
-                            <div class="form-group">
-                                <label class="fw-bold mb-5" for="expiry"
-                                    >Date of Birth</label
-                                >
-                                <input
-                                    class="basic-input"
-                                    type="text"
-                                    id="expiry"
-                                    placeholder="MM/YY"
-                                />
-                            </div>
-							<div class="form-group">
-							<label class="basic-label d-block mb-2">Gender</label>
-
-							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" checked>
-								<label class="form-check-label" for="genderMale">Male</label>
-							</div>
-
-							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
-								<label class="form-check-label" for="genderFemale">Female</label>
-							</div>
-							</div>
-							<div class="form-group">
-								<label for="phone-number" class="basic-label">Phone Number</label>
-								<input
-									id="phone-number"
-									type="number"
-									class="basic-input my-profile__input"
-									placeholder="Phone Number"
-									required=""
-								/>
-							</div>
-						</form>
 					</div>
+					
 				</div>
 			</section>
 			<!-- ==|| My Profile Section End ||== -->
 		</div>
 	</main>
+
+	<Footer />
 </Layout>
