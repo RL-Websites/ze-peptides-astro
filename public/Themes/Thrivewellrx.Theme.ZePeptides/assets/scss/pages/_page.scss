@@ -23,18 +23,18 @@
 	}
 }
 
-.faq-section {
-	margin-bottom: 30px;
-}
+
+
 .faq {
 	&__lg {
 		&__body {
-			color: $black !important;
 			line-height: 1.6 !important;
 		}
+
 		&__heading {
 			p.collapsed-heading {
 				font-weight: 700 !important;
+
 				&::after {
 					background-color: #712ad5 !important;
 					color: $white !important;
@@ -42,8 +42,10 @@
 			}
 		}
 	}
+
 	&__show-more {
 		margin-top: 20px;
+
 		a {
 			font-family: "SF UI Display", sans-serif;
 			font-weight: 700;
@@ -84,18 +86,21 @@
 		&__show-more {
 			text-align: center;
 		}
+
 		&__lg {
 			&__body {
-				font-size: $fs-16 !important;
+				font-size: $fs-14 !important;
 				line-height: 1.6 !important;
 			}
 		}
+
 		&__heading {
 			p {
 				font-size: 18px !important;
 			}
 		}
 	}
+
 	.faq-subtitle {
 		padding: 12px;
 		font-size: 16px;
