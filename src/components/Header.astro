@@ -25,13 +25,14 @@ const isHome = Astro.url.pathname === "/";
 					<!-- <li><a href="/faq">FAQ</a></li> -->
 				</ul>
 			</nav>
-
+			<div class="cart">
+				<a href="/cart" class="header-icon cart-icon">
+					<i class="icon-cart"></i>
+					<span class="cart__badge text-center">99</span>
+				</a>
+			</div>
 			<!-- CTA Buttons -->
 			<div class="site__menu--auth">
-				<a href="/cart" class="header-icon cart-icon mr-14">
-					<i class="icon-cart"></i>
-					<span class="cart__badge text-center">4</span>
-				</a>
 				<a
 					type="button"
 					href="/login"
@@ -47,13 +48,10 @@ const isHome = Astro.url.pathname === "/";
 					Get Started
 				</button>
 			</div>
+			
 
 			<!-- Mobile Header Elements -->
 			<div class="mobile-header-elements">
-				<a href="/cart" class="header-icon cart-icon">
-					<i class="icon-cart"></i>
-					<span class="cart__badge text-center">99</span>
-				</a>
 
 				<div class="user-dropdown-container mobile-only">
 					<button class="header-icon user-icon" id="user-menu-btn">
