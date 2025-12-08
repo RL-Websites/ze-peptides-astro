@@ -1,5 +1,23 @@
 @use "../base/variables" as *;
 
+// Background decorations for How It Works section
+.how-works {
+	position: relative;
+	// Two background images: top and bottom
+	background-image: url("/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/how-it-works-top-bg.png"),
+		url("/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/how-it-works-bottom-bg.png");
+	background-repeat: no-repeat, no-repeat;
+	background-position: top center, bottom center;
+	background-size: 1920px auto, 1920px auto; // tune sizes as needed
+	z-index: 0;
+
+	// Keep main content above decorative backgrounds
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+}
+
 .step-title {
 	font-family: "sfuidisplay";
 	font-weight: 700;
