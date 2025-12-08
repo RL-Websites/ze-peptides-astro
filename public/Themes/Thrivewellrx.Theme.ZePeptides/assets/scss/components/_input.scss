@@ -65,7 +65,7 @@
 		display: none;
 	}
 
-	&__input:checked+&__label {
+	&__input:checked + &__label {
 		background-color: $blue-1;
 		color: $blue-2;
 		font-weight: 400;
@@ -116,6 +116,10 @@
 	outline: 0;
 	box-shadow: none;
 	font-size: 16px;
+	
+	&::placeholder {
+		color: $light;
+	}
 }
 
 .basic-label {
@@ -239,10 +243,10 @@
 		left: 40px;
 		top: 25px;
 		&__right {
-				position: absolute;
-				right: 40px;
-				top: 25px;
-			}
+			position: absolute;
+			right: 40px;
+			top: 25px;
+		}
 
 		i {
 			font-size: $fs-24;
@@ -286,7 +290,7 @@
 			outline: 0;
 			box-shadow: none;
 
-			&::placeholder {
+			&:placeholder {
 				color: $light;
 			}
 
@@ -326,7 +330,6 @@
 				top: 20px;
 			}
 		}
-		;
 	}
 }
 

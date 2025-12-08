@@ -201,7 +201,7 @@
 				border: 0.5px solid #aeaeae;
 
 				&::placeholder {
-					color: rgba(0, 0, 0, 0.4); // change this to your color
+					color: $light; // change this to your color
 					opacity: 1; // required for Firefox
 				}
 			}
@@ -222,7 +222,7 @@
 				cursor: texts;
 
 				&::placeholder {
-				color: rgba(0, 0, 0, 0.4); // change this to your color
+				color: $light; // change this to your color
 				opacity: 1; // required for Firefox
 			}
 
@@ -470,7 +470,7 @@
 
 				
 			&::placeholder {
-				color: rgba(0, 0, 0, 0.4); // change this to your color
+				color: $light; // change this to your color
 				opacity: 1; // required for Firefox
 			}
 
