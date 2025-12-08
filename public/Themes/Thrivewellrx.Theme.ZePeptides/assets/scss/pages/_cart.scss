@@ -711,15 +711,8 @@
 @media only screen and (max-width: 1024px) {
 	.cart {
 		&__items {
-
-			max-height: 700px;
-
-
-
-
-
+			max-height: unset;
 		}
-
 	}
 }
 
@@ -730,19 +723,9 @@
 			margin-top: 20px;
 		}
 
-
 		&__items {
-
-			max-height: 530px;
-
-
-
-
-
+			max-height: unset;
 		}
-
-
-
 	}
 
 	.cart-hero {

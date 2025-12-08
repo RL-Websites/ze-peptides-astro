@@ -85,8 +85,8 @@ import Layout from "../layouts/Layout.astro";
 									<div class="cart__action">
 										<button
 											class="theme-btn theme-btn__icon-only cart-delete-btn"
-											data-toggle="modal"
-											data-target="#confirm"
+											data-bs-toggle="modal"
+											data-bs-target="#confirm"
 										>
 											<i class="icon-delete"></i>
 										</button>
@@ -368,7 +368,13 @@ import Layout from "../layouts/Layout.astro";
 <Footer />
 
 <!-- Confirm Modal Start -->
-<div id="confirm" class="modal fade confirm-modal" tabindex="-1" role="dialog">
+<div
+	id="confirm"
+	class="modal fade confirm-modal"
+	tabindex="-1"
+	aria-labelledby="confirmLabel"
+	aria-hidden="true"
+>
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<!-- <button type="button" class="btn-close" data-dismiss="modal">
