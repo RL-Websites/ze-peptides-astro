@@ -126,7 +126,7 @@
 
 // Images
 .timeline-img {
-  width: 270px;
+  width: 370px;
   border-radius: 0.75rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -240,4 +240,21 @@
     height: 128px;
     object-fit: cover;
   }
+}
+
+@media (max-width: 768px) {
+
+
+  .timeline-img {
+    width: 250px;
+    margin-bottom: 1.5rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+
+
+
 }
