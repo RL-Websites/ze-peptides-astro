@@ -17,10 +17,12 @@
 		background-color: $primary;
 		border: 1.5px solid $primary;
 		border-radius: 8px;
+		color: white;
 
 		&:hover {
 			background-color: lighten($primary, 20%);
 			border-color: lighten($primary, 20%);
+			color: white;
 
 			&--icon {
 				i {
@@ -309,7 +311,7 @@
 
 @media only screen and (max-width: 992px) {
 	.theme-btn {
-		padding: 15px 30px;
+		padding: 12px 30px;
 		font-size: $fs-14;
 
 		&__outline {
@@ -331,7 +333,7 @@
 @media only screen and (max-width: 768px) {
 	.theme-btn {
 		font-size: 12px;
-		padding: 12px 20px;
+		padding: 10px 20px;
 
 		&__primary {
 			&--icon {
