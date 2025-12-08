@@ -3,9 +3,8 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
-<Layout>
-	
 
+<Layout>
 	<Header />
 
 	<!-- =====|| Main Section Start ||====== -->
@@ -36,7 +35,9 @@ import Layout from "../layouts/Layout.astro";
 									<p>Smith</p>
 								</div>
 								<div class="form-group">
-									<label for="display-name" class="basic-label">Display Name</label>
+									<label for="display-name" class="basic-label"
+										>Display Name</label
+									>
 									<p>Smith</p>
 								</div>
 								<div class="form-group">
@@ -48,15 +49,26 @@ import Layout from "../layouts/Layout.astro";
 									<p>Male</p>
 								</div>
 								<div class="form-group">
-									<label for="phone-number" class="basic-label">Phone Number</label>
+									<label for="phone-number" class="basic-label"
+										>Phone Number</label
+									>
 									<p>0123456</p>
 								</div>
 							</form>
 
-							<form class="mt-md-20 mt-50 form-wrapper rounded-10" id="edit-profile">
-								<div class="d-flex justify-content-end mb-22">
-									<a href="#" class="mr-40">Cancel</a>
-									<a href="#profile">Save</a>
+							<form
+								class="mt-md-20 mt-50 form-wrapper rounded-10"
+								id="edit-profile"
+							>
+								<div class="d-flex gap-30 justify-content-end mb-22">
+									<button
+										class="text-decoration-underline theme-btn theme-btn__accent text-primary"
+										>Cancel</button
+									>
+									<button
+										class="text-decoration-underline theme-btn theme-btn__accent text-primary"
+										>Save</button
+									>
 								</div>
 								<div class="form-group">
 									<label for="first-name" class="basic-label">First Name</label>
@@ -65,7 +77,8 @@ import Layout from "../layouts/Layout.astro";
 										type="text"
 										class="basic-input my-profile__input"
 										placeholder="First Name"
-										required />
+										required
+									/>
 								</div>
 								<div class="form-group">
 									<label for="last-name" class="basic-label">Last Name</label>
@@ -74,16 +87,20 @@ import Layout from "../layouts/Layout.astro";
 										type="text"
 										class="basic-input my-profile__input"
 										placeholder="Last Name"
-										required />
+										required
+									/>
 								</div>
 								<div class="form-group">
-									<label for="display-name" class="basic-label">Display Name</label>
+									<label for="display-name" class="basic-label"
+										>Display Name</label
+									>
 									<input
 										id="display-name"
 										type="text"
 										class="basic-input my-profile__input"
 										placeholder="Display Name"
-										required />
+										required
+									/>
 								</div>
 								<div class="form-group">
 									<label class="fw-bold mb-5" for="expiry">Date of Birth</label>
@@ -91,34 +108,53 @@ import Layout from "../layouts/Layout.astro";
 										class="basic-input"
 										type="text"
 										id="expiry"
-										placeholder="MM/YY" />
+										placeholder="MM/YY"
+									/>
 								</div>
 								<div class="form-group">
 									<label class="basic-label d-block mb-2">Gender</label>
 
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" checked>
-										<label class="form-check-label" for="genderMale">Male</label>
+										<input
+											class="form-check-input"
+											type="radio"
+											name="gender"
+											id="genderMale"
+											value="male"
+											checked
+										/>
+										<label class="form-check-label" for="genderMale">Male</label
+										>
 									</div>
 
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
-										<label class="form-check-label" for="genderFemale">Female</label>
+										<input
+											class="form-check-input"
+											type="radio"
+											name="gender"
+											id="genderFemale"
+											value="female"
+										/>
+										<label class="form-check-label" for="genderFemale"
+											>Female</label
+										>
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="phone-number" class="basic-label">Phone Number</label>
+									<label for="phone-number" class="basic-label"
+										>Phone Number</label
+									>
 									<input
 										id="phone-number"
 										type="number"
 										class="basic-input my-profile__input"
 										placeholder="Phone Number"
-										required />
+										required
+									/>
 								</div>
-							</form>							
+							</form>
 						</div>
 					</div>
-					
 				</div>
 			</section>
 			<!-- ==|| My Profile Section End ||== -->
