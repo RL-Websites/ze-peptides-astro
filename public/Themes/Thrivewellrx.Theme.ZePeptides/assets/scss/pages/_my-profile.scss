@@ -3,6 +3,25 @@
 .my-profile {
 	padding-top: 120px;
 	padding-bottom: 100px;
+
+}
+
+.my-profile__input{
+
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus,
+	&:-webkit-autofill:active {
+		-webkit-text-fill-color: black !important;
+		/* THE REAL FIX */
+		box-shadow: 0 0 0 1000px #FBF9FF inset !important;
+		/* THE SECRET iOS TRICK */
+		transition: background-color 99999s ease-in-out 0s !important;
+		/* Helps but not required */
+		caret-color: black !important;
+		appearance: none !important;
+		background-color: rgba(167, 112, 245, 0.12) !important;
+	}
 }
 
 .rounded-10 {

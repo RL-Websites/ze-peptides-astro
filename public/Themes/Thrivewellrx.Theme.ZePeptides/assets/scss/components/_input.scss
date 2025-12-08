@@ -116,6 +116,7 @@
 	outline: 0;
 	box-shadow: none;
 	font-size: 16px;
+	
 	&::placeholder {
 		color: $light;
 	}
@@ -214,6 +215,21 @@
 		padding: 25px;
 		padding-left: 83px;
 		padding-right: 80px;
+
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover,
+		&:-webkit-autofill:focus,
+		&:-webkit-autofill:active {
+			-webkit-text-fill-color: black !important;
+			/* THE REAL FIX */
+			box-shadow: 0 0 0 1000px rgba(167, 112, 245, 0.12) inset !important;
+			/* THE SECRET iOS TRICK */
+			transition: background-color 99999s ease-in-out 0s !important;
+			/* Helps but not required */
+			caret-color: black !important;
+			appearance: none !important;
+			background-color: rgba(167, 112, 245, 0.12) !important;
+		}
 	}
 
 	&__icon {

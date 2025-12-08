@@ -201,7 +201,19 @@
 				border: 0.5px solid #aeaeae;
 
 				&::placeholder {
-					color: $secondary;
+					color: $light; // change this to your color
+					opacity: 1; // required for Firefox
+				}
+			}
+			.card-icons {
+				padding-left: 10px;
+				display: flex;
+				align-items: center;
+				gap: 5px;
+
+				img {
+					height: 20px;
+					border-radius: 5px;
 				}
 			}
 		}
@@ -218,19 +230,16 @@
 				padding: 0;
 				height: 100%;
 				border-radius: 0;
+				cursor: texts;
+
+				&::placeholder {
+				color: $light; // change this to your color
+				opacity: 1; // required for Firefox
 			}
 
-			.card-icons {
-				padding-left: 10px;
-				display: flex;
-				align-items: center;
-				gap: 5px;
-
-				img {
-					height: 20px;
-					border-radius: 5px;
-				}
 			}
+
+			
 		}
 
 		&--inline-fields {
@@ -325,6 +334,21 @@
 
 .basic-input {
 	border: 1px solid #aeaeae !important;
+
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus,
+	&:-webkit-autofill:active {
+		-webkit-text-fill-color: black !important;
+		/* THE REAL FIX */
+		box-shadow: 0 0 0 1000px #ffffff inset !important;
+		/* THE SECRET iOS TRICK */
+		transition: background-color 99999s ease-in-out 0s !important;
+		/* Helps but not required */
+		caret-color: black !important;
+		appearance: none !important;
+		background-color: #ffffff !important;
+	}
 }
 .select__options {
 	border: 1px solid #aeaeae !important;
@@ -442,9 +466,7 @@
 				}
 			}
 
-			&--card-variation {
-				padding: 10px;
-
+			&--card{
 				.card-icons {
 					gap: 3px;
 
@@ -453,6 +475,18 @@
 						border-radius: 5px;
 					}
 				}
+			}
+
+			&--card-variation {
+				padding: 10px;
+
+				
+			&::placeholder {
+				color: $light; // change this to your color
+				opacity: 1; // required for Firefox
+			}
+
+				
 			}
 		}
 	}
