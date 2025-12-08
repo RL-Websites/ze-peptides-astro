@@ -3,7 +3,9 @@
       xmlns:v="urn:schemas-microsoft-com:vml"
       xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-    <title>Complete Your Intake Form for Order #{orderid} </title>
+    <title>
+        Just a Heads Up: You’re {timespan} Through Your {companyName} Program!
+    </title>
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!--<![endif]-->
@@ -45,24 +47,7 @@
             margin: 13px 0;
         }
     </style>
-    <!--[if mso]>
-        <noscript>
-            <xml>
-                <o:OfficeDocumentSettings>
-                    <o:AllowPNG />
-                    <o:PixelsPerInch>96</o:PixelsPerInch>
-                </o:OfficeDocumentSettings>
-            </xml>
-        </noscript>
-    <![endif]-->
-    <!--[if lte mso 11]>
-        <style type="text/css">
-            .mj-outlook-group-fix {
-                width: 100% !important;
-            }
-        </style>
-    <![endif]-->
-    <!--[if !mso]><!-->
+
     <link href="undefined" rel="stylesheet" type="text/css" />
     <style type="text/css">
         @import url(undefined);
@@ -79,16 +64,6 @@
                 width: 100% !important;
                 max-width: 100%;
             }
-
-            .mj-column-per-70 {
-                width: 70% !important;
-                max-width: 70%;
-            }
-
-            .mj-column-per-30 {
-                width: 30% !important;
-                max-width: 30%;
-            }
         }
     </style>
     <style media="screen and (min-width:480px)">
@@ -100,16 +75,6 @@
         .moz-text-html .mj-column-per-100 {
             width: 100% !important;
             max-width: 100%;
-        }
-
-        .moz-text-html .mj-column-per-70 {
-            width: 70% !important;
-            max-width: 70%;
-        }
-
-        .moz-text-html .mj-column-per-30 {
-            width: 30% !important;
-            max-width: 30%;
         }
     </style>
     <style type="text/css">
@@ -129,8 +94,8 @@
     <div style="background-color: #ffffff">
         <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#FAF8F2" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
         <div style="
-					background: #e8f4ff;
-					background-color: #e8f4ff;
+					background: #102c4e;
+					background-color: #102c4e;
 					margin: 0px auto;
 					max-width: 600px;
 				">
@@ -167,11 +132,7 @@
                                     <tbody>
                                         <tr>
                                             <td align="center"
-                                                style="
-														font-size: 0px;
-														padding: 10px 25px;
-														word-break: break-word;
-													">
+                                                style="font-size: 0px; word-break: break-word">
                                                 <table border="0"
                                                        cellpadding="0"
                                                        cellspacing="0"
@@ -182,7 +143,7 @@
 														">
                                                     <tbody>
                                                         <tr>
-                                                            <td style="width: 184px">
+                                                            <td>
                                                                 <img height="auto"
                                                                      src="{bioAccessLogo}"
                                                                      style="
@@ -191,9 +152,9 @@
 																			outline: none;
 																			text-decoration: none;
 																			height: auto;
-																			width: 100%;
 																			font-size: 13px;
-																		" />
+																		"
+                                                                     width="140" />
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -232,44 +193,44 @@
 															font-size: 22px;
 															font-weight: 700;
 															line-height: 1;
-															text-align: left;
+															text-align: center;
 															color: #444444;
+															margin-top: 20px;
 														">
-                                                    <p style="text-align: center"></p>
+                                                    <p style="text-align: center">Email Reminder</p>
                                                 </div>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <!--[if mso | IE]></td></tr></table><![endif]-->
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+
         <div style="
-					margin: 0px auto;
-					max-width: 600px;
 					background: #e3eef8;
 					background-color: #e3eef8;
+					margin: 0px auto;
+					max-width: 600px;
 				">
             <table align="center"
                    border="0"
                    cellpadding="0"
                    cellspacing="0"
                    role="presentation"
-                   style="width: 100%">
+                   style="width: 100%; background: #e3eef8; background-color: #e3eef8">
                 <tbody>
                     <tr>
                         <td style="
 									direction: ltr;
 									font-size: 0px;
-									padding: 50px 90px 50px 90px;
+									padding: 50px 70px 50px 70px;
 									text-align: center;
 								">
-                            <div style="margin: 0px auto; max-width: 420px">
+                            <div style="margin: 0px auto; max-width: 460px">
                                 <table align="center"
                                        border="0"
                                        cellpadding="0"
@@ -311,172 +272,40 @@
 																				font-family: Calibri;
 																				font-size: 16px;
 																				font-weight: 400;
-																				line-height: 20px;
+																				line-height: 28px;
 																				text-align: left;
 																				color: #444444;
 																			">
-                                                                        <p>Dear {name},</p>
+                                                                        <p>Hi {name},</p>
                                                                         <p>
-                                                                            We noticed that you have placed an order
-                                                                            with {companyName} but have not yet
-                                                                            completed your intake form. This step is
-                                                                            required for the doctor to review your
-                                                                            information and proceed with your
-                                                                            prescription.
+                                                                            You're {timespan} through your {month}
+                                                                            {companyName} program—great job staying
+                                                                            consistent! To avoid any interruption in
+                                                                            your progress, now’s the perfect time to
+                                                                            reorder your next dose. This ensures you
+                                                                            stay on track without missing a beat.
+                                                                        </p>
+                                                                        <p> product: {products} </p>
+                                                                        <p>
+                                                                            Place your next order now to stay
+                                                                            consistent
+                                                                            <br />
+                                                                            Questions? We’re here to help!
+                                                                            <br />
+                                                                            <a href="{reorder}"
+                                                                               style="
+																						text-decoration: none;
+																						color: #de6044;
+																						font-weight: 600;
+																					">
+                                                                                <!--  <button style="color: black;padding: 16px 24px; border: none; border-radius: 8px;font-size: 12px;cursor: pointer; ">-->
+                                                                                Reorder Now
+                                                                                <!--</button>-->
+                                                                            </a>
+                                                                            <br />Stay well, <br />
+                                                                            The {companyName} Team
                                                                         </p>
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <!--[if mso | IE]></td></tr></table><![endif]-->
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            {products}
-
-                            <div style="
-										font-family: Calibri;
-										font-size: 13px;
-										line-height: 1;
-										text-align: left;
-										color: #444444;
-									">
-                                <br />
-                            </div>
-
-                            <div style="margin: 0px auto; max-width: 420px">
-                                <table align="center"
-                                       border="0"
-                                       cellpadding="0"
-                                       cellspacing="0"
-                                       role="presentation"
-                                       style="width: 100%">
-                                    <tbody>
-                                        <tr>
-                                            <td style="
-														direction: ltr;
-														font-size: 0px;
-														padding: 20px 0;
-														text-align: center;
-													">
-                                                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:420px;" ><![endif]-->
-                                                <div class="mj-column-per-100 mj-outlook-group-fix"
-                                                     style="
-															font-size: 0px;
-															text-align: left;
-															direction: ltr;
-															display: inline-block;
-															vertical-align: top;
-															width: 100%;
-														">
-                                                    <table border="0"
-                                                           cellpadding="0"
-                                                           cellspacing="0"
-                                                           role="presentation"
-                                                           style="vertical-align: top"
-                                                           width="100%">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td align="left"
-                                                                    style="
-																			font-size: 0px;
-																			padding: 0;
-																			word-break: break-word;
-																		">
-                                                                    <div style="
-																				font-family: Calibri;
-																				font-size: 16px;
-																				font-weight: 400;
-																				line-height: 20px;
-																				text-align: left;
-																				color: #444444;
-																			">
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td align="left"
-                                                                    style="
-																			font-size: 0px;
-																			padding: 0;
-																			word-break: break-word;
-																		">
-                                                                    <div style="
-																				font-family: Calibri;
-																				font-size: 16px;
-																				font-weight: 400;
-																				line-height: 18px;
-																				text-align: left;
-																				color: #444444;
-																			">
-                                                                        <p>
-                                                                            To avoid any delays in processing your
-                                                                            order, please complete your intake form
-                                                                            as soon as possible using the link
-                                                                            below:
-                                                                        </p>
-
-                                                                        <a href="{intakeFormUrl}"
-                                                                           style="
-																					color: #04fcff;
-																					text-decoration: none;
-																				">
-                                                                            [Complete Intake Form Link]
-                                                                        </a>
-
-                                                                        <p>
-                                                                            If you need any assistance, feel free
-                                                                            to reach out to us.
-                                                                        </p>
-                                                                        <br />
-
-                                                                        <p>
-                                                                            Thank you for choosing
-                                                                            {companyName}!
-                                                                        </p>
-                                                                        <br />
-                                                                        <p style="margin-top: 0px"><b>Best regards,</b></p>
-                                                                        <p>The {companyName} Team</p>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td align="center"
-                                                                    vertical-align="middle"
-                                                                    style="
-																			font-size: 0px;
-																			padding: 10px 25px;
-																			word-break: break-word;
-																		">
-                                                                    <table border="0"
-                                                                           cellpadding="0"
-                                                                           cellspacing="0"
-                                                                           role="presentation"
-                                                                           style="
-																				border-collapse: separate;
-																				width: 206px;
-																				line-height: 100%;
-																			">
-                                                                        <tr>
-                                                                            <td align="center"
-                                                                                bgcolor="#1F1F1F"
-                                                                                role="presentation"
-                                                                                style="
-																						border: none;
-																						border-radius: 50px;
-																						cursor: auto;
-																						mso-padding-alt: 10px 25px;
-																						background: #1f1f1f;
-																					"
-                                                                                valign="middle">
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -494,8 +323,8 @@
         </div>
 
         <div style="
-					background: #102c4e;
-					background-color: #102c4e;
+					background: #45647f;
+					background-color: #45647f;
 					margin: 0px auto;
 					max-width: 600px;
 				">
@@ -571,7 +400,6 @@
                 </tbody>
             </table>
         </div>
-        <!--[if mso | IE]></td></tr></table><![endif]-->
     </div>
 </body>
 </html>
