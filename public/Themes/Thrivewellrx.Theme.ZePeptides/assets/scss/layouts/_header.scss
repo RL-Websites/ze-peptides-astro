@@ -235,6 +235,7 @@
 	gap: 16px;
 }
 
+
 // User Dropdown
 .user-dropdown-container {
 	position: relative;
@@ -328,7 +329,7 @@
 			padding: 16px 0;
 
 			.cart__badge {
-				top: 0px;
+				top: -5px;
 			}
 
 			&.menu-open {
