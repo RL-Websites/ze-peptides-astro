@@ -201,7 +201,8 @@
 				border: 0.5px solid #aeaeae;
 
 				&::placeholder {
-					color: $secondary;
+					color: rgba(0, 0, 0, 0.4); // change this to your color
+					opacity: 1; // required for Firefox
 				}
 			}
 		}
@@ -219,6 +220,12 @@
 				height: 100%;
 				border-radius: 0;
 				cursor: texts;
+
+				&::placeholder {
+				color: rgba(0, 0, 0, 0.4); // change this to your color
+				opacity: 1; // required for Firefox
+			}
+
 			}
 
 			.card-icons {
@@ -460,6 +467,12 @@
 
 			&--card-variation {
 				padding: 10px;
+
+				
+			&::placeholder {
+				color: rgba(0, 0, 0, 0.4); // change this to your color
+				opacity: 1; // required for Firefox
+			}
 
 				.card-icons {
 					gap: 3px;
