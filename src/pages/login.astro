@@ -47,13 +47,18 @@ import Layout from "../layouts/Layout.astro";
 									<label for="password" class="basic-label mt-24">
 										Password<span class="icon-ellipse"> </span></label
 									>
-
-									<input
-										type="password"
-										class="basic-input form-control"
-										id="password"
-										required
-									/>
+									<div class="login__password">
+										<input
+											type="password"
+											class="login__input"
+											id="password"
+											required
+										/>
+										<button type="button" class="login__toggle-btn">
+											<i class="icon-StateOff"></i>
+											<!-- <i class="icon-password-encrypt"></i> -->
+										</button>
+									</div>
 									<p class="basic-error">Password required</p>
 									<div class="d-flex gap-2 p-2 mt-24">
 										<input
@@ -62,6 +67,7 @@ import Layout from "../layouts/Layout.astro";
 											id="remember"
 											checked
 										/>
+
 										<label class="basic-label mb-24" for="remember">
 											Remember me
 										</label>
