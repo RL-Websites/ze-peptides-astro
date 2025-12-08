@@ -1,260 +1,248 @@
-@import "../base/variables";
-
-
+@use "../base/variables" as *;
 
 .step-title {
-  font-family: "sfuidisplay";
-  font-weight: 700;
-  font-style: bold;
-  font-size: 30px;
+	font-family: "sfuidisplay";
+	font-weight: 700;
+	font-style: bold;
+	font-size: 30px;
 }
 
 .step-title.active-title {
-  color: $primary;
-  /* Replace with your brand color */
+	color: $primary;
+	/* Replace with your brand color */
 }
 
 .mobile-step-title.active-title {
-  color: $primary;
-
+	color: $primary;
 }
 
 .mobile-number-description.active-title {
-  color: $primary;
-
+	color: $primary;
 }
 
-
-
 .timeline-description {
-  font-family: 'sfuidisplay', serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 160%;
-  width: 370px;
-  color: #525252;
+	font-family: "sfuidisplay", serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 160%;
+	width: 370px;
+	color: #525252;
 }
 
 // Desktop Timeline
 .timeline-desktop {
-  position: relative;
+	position: relative;
 
-  // Remove the single vertical line
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   left: 50%;
-  //   top: 4rem;
-  //   bottom: calc(100vh - 16rem);
-  //   width: 1px;
-  //   background-color: $gray-border;
-  //   transform: translateX(-50%);
-  // }
+	// Remove the single vertical line
+	// &::before {
+	//   content: '';
+	//   position: absolute;
+	//   left: 50%;
+	//   top: 4rem;
+	//   bottom: calc(100vh - 16rem);
+	//   width: 1px;
+	//   background-color: $gray-border;
+	//   transform: translateX(-50%);
+	// }
 }
 
 // Timeline Step
 .timeline-step {
-  position: relative;
-  margin-bottom: 8rem;
+	position: relative;
+	margin-bottom: 8rem;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+	&:last-child {
+		margin-bottom: 0;
+	}
 
-  // Add connecting line AFTER each dot (except the last one)
-  &:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 2rem; // Start from the dot (2rem is dot's top position)
-    height: calc(100% - 2rem); // Full height minus dot's top position
-    width: 1px;
-    background-color: $gray-border;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
+	// Add connecting line AFTER each dot (except the last one)
+	&:not(:last-child)::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 2rem; // Start from the dot (2rem is dot's top position)
+		height: calc(100% - 2rem); // Full height minus dot's top position
+		width: 1px;
+		background-color: $gray-border;
+		transform: translateX(-50%);
+		z-index: 1;
+	}
 
-  // Alternative: Add gap in the line
-  &:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 4rem; // Start below the dot (12px dot + some gap)
-    height: calc(100% + 50px); // Height minus starting position
-    width: 1px;
-    background-color: $gray-border;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
+	// Alternative: Add gap in the line
+	&:not(:last-child)::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 4rem; // Start below the dot (12px dot + some gap)
+		height: calc(100% + 50px); // Height minus starting position
+		width: 1px;
+		background-color: $gray-border;
+		transform: translateX(-50%);
+		z-index: 1;
+	}
 }
 
 // Center Dot - updated for better positioning
 .timeline-dot {
-  position: absolute;
-  left: 50%;
-  top: 2rem;
-  transform: translateX(-50%);
-  width: 12px;
-  height: 12px;
-  background-color: $gray-border;
-  border-radius: 50%;
-  z-index: 10; // Make sure dot is above the line
-  transition: all 0.3s ease;
+	position: absolute;
+	left: 50%;
+	top: 2rem;
+	transform: translateX(-50%);
+	width: 12px;
+	height: 12px;
+	background-color: $gray-border;
+	border-radius: 50%;
+	z-index: 10; // Make sure dot is above the line
+	transition: all 0.3s ease;
 
-  &.active {
-    background-color: $primary;
-    transform: translateX(-50%) scale(1.25);
-  }
+	&.active {
+		background-color: $primary;
+		transform: translateX(-50%) scale(1.25);
+	}
 }
 
 // Step Number
 .step-number {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-size: 140px;
-  line-height: 100%;
-  // text-transform: uppercase;
-  color: $black;
-  line-height: 1;
-  transition: color 0.3s ease;
-  flex-shrink: 0;
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: 400;
+	font-size: 140px;
+	line-height: 100%;
+	// text-transform: uppercase;
+	color: $black;
+	line-height: 1;
+	transition: color 0.3s ease;
+	flex-shrink: 0;
 
-  &.purple {
-    color: $primary;
-  }
+	&.purple {
+		color: $primary;
+	}
 }
 
 // Images
 .timeline-img {
-  width: 370px;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+	width: 370px;
+	border-radius: 0.75rem;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
 
-  position: relative;
+	position: relative;
 
-  &::after {
-    content: attr(data-size);
-    position: absolute;
-    bottom: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #5a67d8;
-    color: white;
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 600;
-  }
+	&::after {
+		content: attr(data-size);
+		position: absolute;
+		bottom: 8px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #5a67d8;
+		color: white;
+		padding: 4px 12px;
+		border-radius: 4px;
+		font-size: 0.75rem;
+		font-weight: 600;
+	}
 
-  img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-  }
+	img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+		display: block;
+	}
 }
 
 // Mobile Timeline
 .mobile-timeline-step {
-  position: relative;
-  margin-bottom: 3rem;
+	position: relative;
+	margin-bottom: 3rem;
 
-  // Hover effects
-  // &:hover {
-  //   .mobile-step-number {
-  //     color: primary;
-  //   }
+	// Hover effects
+	// &:hover {
+	//   .mobile-step-number {
+	//     color: primary;
+	//   }
 
-  //   .mobile-dot {
-  //     background-color: primary;
+	//   .mobile-dot {
+	//     background-color: primary;
 
-  //     &::after {
-  //       background-color: primary;
-  //     }
-  //   }
-  // }
+	//     &::after {
+	//       background-color: primary;
+	//     }
+	//   }
+	// }
 
-  // Remove line from last step
+	// Remove line from last step
 
-  &:last-child {
-    margin-bottom: 0;
+	&:last-child {
+		margin-bottom: 0;
 
-    .mobile-dot::after {
-      display: none;
-    }
-  }
+		.mobile-dot::after {
+			display: none;
+		}
+	}
 }
 
 // Mobile Step Number
 .mobile-step-number {
-  font-size: 3rem;
-  font-weight: bold;
-  color: $black;
-  line-height: 1;
-  transition: color 0.3s ease;
-  flex-shrink: 0;
+	font-size: 3rem;
+	font-weight: bold;
+	color: $black;
+	line-height: 1;
+	transition: color 0.3s ease;
+	flex-shrink: 0;
 
-  &.purple {
-    color: $primary;
-  }
+	&.purple {
+		color: $primary;
+	}
 }
 
 // Mobile Dot
 .mobile-dot {
-  width: 10px;
-  height: 10px;
-  background-color: $gray-border;
-  border-radius: 50%;
-  position: relative;
-  transition: all 0.3s ease;
-  margin-top: 4px;
+	width: 10px;
+	height: 10px;
+	background-color: $gray-border;
+	border-radius: 50%;
+	position: relative;
+	transition: all 0.3s ease;
+	margin-top: 4px;
 
-  &.active {
-    background-color: $primary;
-  }
+	&.active {
+		background-color: $primary;
+	}
 
-  // Vertical connecting line
-  &::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 20px;
-    transform: translateX(-50%);
-    width: 1px;
-    height: 230px;
-    background-color: $gray-border;
-    transition: background-color 0.3s ease;
-  }
+	// Vertical connecting line
+	&::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 20px;
+		transform: translateX(-50%);
+		width: 1px;
+		height: 230px;
+		background-color: $gray-border;
+		transition: background-color 0.3s ease;
+	}
 }
 
 // Mobile Image
 .mobile-img {
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  margin-bottom: 0.75rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	margin-bottom: 0.75rem;
 
-  img {
-    width: 100%;
-    height: 128px;
-    object-fit: cover;
-  }
+	img {
+		width: 100%;
+		height: 128px;
+		object-fit: cover;
+	}
 }
 
 @media (max-width: 768px) {
+	.timeline-img {
+		width: 250px;
+		margin-bottom: 1.5rem;
 
-
-  .timeline-img {
-    width: 250px;
-    margin-bottom: 1.5rem;
-
-    img {
-      width: 100%;
-    }
-  }
-
-
-
-
+		img {
+			width: 100%;
+		}
+	}
 }

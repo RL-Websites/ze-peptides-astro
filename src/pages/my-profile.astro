@@ -105,7 +105,8 @@ import Layout from "../layouts/Layout.astro";
 								<div class="form-group">
 									<label class="fw-bold mb-5" for="expiry">Date of Birth</label>
 									<input
-										class="basic-input"
+										inputmode="numeric"
+										class="basic-input my-profile__input"
 										type="text"
 										id="expiry"
 										placeholder="MM/YY"
@@ -145,6 +146,7 @@ import Layout from "../layouts/Layout.astro";
 										>Phone Number</label
 									>
 									<input
+										inputmode="numeric"
 										id="phone-number"
 										type="number"
 										class="basic-input my-profile__input"
