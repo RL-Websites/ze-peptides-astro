@@ -24,7 +24,10 @@ $(document).ready(function () {
 	// Close dropdown when clicking outside
 	// Close dropdown when clicking outside
 	$(document).on("click", function (e) {
-		if (!$(e.target).closest("#user-menu-btn").length && !$(e.target).closest("#user-dropdown").length) {
+		if (
+			!$(e.target).closest("#user-menu-btn").length &&
+			!$(e.target).closest("#user-dropdown").length
+		) {
 			$("#user-dropdown").removeClass("show");
 		}
 	});
@@ -104,9 +107,15 @@ $(document).ready(function () {
 
 	// If coming from anchor link (#products) on non-home pages, redirect and scroll
 	$(window).on("load", function () {
-		if (window.location.hash === "#products" && window.location.pathname !== "/") {
+		if (
+			window.location.hash === "#products" &&
+			window.location.pathname !== "/"
+		) {
 			window.location.pathname = "/";
-		} else if (window.location.hash === "#products" && window.location.pathname === "/") {
+		} else if (
+			window.location.hash === "#products" &&
+			window.location.pathname === "/"
+		) {
 			setTimeout(function () {
 				$("html, body").animate(
 					{
@@ -210,3 +219,99 @@ updateActiveStep();
 
 // Listen to scroll events
 window.addEventListener("scroll", handleScroll);
+
+// Mobile Timeline Script
+const mobileSteps = document.querySelectorAll(
+	".mobile-timeline-step[data-observed]"
+);
+
+// Function to remove active class from all mobile steps
+const deactivateAllMobileSteps = () => {
+	mobileSteps.forEach((step) => {
+		const dot = step.querySelector(".mobile-dot");
+		const stepNumber = step.querySelector(".mobile-step-number");
+		const title = step.querySelector(".mobile-step-title");
+		const line = step.querySelector(".mobile-dot-line");
+		const description = step.querySelector(".mobile-number-description");
+
+		if (dot) dot.classList.remove("active");
+		if (stepNumber) stepNumber.classList.remove("purple");
+		if (title) title.classList.remove("active-title");
+		if (description) description.classList.remove("active-title");
+		// Reset line when step is not active
+		if (line) {
+			line.style.height = "0";
+		}
+	});
+};
+
+// Function to activate a specific mobile step
+const activateMobileStep = (step) => {
+	const dot = step.querySelector(".mobile-dot");
+	const stepNumber = step.querySelector(".mobile-step-number");
+	const title = step.querySelector(".mobile-step-title");
+	const line = step.querySelector(".mobile-dot-line");
+	const description = step.querySelector(".mobile-number-description");
+
+	if (dot) dot.classList.add("active");
+	if (stepNumber) stepNumber.classList.add("purple");
+	if (title) title.classList.add("active-title");
+	if (description) description.classList.add("active-title");
+	// Animate line when step becomes active
+	if (line) {
+		line.style.height = "var(--line-height)";
+	}
+};
+
+// Function to find and activate the most centered mobile step
+const updateActiveMobileStep = () => {
+	let mostCenteredStep = null;
+	let minDistance = Infinity;
+
+	mobileSteps.forEach((step) => {
+		const rect = step.getBoundingClientRect();
+		const elementCenter = rect.top + rect.height / 2;
+		const viewportCenter = window.innerHeight / 2;
+		const distance = Math.abs(elementCenter - viewportCenter);
+
+		// Check if element is in viewport
+		if (rect.top < window.innerHeight && rect.bottom > 0) {
+			if (distance < minDistance) {
+				minDistance = distance;
+				mostCenteredStep = step;
+			}
+		}
+	});
+
+	// Deactivate all steps first
+	deactivateAllMobileSteps();
+
+	// Activate only the most centered step
+	if (mostCenteredStep) {
+		activateMobileStep(mostCenteredStep);
+	}
+};
+
+// Use scroll event with throttling for better performance
+let mobileTickingState = false;
+const handleMobileScroll = () => {
+	if (!mobileTickingState) {
+		window.requestAnimationFrame(() => {
+			updateActiveMobileStep();
+			mobileTickingState = false;
+		});
+		mobileTickingState = true;
+	}
+};
+
+// Set CSS custom properties for all mobile steps
+mobileSteps.forEach((step) => {
+	step.style.setProperty("--dot-gap", "2rem");
+	step.style.setProperty("--line-height", "calc(100% - 14px)");
+});
+
+// Initial check for mobile
+updateActiveMobileStep();
+
+// Listen to scroll events for mobile
+window.addEventListener("scroll", handleMobileScroll);
