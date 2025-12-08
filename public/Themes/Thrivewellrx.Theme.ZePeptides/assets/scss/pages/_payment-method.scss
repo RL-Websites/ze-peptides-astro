@@ -205,6 +205,17 @@
 					opacity: 1; // required for Firefox
 				}
 			}
+			.card-icons {
+				padding-left: 10px;
+				display: flex;
+				align-items: center;
+				gap: 5px;
+
+				img {
+					height: 20px;
+					border-radius: 5px;
+				}
+			}
 		}
 
 		&--card-variation {
@@ -228,17 +239,7 @@
 
 			}
 
-			.card-icons {
-				padding-left: 10px;
-				display: flex;
-				align-items: center;
-				gap: 5px;
-
-				img {
-					height: 20px;
-					border-radius: 5px;
-				}
-			}
+			
 		}
 
 		&--inline-fields {
@@ -465,6 +466,17 @@
 				}
 			}
 
+			&--card{
+				.card-icons {
+					gap: 3px;
+
+					img {
+						height: 17px;
+						border-radius: 5px;
+					}
+				}
+			}
+
 			&--card-variation {
 				padding: 10px;
 
@@ -474,14 +486,7 @@
 				opacity: 1; // required for Firefox
 			}
 
-				.card-icons {
-					gap: 3px;
-
-					img {
-						height: 17px;
-						border-radius: 5px;
-					}
-				}
+				
 			}
 		}
 	}
