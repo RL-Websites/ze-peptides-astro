@@ -11,7 +11,7 @@ import Layout from "../layouts/Layout.astro";
 	<main class="page">
 		<div class="page__wrapper page__wrapper--alt">
 			<!-- ==|| Cart Hero Section Start ||== -->
-			<section class="cart-hero">
+			<section class="cart-hero pt-md-130 pt-120">
 				<div class="container">
 					<h1 class="text-center text-primary-grad-1"> Complete Your Order </h1>
 
@@ -50,7 +50,7 @@ import Layout from "../layouts/Layout.astro";
 			<!--==|| Product Cart Items Status End ||== -->
 
 			<!--==|| Cart Information Status Start ||== -->
-			<section class="cart-view">
+			<section class="cart-view pb-md-100 pb-50">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-7">
@@ -306,16 +306,36 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 
 					<div class="text-center mt-30">
-						<a href="/payment-method" class="theme-btn theme-btn__primary px-50">
+						<a
+							href="/payment-method"
+							class="theme-btn theme-btn__primary px-50"
+						>
 							Proceed to Checkout
 						</a>
+					</div>
+				</div>
+
+				<div class="floating__buttons d-md-none d-block">
+					<div class="floating__buttons__items">
+						<button
+							class="theme-btn theme-btn__accent fw-medium text-primary"
+							data-bind="click:goToHome"
+						>
+							Continue Shopping
+						</button>
+						<button
+							class="theme-btn theme-btn__primary text-center"
+							data-bind="click:loadPartialShippingView"
+						>
+							Proceed to Checkout
+						</button>
 					</div>
 				</div>
 			</section>
 			<!--==|| Cart Information Status End ||== -->
 
 			<!--==|| Empty Cart Status Start ||== -->
-			<section class="cart-view pt-md-150 pb-md-80 pt-120 pb-50">
+			<section class="cart-view pt-md-150 pb-md-100 pt-120 pb-50 d-none">
 				<div class="container">
 					<div class="row">
 						<div class="text-center">

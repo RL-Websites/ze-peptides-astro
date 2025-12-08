@@ -37,17 +37,38 @@ import Layout from "../layouts/Layout.astro";
 									id="payment-form"
 								>
 									<div class="form-group">
-										<label class="fw-bold mb-5" for="cardNumber"
-											>Card Number</label
-										>
+										<div class="d-flex d-md-none items-start">
+											<label class="fw-bold mb-5" for="cardNumber">Card Number</label>
+										<div class="card-icons d-md-none d-flex ml-auto">
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/payment/visa.png"
+													alt="Visa"
+												/>
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/payment/master.png"
+													alt="Mastercard"
+												/>
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/payment/amex.png"
+													alt="AMEX"
+												/>
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/payment/jcb.png"
+													alt="JCB"
+												/>
+											</div>
+										</div>
+										
+
 										<div class="payment__form--card-variation">
 											<input
+												inputmode="numeric"
 												class="basic-input card-input"
 												type="text"
 												id="cardNumber"
 												placeholder="1234 1234 1234 1234"
 											/>
-											<div class="card-icons">
+											<div class="card-icons d-md-flex d-none">
 												<img
 													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/payment/visa.png"
 													alt="Visa"
@@ -74,6 +95,7 @@ import Layout from "../layouts/Layout.astro";
 												>Expiration Date</label
 											>
 											<input
+												inputmode="numeric"
 												class="basic-input"
 												type="text"
 												id="expiry"
@@ -84,6 +106,7 @@ import Layout from "../layouts/Layout.astro";
 											<label class="fw-bold mb-5" for="cvc">Security Code</label
 											>
 											<input
+												inputmode="numeric"
 												class="basic-input"
 												type="text"
 												id="cvc"
@@ -300,6 +323,7 @@ import Layout from "../layouts/Layout.astro";
 												>Zip Code <span class="icon-ellipse"></span></label
 											>
 											<input
+												inputmode="numeric"
 												class="basic-input"
 												type="text"
 												name="shippingZipCode"
@@ -411,6 +435,7 @@ import Layout from "../layouts/Layout.astro";
 												>Zip Code <span class="icon-ellipse"></span></label
 											>
 											<input
+												inputmode="numeric"
 												class="basic-input"
 												type="text"
 												name="shippingZipCode"
@@ -940,10 +965,9 @@ import Layout from "../layouts/Layout.astro";
 
 
 <script>
-
-$(document).ready(function () {
-		$("#agreeTerms").click(function(){
-			window.location = "/thank-you"
-		})
-	})
+	$(document).ready(function () {
+		$("#agreeTerms").on("click", function () {
+			window.location.href = "/thank-you";
+		});
+	});
 </script>

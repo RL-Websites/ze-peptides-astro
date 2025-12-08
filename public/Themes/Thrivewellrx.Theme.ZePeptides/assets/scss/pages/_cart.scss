@@ -1,7 +1,6 @@
 @use "../base/variables" as *;
 
 .cart-hero {
-	padding-top: 130px;
 
 	&__heading {
 		font-size: $fs-30;
@@ -102,9 +101,6 @@
 	}
 }
 
-.cart-view {
-	margin-bottom: 50px;
-}
 
 .cart {
 	&-card {
@@ -770,10 +766,6 @@
 			height: 30px;
 			border-radius: 20px;
 		}
-	}
-
-	.cart-view {
-		margin-bottom: 50px;
 	}
 
 	.recommended {

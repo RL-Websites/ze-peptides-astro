@@ -18,7 +18,6 @@ import Layout from "../layouts/Layout.astro";
 	<main class="page">
 		<!--===|| Banner Section Start ||===-->
 
-		
 		<Homehero />
 		<!--===|| Banner Section End ||===-->
 
@@ -37,16 +36,36 @@ import Layout from "../layouts/Layout.astro";
 		<!--===|| Product Section Start ||===-->
 		<section class="product py-50 py-md-100">
 			<div class="container">
-				<h1 class="site__heading-one text-center"  data-aos="zoom-in" data-aos-duration="1000">
+				<h1
+					class="site__heading-one text-center"
+					data-aos="fade-up"
+					data-aos-duration="1400"
+					data-aos-delay="400"
+					data-aos-easing="cubic-bezier(0.16, 0.84, 0.44, 1)"
+					data-aos-anchor=".home__hero"
+					data-aos-offset="100"
+				>
 					Our
 					<span class="text-primary-grad-1">Products</span>
 				</h1>
-				<p class="text-center mt-20 mt-md-24" data-aos="fade-up" data-aos-delay="600">
+				<p
+					class="text-center mt-20 mt-md-24"
+					data-aos="fade-up"
+					data-aos-duration="1400"
+					data-aos-delay="600"
+					data-aos-easing="cubic-bezier(0.16, 0.84, 0.44, 1)"
+					data-aos-anchor=".home__hero"
+				>
 					High-quality research peptides for laboratory use — verified for
 					purity and quality
 				</p>
 				<div
-					class="d-flex justify-content-center gap-3 align-items-center mt-20 mt-md-24 text-red" data-aos="fade-up" data-aos-delay="800"
+					class="d-flex justify-content-center gap-3 align-items-center mt-20 mt-md-24 text-red"
+					data-aos="fade-up"
+					data-aos-duration="1400"
+					data-aos-delay="900"
+					data-aos-easing="cubic-bezier(0.16, 0.84, 0.44, 1)"
+					data-aos-anchor=".home__hero"
 				>
 					<i class="icon-alert"></i>
 					<span class="text-md-body4 lh-1"
@@ -54,23 +73,44 @@ import Layout from "../layouts/Layout.astro";
 					>
 				</div>
 
-					<div class="zepeptides-search max-w-full mt-30 mt-md-24">
-						<div class="zepeptides-search__icon">
-							<i class="icon-search"></i>
-						</div>
-						<input type="text" class="zepeptides-search__input text-center" id="productSearch" placeholder="Search by product/treatment" data-bind="textInput: statSearch">
-						<div class="zepeptides-search__icon__right">
-							<i class="icon-cross1"></i>
-						</div>
+				<div
+					class="zepeptides-search max-w-full mt-30 mt-md-24"
+					data-aos="flip-left"
+					data-aos-duration="1600"
+					data-aos-delay="1500"
+					data-aos-easing="cubic-bezier(0.16, 0.84, 0.44, 1)"
+					data-aos-anchor=".home__hero"
+				>
+					<div class="zepeptides-search__icon">
+						<i class="icon-search"></i>
 					</div>
-					<p class="mt-16 mt-md-20 fs-14 fs-md-18 mb-50 text-center">No results found for “<span>hello world</span>”. Check the spelling or use a different word or phrase.</p>
+					<input
+						type="text"
+						class="zepeptides-search__input text-center"
+						id="productSearch"
+						placeholder="Search by product/treatment"
+						data-bind="textInput: statSearch"
+					/>
+					<div class="zepeptides-search__icon__right">
+						<i class="icon-cross1"></i>
+					</div>
+				</div>
+				<p
+					class="mt-16 mt-md-20 fs-14 fs-md-18 mb-50 text-center"
+					data-aos="fade-up"
+					data-aos-duration="1400"
+					data-aos-delay="2000"
+					data-aos-easing="cubic-bezier(0.16, 0.84, 0.44, 1)"
+					data-aos-anchor=".home__hero"
+					>No results found for “<span>hello world</span>”. Check the spelling
+					or use a different word or phrase.</p
+				>
 
 				<ProductCard />
 
 				<!-- <div class="col-md-12">
 					<img class="img-fluid" src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/product-not-found.svg" alt="">
 				</div> -->
-
 			</div>
 		</section>
 		<!--===|| Product Section End ||===-->
@@ -87,8 +127,8 @@ import Layout from "../layouts/Layout.astro";
 
 		<!--===|| Faq Section Start ||===-->
 		<section class="faq py-50 py-md-100">
-			<div class="container faq__wrapper">				
-				<div class="row">					
+			<div class="container faq__wrapper">
+				<div class="row">
 					<div class="col-lg-12 faq__items">
 						<Faq />
 					</div>
@@ -97,7 +137,6 @@ import Layout from "../layouts/Layout.astro";
 		</section>
 		<!--===|| Faq Section End ||===-->
 
-		
 		<!--===|| Client Feedback Section Start ||===-->
 		<Client />
 		<!--===|| Client Feedback Section End ||===-->
