@@ -13,6 +13,7 @@
 	transition: 0.3s;
 	text-decoration: none;
 
+
 	&__primary {
 		background-color: $primary;
 		border: 1.5px solid $primary;
@@ -21,6 +22,7 @@
 		&:hover {
 			background-color: lighten($primary, 20%);
 			border-color: lighten($primary, 20%);
+
 			&--icon {
 				i {
 					color: $secondary;
@@ -49,6 +51,7 @@
 				line-height: 1;
 				font-weight: 500;
 			}
+
 			&-box {
 				padding: 5px;
 				border-radius: 4px;
