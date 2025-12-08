@@ -1,5 +1,9 @@
 # Release Notes
 
+## [0.0.1] - 2025-12-8
+
+- fixed the padding and cart items height
+
 ## [0.0.1] - 2025-12-4
 
 - get started button click fix

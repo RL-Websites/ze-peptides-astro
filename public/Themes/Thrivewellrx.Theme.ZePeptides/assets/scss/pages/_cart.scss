@@ -712,7 +712,43 @@
 	}
 }
 
+@media only screen and (max-width: 1024px) {
+	.cart {
+		&__items {
+
+			max-height: 700px;
+
+
+
+
+
+		}
+
+	}
+}
+
 @media only screen and (max-width: 768px) {
+	.cart {
+		&__details {
+			margin-left: 0px;
+			margin-top: 20px;
+		}
+
+
+		&__items {
+
+			max-height: 530px;
+
+
+
+
+
+		}
+
+
+
+	}
+
 	.cart-hero {
 		padding: 120px 0 0;
 
@@ -779,4 +815,13 @@
 			padding-right: 5px;
 		}
 	}
+}
+
+@media only screen and (max-width: 320px) {
+	.cart {
+		&__items {
+			max-height: 600px;
+		}
+	}
+
 }
