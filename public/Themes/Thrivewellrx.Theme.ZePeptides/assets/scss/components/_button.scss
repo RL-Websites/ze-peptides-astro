@@ -18,10 +18,12 @@
 		background-color: $primary;
 		border: 1.5px solid $primary;
 		border-radius: 8px;
+		color: white;
 
 		&:hover {
 			background-color: lighten($primary, 20%);
 			border-color: lighten($primary, 20%);
+			color: white;
 
 			&--icon {
 				i {
@@ -277,6 +279,27 @@
 	}
 }
 
+.floating {
+	&__buttons {
+		position: fixed;
+		width: 100%;
+		bottom: 0px;
+		left: 0px;
+		z-index: 1;
+		background-color: #FAFAFA;
+		box-shadow: 0px -4px 16px 0px #0000001F;
+
+		&__items {
+			display: flex;
+			flex-direction: column-reverse;
+			width: 100%;
+			gap: 5px;
+			padding: 10px;
+			align-items: stretch;
+		}
+	}
+}
+
 @keyframes spin {
 	0% {
 		transform: rotate(0deg);
@@ -289,7 +312,7 @@
 
 @media only screen and (max-width: 992px) {
 	.theme-btn {
-		padding: 15px 30px;
+		padding: 12px 30px;
 		font-size: $fs-14;
 
 		&__outline {
@@ -311,7 +334,7 @@
 @media only screen and (max-width: 768px) {
 	.theme-btn {
 		font-size: 12px;
-		padding: 12px 20px;
+		padding: 10px 20px;
 
 		&__primary {
 			&--icon {

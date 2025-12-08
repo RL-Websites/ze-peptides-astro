@@ -57,6 +57,26 @@
 			right: -10px;
 			transition: 0.3s;
 		}
+
+		@supports (-webkit-touch-callout: none) {
+			.cart__badge {
+				width: 18px;
+				font-size: 10px;
+				line-height: 1;
+				top: -8px;
+				right: -5px;
+			}
+		}
+
+		@supports (-webkit-overflow-scrolling: touch) {
+			.cart__badge {
+				width: 18px;
+				font-size: 10px;
+				line-height: 1;
+				top: -8px;
+				right: -5px;
+			}
+		}
 	}
 
 	&__navbar {
@@ -296,10 +316,10 @@
 		}
 	}
 
-	.theme-btn {
-		padding: 10px 20px;
-		font-size: 14px;
-	}
+	// .theme-btn {
+	// 	padding: 10px 20px;
+	// 	font-size: 14px;
+	// }
 }
 
 @media only screen and (max-width: 768px) {
