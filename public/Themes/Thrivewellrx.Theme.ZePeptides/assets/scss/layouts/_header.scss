@@ -83,7 +83,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 40px;
+		gap: 20px;
 	}
 
 	&__logo {
@@ -234,7 +234,6 @@
 	align-items: center;
 	gap: 16px;
 }
-
 
 // User Dropdown
 .user-dropdown-container {
@@ -412,7 +411,7 @@
 	}
 
 	.hamburger-menu {
-		display: block; // Keep it visible but handled in mobile-header-elements
+		display: flex; // Keep it visible but handled in mobile-header-elements
 	}
 
 	// Mobile Header Layout Adjustments
