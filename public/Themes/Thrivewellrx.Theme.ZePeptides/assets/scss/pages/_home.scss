@@ -93,6 +93,11 @@
 }
 
 .product {
+	&__card {
+		& > a {
+			text-decoration: none;
+		}
+	}
 	&__title {
 		max-width: 400px;
 		height: 58px;
@@ -251,7 +256,8 @@
 	background-color: $blue-3;
 }
 
-@media only screen and (max-width: 1170px) {}
+@media only screen and (max-width: 1170px) {
+}
 
 @media only screen and (max-width: 992px) {
 	.home {
