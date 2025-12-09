@@ -205,9 +205,8 @@ import Layout from "../layouts/Layout.astro";
 						</div>
 					</div>
 
-					<div class="thank-you__actions">
+					<div class="thank-you__actions d-md-block d-none">
 						<a
-							
 							href="/my-order"
 							class="theme-btn theme-btn__outline theme-btn__outline--primary"
 						>
@@ -220,6 +219,22 @@ import Layout from "../layouts/Layout.astro";
 				</div>
 			</div>
 		</section>
+		<div class="floating__buttons d-md-none d-block">
+			<div class="floating__buttons__items">
+				<button
+					class="theme-btn theme-btn__accent fw-medium text-primary"
+					data-bind="click:goToHome"
+				>
+					Continue Shopping
+				</button>
+				<button
+					class="theme-btn theme-btn__primary text-center"
+					data-bind="click:loadPartialShippingView"
+				>
+					Proceed to Checkout
+				</button>
+			</div>
+		</div>
 	</main>
 	<Footer />
 </Layout>
