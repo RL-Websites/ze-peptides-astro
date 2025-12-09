@@ -203,6 +203,154 @@ textarea.form-control {
 	}
 }
 
+/* WRAPPER */
+.datepicker-dropdown {
+	min-width: 380px;
+	font-size: 16px;
+	border: 0;
+	border-radius: 8px;
+}
+
+/* POSITIONING (top arrow) */
+.datepicker-dropdown.datepicker-orient-top {
+	left: 50% !important;
+	transform: translateX(-50%);
+	bottom: calc(100% + 10px) !important;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 50% !important;
+		transform: translateX(-50%);
+		border-left: 14px solid transparent;
+		border-right: 14px solid transparent;
+		border-top: 12px solid rgba($primary-light, 0.9);
+		bottom: -12px;
+	}
+
+	&::after {
+		display: none;
+	}
+}
+
+/* HEADER (month navigation bar) */
+.datepicker .datepicker-header {
+	border-bottom: 1px solid $primary-light;
+	padding-bottom: 5px;
+
+	.datepicker-controls .btn {
+		color: $light;
+
+		&:hover {
+			background-color: $primary;
+		}
+	}
+}
+
+.datepicker .days-of-week {
+	padding-top: 8px;
+	color: $primary;
+}
+
+/* DAYS VIEW */
+.datepicker .days .datepicker-grid .datepicker-cell {
+	height: 53px;
+	width: 40px;
+	line-height: 40px;
+	border-radius: 50px;
+	transition: 0.5s;
+
+	&:hover:not(.disabled) {
+		background-color: $primary;
+		color: $white;
+		transition: 0.5s;
+	}
+
+	&.today {
+		position: relative;
+		background-color: $primary;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 1px;
+			left: 1px;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			border: 1px solid $primary;
+		}
+	}
+
+	&.selected,
+	&.active {
+		background-color: $primary-light !important;
+		color: $primary !important;
+
+		&:hover {
+			background-color: $primary !important;
+			color: $white !important;
+		}
+	}
+}
+
+/* MONTHS + YEARS VIEW */
+.datepicker .months .datepicker-cell,
+.datepicker .years .datepicker-cell {
+	border-radius: 8px;
+
+	&:hover:not(.disabled) {
+		background-color: $primary;
+		color: $white;
+	}
+
+	&.selected,
+	&.active {
+		background-color: $primary-light;
+		color: $primary;
+
+		&:hover {
+			background-color: $primary;
+			color: $white;
+		}
+	}
+}
+
+/* DECADES VIEW */
+.datepicker .decades .datepicker-cell {
+	border-radius: 12px;
+	padding: 4px 0;
+
+	&:hover:not(.disabled) {
+		background-color: $primary;
+		color: $white;
+	}
+
+	&.selected,
+	&.active {
+		background-color: $primary;
+		color: $white;
+
+		&:hover {
+			background-color: $primary-light;
+			color: $white;
+		}
+	}
+}
+
+.datepicker {
+	&-view {
+		width: 100%;
+	}
+	&-cell {
+		&.focused {
+			&:not(.selected) {
+				background-color: $primary-light;
+			}
+		}
+	}
+}
+
 .tooltip {
 	z-index: 970;
 
