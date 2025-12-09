@@ -18,7 +18,7 @@ async function initMap() {
 			elementType: "labels.text.fill",
 			stylers: [
 				{
-					color: "#444444",
+					color: "#2D2D2D",
 				},
 			],
 		},
