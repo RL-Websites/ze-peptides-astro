@@ -35,7 +35,7 @@ const footerLinkCols = [
 			<div
 				class="site__footer__logo-section"
 				data-aos="fade-left"
-				data-aos-duration="800"
+				data-aos-duration="600"
 			>
 				<a href="/">
 					<img
@@ -45,17 +45,17 @@ const footerLinkCols = [
 				</a>
 			</div>
 
-			<div
-				class="site__footer__links w-full"
-				data-aos="fade-left"
-				data-aos-duration="800"
-			>
+			<div class="site__footer__links w-full">
 				{
 					footerLinkCols.map((col) => (
 						<div class="site__footer__links-column">
 							<ul>
 								{col.links.map((link) => (
-									<li>
+									<li
+										data-aos="fade-left"
+										data-aos-delay="200"
+										data-aos-duration="600"
+									>
 										<a class="site__heading-five" href={link.href}>
 											{link.text}
 										</a>
@@ -67,17 +67,27 @@ const footerLinkCols = [
 				}
 				<div
 					class="site__footer__links-column site__footer__social ml-md-auto pt-14 pt-md-24"
-					data-aos="fade-left"
-					data-aos-duration="800"
 				>
 					<a href="#" aria-label="Instagram">
-						<i class="icon-instagram"></i>
+						<i
+							class="icon-instagram"
+							data-aos="fade-up"
+							data-aos-delay="400"
+							data-aos-duration="600"></i>
 					</a>
 					<a href="#" aria-label="Facebook">
-						<i class="icon-facebook"></i>
+						<i
+							class="icon-facebook"
+							data-aos="fade-up"
+							data-aos-delay="500"
+							data-aos-duration="600"></i>
 					</a>
 					<a href="#" aria-label="LinkedIn">
-						<i class="icon-linkedin"></i>
+						<i
+							class="icon-linkedin"
+							data-aos="fade-up"
+							data-aos-delay="600"
+							data-aos-duration="600"></i>
 					</a>
 				</div>
 			</div>
