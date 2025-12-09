@@ -50,6 +50,10 @@
 		gap: 4rem;
 		margin-left: 156px;
 
+		@media all and (max-width: 992px) {
+			gap: 20px;
+		}
+
 		@media all and (max-width: 768px) {
 			flex-direction: column;
 			margin-left: 0px;
