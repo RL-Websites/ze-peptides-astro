@@ -5,7 +5,7 @@
 	xmlns:o="urn:schemas-microsoft-com:office:office"
 >
 	<head>
-		<title>Order Confirmation</title>
+		<title>Order Confirmation With Lab Report</title>
 		<!--[if !mso]><!-->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<!--<![endif]-->
@@ -128,6 +128,7 @@
 			}
 		</style>
 	</head>
+
 	<body style="word-spacing: normal; background-color: #ffffff">
 		<div style="background-color: #ffffff">
 			<!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#FAF8F2" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
@@ -461,7 +462,107 @@
 										</tbody>
 									</table>
 								</div>
-								{products}
+								<div style="margin: 0px auto; max-width: 420px">
+									<table
+										align="center"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+										role="presentation"
+										style="width: 100%"
+									>
+										<tbody>
+											<tr>
+												<td
+													style="
+														border: 1px solid #e6d4ff;
+														font-size: 0px;
+														padding: 15px;
+														text-align: center;
+													"
+												>
+													<div
+														class="mj-column-per-100 mj-outlook-group-fix"
+														style="
+															display: inline-block;
+															width: 100%;
+															text-align: left;
+														"
+													>
+														<table
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+															role="presentation"
+															style="width: 100%"
+														>
+															<tbody>
+																<tr>
+																	<td
+																		align="left"
+																		style="
+																			font-family: Calibri;
+																			font-size: 16px;
+																			color: #444444;
+																		"
+																	>
+																		<p style="margin: 0">{item.ProductName}</p>
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		align="left"
+																		style="
+																			font-family: Arial;
+																			font-size: 14px;
+																			font-weight: 700;
+																			color: #444444;
+																		"
+																	>
+																		<p style="margin: 15px 0 0 0"
+																			>Order number:
+																			{myOrderByOrderIdViewModel.FirstOrDefault()?.OrderNo}</p
+																		>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+
+													<div
+														class="mj-column-per-100 mj-outlook-group-fix"
+														style="
+															display: inline-block;
+															width: 100%;
+															text-align: left;
+															padding-top: 20px;
+														"
+													>
+														<table
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+															role="presentation"
+															style="width: 100%"
+														>
+															<tbody>
+																<tr>
+																	<td>
+																		<img
+																			height="auto"
+																			src="{item.ProductImage}"
+																			style="width: 40px; display: block"
+																		/>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 
 								<div style="margin: 0px auto; max-width: 420px">
 									<table
@@ -1012,16 +1113,17 @@
 				>
 					<tr>
 						<td
+							align="center"
 							style="
-								padding: 20px 40px;
+								padding: 25px 40px;
 								font-family: Calibri, sans-serif;
 								font-size: 12px;
 								color: #ffffff;
 							"
 						>
-							<p style="margin: 0"
-								>Copyright © {year} {companyName}. All rights reserved.</p
-							>
+							<p style="margin: 0; text-align: center"
+								>Copyright © {year} {companyName}. All rights reserved.
+							</p>
 						</td>
 					</tr>
 				</table>
