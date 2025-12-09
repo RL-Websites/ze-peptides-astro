@@ -8,21 +8,7 @@
   -moz-box-shadow: 0 4px 16px 0px #0000001F;
   box-shadow: 0 4px 16px 0px #0000001F;
 
-  &__ft-toast-title {
-    font-family: "Poppins", sans-serif !important;
-    font-weight: 700 !important;
-    font-size: $fs-16 !important;
-    line-height: 1.6 !important;
-    letter-spacing: 0 !important;
-  }
 
-  &__ft-toast-msg {
-    font-family: "Neue", sans-serif !important;
-    font-weight: 400 !important;
-    font-size: $fs-12 !important;
-    line-height: 1.2 !important;
-    letter-spacing: 0 !important;
-  }
 
   &__success {
     padding: 19px 20px 19px 16px;
