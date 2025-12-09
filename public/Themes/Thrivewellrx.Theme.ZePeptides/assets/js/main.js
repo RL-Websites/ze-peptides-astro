@@ -24,10 +24,7 @@ $(document).ready(function () {
 	// Close dropdown when clicking outside
 	// Close dropdown when clicking outside
 	$(document).on("click", function (e) {
-		if (
-			!$(e.target).closest("#user-menu-btn").length &&
-			!$(e.target).closest("#user-dropdown").length
-		) {
+		if (!$(e.target).closest("#user-menu-btn").length && !$(e.target).closest("#user-dropdown").length) {
 			$("#user-dropdown").removeClass("show");
 		}
 	});
@@ -107,15 +104,9 @@ $(document).ready(function () {
 
 	// If coming from anchor link (#products) on non-home pages, redirect and scroll
 	$(window).on("load", function () {
-		if (
-			window.location.hash === "#products" &&
-			window.location.pathname !== "/"
-		) {
+		if (window.location.hash === "#products" && window.location.pathname !== "/") {
 			window.location.pathname = "/";
-		} else if (
-			window.location.hash === "#products" &&
-			window.location.pathname === "/"
-		) {
+		} else if (window.location.hash === "#products" && window.location.pathname === "/") {
 			setTimeout(function () {
 				$("html, body").animate(
 					{
@@ -148,6 +139,13 @@ $(document).ready(function () {
 // how it works script
 // This script will run on the client-side
 const steps = document.querySelectorAll(".timeline-step[data-observed]");
+
+document.addEventListener("DOMContentLoaded", () => {
+	console.log("hello");
+
+	initDobDatepicker("#dobField", "#dobError");
+	initDobDatepicker("#myProfileDob", "#myProfileDobError");
+});
 
 // Function to remove active class from all steps
 const deactivateAllSteps = () => {
@@ -221,9 +219,7 @@ updateActiveStep();
 window.addEventListener("scroll", handleScroll);
 
 // Mobile Timeline Script
-const mobileSteps = document.querySelectorAll(
-	".mobile-timeline-step[data-observed]"
-);
+const mobileSteps = document.querySelectorAll(".mobile-timeline-step[data-observed]");
 
 // Function to remove active class from all mobile steps
 const deactivateAllMobileSteps = () => {
