@@ -33,7 +33,7 @@
 		align-items: center;
 		border-bottom: 2px solid $primary-light;
 
-		h2{
+		h2 {
 			font-size: $fs-30;
 		}
 	}
@@ -184,7 +184,7 @@
 		transition: all 0.2s ease-in-out, border 0.1s ease-in-out;
 
 		@media all and (max-width: 767px) {
-			width: 150px;
+			width: 50%;
 			padding: 8px 20px;
 			font-size: 14px;
 			line-height: 18px;
@@ -416,13 +416,13 @@
 		}
 
 		&-header {
-			h2{
+			h2 {
 				font-size: $fs-18;
 			}
 		}
 
 		&__actions {
-			margin: 20px auto 0;
+			margin: 20px 0 0;
 
 			&--alt {
 				max-width: 320px;
