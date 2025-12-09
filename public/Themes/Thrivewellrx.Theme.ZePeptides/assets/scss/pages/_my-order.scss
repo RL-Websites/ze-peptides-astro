@@ -90,6 +90,7 @@
 		color: #2D2D2D;
 		display: flex;
 		gap: 8px;
+		flex-wrap: wrap;
 
 		span {
 			font-weight: 400;
@@ -247,8 +248,16 @@
 				top: -7px;
 
 				&__single {
-					width: 24.6%;
+					width: 24%;
 				}
+			}
+		}
+
+		&__label {
+			font-size: $fs-16;
+
+			span {
+				font-size: $fs-14;
 			}
 		}
 
@@ -319,6 +328,88 @@
 			gap: 5px;
 		}
 	}
+
+
+	.timeline {
+		position: relative;
+		display: block;
+		margin-top: 30px;
+		margin-left: 5px;
+
+		&__steps {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+		}
+
+		&__step {
+			position: relative;
+			display: flex;
+			align-items: center;
+			gap: 20px;
+
+			&.active {
+				.timeline__dot {
+					background: #7b3ff2;
+				}
+
+				.timeline__label {
+					font-weight: 600;
+					color: #000;
+				}
+			}
+
+			&.completed {
+				.timeline__dot {
+					background: #7b3ff2;
+				}
+
+				.timeline__label {
+					font-weight: 600;
+					color: #000;
+				}
+			}
+
+
+		}
+
+		&__dot {
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			background: #c6a3ff;
+			position: absolute;
+			left: -6px;
+		}
+
+		&__label {
+			font-size: $fs-16;
+			line-height: 1;
+			color: #6f6f6f;
+			font-weight: 400;
+			margin-left: 20px;
+		}
+
+		&__tracker {
+			display: inline-block;
+			height: 50px;
+			width: 2px;
+			background-color: #c6a3ff;
+			position: absolute;
+			top: 5px;
+			left: 0;
+
+			&.active {
+				background-color: #7b3ff2;
+			}
+
+			&--last {
+				height: 0;
+				width: 0;
+			}
+		}
+	}
+
 
 	.medicine-info,
 	.document-info {

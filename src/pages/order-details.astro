@@ -84,7 +84,7 @@ import Layout from "../layouts/Layout.astro";
 							</div>
 
 							<div class="col-md-6">
-								<div class="card-basic h-100">
+								<div class="card-basic card-basic__mt h-100">
 									<div class="card-basic__header">
 										<p class="card-basic__title">Billing Information</p>
 									</div>
@@ -164,7 +164,7 @@ import Layout from "../layouts/Layout.astro";
 										</p>
 									</div>
 
-									<div class="order__status">
+									<div class="order__status d-md-block d-none">
 										<div class="order__track">
 											<div class="tracker">
 												<span class="tracker__single active"></span>
@@ -194,12 +194,56 @@ import Layout from "../layouts/Layout.astro";
 											</div>
 										</div>
 									</div>
+
+									<div class="timeline d-md-none">
+										<!-- <div class="timeline__tracker">
+											<span class="timeline__tracker__single"></span>
+											<span class="timeline__tracker__single"></span>
+											<span class="timeline__tracker__single"></span>
+										</div> -->
+										<div class="timeline__steps">
+											<div class="timeline__step completed">
+												<span class="timeline__dot"></span>
+												<span class="timeline__label">Received</span>
+												<span class="timeline__tracker active"></span>
+											</div>
+
+											<div class="timeline__step active">
+												<span class="timeline__dot"></span>
+												<span class="timeline__label">Processing</span>
+												<span class="timeline__tracker active"></span>
+											</div>
+
+											<div class="timeline__step">
+												<span class="timeline__dot"></span>
+												<span class="timeline__label">Declined</span>
+												<span class="timeline__tracker"></span>
+											</div>
+
+											<div class="timeline__step">
+												<span class="timeline__dot"></span>
+												<p class="d-flex align-items-center gap-20">
+													<span class="timeline__label">Shipped</span>
+													<a class="" target="_blank">Track_ID_HG-003</a>
+												</p>
+
+												<span class="timeline__tracker"></span>
+											</div>
+
+											<div class="timeline__step">
+												<span class="timeline__dot"></span>
+												<span class="timeline__label">Delivered</span>
+												<span class="timeline__tracker timeline__tracker--last"
+												></span>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="row col-equal-height mt-20">
-							<div class="col-md-6">
+							<div class="col-lg-6">
 								<div class="card-basic h-100">
 									<div class="card-basic__header">
 										<p class="card-basic__title">Medicine information</p>

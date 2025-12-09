@@ -99,10 +99,9 @@
 
 @media only screen and (max-width: 992px) {
 	.card-basic {
-		margin-top: 20px;
 
-		&__header,
-		.order {
+
+		&__header {
 			padding: 12px 16px;
 		}
 
@@ -122,6 +121,14 @@
 	.cart-card {
 		&__header {
 			padding: 12px 16px !important;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.card-basic {
+		&__mt {
+			margin-top: 20px;
 		}
 	}
 }
