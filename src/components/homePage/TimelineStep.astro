@@ -32,19 +32,34 @@ const numberClass = "step-number";
 		alignment === "left" ? (
 			<div class="row align-items-center justify-center">
 				<div class="col-6 pe-5">
-					<div class="timeline-img">
+					<div class="timeline-img" data-aos="zoom-out" data-aos-duration="800">
 						<img src={imageSrc} alt={imageAlt} />
 					</div>
 				</div>
 
 				<div class="col-6 ps-5 pt-4">
-					<h3 class="step-title h5 fw-bold mb-3">{title}</h3>
+					<h3
+						class="step-title h5 fw-bold mb-3"
+						data-aos="fade-left"
+						data-aos-duration="500"
+					>
+						{title}
+					</h3>
 
 					<div class="d-flex align-items-center justify-center gap-4">
-						<div class={numberClass}>{stepNumber}</div>
+						<div
+							class={numberClass}
+							data-aos="fade-left"
+							data-aos-duration="500"
+						>
+							{" "}
+							{stepNumber}
+						</div>
 						<p
 							class="timeline-description small   mb-0 "
 							style="line-height: 1.6;"
+							data-aos="fade-left"
+							data-aos-duration="500"
 						>
 							{description}
 						</p>
@@ -54,13 +69,27 @@ const numberClass = "step-number";
 		) : (
 			<div class="row align-items-start">
 				<div class="col-6 text-start pe-5 pt-4">
-					<h3 class="step-title h5 fw-bold mb-3">{title}</h3>
+					<h3
+						class="step-title h5 fw-bold mb-3"
+						data-aos="fade-right"
+						data-aos-duration="500"
+					>
+						{title}
+					</h3>
 
 					<div class="d-flex align-items-center justify-center gap-4">
-						<div class={numberClass}>{stepNumber}</div>
+						<div
+							class={numberClass}
+							data-aos="fade-right"
+							data-aos-duration="500"
+						>
+							{stepNumber}
+						</div>
 						<p
 							class="timeline-description small  pt-3 mb-0 "
 							style="line-height: 1.6;"
+							data-aos="fade-right"
+							data-aos-duration="500"
 						>
 							{description}
 						</p>
@@ -68,7 +97,7 @@ const numberClass = "step-number";
 				</div>
 
 				<div class="col-6 ps-5 d-flex align-items-start justify-center gap-4">
-					<div class="timeline-img">
+					<div class="timeline-img" data-aos="zoom-out" data-aos-duration="800">
 						<img src={imageSrc} alt={imageAlt} />
 					</div>
 				</div>
