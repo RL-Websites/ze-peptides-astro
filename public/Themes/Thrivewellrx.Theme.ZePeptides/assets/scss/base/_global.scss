@@ -202,3 +202,50 @@ ul {
 		transform: translateX(-50%) !important;
 	}
 }
+
+
+/* SCROLL BAR CSS */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #a16de0 transparent !important;
+
+	/* Default: Light pink */
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #d8baff;
+	/* Default: Light pink */
+	border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #f0e5ff !important;
+
+}
+
+/* Smooth transitions */
+::-webkit-scrollbar-thumb {
+	transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* For Firefox smooth transition */
+* {
+	transition: scrollbar-color 0.3s ease;
+}
+
+/* Optional: Smooth scrolling for the entire page */
+html {
+	scroll-behavior: smooth !important;
+}

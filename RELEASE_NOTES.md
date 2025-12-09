@@ -4,6 +4,7 @@
 
 - fixed animation on homepage
 - fixed message modal design according to figma
+- scrollbar style added
 
 ## [0.0.1] - 2025-12-8
 
