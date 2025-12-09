@@ -12,6 +12,8 @@ h6 {
 	color: $secondary;
 }
 
+
+
 p {
 	margin: 0;
 	font-family: "sfuidisplay", sans-serif;
@@ -197,6 +199,8 @@ small,
 
 // Responsive typography
 @media only screen and (max-width: 992px) {
+
+
 	h1 {
 		font-size: 48px;
 	}
@@ -245,6 +249,8 @@ small,
 }
 
 @media only screen and (max-width: 768px) {
+
+
 	h1 {
 		font-size: 30px;
 	}
