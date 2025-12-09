@@ -46,9 +46,12 @@
     box-shadow: none;
     font-size: $fs-24;
     padding: 0;
+    color: inherit;
 
     i {
       line-height: 1.5;
+      color: $black !important; // force icon color
+      -webkit-text-fill-color: $black !important; // iPhone fix
     }
   }
 
