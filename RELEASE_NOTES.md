@@ -1,5 +1,10 @@
 # Release Notes
 
+## [0.0.1] - 2025-12-9
+
+- fixed animation on homepage
+- fixed message modal design according to figma
+
 ## [0.0.1] - 2025-12-8
 
 - fixed the padding and cart items height

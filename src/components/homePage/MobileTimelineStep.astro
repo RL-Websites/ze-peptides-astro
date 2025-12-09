@@ -36,22 +36,29 @@ const numberClass = "mobile-step-number";
 
 		<div class="d-flex align-items-start gap-3">
 			<div class="d-flex flex-column">
-				<h3 class="mobile-step-title h6 fw-bold mb-3">
+				<h3
+					class="mobile-step-title h6 fw-bold mb-3"
+					data-aos="fade-up"
+					data-aos-duration="500"
+				>
 					{title}
 				</h3>
 
 				<div class="d-flex gap-3 align-items-start">
-					<div class=`${numberClass} mt-10 step-number-mobile`>{stepNumber}</div
+					<div
+						class=`${numberClass} mt-10 step-number-mobile`
+						data-aos="fade-up"
+						data-aos-duration="500">{stepNumber}</div
 					>
 
-					<div class="flex-grow-1">
+					<div class="flex-grow-1" data-aos="fade-up" data-aos-duration="500">
 						<p
 							class="small mb-3 mobile-number-description"
 							style="line-height: 1.5; font-size: 0.875rem;"
 						>
 							{description}
 						</p>
-						<div class="mobile-img">
+						<div class="mobile-img" data-aos="fade-up" data-aos-duration="500">
 							<img src={imageSrc} alt={imageAlt} hidden />
 						</div>
 					</div>
