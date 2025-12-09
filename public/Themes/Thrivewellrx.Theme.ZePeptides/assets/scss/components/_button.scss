@@ -5,14 +5,13 @@
 	cursor: pointer;
 	font-size: $fs-16;
 	line-height: 150%;
-	font-weight: 500;
+	font-weight: 700;
 	color: white;
 	border: 0;
 	outline: 0;
 	box-shadow: none;
 	transition: 0.9s;
 	text-decoration: none;
-
 
 	&__primary {
 		background-color: $primary;
@@ -70,9 +69,9 @@
 	}
 
 	&__secondary {
-		background-color: $yellow;
-		border: 1px solid $yellow;
-		color: $secondary;
+		background-color: $background-3;
+		border: 1px solid $background-3;
+		color: $black;
 		border-radius: 8px;
 		font-weight: 700;
 
@@ -92,7 +91,7 @@
 
 		&:hover,
 		&:focus {
-			background-color: transparent;
+			background-color: darken($background-3, 10%);
 		}
 	}
 
@@ -150,13 +149,14 @@
 		}
 
 		&--secondary {
-			border: 1px solid $secondary;
+			border: 1px solid $background-3;
 			color: $secondary;
-
+			font-weight: 700;
 			&:hover,
 			&:focus {
-				background-color: $secondary;
-				color: $primary;
+				background-color: $background-3;
+				color: $secondary;
+				border: 1px solid $background-3;
 			}
 		}
 
@@ -286,8 +286,8 @@
 		bottom: 0px;
 		left: 0px;
 		z-index: 1;
-		background-color: #FAFAFA;
-		box-shadow: 0px -4px 16px 0px #0000001F;
+		background-color: #fafafa;
+		box-shadow: 0px -4px 16px 0px #0000001f;
 
 		&__items {
 			display: flex;
@@ -333,7 +333,7 @@
 
 @media only screen and (max-width: 768px) {
 	.theme-btn {
-		font-size: 12px;
+		font-size: 16px;
 		padding: 10px 20px;
 
 		&__primary {

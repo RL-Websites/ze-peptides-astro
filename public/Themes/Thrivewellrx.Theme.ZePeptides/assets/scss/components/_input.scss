@@ -216,6 +216,15 @@
 		padding-left: 83px;
 		padding-right: 80px;
 
+		&::placeholder {
+        opacity: 1;
+        transition: opacity 0.2s ease;
+		}
+
+		&:focus::placeholder {
+			opacity: 0;   // hides the placeholder when input is focused
+		}
+
 		&:-webkit-autofill,
 		&:-webkit-autofill:hover,
 		&:-webkit-autofill:focus,
