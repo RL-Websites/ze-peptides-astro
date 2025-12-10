@@ -264,7 +264,7 @@
 		cursor: not-allowed !important;
 		pointer-events: none;
 		background-color: $gray-light;
-		border-color: $gray-light;
+		border-color: $gray-light !important;
 	}
 
 	&__min-w-210 {
