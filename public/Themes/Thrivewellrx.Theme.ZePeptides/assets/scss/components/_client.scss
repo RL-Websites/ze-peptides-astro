@@ -74,6 +74,8 @@
 
 	&__review {
 		margin-bottom: 30px;
+		display: flex;
+		gap: 3px;
 
 		i {
 			background: $orange;
