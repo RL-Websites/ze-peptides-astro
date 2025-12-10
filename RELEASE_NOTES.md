@@ -1,5 +1,9 @@
 # Release Notes
 
+## [0.0.1] - 2025-12-10
+
+- adding animations on remaining pages
+
 ## [0.0.1] - 2025-12-9
 
 - fixed animation on homepage

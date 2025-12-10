@@ -16,7 +16,11 @@ import Layout from "../layouts/Layout.astro";
 		<section class="product-hero bg-white">
 			<div class="container">
 				<div class="row align-items-start">
-					<div class="col-xl-5 col-md-6 product-hero__left-col">
+					<div
+						class="col-xl-5 col-md-6 product-hero__left-col"
+						data-aos="zoom-out"
+						data-aos-duration="1000"
+					>
 						<div class="product-hero__left">
 							<img
 								src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-2.png"
@@ -25,11 +29,18 @@ import Layout from "../layouts/Layout.astro";
 							/>
 						</div>
 					</div>
-					<div class="col-xl-7 col-md-6">
+					<div
+						class="col-xl-7 col-md-6"
+						data-aos="fade-left"
+						data-aos-duration="1000"
+						data-aos-delay="200"
+					>
 						<div class="product-hero__right">
 							<div class="d-flex align-items-start">
 								<h2>Focus and Mood Blend - PE-22-28/Pinealon/Selank</h2>
-								<span class="badge rounded-pill bg-pink-2 text-red ml-auto mt-1">
+								<span
+									class="badge rounded-pill bg-pink-2 text-red ml-auto mt-1"
+								>
 									Out of Stock
 								</span>
 							</div>
@@ -75,10 +86,19 @@ import Layout from "../layouts/Layout.astro";
 										<button
 											type="button"
 											class="theme-btn theme-btn__outline theme-btn__outline--primary"
+											data-aos="flip-left"
+											data-aos-duration="1000"
+											data-aos-once="true"
 										>
 											Buy Now
 										</button>
-										<button type="button" class="theme-btn theme-btn__primary">
+										<button
+											type="button"
+											class="theme-btn theme-btn__primary"
+											data-aos="flip-left"
+											data-aos-duration="1000"
+											data-aos-once="true"
+										>
 											Add to Cart
 										</button>
 									</div>
@@ -209,17 +229,17 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 		<!-- ==|| Product Section End ||== -->
-	
+
 		<!--===|| How it Works Section Start ||===-->
-	
+
 		<HowItWorks />
-	
+
 		<!--===|| How it Works Section End ||===-->
-	
+
 		<!-- Why Choose Us ZePeptides Section Start -->
 		<WhyChooseUs />
 		<!-- Why Choose Us ZePeptides Section End -->
-	
+
 		<!--===|| Faq Section Start ||===-->
 		<section class="faq py-50 py-md-100">
 			<div class="container faq__wrapper">
@@ -231,11 +251,11 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 		<!--===|| Faq Section End ||===-->
-	
+
 		<!--===|| Client Feedback Section Start ||===-->
 		<Client />
 		<!--===|| Client Feedback Section End ||===-->
-	
+
 		<!--=====|| Main Section End ||=====-->
 	</main>
 </Layout>

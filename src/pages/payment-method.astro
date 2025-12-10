@@ -12,11 +12,9 @@ import Layout from "../layouts/Layout.astro";
 	<main class="page">
 		<div class="page__wrapper page__wrapper--alt">
 			<!-- ==|| Cart Hero Section Start ||== -->
-			<section class="cart-hero   pt-md-130 pt-120">
-				<div class="container">
-					<h1 class="text-primary-grad-1 text-center"
-						>Payment Method</h1
-					>
+			<section class="cart-hero pt-md-130 pt-120">
+				<div class="container" data-aos="fade-up" data-aos-duration="1000">
+					<h1 class="text-primary-grad-1 text-center">Payment Method</h1>
 				</div>
 			</section>
 			<!-- ==|| Cart Hero Section End ||== -->
@@ -28,6 +26,8 @@ import Layout from "../layouts/Layout.astro";
 						<div class="col-12 col-lg-8">
 							<div
 								class="payment-card__body cart-card payment__card--cart-summary"
+								data-aos="fade-left"
+								data-aos-duration="1000"
 							>
 								<div class="cart-card__header">
 									<h3>Payment Details</h3>
@@ -38,8 +38,10 @@ import Layout from "../layouts/Layout.astro";
 								>
 									<div class="form-group">
 										<div class="d-flex d-md-none items-start">
-											<label class="fw-bold mb-5" for="cardNumber">Card Number</label>
-										<div class="card-icons d-md-none d-flex ml-auto">
+											<label class="fw-bold mb-5" for="cardNumber"
+												>Card Number</label
+											>
+											<div class="card-icons d-md-none d-flex ml-auto">
 												<img
 													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/payment/visa.png"
 													alt="Visa"
@@ -58,7 +60,6 @@ import Layout from "../layouts/Layout.astro";
 												/>
 											</div>
 										</div>
-										
 
 										<div class="payment__form--card-variation">
 											<input
@@ -134,9 +135,17 @@ import Layout from "../layouts/Layout.astro";
 							</div>
 						</div>
 						<div class="col-12 col-lg-4 payment__card--right">
-							<div class="cart-card">
+							<div
+								class="cart-card"
+								data-aos="fade-left"
+								data-aos-duration="1000"
+								data-aos-delay="200"
+							>
 								<div class="cart-card__header">
-									<h3 class="fs-md-24 fs-20 fw-bold">Cart Total <span class="fs-16 fw-normal">(4 items)</span></h3>
+									<h3 class="fs-md-24 fs-20 fw-bold"
+										>Cart Total <span class="fs-16 fw-normal">(4 items)</span
+										></h3
+									>
 								</div>
 								<div class="cart-card__body">
 									<div class="pricing__basic">
@@ -158,7 +167,9 @@ import Layout from "../layouts/Layout.astro";
 										<p class="coupon__label">Coupon Code</p>
 										<div class="dnn-tag">
 											<i class="icon-promo-code dnn-tag__icon"></i>
-											<span class="dnn-tag__text" data-bind="text: billDiscountCode()"></span>
+											<span
+												class="dnn-tag__text"
+												data-bind="text: billDiscountCode()"></span>
 										</div>
 									</div>
 
@@ -177,7 +188,6 @@ import Layout from "../layouts/Layout.astro";
 									</div>
 								</div>
 							</div>
-							
 
 							<!-- <div class="attention mt-20">
 								<div class="attention__box">
@@ -209,43 +219,47 @@ import Layout from "../layouts/Layout.astro";
 						</div>
 					</div>
 					<!-- ALert section start -->
-					<div class="attention pb-40 mt-40">
-												<div class="attention__box">
+					<div
+						class="attention pb-40 mt-40"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="300"
+					>
+						<div class="attention__box">
+							<div class="attention__title">
+								<!-- <i class="icon-alert"></i> -->
+								<p
+									>GLP-1, Peptides, TRT/HRT, and Other Prescription Treatments</p
+								>
+							</div>
 
-													<div class="attention__title">
-														<!-- <i class="icon-alert"></i> -->
-														<p>GLP-1, Peptides, TRT/HRT, and Other Prescription Treatments</p>
-													</div>
+							<p class="attention__text">
+								Your card will not be charged at checkout. We securely store
+								your payment information and only process the charge once a
+								doctor reviews your intake form and issues your prescription. If
+								you are not approved, you will not be charged.
+							</p>
+							<div class="attention__title">
+								<!-- <i class="icon-alert"></i> -->
+								<p
+									>DotFit, Skin Care & Pain Relief Products (Non-Prescription)</p
+								>
+							</div>
 
-													<p class="attention__text">
-														Your card will not be charged at checkout. 
-														We securely store your payment information 
-														and only process the charge once a doctor 
-														reviews your intake form and issues your 
-														prescription. If you are not approved, you 
-														will not be charged.
-													</p>
-													<div class="attention__title">
-														<!-- <i class="icon-alert"></i> -->
-														<p>DotFit, Skin Care & Pain Relief Products (Non-Prescription)</p>
-													</div>
-
-													<p class="attention__text">
-														These items do not require a doctor review or intake form. 
-														Your card will be charged immediately at checkout, and your 
-														order will proceed directly to fulfillment.
-													</p>
-												</div>
-											</div>
+							<p class="attention__text">
+								These items do not require a doctor review or intake form. Your
+								card will be charged immediately at checkout, and your order
+								will proceed directly to fulfillment.
+							</p>
+						</div>
+					</div>
 					<!-- ALert section end -->
 				</div>
 			</section>
 			<!-- ==|| Payment List Section End ||== -->
 
-			
-
 			<!-- ==|| Shipping info Section Start ||== -->
-			<section class="mt-40">
+			<section class="mt-40" data-aos="fade-up" data-aos-duration="1000">
 				<div class="container">
 					<div class="payment__card mt-0">
 						<div class="payment__header">
@@ -351,7 +365,11 @@ import Layout from "../layouts/Layout.astro";
 			<!-- ==|| Shipping info Section End ||== -->
 
 			<!-- ==|| Billing Section Start ||== -->
-			<section class="payment__billing mt-50 mt-md-100">
+			<section
+				class="payment__billing mt-50 mt-md-100"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+			>
 				<div class="container">
 					<div class="payment__card mt-0">
 						<div class="payment__header">
@@ -468,39 +486,47 @@ import Layout from "../layouts/Layout.astro";
 					<div class="mt-30">
 						<label class="custom-check mt-15">
 							<span class="custom-check__input">
-								<input type="checkbox" data-bind="checked: hasAnsweredTruthfully" />
+								<input
+									type="checkbox"
+									data-bind="checked: hasAnsweredTruthfully"
+								/>
 								<span></span>
 							</span>
 
 							<span class="custom-check__label">
-								I confirm that all information associated with my treatment is accurate and that I
-								understand these medications must be used only under the supervision of a licensed
-								healthcare provider.
+								I confirm that all information associated with my treatment is
+								accurate and that I understand these medications must be used
+								only under the supervision of a licensed healthcare provider.
 							</span>
 						</label>
-						<p class="basic-error"
-							data-bind="visible: isSubmitted, validationMessage: hasAnsweredTruthfully"></p>
+						<p
+							class="basic-error"
+							data-bind="visible: isSubmitted, validationMessage: hasAnsweredTruthfully"
+						></p>
 					</div>
 
 					<div>
 						<label class="custom-check mt-15">
 							<span class="custom-check__input">
 								<!--<input type="checkbox" data-bind="checked: agreedToTermsAndConditions" />-->
-								<input type="checkbox"
+								<input
+									type="checkbox"
 									data-bs-toggle="modal"
-                   data-bs-target="#termCodition" />
+									data-bs-target="#termCodition"
+								/>
 								<span></span>
 							</span>
 
 							<span class="custom-check__label">
-								Please read the terms & conditions—purchase cannot be completed without your acknowledgment.
-
+								Please read the terms & conditions—purchase cannot be completed
+								without your acknowledgment.
 							</span>
 						</label>
-						<p class="basic-error" data-bind="visible: isSubmitted, validationMessage: agreedToTermsAndConditions"></p>
-
+						<p
+							class="basic-error"
+							data-bind="visible: isSubmitted, validationMessage: agreedToTermsAndConditions"
+						></p>
 					</div>
-
 
 					<div class="step-btn text-end mt-40">
 						<button
@@ -607,333 +633,362 @@ import Layout from "../layouts/Layout.astro";
 
 				<div class="modal-body">
 					<div class="container">
-                    <div class="mt-md-40 mt-20">
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            WE ARE NOT A REPLACEMENT FOR EMERGENCY MEDICAL SERVICES. IF YOU
-                            HAVE A MEDICAL EMERGENCY SEEK EMERGENCY MEDICAL CARE IMMEDIATELY
-                            IN-PERSON OR DIAL 911 OR YOUR LOCAL EMERGENCY NUMBER.
-                        </p>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            Acceptance of the Terms and Conditions Herein
-                        </p>
+						<div class="mt-md-40 mt-20">
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								WE ARE NOT A REPLACEMENT FOR EMERGENCY MEDICAL SERVICES. IF YOU
+								HAVE A MEDICAL EMERGENCY SEEK EMERGENCY MEDICAL CARE IMMEDIATELY
+								IN-PERSON OR DIAL 911 OR YOUR LOCAL EMERGENCY NUMBER.
+							</p>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								Acceptance of the Terms and Conditions Herein
+							</p>
 
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            By clicking “I Agree”, checking a related box, or accessing these
-                            services (so defined below), you acknowledge that you have read,
-                            understood, accepted, and agreed to be bound by this agreement. If
-                            you do not agree to these terms and conditions or do not
-                            understand these terms and conditions, you are not allowed to use
-                            and/or access these services and if so. You hereby grant agency
-                            authority to any party who clicks the “I agree” button or
-                            otherwise accepts these terms and conditions on your behalf
-                        </p>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								By clicking “I Agree”, checking a related box, or accessing
+								these services (so defined below), you acknowledge that you have
+								read, understood, accepted, and agreed to be bound by this
+								agreement. If you do not agree to these terms and conditions or
+								do not understand these terms and conditions, you are not
+								allowed to use and/or access these services and if so. You
+								hereby grant agency authority to any party who clicks the “I
+								agree” button or otherwise accepts these terms and conditions on
+								your behalf
+							</p>
 
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            Binding Arbitration Notice: You agree that disputes between you
-                            and us (non-exhaustively: the company and/or our agents,
-                            contractors employees, officers, shareholders), and/or you and any
-                            affiliated individuals or groups (non-exhaustively: medical
-                            providers, nursing providers, and/or any other affiliated
-                            third-party), arising out of or in relation to these terms and
-                            conditions and/or the service will be resolved by binding,
-                            individual arbitration and you waive your rights to a jury trial
-                            and/or to participate in a class-action lawsuit or class-wide
-                            arbitration, so explained below.
-                        </p>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								Binding Arbitration Notice: You agree that disputes between you
+								and us (non-exhaustively: the company and/or our agents,
+								contractors employees, officers, shareholders), and/or you and
+								any affiliated individuals or groups (non-exhaustively: medical
+								providers, nursing providers, and/or any other affiliated
+								third-party), arising out of or in relation to these terms and
+								conditions and/or the service will be resolved by binding,
+								individual arbitration and you waive your rights to a jury trial
+								and/or to participate in a class-action lawsuit or class-wide
+								arbitration, so explained below.
+							</p>
 
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            This agreement is subject to changes as explained below.
-                        </p>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								This agreement is subject to changes as explained below.
+							</p>
 
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            We may change these terms at any time and as required by law. This
-                            may include changing, adding, or removing terms. We may do this in
-                            response to legal, business, competitive environment or other
-                            reasons not listed here.
-                        </p>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								We may change these terms at any time and as required by law.
+								This may include changing, adding, or removing terms. We may do
+								this in response to legal, business, competitive environment or
+								other reasons not listed here.
+							</p>
 
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            &nbsp;<span >ZEPETIDES Weight Loss Wellness &amp; Recovery (“we” or “us”) at www.zepetidesmdscientific.com &amp; www.zepetides-wellness.com</span>&nbsp;<span> owns and operates websites located</span>
-                            (collectively,
-                            the “Platform”). Your access and/or use of the Platform, or
-                            anything associated with it (non-exhaustively: any products,
-                            services, websites, software applications, mobile applications,
-                            content generated by Us and/or any affiliated third-party, the
-                            “Service”) are governed by these Terms and Conditions (the “Terms
-                            and Conditions” or the “Agreement”)
-                        </p>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								&nbsp;<span
+									>ZEPETIDES Weight Loss Wellness &amp; Recovery (“we” or “us”)
+									at www.zepetidesmdscientific.com &amp;
+									www.zepetides-wellness.com</span
+								>&nbsp;<span> owns and operates websites located</span>
+								(collectively, the “Platform”). Your access and/or use of the Platform,
+								or anything associated with it (non-exhaustively: any products, services,
+								websites, software applications, mobile applications, content generated
+								by Us and/or any affiliated third-party, the “Service”) are governed
+								by these Terms and Conditions (the “Terms and Conditions” or the
+								“Agreement”)
+							</p>
 
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            Please read this Agreement carefully as it establishes the
-                            important terms you need to know about the Services you are
-                            agreeing to. In this agreement, the use of the terms, “you”,
-                            “yours”, and such similar phrasing refer to the person or entity
-                            using the Service.
-                        </p>
-                    </div>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								Please read this Agreement carefully as it establishes the
+								important terms you need to know about the Services you are
+								agreeing to. In this agreement, the use of the terms, “you”,
+								“yours”, and such similar phrasing refer to the person or entity
+								using the Service.
+							</p>
+						</div>
 
-                    <div class="mt-md-40 mt-20">
-                        <h6>Consent to Telehealth</h6>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            Telehealth uses electronic communications to connect patients and
-                            providers for the remote delivery of healthcare services. Though
-                            Telehealth carries potential benefits, like any medical procedure
-                            it also carries potential risks. Specifically but
-                            non-exhaustively: Telehealth is not a substitute for in-person
-                            medical care for all cases or all conditions. If you do not accept
-                            the risks associated with using Telehealth, you should seek
-                            in-person care. As part of the on-boarding process you are offered
-                            the opportunity to agree to a Medical Consent form that includes
-                            consent to telehealth treatment. By using the Services you agree
-                            and acknowledge that &nbsp;<span >ZEPETIDES Weight Loss Wellness &amp; Recovery,</span> is a
-                            third-party beneficiary of the Medical Consent and has the right
-                            to enforce it against you.
-                        </p>
-                    </div>
+						<div class="mt-md-40 mt-20">
+							<h6>Consent to Telehealth</h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								Telehealth uses electronic communications to connect patients
+								and providers for the remote delivery of healthcare services.
+								Though Telehealth carries potential benefits, like any medical
+								procedure it also carries potential risks. Specifically but
+								non-exhaustively: Telehealth is not a substitute for in-person
+								medical care for all cases or all conditions. If you do not
+								accept the risks associated with using Telehealth, you should
+								seek in-person care. As part of the on-boarding process you are
+								offered the opportunity to agree to a Medical Consent form that
+								includes consent to telehealth treatment. By using the Services
+								you agree and acknowledge that &nbsp;<span
+									>ZEPETIDES Weight Loss Wellness &amp; Recovery,</span
+								> is a third-party beneficiary of the Medical Consent and has the
+								right to enforce it against you.
+							</p>
+						</div>
 
-                    <div class="mt-md-40 mt-20">
-                        <h6>Use By Minors</h6>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            The Service is not intended for use by anyone under the age of
-                            eighteen (18) and anyone under the age of eighteen (18) is
-                            prohibited from using any part of the Service and/or the Platform,
-                            except as to read these Terms and Conditions.
-                        </p>
-                    </div>
+						<div class="mt-md-40 mt-20">
+							<h6>Use By Minors</h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								The Service is not intended for use by anyone under the age of
+								eighteen (18) and anyone under the age of eighteen (18) is
+								prohibited from using any part of the Service and/or the
+								Platform, except as to read these Terms and Conditions.
+							</p>
+						</div>
 
-                    <div class="mt-md-40 mt-20">
-                        <h6>Your Relationship with Us</h6>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            As part of the Service we make available certain products and
-                            services sold and/or offered by us and by third-party providers
-                            (medical and/or nursing care), pharmacies, diagnostics
-                            laboratories, and other vendors via our Service.
-                        </p>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            We provide prescription fulfillment services via 3rd Party
-                            Independent Pharmacies (the “Pharmacies”) and laboratory services
-                            via Quest Diagnostics and/or LabCorp (the “Labs”). We may also
-                            provide you with access to a network of independent third-party
-                            providers and/or medical groups (the “Providers”). These providers
-                            offer certain independent medical and/or nursing services. By
-                            accepting these Terms and Conditions, you acknowledge and agree
-                            that any services or products received from the aforementioned
-                            individuals and/or groups are also bound by this Agreement and
-                            that they are third-party beneficiaries of this Agreement.
-                        </p>
-                    </div>
+						<div class="mt-md-40 mt-20">
+							<h6>Your Relationship with Us</h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								As part of the Service we make available certain products and
+								services sold and/or offered by us and by third-party providers
+								(medical and/or nursing care), pharmacies, diagnostics
+								laboratories, and other vendors via our Service.
+							</p>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								We provide prescription fulfillment services via 3rd Party
+								Independent Pharmacies (the “Pharmacies”) and laboratory
+								services via Quest Diagnostics and/or LabCorp (the “Labs”). We
+								may also provide you with access to a network of independent
+								third-party providers and/or medical groups (the “Providers”).
+								These providers offer certain independent medical and/or nursing
+								services. By accepting these Terms and Conditions, you
+								acknowledge and agree that any services or products received
+								from the aforementioned individuals and/or groups are also bound
+								by this Agreement and that they are third-party beneficiaries of
+								this Agreement.
+							</p>
+						</div>
 
-                    <div class="mt-md-40 mt-20">
-                        <h6>No Medical–Relationship</h6>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            &nbsp;<span>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span>
-                            has no control or
-                            interference with the practice of medicine, nursing, or any other
-                            such care by any providers. All providers are individually and
-                            solely responsible for managing the medical care and/or any
-                            treatments they provide to you. By accepting this Agreement, you
-                            understand and agree that &nbsp;<span>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span>
-                            is not acting as a healthcare provider and that you are not
-                            entering into a patient–provider relationship with us. By
-                            accepting this Agreement, you understand and agree that you may be
-                            entering into a patient–provider relationship or other such
-                            relationship with any one or more Providers.
-                        </p>
-                    </div>
+						<div class="mt-md-40 mt-20">
+							<h6>No Medical–Relationship</h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								&nbsp;<span
+									>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span
+								>
+								has no control or interference with the practice of medicine, nursing,
+								or any other such care by any providers. All providers are individually
+								and solely responsible for managing the medical care and/or any treatments
+								they provide to you. By accepting this Agreement, you understand
+								and agree that &nbsp;<span
+									>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span
+								>
+								is not acting as a healthcare provider and that you are not entering
+								into a patient–provider relationship with us. By accepting this Agreement,
+								you understand and agree that you may be entering into a patient–provider
+								relationship or other such relationship with any one or more Providers.
+							</p>
+						</div>
 
-                    <div class="mt-md-40 mt-20">
-                        <h6>No Pharmacy–Relationship</h6>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            By accepting this Agreement, you understand and agree that &nbsp;<span>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span>
-                            is not acting as a pharmacy, nor
-                            do we control or interfere with any such services. By accepting
-                            this Agreement, you understand and agree that you may be entering
-                            into a relationship with a pharmacy, pharmacist, and/or pharmacy
-                            group or other such relationship with any one or more such
-                            third-party entities and authorize the aforementioned to access
-                            your prescription records through a Controlled Substances
-                            Prescription Management Program (CSPMP) or any other such program
-                            as is required by law and/or under the discretion of the Pharmacy.
-                        </p>
-                    </div>
+						<div class="mt-md-40 mt-20">
+							<h6>No Pharmacy–Relationship</h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								By accepting this Agreement, you understand and agree that
+								&nbsp;<span
+									>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span
+								>
+								is not acting as a pharmacy, nor do we control or interfere with
+								any such services. By accepting this Agreement, you understand and
+								agree that you may be entering into a relationship with a pharmacy,
+								pharmacist, and/or pharmacy group or other such relationship with
+								any one or more such third-party entities and authorize the aforementioned
+								to access your prescription records through a Controlled Substances
+								Prescription Management Program (CSPMP) or any other such program
+								as is required by law and/or under the discretion of the Pharmacy.
+							</p>
+						</div>
 
-                    <div class="mt-md-40 mt-20">
-                        <h6>Consent to the Use of Messaging</h6>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            By accepting this Agreement, you understand and agree that &nbsp;<span>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span>,
-                            along with third-party Providers
-                            and Pharmacies may receive messages regarding your treatment, and
-                            respond to you via email, text messages (SMS/MMS), phone calls,
-                            and voicemails (collectively, “Communications”). You acknowledge
-                            and accept that &nbsp;<span data-bind="text: (referralShortCode &amp;&amp; referralShortCode() &amp;&amp; referralShortCode().trim() !== '') ? 'BIO ACCESS LABS' : 'ZEPETIDES Weight Loss , Wellness &amp; Recovery '">ZEPETIDES Weight Loss , Wellness &amp; Recovery </span>
-                            and it’s
-                            affiliates are not responsible for the contents or security of any
-                            of those means of communications. These communications may contain
-                            important information about your health and treatment. You
-                            acknowledge that the receipt and reading of any such messages is
-                            solely your responsibility and that you agree to hold–harmless
-                            &nbsp;<span data-bind="text: (referralShortCode &amp;&amp; referralShortCode() &amp;&amp; referralShortCode().trim() !== '') ? 'BIO ACCESS LABS' : 'ZEPETIDES Weight Loss , Wellness &amp; Recovery '">ZEPETIDES Weight Loss , Wellness &amp; Recovery </span>
-                            and any of it’s employees,
-                            officers, or affiliated entities (providers, pharmacies, etc.)
-                            regarding the receipt and contents of such communications. You
-                            also accept that some or all of the Communications may be
-                            unrelated to your treatment, such as promotional and advertising
-                            Communications.
-                        </p>
-                    </div>
+						<div class="mt-md-40 mt-20">
+							<h6>Consent to the Use of Messaging</h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								By accepting this Agreement, you understand and agree that
+								&nbsp;<span
+									>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span
+								>, along with third-party Providers and Pharmacies may receive
+								messages regarding your treatment, and respond to you via email,
+								text messages (SMS/MMS), phone calls, and voicemails
+								(collectively, “Communications”). You acknowledge and accept
+								that &nbsp;<span
+									data-bind="text: (referralShortCode && referralShortCode() && referralShortCode().trim() !== '') ? 'BIO ACCESS LABS' : 'ZEPETIDES Weight Loss , Wellness & Recovery '"
+									>ZEPETIDES Weight Loss , Wellness &amp; Recovery
+								</span>
+								and it’s affiliates are not responsible for the contents or security
+								of any of those means of communications. These communications may
+								contain important information about your health and treatment. You
+								acknowledge that the receipt and reading of any such messages is
+								solely your responsibility and that you agree to hold–harmless &nbsp;<span
+									data-bind="text: (referralShortCode && referralShortCode() && referralShortCode().trim() !== '') ? 'BIO ACCESS LABS' : 'ZEPETIDES Weight Loss , Wellness & Recovery '"
+									>ZEPETIDES Weight Loss , Wellness &amp; Recovery
+								</span>
+								and any of it’s employees, officers, or affiliated entities (providers,
+								pharmacies, etc.) regarding the receipt and contents of such communications.
+								You also accept that some or all of the Communications may be unrelated
+								to your treatment, such as promotional and advertising Communications.
+							</p>
+						</div>
 
-                    <div class="mt-md-40 mt-20">
-                        <h6>Consent to Pay for Services</h6>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            &nbsp;<span >ZEPETIDES Weight Loss  , Wellness &amp; Recovery </span>
-                            and/or its subsidiaries
-                            are not currently enrolled with, accepting, or participating in
-                            any state, local, or federal healthcare and/or health insurance
-                            programs (non–exhaustively: Medicare, Medicaid, etcetera). You
-                            acknowledge and accept that &nbsp;<span>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span>,
-                            the Providers, the Pharmacies, and yourself may not
-                            receive payment from any such programs for any of the services or
-                            products provided by &nbsp;<span>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span>,
-                            or
-                            any affiliated entities. By engaging with &nbsp;<span >ZEPETIDES Weight Loss Wellness &amp; Recovery</span>,
-                            and using the Services, you are choosing to
-                            obtain service solely on a cash-basis. As such, you have sole
-                            financial responsibility for paying the costs associated with the
-                            Services.
-                        </p>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            By clicking “I Agree”, checking a related box, or accessing these
-                            services you agree that you are exclusively choosing to access
-                            these services on a cash-basis and are solely responsibility for
-                            any costs incurred, and that neither you, nor &nbsp;<span>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span>,
-                            the Providers, the Labs, nor the Pharmacies
-                            will submit any claims for reimbursement to any state, local, or
-                            federal healthcare and/or health insurance programs
-                            (non-exhaustively: Medicare, Medicaid, etcetera).
-                        </p>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            &nbsp;<span>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span>
-                            does not provide
-                            Superbills or other medically coded invoices for services. Regular
-                            invoices are provided upon request.
-                        </p>
-                    </div>
+						<div class="mt-md-40 mt-20">
+							<h6>Consent to Pay for Services</h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								&nbsp;<span
+									>ZEPETIDES Weight Loss , Wellness &amp; Recovery
+								</span>
+								and/or its subsidiaries are not currently enrolled with, accepting,
+								or participating in any state, local, or federal healthcare and/or
+								health insurance programs (non–exhaustively: Medicare, Medicaid,
+								etcetera). You acknowledge and accept that &nbsp;<span
+									>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span
+								>, the Providers, the Pharmacies, and yourself may not receive
+								payment from any such programs for any of the services or
+								products provided by &nbsp;<span
+									>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span
+								>, or any affiliated entities. By engaging with &nbsp;<span
+									>ZEPETIDES Weight Loss Wellness &amp; Recovery</span
+								>, and using the Services, you are choosing to obtain service
+								solely on a cash-basis. As such, you have sole financial
+								responsibility for paying the costs associated with the
+								Services.
+							</p>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								By clicking “I Agree”, checking a related box, or accessing
+								these services you agree that you are exclusively choosing to
+								access these services on a cash-basis and are solely
+								responsibility for any costs incurred, and that neither you, nor
+								&nbsp;<span
+									>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span
+								>, the Providers, the Labs, nor the Pharmacies will submit any
+								claims for reimbursement to any state, local, or federal
+								healthcare and/or health insurance programs (non-exhaustively:
+								Medicare, Medicaid, etcetera).
+							</p>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								&nbsp;<span
+									>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span
+								>
+								does not provide Superbills or other medically coded invoices for
+								services. Regular invoices are provided upon request.
+							</p>
+						</div>
 
-                    <div class="mt-md-40 mt-20">
-                        <h6>Prescription Only Products</h6>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            Some of the Products and Services offered via the Platform require
-                            a valid prescription. Payment does not guarantee the writing or
-                            dispensing of any prescription medications. You will not be
-                            offered a prescription unless you have completed a medical intake
-                            form, have established a patient–provider relationship with a
-                            Provider, have completed a medical consultation with said
-                            Provider, and have an established medical need for said
-                            prescription (as determined in the Provider’s professional
-                            judgment). If you choose to have an affiliated Pharmacy fulfill
-                            that Product, the charges associated with said Product will be
-                            bundled into the Charges.
-                        </p>
-                    </div>
+						<div class="mt-md-40 mt-20">
+							<h6>Prescription Only Products</h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								Some of the Products and Services offered via the Platform
+								require a valid prescription. Payment does not guarantee the
+								writing or dispensing of any prescription medications. You will
+								not be offered a prescription unless you have completed a
+								medical intake form, have established a patient–provider
+								relationship with a Provider, have completed a medical
+								consultation with said Provider, and have an established medical
+								need for said prescription (as determined in the Provider’s
+								professional judgment). If you choose to have an affiliated
+								Pharmacy fulfill that Product, the charges associated with said
+								Product will be bundled into the Charges.
+							</p>
+						</div>
 
-                    <div class="mt-md-40 mt-20">
-                        <h6>Risks and Disclosures</h6>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            You agree that you have read, understood the information provided
-                            about any prescribed medications available from the FDA, or on
-                            &nbsp;<a class="text-blue-6" data-bind="attr: { href: (referralShortCode &amp;&amp; referralShortCode() &amp;&amp; referralShortCode().trim() !== '') ? 'https://www.bioaccesslabs.com' : 'https://www.zepetidesmd-scientific.com' },
-                                          text: (referralShortCode &amp;&amp; referralShortCode() &amp;&amp; referralShortCode().trim() !== '') ? 'www.bioaccesslabs.com' : 'www.zepetidesmd-scientific.com'" target="_blank" href="https://www.zepetidesmd-scientific.com">www.zepetidesmd-scientific.com</a>.
-                            Your use of any prescription medication, reliance on any
-                            provider, or reliance on any treatment or health decision
-                            delivered by the Providers via the Platform, is solely and
-                            exclusively at your own risk and you assume full responsibility
-                            for all risks associated herewith.
-                        </p>
-                    </div>
+						<div class="mt-md-40 mt-20">
+							<h6>Risks and Disclosures</h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								You agree that you have read, understood the information
+								provided about any prescribed medications available from the
+								FDA, or on &nbsp;<a
+									class="text-blue-6"
+									data-bind="attr: { href: (referralShortCode && referralShortCode() && referralShortCode().trim() !== '') ? 'https://www.bioaccesslabs.com' : 'https://www.zepetidesmd-scientific.com' },
+                                          text: (referralShortCode && referralShortCode() && referralShortCode().trim() !== '') ? 'www.bioaccesslabs.com' : 'www.zepetidesmd-scientific.com'"
+									target="_blank"
+									href="https://www.zepetidesmd-scientific.com"
+									>www.zepetidesmd-scientific.com</a
+								>. Your use of any prescription medication, reliance on any
+								provider, or reliance on any treatment or health decision
+								delivered by the Providers via the Platform, is solely and
+								exclusively at your own risk and you assume full responsibility
+								for all risks associated herewith.
+							</p>
+						</div>
 
-                    <div class="mt-md-40 mt-20">
-                        <h6>Mediation and Binding Arbitration</h6>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            If a dispute arises from or relates to this contract or the breach
-                            thereof, and if the dispute cannot be settled through direct
-                            discussions, the parties agree to endeavor first to settle the
-                            dispute by mediation administered by the American Arbitration
-                            Association under its Healthcare Payor Provider Mediation
-                            Procedures before resorting to arbitration. The parties further
-                            agree that any unresolved controversy or claim arising out of or
-                            relating to this contract, or breach thereof, shall be settled by
-                            arbitration administered by the American Arbitration Association
-                            in accordance with its Healthcare Payor Provider Arbitration Rules
-                            and judgment on the award rendered by the arbitrator(s) may be
-                            entered in any court having jurisdiction thereof.
-                        </p>
-                    </div>
+						<div class="mt-md-40 mt-20">
+							<h6>Mediation and Binding Arbitration</h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								If a dispute arises from or relates to this contract or the
+								breach thereof, and if the dispute cannot be settled through
+								direct discussions, the parties agree to endeavor first to
+								settle the dispute by mediation administered by the American
+								Arbitration Association under its Healthcare Payor Provider
+								Mediation Procedures before resorting to arbitration. The
+								parties further agree that any unresolved controversy or claim
+								arising out of or relating to this contract, or breach thereof,
+								shall be settled by arbitration administered by the American
+								Arbitration Association in accordance with its Healthcare Payor
+								Provider Arbitration Rules and judgment on the award rendered by
+								the arbitrator(s) may be entered in any court having
+								jurisdiction thereof.
+							</p>
+						</div>
 
-                    <div class="mt-md-40 mt-20">
-                        <h6>Indemnification </h6>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            If a dispute arises from or relates to this contract or the breach
-                            thereof, and if the dispute cannot be settled through direct
-                            discussions, the parties agree to endeavor first to settle the
-                            dispute by mediation administered by the American Arbitration
-                            Association under its Healthcare Payor Provider Mediation
-                            Procedures before resorting to arbitration. The parties further
-                            agree that any unresolved controversy or claim arising out of or
-                            relating to this contract, or breach thereof, shall be settled by
-                            arbitration administered by the American Arbitration Association
-                            in accordance with its Healthcare Payor Provider Arbitration Rules
-                            and judgment on the award rendered by the arbitrator(s) may be
-                            entered in any court having jurisdiction thereof.
-                        </p>
-                    </div>
+						<div class="mt-md-40 mt-20">
+							<h6>Indemnification </h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								If a dispute arises from or relates to this contract or the
+								breach thereof, and if the dispute cannot be settled through
+								direct discussions, the parties agree to endeavor first to
+								settle the dispute by mediation administered by the American
+								Arbitration Association under its Healthcare Payor Provider
+								Mediation Procedures before resorting to arbitration. The
+								parties further agree that any unresolved controversy or claim
+								arising out of or relating to this contract, or breach thereof,
+								shall be settled by arbitration administered by the American
+								Arbitration Association in accordance with its Healthcare Payor
+								Provider Arbitration Rules and judgment on the award rendered by
+								the arbitrator(s) may be entered in any court having
+								jurisdiction thereof.
+							</p>
+						</div>
 
-                    <div class="mt-md-40 mt-20">
-                        <h6>Class-Action Waiver </h6>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            You hereby waive, with respect to any dispute, the right to
-                            participate in a class action, private attorney general action, or
-                            other representative action in court or group-arbitration either
-                            as a class representative or class member, and hereby waive the
-                            right to join or consolidate claims with the claims of any other
-                            person or group; as allowed by law.
-                        </p>
-                    </div>
+						<div class="mt-md-40 mt-20">
+							<h6>Class-Action Waiver </h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								You hereby waive, with respect to any dispute, the right to
+								participate in a class action, private attorney general action,
+								or other representative action in court or group-arbitration
+								either as a class representative or class member, and hereby
+								waive the right to join or consolidate claims with the claims of
+								any other person or group; as allowed by law.
+							</p>
+						</div>
 
-                    <div class="mt-md-40 mt-20">
-                        <h6>Severability of Terms </h6>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            If a provision of this Agreement is or becomes illegal,
-                            unenforceable, or invalid in any jurisdiction, it shall not affect
-                            the enforceability or validity in that jurisdiction of any other
-                            provision of this Agreement, and/or the enforceability or validity
-                            in other jurisdictions of that or any other provision of this
-                            Agreement.
-                        </p>
-                    </div>
+						<div class="mt-md-40 mt-20">
+							<h6>Severability of Terms </h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								If a provision of this Agreement is or becomes illegal,
+								unenforceable, or invalid in any jurisdiction, it shall not
+								affect the enforceability or validity in that jurisdiction of
+								any other provision of this Agreement, and/or the enforceability
+								or validity in other jurisdictions of that or any other
+								provision of this Agreement.
+							</p>
+						</div>
 
-                    <div class="mt-md-40 mt-20">
-                        <h6>Assignment of Rights</h6>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            This agreement is solely between you and &nbsp;<span >ZEPETIDES Weight Loss Wellness &amp; Recovery</span>,
-                            . No portion of your rights or agreed upon
-                            terms may be assigned to anyone else and any attempt to do so is
-                            null and void. &nbsp;<span >ZEPETIDES Weight Loss Wellness &amp; Recovery</span>, may, at any
-                            time and in our sole discretion, assign, transfer, or other such
-                            action, without your additional consent or notice, this entire
-                            Agreement or any part of this Agreement, to any third-party of our
-                            choice.
-                        </p>
-                    </div>
+						<div class="mt-md-40 mt-20">
+							<h6>Assignment of Rights</h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								This agreement is solely between you and &nbsp;<span
+									>ZEPETIDES Weight Loss Wellness &amp; Recovery</span
+								>, . No portion of your rights or agreed upon terms may be
+								assigned to anyone else and any attempt to do so is null and
+								void. &nbsp;<span
+									>ZEPETIDES Weight Loss Wellness &amp; Recovery</span
+								>, may, at any time and in our sole discretion, assign,
+								transfer, or other such action, without your additional consent
+								or notice, this entire Agreement or any part of this Agreement,
+								to any third-party of our choice.
+							</p>
+						</div>
 
-                    <div class="mt-md-40 mt-20">
-                        <h6>Choice of Law</h6>
-                        <p class="fs-md-18 fs-14 fw-400 mt-20">
-                            THIS AGREEMENT SHALL BE GOVERNED BY THE LAWS OF THE STATE OF
-                            TEXAS, WITHOUT GIVING EFFECT TO ANY PRINCIPLES REGARDING CONFLICT
-                            OF LAWS
-                        </p>
-                    </div>
-                </div>
+						<div class="mt-md-40 mt-20">
+							<h6>Choice of Law</h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								THIS AGREEMENT SHALL BE GOVERNED BY THE LAWS OF THE STATE OF
+								TEXAS, WITHOUT GIVING EFFECT TO ANY PRINCIPLES REGARDING
+								CONFLICT OF LAWS
+							</p>
+						</div>
+					</div>
 
 					<div
 						class="modal__actions modal__action__justify modal__actions__equal"
@@ -962,7 +1017,6 @@ import Layout from "../layouts/Layout.astro";
 
 	<Footer />
 </Layout>
-
 
 <script>
 	$(document).ready(function () {

@@ -13,12 +13,21 @@ import Layout from "../layouts/Layout.astro";
 			<!--===|| Shipping State Start-->
 			<section class="assessment shipping__state">
 				<div class="container">
-					<h1 class="section__title fs-lg-56 text-center">
+					<h1
+						class="section__title fs-lg-56 text-center"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+					>
 						<span>What Is Your State Of </span>
 						<br />
 						<span class="text-gold-gradient-1">Residence?</span>
 					</h1>
-					<div class="assessment__form">
+					<div
+						class="assessment__form"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="200"
+					>
 						<div class="state-btn">
 							<div class="zepeptides-search max-w-full">
 								<input
@@ -158,6 +167,9 @@ import Layout from "../layouts/Layout.astro";
 					<!-- Assessment buttons start -->
 					<div
 						class="assessment__buttons assessment__buttons--wrapper-alt assessment__buttons--wrapper-alt mx-auto mt-20"
+						data-aos="flip-left"
+						data-aos-duration="1000"
+						data-aos-once="true"
 					>
 						<button class="theme-btn theme-btn-size-lg theme-btn__primary w-mob"
 							>Go Back</button
@@ -174,7 +186,14 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <!-- Confirm Modal Start -->
-<div id="confirm" class="modal fade confirm-modal" tabindex="-1" role="dialog">
+<div
+	id="confirm"
+	class="modal fade confirm-modal"
+	tabindex="-1"
+	role="dialog"
+	data-aos="fade-up"
+	data-aos-duration="1000"
+>
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<!-- <button type="button" class="btn-close" data-dismiss="modal">
