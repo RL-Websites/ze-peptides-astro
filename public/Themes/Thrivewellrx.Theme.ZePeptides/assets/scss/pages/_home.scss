@@ -94,10 +94,11 @@
 
 .product {
 	&__card {
-		& > a {
+		&>a {
 			text-decoration: none;
 		}
 	}
+
 	&__title {
 		max-width: 400px;
 		height: 58px;
@@ -256,8 +257,7 @@
 	background-color: $blue-3;
 }
 
-@media only screen and (max-width: 1170px) {
-}
+@media only screen and (max-width: 1170px) {}
 
 @media only screen and (max-width: 992px) {
 	.home {
@@ -303,7 +303,6 @@
 	}
 
 	.faq {
-		padding: 70px 0;
 		// background: linear-gradient(to bottom, $blue-2 0%, $blue-2 22%, #f9f9f9 22%, #f9f9f9 100%);
 
 		&__items {
@@ -367,7 +366,6 @@
 	}
 
 	.faq {
-		padding: 50px 0;
 		// background: linear-gradient(to bottom, $blue-2 0%, $blue-2 135px, #f9f9f9 13px, #f9f9f9 100%);
 
 		&__main {
@@ -396,7 +394,6 @@
 	}
 
 	.faq {
-		padding: 0 0 50px;
 		background: none;
 
 		&__title {
