@@ -73,48 +73,31 @@ $(document).ready(function () {
 	// Header Menu JS Code end
 
 	// Get Started Button Handler
-	$("#browseProducts").on("click", function () {
-		if (window.location.pathname === "/") {
-			// On home page - scroll to product section
+	$(document).on("click", "#browseProducts", function () {
+		const productSection = $(".product");
+
+		if (productSection.length) {
 			$("html, body").animate(
 				{
-					scrollTop: $(".product").offset().top - 75,
+					scrollTop: productSection.offset().top - 75,
 				},
+
 				"smooth"
 			);
-		} else {
-			// On other pages - redirect to home and scroll to product section
-			window.location.href = "/#products";
-		}
-	});
-	$("#getStartedBtn").on("click", function () {
-		if (window.location.pathname === "/") {
-			// On home page - scroll to product section
-			$("html, body").animate(
-				{
-					scrollTop: $(".product").offset().top - 75,
-				},
-				"smooth"
-			);
-		} else {
-			// On other pages - redirect to home and scroll to product section
-			window.location.href = "/#products";
 		}
 	});
 
-	// If coming from anchor link (#products) on non-home pages, redirect and scroll
-	$(window).on("load", function () {
-		if (window.location.hash === "#products" && window.location.pathname !== "/") {
-			window.location.pathname = "/";
-		} else if (window.location.hash === "#products" && window.location.pathname === "/") {
-			setTimeout(function () {
-				$("html, body").animate(
-					{
-						scrollTop: $(".product").offset().top - 75,
-					},
-					"smooth"
-				);
-			}, 100);
+	$(document).on("click", "#getStartedBtn", function () {
+		const productSection = $(".product");
+
+		if (productSection.length) {
+			$("html, body").animate(
+				{
+					scrollTop: productSection.offset().top - 75,
+				},
+
+				"smooth"
+			);
 		}
 	});
 
