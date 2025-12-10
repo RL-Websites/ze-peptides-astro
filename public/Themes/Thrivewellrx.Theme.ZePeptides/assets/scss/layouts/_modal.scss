@@ -199,9 +199,9 @@
 			&:hover,
 			&:focus,
 			.active {
-				color: $primary;
-				border: 1px solid $primary;
-				background: transparent;
+				background-color: lighten($primary, 20%);
+				border-color: lighten($primary, 20%);
+				color: white;
 			}
 		}
 
@@ -214,9 +214,8 @@
 			&:hover,
 			&:focus,
 			.active {
-				color: white;
-				border: 1px solid $primary;
-				background: $primary;
+				background-color: $primary-light;
+				color: $primary;
 			}
 		}
 
