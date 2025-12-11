@@ -1,215 +1,219 @@
+// Header, menu, scrolling, toasts, etc.
 $(document).ready(function () {
-	AOS.init();
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip();
-	});
+    // AOS init (guarded)
+    if (window.AOS && typeof AOS.init === "function") {
+        AOS.init();
+    }
 
-	$(".hamburger-menu").click(function () {
-		$(".site__menu__list").toggleClass("show-menu");
-		$(".site__header").toggleClass("menu-open");
-		$("body").toggleClass("header-open");
+    // Tooltip
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
 
-		var icon = $(this).find("i");
-		if (icon.hasClass("icon-hamburger-menu")) {
-			icon.removeClass("icon-hamburger-menu").addClass("icon-cross");
-		} else {
-			icon.removeClass("icon-cross").addClass("icon-hamburger-menu");
-		}
-	});
+    // Hamburger menu
+    $(document).on("click", ".hamburger-menu", function () {
+        $(".site__menu__list").toggleClass("show-menu");
+        $(".site__header").toggleClass("menu-open");
+        $("body").toggleClass("header-open");
 
-	$("#user-menu-btn").click(function () {
-		$("#user-dropdown").toggleClass("show");
-	});
+        var icon = $(this).find("i");
+        if (icon.hasClass("icon-hamburger-menu")) {
+            icon.removeClass("icon-hamburger-menu").addClass("icon-cross");
+        } else {
+            icon.removeClass("icon-cross").addClass("icon-hamburger-menu");
+        }
+    });
 
-	// Close dropdown when clicking outside
-	// Close dropdown when clicking outside
-	$(document).on("click", function (e) {
-		if (!$(e.target).closest("#user-menu-btn").length && !$(e.target).closest("#user-dropdown").length) {
-			$("#user-dropdown").removeClass("show");
-		}
-	});
+    // User dropdown toggle
+    $("#user-menu-btn").click(function () {
+        $("#user-dropdown").toggleClass("show");
+    });
 
-	function updateHeader() {
-		const header = document.querySelector(".site__header");
-		if (!header) return;
+    // Close dropdown when clicking outside
+    $(document).on("click", function (e) {
+        if (
+            !$(e.target).closest("#user-menu-btn").length &&
+            !$(e.target).closest("#user-dropdown").length
+        ) {
+            $("#user-dropdown").removeClass("show");
+        }
+    });
 
-		const logo = header.querySelector(".site__logo--img");
-		if (!logo) return;
+    function updateHeader() {
+        const header = document.querySelector(".site__header");
+        if (!header) return;
 
-		const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const logo = header.querySelector(".site__logo--img");
+        if (!logo) return;
 
-		if (scrollTop >= 50) {
-			header.classList.add("sticky");
-			if (logo.dataset.logoSticky) logo.src = logo.dataset.logoSticky;
-		} else {
-			header.classList.remove("sticky");
-			if (logo.dataset.logoDefault) logo.src = logo.dataset.logoDefault;
-		}
-	}
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-	// Run on page load
-	updateHeader();
+        if (scrollTop >= 50) {
+            header.classList.add("sticky");
+            if (logo.dataset.logoSticky) logo.src = logo.dataset.logoSticky;
+        } else {
+            header.classList.remove("sticky");
+            if (logo.dataset.logoDefault) logo.src = logo.dataset.logoDefault;
+        }
+    }
 
-	// Run on scroll
-	$(window).on("scroll", function () {
-		updateHeader();
-	});
+    // Run on page load
+    updateHeader();
 
-	//Scroll section
-	$(".scrollToTop").on("click", function () {
-		$("html, body").animate(
-			{
-				scrollTop: 0,
-			},
-			"slow"
-		);
-	});
+    // Run on scroll
+    $(window).on("scroll", function () {
+        updateHeader();
+    });
 
-	$("#liveToastBtn").on("click", function () {
-		var toastEl = $("#liveToast");
-		var toast = new bootstrap.Toast(toastEl[0]);
-		toast.show();
-	});
-	// Header Menu JS Code end
+    // Scroll to top
+    $(".scrollToTop").on("click", function () {
+        $("html, body").animate(
+            {
+                scrollTop: 0,
+            },
+            "slow"
+        );
+    });
 
-	// Get Started Button Handler
-	$("#browseProducts").on("click", function () {
-		if (window.location.pathname === "/") {
-			// On home page - scroll to product section
-			$("html, body").animate(
-				{
-					scrollTop: $(".product").offset().top - 75,
-				},
-				"smooth"
-			);
-		} else {
-			// On other pages - redirect to home and scroll to product section
-			window.location.href = "/#products";
-		}
-	});
-	$("#getStartedBtn").on("click", function () {
-		if (window.location.pathname === "/") {
-			// On home page - scroll to product section
-			$("html, body").animate(
-				{
-					scrollTop: $(".product").offset().top - 75,
-				},
-				"smooth"
-			);
-		} else {
-			// On other pages - redirect to home and scroll to product section
-			window.location.href = "/#products";
-		}
-	});
+    // Toast
+    $("#liveToastBtn").on("click", function () {
+        var toastEl = $("#liveToast");
+        if (toastEl.length && window.bootstrap && bootstrap.Toast) {
+            var toast = new bootstrap.Toast(toastEl[0]);
+            toast.show();
+        }
+    });
 
-	// If coming from anchor link (#products) on non-home pages, redirect and scroll
-	$(window).on("load", function () {
-		if (window.location.hash === "#products" && window.location.pathname !== "/") {
-			window.location.pathname = "/";
-		} else if (window.location.hash === "#products" && window.location.pathname === "/") {
-			setTimeout(function () {
-				$("html, body").animate(
-					{
-						scrollTop: $(".product").offset().top - 75,
-					},
-					"smooth"
-				);
-			}, 100);
-		}
-	});
+    // Get Started / Browse Products (delegated so it works after SPA navigation)
+    $(document).on("click", "#browseProducts", function () {
+        const productSection = $(".product");
 
-	// Header Sticky end
+        if (productSection.length) {
+            $("html, body").animate(
+                {
+                    scrollTop: productSection.offset().top - 75,
+                },
+                "smooth"
+            );
+        }
+    });
 
-	// 	$("#couponModal")
-	// 		.on("show.bs.modal", function () {
-	// 			const modalDialog = $(this).find(".modal-dialog");
-	// 			modalDialog.addClass("animate-bounceIn");
-	// 		})
-	// 		.on("hidden.bs.modal", function () {
-	// 			const modalDialog = $(this).find(".modal-dialog");
-	// 			modalDialog.removeClass("animate-bounceIn");
-	// 		});
+    $(document).on("click", "#getStartedBtn", function () {
+        const productSection = $(".product");
 
-	// Product page Js
-	$("#readMore").on("click", function () {
-		$(this).parents(".product-hero__details").toggleClass("show");
-		$(this).text("Read Less");
-	});
+        if (productSection.length) {
+            $("html, body").animate(
+                {
+                    scrollTop: productSection.offset().top - 75,
+                },
+                "smooth"
+            );
+        }
+    });
+
+    // Product Read More
+    $("#readMore").on("click", function () {
+        const parent = $(this).parents(".product-hero__details");
+        parent.toggleClass("show");
+        $(this).text(parent.hasClass("show") ? "Read Less" : "Read More");
+    });
 });
-// how it works script
-// This script will run on the client-side
-const steps = document.querySelectorAll(".timeline-step[data-observed]");
 
+// Numeric-only input handlers
+$(document).on("input", ".numeric-only", function () {
+    this.value = this.value.replace(/[^0-9]/g, "");
+});
+
+$(document).on("paste", ".numeric-only", function () {
+    var $this = $(this);
+    setTimeout(function () {
+        $this.val($this.val().replace(/[^0-9]/g, ""));
+    }, 10);
+});
+
+// DOB datepicker + timeline scripts
 document.addEventListener("DOMContentLoaded", () => {
-	console.log("hello");
+    console.log("hello");
 
-	initDobDatepicker("#dobField", "#dobError");
-	initDobDatepicker("#myProfileDob", "#myProfileDobError");
+    if (typeof initDobDatepicker === "function") {
+        try {
+            initDobDatepicker("#dobField", "#dobError");
+            initDobDatepicker("#myProfileDob", "#myProfileDobError");
+        } catch (err) {
+            console.warn("initDobDatepicker error:", err);
+        }
+    }
 });
 
-// Function to remove active class from all steps
+// Desktop timeline helpers
+const getSteps = () =>
+    document.querySelectorAll(".timeline-step[data-observed]");
+
+// Remove active class from all steps
 const deactivateAllSteps = () => {
-	steps.forEach((step) => {
-		const dot = step.querySelector(".timeline-dot");
-		const stepNumber = step.querySelector(".step-number");
-		const title = step.querySelector(".step-title");
+    const steps = getSteps();
+    steps.forEach((step) => {
+        const dot = step.querySelector(".timeline-dot");
+        const stepNumber = step.querySelector(".step-number");
+        const title = step.querySelector(".step-title");
 
-		dot?.classList.remove("active");
-		stepNumber?.classList.remove("purple");
-		title?.classList.remove("active-title");
-	});
+        dot?.classList.remove("active");
+        stepNumber?.classList.remove("purple");
+        title?.classList.remove("active-title");
+    });
 };
 
-// Function to activate a specific step
+// Activate a specific step
 const activateStep = (step) => {
-	const dot = step.querySelector(".timeline-dot");
-	const stepNumber = step.querySelector(".step-number");
-	const title = step.querySelector(".step-title");
+    const dot = step.querySelector(".timeline-dot");
+    const stepNumber = step.querySelector(".step-number");
+    const title = step.querySelector(".step-title");
 
-	dot?.classList.add("active");
-	stepNumber?.classList.add("purple");
-	title?.classList.add("active-title");
+    dot?.classList.add("active");
+    stepNumber?.classList.add("purple");
+    title?.classList.add("active-title");
 };
 
-// Function to find and activate the most centered step
+// Find and activate the most centered step
 const updateActiveStep = () => {
-	let mostCenteredStep = null;
-	let minDistance = Infinity;
+    const steps = getSteps();
+    if (!steps.length) return;
 
-	steps.forEach((step) => {
-		const rect = step.getBoundingClientRect();
-		const elementCenter = rect.top + rect.height / 2;
-		const viewportCenter = window.innerHeight / 2;
-		const distance = Math.abs(elementCenter - viewportCenter);
+    let mostCenteredStep = null;
+    let minDistance = Infinity;
 
-		// Check if element is in viewport
-		if (rect.top < window.innerHeight && rect.bottom > 0) {
-			if (distance < minDistance) {
-				minDistance = distance;
-				mostCenteredStep = step;
-			}
-		}
-	});
+    const viewportCenter = window.innerHeight / 2;
 
-	// Deactivate all steps first
-	deactivateAllSteps();
+    steps.forEach((step) => {
+        const rect = step.getBoundingClientRect();
+        const elementCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(elementCenter - viewportCenter);
 
-	// Activate only the most centered step
-	if (mostCenteredStep) {
-		activateStep(mostCenteredStep);
-	}
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            if (distance < minDistance) {
+                minDistance = distance;
+                mostCenteredStep = step;
+            }
+        }
+    });
+
+    deactivateAllSteps();
+
+    if (mostCenteredStep) {
+        activateStep(mostCenteredStep);
+    }
 };
 
-// Use scroll event with throttling for better performance
+// Scroll throttling for desktop timeline
 let ticking = false;
 const handleScroll = () => {
-	if (!ticking) {
-		window.requestAnimationFrame(() => {
-			updateActiveStep();
-			ticking = false;
-		});
-		ticking = true;
-	}
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            updateActiveStep();
+            ticking = false;
+        });
+        ticking = true;
+    }
 };
 
 // Initial check
@@ -218,92 +222,94 @@ updateActiveStep();
 // Listen to scroll events
 window.addEventListener("scroll", handleScroll);
 
-// Mobile Timeline Script
-const mobileSteps = document.querySelectorAll(".mobile-timeline-step[data-observed]");
+// Mobile timeline helpers
+const getMobileSteps = () =>
+    document.querySelectorAll(".mobile-timeline-step[data-observed]");
 
-// Function to remove active class from all mobile steps
+// Remove active class from all mobile steps
 const deactivateAllMobileSteps = () => {
-	mobileSteps.forEach((step) => {
-		const dot = step.querySelector(".mobile-dot");
-		const stepNumber = step.querySelector(".mobile-step-number");
-		const title = step.querySelector(".mobile-step-title");
-		const line = step.querySelector(".mobile-dot-line");
-		const description = step.querySelector(".mobile-number-description");
+    const mobileSteps = getMobileSteps();
 
-		if (dot) dot.classList.remove("active");
-		if (stepNumber) stepNumber.classList.remove("purple");
-		if (title) title.classList.remove("active-title");
-		if (description) description.classList.remove("active-title");
-		// Reset line when step is not active
-		if (line) {
-			line.style.height = "0";
-		}
-	});
+    mobileSteps.forEach((step) => {
+        const dot = step.querySelector(".mobile-dot");
+        const stepNumber = step.querySelector(".mobile-step-number");
+        const title = step.querySelector(".mobile-step-title");
+        const line = step.querySelector(".mobile-dot-line");
+        const description = step.querySelector(".mobile-number-description");
+
+        if (dot) dot.classList.remove("active");
+        if (stepNumber) stepNumber.classList.remove("purple");
+        if (title) title.classList.remove("active-title");
+        if (description) description.classList.remove("active-title");
+        if (line) {
+            line.style.height = "0";
+        }
+    });
 };
 
-// Function to activate a specific mobile step
+// Activate a specific mobile step
 const activateMobileStep = (step) => {
-	const dot = step.querySelector(".mobile-dot");
-	const stepNumber = step.querySelector(".mobile-step-number");
-	const title = step.querySelector(".mobile-step-title");
-	const line = step.querySelector(".mobile-dot-line");
-	const description = step.querySelector(".mobile-number-description");
+    const dot = step.querySelector(".mobile-dot");
+    const stepNumber = step.querySelector(".mobile-step-number");
+    const title = step.querySelector(".mobile-step-title");
+    const line = step.querySelector(".mobile-dot-line");
+    const description = step.querySelector(".mobile-number-description");
 
-	if (dot) dot.classList.add("active");
-	if (stepNumber) stepNumber.classList.add("purple");
-	if (title) title.classList.add("active-title");
-	if (description) description.classList.add("active-title");
-	// Animate line when step becomes active
-	if (line) {
-		line.style.height = "var(--line-height)";
-	}
+    if (dot) dot.classList.add("active");
+    if (stepNumber) stepNumber.classList.add("purple");
+    if (title) title.classList.add("active-title");
+    if (description) description.classList.add("active-title");
+    if (line) {
+        line.style.height = "var(--line-height)";
+    }
 };
 
-// Function to find and activate the most centered mobile step
+// Find and activate the most centered mobile step
 const updateActiveMobileStep = () => {
-	let mostCenteredStep = null;
-	let minDistance = Infinity;
+    const mobileSteps = getMobileSteps();
+    if (!mobileSteps.length) return;
 
-	mobileSteps.forEach((step) => {
-		const rect = step.getBoundingClientRect();
-		const elementCenter = rect.top + rect.height / 2;
-		const viewportCenter = window.innerHeight / 2;
-		const distance = Math.abs(elementCenter - viewportCenter);
+    let mostCenteredStep = null;
+    let minDistance = Infinity;
 
-		// Check if element is in viewport
-		if (rect.top < window.innerHeight && rect.bottom > 0) {
-			if (distance < minDistance) {
-				minDistance = distance;
-				mostCenteredStep = step;
-			}
-		}
-	});
+    const viewportCenter = window.innerHeight / 2;
 
-	// Deactivate all steps first
-	deactivateAllMobileSteps();
+    mobileSteps.forEach((step) => {
+        const rect = step.getBoundingClientRect();
+        const elementCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(elementCenter - viewportCenter);
 
-	// Activate only the most centered step
-	if (mostCenteredStep) {
-		activateMobileStep(mostCenteredStep);
-	}
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            if (distance < minDistance) {
+                minDistance = distance;
+                mostCenteredStep = step;
+            }
+        }
+    });
+
+    deactivateAllMobileSteps();
+
+    if (mostCenteredStep) {
+        activateMobileStep(mostCenteredStep);
+    }
 };
 
-// Use scroll event with throttling for better performance
+// Scroll throttling for mobile timeline
 let mobileTickingState = false;
 const handleMobileScroll = () => {
-	if (!mobileTickingState) {
-		window.requestAnimationFrame(() => {
-			updateActiveMobileStep();
-			mobileTickingState = false;
-		});
-		mobileTickingState = true;
-	}
+    if (!mobileTickingState) {
+        window.requestAnimationFrame(() => {
+            updateActiveMobileStep();
+            mobileTickingState = false;
+        });
+        mobileTickingState = true;
+    }
 };
 
 // Set CSS custom properties for all mobile steps
-mobileSteps.forEach((step) => {
-	step.style.setProperty("--dot-gap", "2rem");
-	step.style.setProperty("--line-height", "calc(100% - 14px)");
+getMobileSteps().forEach((step) => {
+    step.style.setProperty("--dot-gap", "2rem");
+    step.style.setProperty("--line-height", "calc(100% - 14px)");
 });
 
 // Initial check for mobile
