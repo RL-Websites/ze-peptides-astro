@@ -1,219 +1,215 @@
 // Header, menu, scrolling, toasts, etc.
 $(document).ready(function () {
-    // AOS init (guarded)
-    if (window.AOS && typeof AOS.init === "function") {
-        AOS.init();
-    }
+	// AOS init (guarded)
+	if (window.AOS && typeof AOS.init === "function") {
+		AOS.init();
+	}
 
-    // Tooltip
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
+	// Tooltip
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip();
+	});
 
-    // Hamburger menu
-    $(document).on("click", ".hamburger-menu", function () {
-        $(".site__menu__list").toggleClass("show-menu");
-        $(".site__header").toggleClass("menu-open");
-        $("body").toggleClass("header-open");
+	// Hamburger menu
+	$(document).on("click", ".hamburger-menu", function () {
+		$(".site__menu__list").toggleClass("show-menu");
+		$(".site__header").toggleClass("menu-open");
+		$("body").toggleClass("header-open");
 
-        var icon = $(this).find("i");
-        if (icon.hasClass("icon-hamburger-menu")) {
-            icon.removeClass("icon-hamburger-menu").addClass("icon-cross");
-        } else {
-            icon.removeClass("icon-cross").addClass("icon-hamburger-menu");
-        }
-    });
+		var icon = $(this).find("i");
+		if (icon.hasClass("icon-hamburger-menu")) {
+			icon.removeClass("icon-hamburger-menu").addClass("icon-cross");
+		} else {
+			icon.removeClass("icon-cross").addClass("icon-hamburger-menu");
+		}
+	});
 
-    // User dropdown toggle
-    $("#user-menu-btn").click(function () {
-        $("#user-dropdown").toggleClass("show");
-    });
+	// User dropdown toggle
+	$(document).on("click", "#user-menu-btn, #user-menu-btn-mob", function () {
+		$(this).next(".user-dropdown").toggleClass("show");
+	});
 
-    // Close dropdown when clicking outside
-    $(document).on("click", function (e) {
-        if (
-            !$(e.target).closest("#user-menu-btn").length &&
-            !$(e.target).closest("#user-dropdown").length
-        ) {
-            $("#user-dropdown").removeClass("show");
-        }
-    });
+	// Close dropdown when clicking outside
+	$(document).on("click", function (e) {
+		if (!$(e.target).closest("#user-menu-btn").length && !$(e.target).closest("#user-dropdown").length) {
+			$("#user-dropdown").removeClass("show");
+		}
+	});
 
-    function updateHeader() {
-        const header = document.querySelector(".site__header");
-        if (!header) return;
+	function updateHeader() {
+		const header = document.querySelector(".site__header");
+		if (!header) return;
 
-        const logo = header.querySelector(".site__logo--img");
-        if (!logo) return;
+		const logo = header.querySelector(".site__logo--img");
+		if (!logo) return;
 
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+		const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-        if (scrollTop >= 50) {
-            header.classList.add("sticky");
-            if (logo.dataset.logoSticky) logo.src = logo.dataset.logoSticky;
-        } else {
-            header.classList.remove("sticky");
-            if (logo.dataset.logoDefault) logo.src = logo.dataset.logoDefault;
-        }
-    }
+		if (scrollTop >= 50) {
+			header.classList.add("sticky");
+			if (logo.dataset.logoSticky) logo.src = logo.dataset.logoSticky;
+		} else {
+			header.classList.remove("sticky");
+			if (logo.dataset.logoDefault) logo.src = logo.dataset.logoDefault;
+		}
+	}
 
-    // Run on page load
-    updateHeader();
+	// Run on page load
+	updateHeader();
 
-    // Run on scroll
-    $(window).on("scroll", function () {
-        updateHeader();
-    });
+	// Run on scroll
+	$(window).on("scroll", function () {
+		updateHeader();
+	});
 
-    // Scroll to top
-    $(".scrollToTop").on("click", function () {
-        $("html, body").animate(
-            {
-                scrollTop: 0,
-            },
-            "slow"
-        );
-    });
+	// Scroll to top
+	$(".scrollToTop").on("click", function () {
+		$("html, body").animate(
+			{
+				scrollTop: 0,
+			},
+			"slow"
+		);
+	});
 
-    // Toast
-    $("#liveToastBtn").on("click", function () {
-        var toastEl = $("#liveToast");
-        if (toastEl.length && window.bootstrap && bootstrap.Toast) {
-            var toast = new bootstrap.Toast(toastEl[0]);
-            toast.show();
-        }
-    });
+	// Toast
+	$("#liveToastBtn").on("click", function () {
+		var toastEl = $("#liveToast");
+		if (toastEl.length && window.bootstrap && bootstrap.Toast) {
+			var toast = new bootstrap.Toast(toastEl[0]);
+			toast.show();
+		}
+	});
 
-    // Get Started / Browse Products (delegated so it works after SPA navigation)
-    $(document).on("click", "#browseProducts", function () {
-        const productSection = $(".product");
+	// Get Started / Browse Products (delegated so it works after SPA navigation)
+	$(document).on("click", "#browseProducts", function () {
+		const productSection = $(".product");
 
-        if (productSection.length) {
-            $("html, body").animate(
-                {
-                    scrollTop: productSection.offset().top - 75,
-                },
-                "smooth"
-            );
-        }
-    });
+		if (productSection.length) {
+			$("html, body").animate(
+				{
+					scrollTop: productSection.offset().top - 75,
+				},
+				"smooth"
+			);
+		}
+	});
 
-    $(document).on("click", "#getStartedBtn", function () {
-        const productSection = $(".product");
+	$(document).on("click", "#getStartedBtn", function () {
+		const productSection = $(".product");
 
-        if (productSection.length) {
-            $("html, body").animate(
-                {
-                    scrollTop: productSection.offset().top - 75,
-                },
-                "smooth"
-            );
-        }
-    });
+		if (productSection.length) {
+			$("html, body").animate(
+				{
+					scrollTop: productSection.offset().top - 75,
+				},
+				"smooth"
+			);
+		}
+	});
 
-    // Product Read More
-    $("#readMore").on("click", function () {
-        const parent = $(this).parents(".product-hero__details");
-        parent.toggleClass("show");
-        $(this).text(parent.hasClass("show") ? "Read Less" : "Read More");
-    });
+	// Product Read More
+	$("#readMore").on("click", function () {
+		const parent = $(this).parents(".product-hero__details");
+		parent.toggleClass("show");
+		$(this).text(parent.hasClass("show") ? "Read Less" : "Read More");
+	});
 });
 
 // Numeric-only input handlers
 $(document).on("input", ".numeric-only", function () {
-    this.value = this.value.replace(/[^0-9]/g, "");
+	this.value = this.value.replace(/[^0-9]/g, "");
 });
 
 $(document).on("paste", ".numeric-only", function () {
-    var $this = $(this);
-    setTimeout(function () {
-        $this.val($this.val().replace(/[^0-9]/g, ""));
-    }, 10);
+	var $this = $(this);
+	setTimeout(function () {
+		$this.val($this.val().replace(/[^0-9]/g, ""));
+	}, 10);
 });
 
 // DOB datepicker + timeline scripts
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("hello");
+	console.log("hello");
 
-    if (typeof initDobDatepicker === "function") {
-        try {
-            initDobDatepicker("#dobField", "#dobError");
-            initDobDatepicker("#myProfileDob", "#myProfileDobError");
-        } catch (err) {
-            console.warn("initDobDatepicker error:", err);
-        }
-    }
+	if (typeof initDobDatepicker === "function") {
+		try {
+			initDobDatepicker("#dobField", "#dobError");
+			initDobDatepicker("#myProfileDob", "#myProfileDobError");
+		} catch (err) {
+			console.warn("initDobDatepicker error:", err);
+		}
+	}
 });
 
 // Desktop timeline helpers
-const getSteps = () =>
-    document.querySelectorAll(".timeline-step[data-observed]");
+const getSteps = () => document.querySelectorAll(".timeline-step[data-observed]");
 
 // Remove active class from all steps
 const deactivateAllSteps = () => {
-    const steps = getSteps();
-    steps.forEach((step) => {
-        const dot = step.querySelector(".timeline-dot");
-        const stepNumber = step.querySelector(".step-number");
-        const title = step.querySelector(".step-title");
+	const steps = getSteps();
+	steps.forEach((step) => {
+		const dot = step.querySelector(".timeline-dot");
+		const stepNumber = step.querySelector(".step-number");
+		const title = step.querySelector(".step-title");
 
-        dot?.classList.remove("active");
-        stepNumber?.classList.remove("purple");
-        title?.classList.remove("active-title");
-    });
+		dot?.classList.remove("active");
+		stepNumber?.classList.remove("purple");
+		title?.classList.remove("active-title");
+	});
 };
 
 // Activate a specific step
 const activateStep = (step) => {
-    const dot = step.querySelector(".timeline-dot");
-    const stepNumber = step.querySelector(".step-number");
-    const title = step.querySelector(".step-title");
+	const dot = step.querySelector(".timeline-dot");
+	const stepNumber = step.querySelector(".step-number");
+	const title = step.querySelector(".step-title");
 
-    dot?.classList.add("active");
-    stepNumber?.classList.add("purple");
-    title?.classList.add("active-title");
+	dot?.classList.add("active");
+	stepNumber?.classList.add("purple");
+	title?.classList.add("active-title");
 };
 
 // Find and activate the most centered step
 const updateActiveStep = () => {
-    const steps = getSteps();
-    if (!steps.length) return;
+	const steps = getSteps();
+	if (!steps.length) return;
 
-    let mostCenteredStep = null;
-    let minDistance = Infinity;
+	let mostCenteredStep = null;
+	let minDistance = Infinity;
 
-    const viewportCenter = window.innerHeight / 2;
+	const viewportCenter = window.innerHeight / 2;
 
-    steps.forEach((step) => {
-        const rect = step.getBoundingClientRect();
-        const elementCenter = rect.top + rect.height / 2;
-        const distance = Math.abs(elementCenter - viewportCenter);
+	steps.forEach((step) => {
+		const rect = step.getBoundingClientRect();
+		const elementCenter = rect.top + rect.height / 2;
+		const distance = Math.abs(elementCenter - viewportCenter);
 
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-            if (distance < minDistance) {
-                minDistance = distance;
-                mostCenteredStep = step;
-            }
-        }
-    });
+		if (rect.top < window.innerHeight && rect.bottom > 0) {
+			if (distance < minDistance) {
+				minDistance = distance;
+				mostCenteredStep = step;
+			}
+		}
+	});
 
-    deactivateAllSteps();
+	deactivateAllSteps();
 
-    if (mostCenteredStep) {
-        activateStep(mostCenteredStep);
-    }
+	if (mostCenteredStep) {
+		activateStep(mostCenteredStep);
+	}
 };
 
 // Scroll throttling for desktop timeline
 let ticking = false;
 const handleScroll = () => {
-    if (!ticking) {
-        window.requestAnimationFrame(() => {
-            updateActiveStep();
-            ticking = false;
-        });
-        ticking = true;
-    }
+	if (!ticking) {
+		window.requestAnimationFrame(() => {
+			updateActiveStep();
+			ticking = false;
+		});
+		ticking = true;
+	}
 };
 
 // Initial check
@@ -223,93 +219,92 @@ updateActiveStep();
 window.addEventListener("scroll", handleScroll);
 
 // Mobile timeline helpers
-const getMobileSteps = () =>
-    document.querySelectorAll(".mobile-timeline-step[data-observed]");
+const getMobileSteps = () => document.querySelectorAll(".mobile-timeline-step[data-observed]");
 
 // Remove active class from all mobile steps
 const deactivateAllMobileSteps = () => {
-    const mobileSteps = getMobileSteps();
+	const mobileSteps = getMobileSteps();
 
-    mobileSteps.forEach((step) => {
-        const dot = step.querySelector(".mobile-dot");
-        const stepNumber = step.querySelector(".mobile-step-number");
-        const title = step.querySelector(".mobile-step-title");
-        const line = step.querySelector(".mobile-dot-line");
-        const description = step.querySelector(".mobile-number-description");
+	mobileSteps.forEach((step) => {
+		const dot = step.querySelector(".mobile-dot");
+		const stepNumber = step.querySelector(".mobile-step-number");
+		const title = step.querySelector(".mobile-step-title");
+		const line = step.querySelector(".mobile-dot-line");
+		const description = step.querySelector(".mobile-number-description");
 
-        if (dot) dot.classList.remove("active");
-        if (stepNumber) stepNumber.classList.remove("purple");
-        if (title) title.classList.remove("active-title");
-        if (description) description.classList.remove("active-title");
-        if (line) {
-            line.style.height = "0";
-        }
-    });
+		if (dot) dot.classList.remove("active");
+		if (stepNumber) stepNumber.classList.remove("purple");
+		if (title) title.classList.remove("active-title");
+		if (description) description.classList.remove("active-title");
+		if (line) {
+			line.style.height = "0";
+		}
+	});
 };
 
 // Activate a specific mobile step
 const activateMobileStep = (step) => {
-    const dot = step.querySelector(".mobile-dot");
-    const stepNumber = step.querySelector(".mobile-step-number");
-    const title = step.querySelector(".mobile-step-title");
-    const line = step.querySelector(".mobile-dot-line");
-    const description = step.querySelector(".mobile-number-description");
+	const dot = step.querySelector(".mobile-dot");
+	const stepNumber = step.querySelector(".mobile-step-number");
+	const title = step.querySelector(".mobile-step-title");
+	const line = step.querySelector(".mobile-dot-line");
+	const description = step.querySelector(".mobile-number-description");
 
-    if (dot) dot.classList.add("active");
-    if (stepNumber) stepNumber.classList.add("purple");
-    if (title) title.classList.add("active-title");
-    if (description) description.classList.add("active-title");
-    if (line) {
-        line.style.height = "var(--line-height)";
-    }
+	if (dot) dot.classList.add("active");
+	if (stepNumber) stepNumber.classList.add("purple");
+	if (title) title.classList.add("active-title");
+	if (description) description.classList.add("active-title");
+	if (line) {
+		line.style.height = "var(--line-height)";
+	}
 };
 
 // Find and activate the most centered mobile step
 const updateActiveMobileStep = () => {
-    const mobileSteps = getMobileSteps();
-    if (!mobileSteps.length) return;
+	const mobileSteps = getMobileSteps();
+	if (!mobileSteps.length) return;
 
-    let mostCenteredStep = null;
-    let minDistance = Infinity;
+	let mostCenteredStep = null;
+	let minDistance = Infinity;
 
-    const viewportCenter = window.innerHeight / 2;
+	const viewportCenter = window.innerHeight / 2;
 
-    mobileSteps.forEach((step) => {
-        const rect = step.getBoundingClientRect();
-        const elementCenter = rect.top + rect.height / 2;
-        const distance = Math.abs(elementCenter - viewportCenter);
+	mobileSteps.forEach((step) => {
+		const rect = step.getBoundingClientRect();
+		const elementCenter = rect.top + rect.height / 2;
+		const distance = Math.abs(elementCenter - viewportCenter);
 
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-            if (distance < minDistance) {
-                minDistance = distance;
-                mostCenteredStep = step;
-            }
-        }
-    });
+		if (rect.top < window.innerHeight && rect.bottom > 0) {
+			if (distance < minDistance) {
+				minDistance = distance;
+				mostCenteredStep = step;
+			}
+		}
+	});
 
-    deactivateAllMobileSteps();
+	deactivateAllMobileSteps();
 
-    if (mostCenteredStep) {
-        activateMobileStep(mostCenteredStep);
-    }
+	if (mostCenteredStep) {
+		activateMobileStep(mostCenteredStep);
+	}
 };
 
 // Scroll throttling for mobile timeline
 let mobileTickingState = false;
 const handleMobileScroll = () => {
-    if (!mobileTickingState) {
-        window.requestAnimationFrame(() => {
-            updateActiveMobileStep();
-            mobileTickingState = false;
-        });
-        mobileTickingState = true;
-    }
+	if (!mobileTickingState) {
+		window.requestAnimationFrame(() => {
+			updateActiveMobileStep();
+			mobileTickingState = false;
+		});
+		mobileTickingState = true;
+	}
 };
 
 // Set CSS custom properties for all mobile steps
 getMobileSteps().forEach((step) => {
-    step.style.setProperty("--dot-gap", "2rem");
-    step.style.setProperty("--line-height", "calc(100% - 14px)");
+	step.style.setProperty("--dot-gap", "2rem");
+	step.style.setProperty("--line-height", "calc(100% - 14px)");
 });
 
 // Initial check for mobile
