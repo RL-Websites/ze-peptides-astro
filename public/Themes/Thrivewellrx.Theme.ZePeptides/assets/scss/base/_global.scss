@@ -102,8 +102,6 @@ ul {
 		align-items: center;
 		text-align: left;
 		background: transparent;
-		color: $red;
-		border: 1px solid $red;
 		outline: 0;
 		font-size: 16px;
 		font-weight: 700;
@@ -124,13 +122,13 @@ ul {
 		}
 
 		option {
-			background-color: $primary !important;
-			color: white;
+			background-color: $white !important;
+			color: $gray-dark;
 
 			&:hover,
 			&:checked {
-				background-color: rgba($primary, 0.8) !important;
-				color: white !important;
+				background-color: rgba($white, 1) !important;
+				color: $gray-dark !important;
 			}
 		}
 	}
@@ -230,12 +228,10 @@ a {
 	background: #d8baff;
 	/* Default: Light pink */
 	border-radius: 10px;
-
 }
 
 ::-webkit-scrollbar-thumb:hover {
 	background: #f0e5ff !important;
-
 }
 
 /* Smooth transitions */

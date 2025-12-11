@@ -13,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
 			<section class="registration pt-80 pt-md-120 mb-100">
 				<div class="container">
 					<div class="row justify-content-center">
-						<div class="col-md-7 col-lg-5 registration__wrapper">
+						<div class="col-md-7 col-xxl-5 registration__wrapper">
 							<div
 								class="d-flex align-items-center gap-12 fs-md-18 mt-40 mb-20 mb-md-16 cursor-pointer"
 								data-aos="fade-up"
@@ -50,7 +50,7 @@ import Layout from "../layouts/Layout.astro";
 						data-aos-delay="600"
 					>
 						<form
-							class="col-md-7 col-lg-5 registration__wrapper mt-md-20 mt-10 rounded-10"
+							class="col-md-7 col-xxl-5 registration__wrapper mt-md-20 mt-10 rounded-10"
 							id="edit-profile"
 						>
 							<div class="form-group">
@@ -107,12 +107,62 @@ import Layout from "../layouts/Layout.astro";
 							</div>
 							<div class="form-group">
 								<label class="fw-bold mb-5" for="expiry">Date of Birth</label>
-								<input
-									class="basic-input"
-									type="text"
-									id="dobField"
-									placeholder="MM/YY"
-								/>
+								<div class="dropdown__selection dropdown__selection__date dropdown__selection__date-md">
+									
+
+									<div class="select__wrapper">
+										<select class="select__options">
+											<option disabled selected>Month</option>
+											<option>January</option>
+											<option>February</option>
+											<option>March</option>
+											<option>April</option>
+											<option>May</option>
+											<option>June</option>
+											<option>July</option>
+											<option>August</option>
+											<option>September</option>
+											<option>October</option>
+											<option>November</option>
+											<option>December</option>
+										</select>
+									</div>
+									<div class="select__wrapper">
+										<select class="select__options">
+											<option disabled selected>Day</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+										</select>
+									</div>
+
+									<div class="select__wrapper">
+										<select class="select__options">
+											<option disabled selected>Year</option>
+											<option>2025</option>
+											<option>2024</option>
+											<option>2023</option>
+											<option>2022</option>
+											<option>2021</option>
+											<option>2020</option>
+											<option>2019</option>
+											<option>2018</option>
+											<option>2017</option>
+											<option>2016</option>
+											<option>2015</option>
+											<option>2014</option>
+											<option>2013</option>
+											<option>2012</option>
+											<option>2011</option>
+											<option>2010</option>
+											<option>2009</option>
+											<option>2008</option>
+											<option>2007</option>
+											<option>2006</option>
+										</select>
+									</div>
+								</div>
 								<p class="basic-error" id="dobError"
 									>Date of Birth is required</p
 								>

@@ -311,12 +311,40 @@
 			}
 
 			option {
-				background-color: $primary !important;
-				color: white;
+				background-color: $white !important;
+				color: $gray-dark;
 
 				&:hover {
-					background-color: $red;
+					background-color: rgba($white, 1) !important;
 					color: white;
+				}
+			}
+
+			&-md {
+				gap: 8px;
+				.select__options {
+					padding: 15px 15px;
+					color: $gray-dark;
+					min-width: unset;
+				}
+				.select__wrapper {
+					width: 100%;
+					&::after {
+						color: $gray-dark;
+					}
+				}
+				@media all and (max-width: 576px) {
+					.select__options {
+						font-size: 12px;
+						padding: 12.5px 10px;
+					}
+					.select__wrapper {
+						&::after {
+							font-size: 14px;
+							top: 24px;
+							right: 10px;
+						}
+					}
 				}
 			}
 
