@@ -39,20 +39,19 @@ const numberClass = "step-number";
 
 				<div class="col-6 ps-5 pt-4">
 					<h3
-						class="step-title h5 fw-bold mb-3"
+						class="step-title fw-bold mb-3"
 						data-aos="fade-up"
 						data-aos-duration="500"
 					>
 						{title}
 					</h3>
 
-					<div class="d-flex align-items-center justify-center gap-4">
+					<div class="d-flex align-items-center justify-center gap-30">
 						<div class={numberClass} data-aos="fade-up" data-aos-duration="500">
-							{" "}
 							{stepNumber}
 						</div>
 						<p
-							class="timeline-description small   mb-0 "
+							class="timeline-description small flex-grow-1  mb-0 "
 							style="line-height: 1.6;"
 							data-aos="fade-up"
 							data-aos-duration="500"
@@ -66,19 +65,19 @@ const numberClass = "step-number";
 			<div class="row align-items-start">
 				<div class="col-6 text-start pe-5 pt-4">
 					<h3
-						class="step-title h5 fw-bold mb-3"
+						class="step-title fw-bold mb-3"
 						data-aos="fade-up"
 						data-aos-duration="500"
 					>
 						{title}
 					</h3>
 
-					<div class="d-flex align-items-center justify-center gap-4">
+					<div class="d-flex align-items-center justify-center gap-30">
 						<div class={numberClass} data-aos="fade-up" data-aos-duration="500">
 							{stepNumber}
 						</div>
 						<p
-							class="timeline-description small  pt-3 mb-0 "
+							class="timeline-description small flex-grow-1 pt-3 mb-0 "
 							style="line-height: 1.6;"
 							data-aos="fade-up"
 							data-aos-duration="500"
@@ -88,8 +87,12 @@ const numberClass = "step-number";
 					</div>
 				</div>
 
-				<div class="col-6 ps-5 d-flex align-items-start justify-center gap-4">
-					<div class="timeline-img" data-aos="zoom-out" data-aos-duration="800">
+				<div class="col-6 ">
+					<div
+						class="timeline-img ms-auto"
+						data-aos="zoom-out"
+						data-aos-duration="800"
+					>
 						<img src={imageSrc} alt={imageAlt} />
 					</div>
 				</div>
