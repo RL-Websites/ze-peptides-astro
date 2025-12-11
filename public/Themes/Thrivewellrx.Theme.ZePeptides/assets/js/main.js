@@ -120,6 +120,17 @@ $(document).ready(function () {
 	});
 });
 // how it works script
+
+$(document).on("input", ".numeric-only", function () {
+	this.value = this.value.replace(/[^0-9]/g, "");
+});
+
+$(document).on("paste", ".numeric-only", function () {
+	var $this = $(this);
+	setTimeout(function () {
+		$this.val($this.val().replace(/[^0-9]/g, ""));
+	}, 10);
+});
 // This script will run on the client-side
 const steps = document.querySelectorAll(".timeline-step[data-observed]");
 

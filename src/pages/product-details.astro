@@ -55,7 +55,7 @@ import Layout from "../layouts/Layout.astro";
 
 							<div class="product-hero__cart mt-24">
 								<div class="product-action">
-									<div
+									<!-- <div
 										class="input-group product-action__cart product-action__cart--lg"
 									>
 										<span class="input-group-btn">
@@ -74,33 +74,53 @@ import Layout from "../layouts/Layout.astro";
 												<i class="icon-plus1"></i>
 											</button>
 										</span>
-									</div>
+									</div> -->
+
+									
 
 									<div class="product-action__btn mt-24">
-										<!-- <button
-											type="button"
-											class="theme-btn theme-btn__primary theme-btn__primary--uppercase"
-											>
-											Out Of Stock
-											</button> -->
-										<button
-											type="button"
-											class="theme-btn theme-btn__outline theme-btn__outline--primary"
-											data-aos="flip-left"
+										<div
+											class="input-group product-action__cart product-action__cart--primary  product-action__cart--md" data-aos="flip-left"
 											data-aos-duration="1000"
 											data-aos-once="true"
 										>
-											Buy Now
-										</button>
+											<span class="input-group-btn">
+												<button class="btn" type="button">
+													<i class="icon-minus"></i>
+												</button>
+											</span>
+											<input
+												type="text"
+												inputmode="numeric"
+												class="form-control numeric-only"
+												id="quantity"
+												value="1"
+											/>
+											<span class="input-group-btn">
+												<button class="btn" type="button">
+													<i class="icon-plus1"></i>
+												</button>
+											</span>
+										</div>
 										<button
 											type="button"
-											class="theme-btn theme-btn__primary"
+											class="theme-btn theme-btn-size-md theme-btn__primary"
 											data-aos="flip-left"
 											data-aos-duration="1000"
 											data-aos-once="true"
 										>
 											Add to Cart
 										</button>
+										<button
+											type="button"
+											class="theme-btn theme-btn-size-md theme-btn__outline theme-btn__outline--primary"
+											data-aos="flip-left"
+											data-aos-duration="1000"
+											data-aos-once="true"
+										>
+											Buy Now
+										</button>
+										
 									</div>
 								</div>
 							</div>
@@ -190,8 +210,30 @@ import Layout from "../layouts/Layout.astro";
 									class="tab-pane fade"
 									id="pills-profile"
 									role="tabpanel"
-									aria-labelledby="pills-profile-tab">..3.</div
-								>
+									aria-labelledby="pills-profile-tab">
+									<div class="tab-pills">
+
+										<div class="tab-pills__single">
+												<span class="fs-md-18 fs-sm-16 fs-14 lh-1 fw-bold"
+													>.50mg</span
+												>
+												<span class="fs-md-16 fs-sm-14 fs-12 lh-1">$299</span>
+											</div>
+											<div class="tab-pills__single">
+												<span class="fs-md-18 fs-sm-16 fs-14 lh-1 fw-bold"
+													>.50mg</span
+												>
+												<span class="fs-md-16 fs-sm-14 fs-12 lh-1">$299</span>
+											</div>
+											<div class="tab-pills__single">
+												<span class="fs-md-18 fs-sm-16 fs-14 lh-1 fw-bold"
+													>.50mg</span
+												>
+												<span class="fs-md-16 fs-sm-14 fs-12 lh-1">$299</span>
+											</div>
+										</div
+									>
+									</div>
 							</div>
 
 							<div

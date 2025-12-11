@@ -215,6 +215,13 @@
 			}
 		}
 
+		&-md {
+			padding: 9px;
+			font-size: 18px;
+			line-height: 1.6;
+			height: 47px;
+		}
+
 		&-lg {
 			padding: 11px 10px;
 			font-size: $fs-18;
