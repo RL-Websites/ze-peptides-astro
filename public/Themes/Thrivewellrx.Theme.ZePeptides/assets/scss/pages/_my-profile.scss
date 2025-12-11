@@ -3,18 +3,16 @@
 .my-profile {
 	padding-top: 120px;
 	padding-bottom: 100px;
-
 }
 
-.my-profile__input{
-
+.my-profile__input {
 	&:-webkit-autofill,
 	&:-webkit-autofill:hover,
 	&:-webkit-autofill:focus,
 	&:-webkit-autofill:active {
 		-webkit-text-fill-color: black !important;
 		/* THE REAL FIX */
-		box-shadow: 0 0 0 1000px #FBF9FF inset !important;
+		box-shadow: 0 0 0 1000px #fbf9ff inset !important;
 		/* THE SECRET iOS TRICK */
 		transition: background-color 99999s ease-in-out 0s !important;
 		/* Helps but not required */
@@ -31,6 +29,9 @@
 .form-wrapper {
 	background-color: #fbf9ff;
 	padding: 20px 40px 20px;
+	@media all and (max-width: 768px) {
+		padding: 20px;
+	}
 }
 
 // .buttons {
