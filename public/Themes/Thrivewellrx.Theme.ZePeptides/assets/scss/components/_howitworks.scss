@@ -171,10 +171,26 @@
 .mobile-timeline-step {
 	position: relative;
 
+	&::after {
+		position: absolute;
+		content: "";
+		left: 6px;
+		top: 30px;
+		transform: translateX(-50%);
+		width: 1px;
+		height: calc(100% - 30sspx);
+		background-color: $gray-border;
+		transition: background-color 0.3s ease;
+	}
+
 	&:last-child {
 		margin-bottom: 0;
 
 		.mobile-dot::after {
+			display: none;
+		}
+
+		&::after {
 			display: none;
 		}
 	}
@@ -210,17 +226,17 @@
 	}
 
 	// Vertical connecting line
-	&::after {
-		content: "";
-		position: absolute;
-		left: 50%;
-		top: 24px;
-		transform: translateX(-50%);
-		width: 1px;
-		height: 230px;
-		background-color: $gray-border;
-		transition: background-color 0.3s ease;
-	}
+	// &::after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	left: 50%;
+	// 	top: 24px;
+	// 	transform: translateX(-50%);
+	// 	width: 1px;
+	// 	height: 230px;
+	// 	background-color: $gray-border;
+	// 	transition: background-color 0.3s ease;
+	// }
 }
 
 // Mobile Image
