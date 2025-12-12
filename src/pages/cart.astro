@@ -60,7 +60,7 @@ import Layout from "../layouts/Layout.astro";
 			<!--==|| Product Cart Items Status End ||== -->
 
 			<!--==|| Cart Information Status Start ||== -->
-			<section class="cart-view pb-md-100 pb-50">
+			<section class="cart-view pb-md-100 pb-50 d-none">
 				<div class="container">
 					<div class="row">
 						<div
@@ -287,9 +287,8 @@ import Layout from "../layouts/Layout.astro";
 											data-aos-delay="100"
 											data-aos-once="true"
 										>
-											<a
+											<a class="theme-btn theme-btn__primary d-block w-100" 
 												href="/payment-method"
-												class="theme-btn theme-btn__primary d-block"
 											>
 												Proceed to Checkout
 											</a>
@@ -366,14 +365,14 @@ import Layout from "../layouts/Layout.astro";
 
 			<!--==|| Empty Cart Status Start ||== -->
 			<section
-				class="cart-view pt-md-150 pb-md-100 pt-120 pb-50 d-none"
+				class="cart-view pt-md-150 pb-md-100 pt-120 pb-50"
 				data-aos="fade-up"
 				data-aos-duration="1000"
 			>
 				<div class="container">
 					<div class="row">
 						<div class="text-center">
-							<div class="cart-empty__graphic">
+							<div class="cart-empty__graphic mx-auto">
 									<img
 										class="cart-empty__img"
 										src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/empty-cart.svg"
@@ -388,10 +387,10 @@ import Layout from "../layouts/Layout.astro";
 							<p class="cart-empty__text font-sfui fs-md-24 fs-20 text-secondary fw-bold mt-30"
 								>Your cart is currently empty!</p
 							>
-							<div class="mt-20" data-aos="flip-left" data-aos-duration="1000">
+							<div class="mt-24" data-aos="flip-left" data-aos-duration="1000">
 								<a
 									href="/"
-									class="theme-btn theme-btn__primary theme-btn__primary--accent px-20"
+									class="theme-btn theme-btn__primary theme-btn-size-md px-md-100 d-inline-block"
 								>
 									Continue Shopping
 								</a>
