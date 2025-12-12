@@ -86,8 +86,11 @@
 				}
 			}
 		}
+		
 	}
-
+.table>:not(caption)>*>*{
+			border-bottom: 0 !important;
+		}
 	&.normal-table {
 		.table {
 			&__normal {
