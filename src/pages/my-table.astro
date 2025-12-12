@@ -1,0 +1,440 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- =====|| Main Section Start ||====== -->
+	<main class="page page__alt">
+		<div class="page__wrapper page__wrapper--alt">
+			<section class="py-md-100 py">
+				<div class="container">
+					<div
+						class="card-basic card-basic--no-shadow card-basic__table card-basic__table-desktop mt-md-30 mt-20"
+					>
+						<div class="card-basic__body">
+							<div class="list-table">
+								<div class="table-responsive">
+									<table
+										class="quickgrid table table-striped"
+										aria-rowcount="11"
+									>
+										<thead>
+											<tr>
+												<th
+													class="col-justify-left country-name col-sort-asc"
+													aria-sort="ascending"
+													scope="col"
+												>
+													<div class="col-header-content">
+														<button
+															class="col-options-button"
+															type="button"
+															title="Column options"></button>
+														<div class="col-title">
+															<div class="col-title-text">Created On</div>
+														</div>
+													</div>
+												</th>
+
+												<th class="col-justify-left country-name" scope="col">
+													<div class="col-header-content">
+														<button
+															class="col-options-button"
+															type="button"
+															title="Column options"></button>
+														<div class="col-title">
+															<div class="col-title-text">Medication</div>
+														</div>
+													</div>
+												</th>
+
+												<th class="col-justify-left country-name" scope="col">
+													<div class="col-header-content">
+														<button
+															class="col-options-button"
+															type="button"
+															title="Column options"></button>
+														<div class="col-title">
+															<div class="col-title-text">OrderID</div>
+														</div>
+													</div>
+												</th>
+
+												<th class="col-justify-center" scope="col">
+													<div class="col-header-content">
+														<div class="col-title">
+															<div class="col-title-text">Prescription</div>
+														</div>
+													</div>
+												</th>
+
+												<th class="col-justify-center" scope="col">
+													<div class="col-header-content">
+														<div class="col-title">
+															<div class="col-title-text">Reports</div>
+														</div>
+													</div>
+												</th>
+
+												<th class="col-justify-center" scope="col">
+													<div class="col-header-content">
+														<div class="col-title">
+															<div class="col-title-text">License</div>
+														</div>
+													</div>
+												</th>
+
+												<th class="col-justify-left country-name" scope="col">
+													<div class="col-header-content">
+														<button
+															class="col-options-button"
+															type="button"
+															title="Column options"></button>
+														<div class="col-title">
+															<div class="col-title-text">Billing Name</div>
+														</div>
+													</div>
+												</th>
+
+												<th class="col-justify-left" scope="col">
+													<div class="col-header-content">
+														<button
+															class="col-options-button"
+															type="button"
+															title="Column options"></button>
+														<div class="col-title">
+															<div class="col-title-text">Amount</div>
+														</div>
+													</div>
+												</th>
+
+												<th class="col-justify-center" scope="col">
+													<div class="col-header-content">
+														<div class="col-title">
+															<div class="col-title-text">Status</div>
+														</div>
+													</div>
+												</th>
+
+												<th class="col-justify-start" scope="col">
+													<div class="col-header-content">
+														<div class="col-title">
+															<div class="col-title-text">Details</div>
+														</div>
+													</div>
+												</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<td class="col-justify-left country-name"
+													>12/5/2025 10:12:45 AM</td
+												>
+												<td class="col-justify-left country-name"
+													>Tirzepatide Injection</td
+												>
+												<td class="col-justify-left country-name"
+													>SO20251200002</td
+												>
+												<td class="col-justify-center">
+													<div class="list-table__actions">
+														<a
+															href="zepetides6/upload-report?id=1039"
+															class="theme-btn theme-btn__accent text-secondary fw-normal"
+														>
+															<i class="icon-upload"></i>
+														</a>
+													</div>
+												</td>
+												<td class="col-justify-center">
+													<div class="list-table__actions">
+														<a
+															href="zepetides6/upload-report?id=1039"
+															class="theme-btn theme-btn__accent text-secondary fw-normal"
+														>
+															<i class="icon-upload"></i>
+														</a>
+													</div>
+												</td>
+												<td class="col-justify-center">
+													<div class="list-table__actions">
+														<a
+															href="zepetides6/upload-report?id=1039"
+															class="theme-btn theme-btn__accent text-secondary fw-normal"
+														>
+															<i class="icon-upload"></i>
+														</a>
+													</div>
+												</td>
+												<td class="col-justify-left country-name"
+													>Emily Stone</td
+												>
+												<td class="col-justify-left">125.50</td>
+												<td class="col-justify-center">
+													<span class="status-pill status-pill--default"
+														>PENDING</span
+													>
+												</td>
+												<td class="col-justify-start">
+													<a
+														href="zepetides6/order-detail?id=1039"
+														class="theme-btn theme-btn__accent text-secondary fw-normal"
+													>
+														<i class="icon-upload"></i>
+													</a>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="col-justify-left country-name"
+													>12/5/2025 10:47:13 AM</td
+												>
+												<td class="col-justify-left country-name"
+													>B12 Energy Booster</td
+												>
+												<td class="col-justify-left country-name"
+													>SO20251200003</td
+												>
+												<td class="col-justify-center">
+													<div class="list-table__actions">
+														<a
+															href="zepetides6/upload-report?id=1040"
+															class="theme-btn theme-btn__accent text-secondary fw-normal"
+														>
+															<i class="icon-upload"></i>
+														</a>
+													</div>
+												</td>
+												<td class="col-justify-center">
+													<div class="list-table__actions">
+														<a
+															href="zepetides6/upload-report?id=1040"
+															class="theme-btn theme-btn__accent text-secondary fw-normal"
+														>
+															<i class="icon-upload"></i>
+														</a>
+													</div>
+												</td>
+												<td class="col-justify-center">
+													<div class="list-table__actions">
+														<a
+															href="zepetides6/upload-report?id=1040"
+															class="theme-btn theme-btn__accent text-secondary fw-normal"
+														>
+															<i class="icon-upload"></i>
+														</a>
+													</div>
+												</td>
+												<td class="col-justify-left country-name"
+													>Michael Carter</td
+												>
+												<td class="col-justify-left">45.00</td>
+												<td class="col-justify-center">
+													<span class="status-pill status-pill--default"
+														>COMPLETED</span
+													>
+												</td>
+												<td class="col-justify-start">
+													<a
+														href="zepetides6/order-detail?id=1040"
+														class="theme-btn theme-btn__accent text-secondary fw-normal"
+													>
+														<i class="icon-upload"></i>
+													</a>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="col-justify-left country-name"
+													>12/5/2025 11:05:29 AM</td
+												>
+												<td class="col-justify-left country-name"
+													>Weight Loss Peptide</td
+												>
+												<td class="col-justify-left country-name"
+													>SO20251200004</td
+												>
+												<td class="col-justify-center">
+													<div class="list-table__actions">
+														<a
+															href="zepetides6/upload-report?id=1041"
+															class="theme-btn theme-btn__accent text-secondary fw-normal"
+														>
+															<i class="icon-upload"></i>
+														</a>
+													</div>
+												</td>
+												<td class="col-justify-center">
+													<div class="list-table__actions">
+														<a
+															href="zepetides6/upload-report?id=1041"
+															class="theme-btn theme-btn__accent text-secondary fw-normal"
+														>
+															<i class="icon-upload"></i>
+														</a>
+													</div>
+												</td>
+												<td class="col-justify-center">
+													<div class="list-table__actions">
+														<a
+															href="zepetides6/upload-report?id=1041"
+															class="theme-btn theme-btn__accent text-secondary fw-normal"
+														>
+															<i class="icon-upload"></i>
+														</a>
+													</div>
+												</td>
+												<td class="col-justify-left country-name"
+													>Sarah Johnson</td
+												>
+												<td class="col-justify-left">98.75</td>
+												<td class="col-justify-center">
+													<span class="status-pill status-pill--default"
+														>RECEIVED</span
+													>
+												</td>
+												<td class="col-justify-start">
+													<a
+														href="zepetides6/order-detail?id=1041"
+														class="theme-btn theme-btn__accent text-secondary fw-normal"
+													>
+														<i class="icon-upload"></i>
+													</a>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="col-justify-left country-name"
+													>12/5/2025 11:44:02 AM</td
+												>
+												<td class="col-justify-left country-name"
+													>Metabolic Support Injection</td
+												>
+												<td class="col-justify-left country-name"
+													>SO20251200005</td
+												>
+												<td class="col-justify-center">
+													<div class="list-table__actions">
+														<a
+															href="zepetides6/upload-report?id=1042"
+															class="theme-btn theme-btn__accent text-secondary fw-normal"
+														>
+															<i class="icon-upload"></i>
+														</a>
+													</div>
+												</td>
+												<td class="col-justify-center">
+													<div class="list-table__actions">
+														<a
+															href="zepetides6/upload-report?id=1042"
+															class="theme-btn theme-btn__accent text-secondary fw-normal"
+														>
+															<i class="icon-upload"></i>
+														</a>
+													</div>
+												</td>
+												<td class="col-justify-center">
+													<div class="list-table__actions">
+														<a
+															href="zepetides6/upload-report?id=1042"
+															class="theme-btn theme-btn__accent text-secondary fw-normal"
+														>
+															<i class="icon-upload"></i>
+														</a>
+													</div>
+												</td>
+												<td class="col-justify-left country-name"
+													>David Miller</td
+												>
+												<td class="col-justify-left">112.30</td>
+												<td class="col-justify-center">
+													<span class="status-pill status-pill--default"
+														>PENDING</span
+													>
+												</td>
+												<td class="col-justify-start">
+													<a
+														href="zepetides6/order-detail?id=1042"
+														class="theme-btn theme-btn__accent text-secondary fw-normal"
+													>
+														<i class="icon-upload"></i>
+													</a>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="col-justify-left country-name"
+													>12/5/2025 12:18:51 PM</td
+												>
+												<td class="col-justify-left country-name"
+													>Hormone Balance Shot</td
+												>
+												<td class="col-justify-left country-name"
+													>SO20251200006</td
+												>
+												<td class="col-justify-center">
+													<div class="list-table__actions">
+														<a
+															href="zepetides6/upload-report?id=1043"
+															class="theme-btn theme-btn__accent text-secondary fw-normal"
+														>
+															<i class="icon-upload"></i>
+														</a>
+													</div>
+												</td>
+												<td class="col-justify-center">
+													<div class="list-table__actions">
+														<a
+															href="zepetides6/upload-report?id=1043"
+															class="theme-btn theme-btn__accent text-secondary fw-normal"
+														>
+															<i class="icon-upload"></i>
+														</a>
+													</div>
+												</td>
+												<td class="col-justify-center">
+													<div class="list-table__actions">
+														<a
+															href="zepetides6/upload-report?id=1043"
+															class="theme-btn theme-btn__accent text-secondary fw-normal"
+														>
+															<i class="icon-upload"></i>
+														</a>
+													</div>
+												</td>
+												<td class="col-justify-left country-name"
+													>Laura White</td
+												>
+												<td class="col-justify-left">67.20</td>
+												<td class="col-justify-center">
+													<span class="status-pill status-pill--default"
+														>COMPLETED</span
+													>
+												</td>
+												<td class="col-justify-start">
+													<a
+														href="zepetides6/order-detail?id=1043"
+														class="theme-btn theme-btn__accent text-secondary fw-normal"
+													>
+														<i class="icon-upload"></i>
+													</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<!-- =====|| Main Section End ||====== -->
+	<Footer />
+</Layout>
