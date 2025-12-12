@@ -51,6 +51,8 @@
 				td:last-child {
 					border-bottom: 0 !important;
 				}
+
+
 			}
 		}
 
@@ -91,6 +93,7 @@
 	&.normal-table {
 		.table {
 			&__normal {
+
 				thead,
 				tbody,
 				tr {
@@ -115,12 +118,12 @@
 // 	background-color: #DADADA !important;
 // }
 
-.table-striped > tbody > tr:nth-of-type(odd) {
+.table-striped>tbody>tr:nth-of-type(odd) {
 	--bs-table-accent-bg: unset;
 	color: var(--bs-table-striped-color);
 }
 
-.table-striped > tbody > tr:nth-of-type(odd) {
+.table-striped>tbody>tr:nth-of-type(odd) {
 	background-color: transparent !important;
 }
 
@@ -179,12 +182,17 @@
 	}
 
 	.order-table {
+		border: 1px solid $primary-light;
+		border-radius: 10px;
+		margin-bottom: 20px;
+
 		&__row {
 			padding: 16px 24px;
 			border-bottom: 1px solid $primary-light;
 
 			&:last-child {
 				border-bottom: 0;
+				margin-bottom: 0;
 			}
 		}
 
