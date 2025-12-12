@@ -280,29 +280,29 @@ import Layout from "../layouts/Layout.astro";
 											<p class="pricing__total--name">Total</p>
 											<p class="pricing__total--value">$175.87</p>
 										</div>
+										<div
+											class="text-center mt-20 d-none d-md-block"
+											data-aos="flip-left"
+											data-aos-duration="1000"
+											data-aos-delay="100"
+											data-aos-once="true"
+										>
+											<a
+												href="/payment-method"
+												class="theme-btn theme-btn__primary d-block"
+											>
+												Proceed to Checkout
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="row d-none">
-						<div class="col-sm-12">
-							<div class="cart-empty">
-								<div class="cart-empty__graphic">
-									<img
-										class="cart-empty__img"
-										src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/cart-empty.png"
-										alt="Empty Cart"
-									/>
-								</div>
+					
 
-								<p class="cart-empty__text">Your cart is currently empty!</p>
-							</div>
-						</div>
-					</div>
-
-					<div
+					<!-- <div
 						class="attention mt-40"
 						data-aos="fade-up"
 						data-aos-duration="1000"
@@ -342,7 +342,7 @@ import Layout from "../layouts/Layout.astro";
 						>
 							Proceed to Checkout
 						</a>
-					</div>
+					</div> -->
 				</div>
 
 				<div class="floating__buttons d-md-none d-block">
@@ -373,12 +373,19 @@ import Layout from "../layouts/Layout.astro";
 				<div class="container">
 					<div class="row">
 						<div class="text-center">
-							<img
+							<div class="cart-empty__graphic">
+									<img
+										class="cart-empty__img"
+										src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/empty-cart.svg"
+										alt="Empty Cart"
+									/>
+								</div>
+							<!-- <img
 								class="img-fluid"
 								src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/empty-cart.svg"
 								alt=""
-							/>
-							<p class="font-sfui fs-md-24 fs-20 text-secondary fw-bold mt-30"
+							/> -->
+							<p class="cart-empty__text font-sfui fs-md-24 fs-20 text-secondary fw-bold mt-30"
 								>Your cart is currently empty!</p
 							>
 							<div class="mt-20" data-aos="flip-left" data-aos-duration="1000">

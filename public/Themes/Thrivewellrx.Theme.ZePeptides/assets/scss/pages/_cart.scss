@@ -1,7 +1,6 @@
 @use "../base/variables" as *;
 
 .cart-hero {
-
 	&__heading {
 		font-size: $fs-30;
 		line-height: 1.4;
@@ -101,7 +100,6 @@
 	}
 }
 
-
 .cart {
 	&-card {
 		border-radius: 10px;
@@ -142,8 +140,6 @@
 				}
 			}
 		}
-
-
 	}
 
 	&__item {
@@ -161,7 +157,6 @@
 				border-bottom: 0 !important;
 			}
 		}
-
 
 		@media all and (max-width: 767px) {
 			border: 1px solid #e6d4ff;
@@ -401,7 +396,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-bottom: 22px;
+		margin-bottom: 12px;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -409,7 +404,7 @@
 
 		&--name {
 			font-weight: 700;
-			line-height: 1;
+			line-height: 1.6;
 			font-size: $fs-16;
 			margin-bottom: 0px;
 		}
@@ -424,13 +419,14 @@
 	}
 
 	&__coupon {
-		padding: 24px;
+		padding: 20px;
 	}
 
 	&__total {
 		border-top: 1px dashed #e6d4ff;
 		display: flex;
 		flex-direction: column;
+		padding: 20px 24px;
 
 		&-item {
 			display: flex;
@@ -441,7 +437,7 @@
 		&--name,
 		&--value {
 			font-size: $fs-28;
-			font-weight: 600;
+			font-weight: 700;
 			color: $secondary;
 			margin-bottom: 0px;
 			line-height: 0.8;
@@ -464,7 +460,6 @@
 		}
 
 		&__item {
-
 			&--name,
 			&--value {
 				font-size: $fs-14;
@@ -474,10 +469,6 @@
 		&__coupon {
 			padding: 12px 16px;
 		}
-	}
-
-	&__total {
-		padding: 30px 24px;
 	}
 }
 
@@ -590,7 +581,6 @@
 		gap: 12px;
 
 		@media only screen and (max-width: 768px) {
-
 			.products__filter-btn.products__filter-left,
 			.products__filter-btn.products__filter-right {
 				display: none !important;
@@ -798,5 +788,4 @@
 			max-height: 600px;
 		}
 	}
-
 }
