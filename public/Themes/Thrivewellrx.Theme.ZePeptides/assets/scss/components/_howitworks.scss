@@ -67,7 +67,7 @@
 // Timeline Step
 .timeline-step {
 	position: relative;
-	margin-bottom: 8rem;
+	margin-bottom: 115px;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -91,7 +91,7 @@
 		content: "";
 		position: absolute;
 		left: 50%;
-		top: 4rem; // Start below the dot (12px dot + some gap)
+		top: 40px; // Start below the dot (12px dot + some gap)
 		height: calc(100% + 50px); // Height minus starting position
 		width: 1px;
 		background-color: $gray-border;
@@ -104,7 +104,7 @@
 .timeline-dot {
 	position: absolute;
 	left: 50%;
-	top: 2rem;
+	top: 0;
 	transform: translateX(-50%);
 	width: 12px;
 	height: 12px;
@@ -170,24 +170,18 @@
 // Mobile Timeline
 .mobile-timeline-step {
 	position: relative;
-	margin-bottom: 3rem;
 
-	// Hover effects
-	// &:hover {
-	//   .mobile-step-number {
-	//     color: primary;
-	//   }
-
-	//   .mobile-dot {
-	//     background-color: primary;
-
-	//     &::after {
-	//       background-color: primary;
-	//     }
-	//   }
-	// }
-
-	// Remove line from last step
+	&::after {
+		position: absolute;
+		content: "";
+		left: 6px;
+		top: 30px;
+		transform: translateX(-50%);
+		width: 1px;
+		height: calc(100% - 30px);
+		background-color: $gray-border;
+		transition: background-color 0.3s ease;
+	}
 
 	&:last-child {
 		margin-bottom: 0;
@@ -195,12 +189,17 @@
 		.mobile-dot::after {
 			display: none;
 		}
+
+		&::after {
+			display: none;
+		}
 	}
 }
 
 // Mobile Step Number
 .mobile-step-number {
-	font-size: 3rem;
+	font-family: "Bebas Neue", sans-serif;
+	font-size: $fs-80;
 	font-weight: bold;
 	color: $black;
 	line-height: 1;
@@ -214,30 +213,30 @@
 
 // Mobile Dot
 .mobile-dot {
-	width: 10px;
-	height: 10px;
+	width: 16px;
+	height: 16px;
 	background-color: $gray-border;
 	border-radius: 50%;
 	position: relative;
+	top: 6px;
 	transition: all 0.3s ease;
-	margin-top: 4px;
 
 	&.active {
 		background-color: $primary;
 	}
 
 	// Vertical connecting line
-	&::after {
-		content: "";
-		position: absolute;
-		left: 50%;
-		top: 20px;
-		transform: translateX(-50%);
-		width: 1px;
-		height: 230px;
-		background-color: $gray-border;
-		transition: background-color 0.3s ease;
-	}
+	// &::after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	left: 50%;
+	// 	top: 24px;
+	// 	transform: translateX(-50%);
+	// 	width: 1px;
+	// 	height: 230px;
+	// 	background-color: $gray-border;
+	// 	transition: background-color 0.3s ease;
+	// }
 }
 
 // Mobile Image

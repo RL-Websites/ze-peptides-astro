@@ -31,7 +31,7 @@ import Layout from "../layouts/Layout.astro";
 						<div class="card-basic__body">
 							<div class="list-table">
 								<div class="table-responsive">
-									<table class="table table-striped order-list">
+									<table class="table order-list">
 										<thead>
 											<tr>
 												<th>Date</th>
@@ -273,9 +273,10 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 
 					<div
-						class="card-basic card-basic--no-shadow card-basic__table-mobile mt-30"
+						class="card-basic card-basic--no-shadow card-basic__table-mobile mt-30 border-0 rounded-0"
 					>
 						<div class="card-basic__body">
+							<OrderTable />
 							<OrderTable />
 						</div>
 					</div>
