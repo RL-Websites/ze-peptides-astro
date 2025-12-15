@@ -130,11 +130,11 @@ $(document).ready(function () {
 	});
 
 	// Product Read More
-	$("#readMore").on("click", function () {
-		const parent = $(this).parents(".product-hero__details");
-		parent.toggleClass("show");
-		$(this).text(parent.hasClass("show") ? "Read Less" : "Read More");
-	});
+	$(document).on("click", "#readMore", function () {
+    const parent = $(this).parents(".product-hero__details");
+    parent.toggleClass("show");
+    $(this).text(parent.hasClass("show") ? "Read Less" : "Read More");
+});
 });
 
 // Numeric-only input handlers
