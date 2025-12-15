@@ -1,9 +1,30 @@
 // Header, menu, scrolling, toasts, etc.
 $(document).ready(function () {
-	// AOS init (guarded)
-	if (window.AOS && typeof AOS.init === "function") {
-		AOS.init();
-	}
+    document.addEventListener("keydown", function (e) {
+    const el = e.target;
+
+    if (!el || (el.id !== "expiry" && el.id !== 'cvc' && el.id !=='zipCode')) return;
+
+    // allow control keys
+    if (
+        e.key === "Backspace" ||
+        e.key === "Delete" ||
+        e.key === "ArrowLeft" ||
+        e.key === "ArrowRight" ||
+        e.key === "Tab"
+    ) {
+        return;
+    }
+
+    // allow digits only
+    if (!/^[0-9]$/.test(e.key)) {
+        e.preventDefault(); // ✅ WORKS (JS side)
+    }
+});
+    // AOS init (guarded)
+    if (window.AOS && typeof AOS.init === "function") {
+        AOS.init();
+    }
 
 	// Tooltip
 	$(function () {
@@ -109,11 +130,11 @@ $(document).ready(function () {
 	});
 
 	// Product Read More
-	$("#readMore").on("click", function () {
-		const parent = $(this).parents(".product-hero__details");
-		parent.toggleClass("show");
-		$(this).text(parent.hasClass("show") ? "Read Less" : "Read More");
-	});
+	$(document).on("click", "#readMore", function () {
+    const parent = $(this).parents(".product-hero__details");
+    parent.toggleClass("show");
+    $(this).text(parent.hasClass("show") ? "Read Less" : "Read More");
+});
 });
 
 // Numeric-only input handlers
