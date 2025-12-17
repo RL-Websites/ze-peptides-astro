@@ -117,18 +117,15 @@ $(document).ready(function () {
 	});
 
 	$(document).on("click", "#getStartedBtn", function () {
-		const productSection = $(".product");
-
-		if (productSection.length) {
-			$("html, body").animate(
-				{
-					scrollTop: productSection.offset().top - 75,
-				},
-				"smooth"
-			);
+		const baseUrl = $("#homeUrl").val();
+		if (baseUrl) {
+			window.location.href = baseUrl + "?loc=product";
 		}
-	});
+		else {
+			window.location.href = "?loc=product";
+		}
 
+	});
 	// Product Read More
 	$(document).on("click", "#readMore", function () {
     const parent = $(this).parents(".product-hero__details");
