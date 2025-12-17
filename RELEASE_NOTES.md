@@ -3,6 +3,8 @@
 ## [0.0.1] - 2025-12-17
 
 - fixed background issue on homepage for iPhone
+- fixed login button not animating on smaller screen laptops
+- faq nbsp added
 
 ## [0.0.1] - 2025-12-10
 
