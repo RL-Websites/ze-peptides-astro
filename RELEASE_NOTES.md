@@ -1,5 +1,9 @@
 # Release Notes
 
+## [0.0.1] - 2025-12-17
+
+- fixed background issue on homepage for iPhone
+
 ## [0.0.1] - 2025-12-10
 
 - adding animations on remaining pages
