@@ -26,7 +26,9 @@
 		}
 
 		background: url("../img/bg/hero-back.png") no-repeat center top / cover;
-		background-attachment: fixed;
+		background-attachment: scroll;
+		background-size: cover;
+		background-position: center center;
 
 		@media all and (max-width: 768px) {
 			align-items: center;
@@ -328,9 +330,11 @@
 @media only screen and (max-width: 768px) {
 	.home {
 		&__hero {
-			padding: 35px 0 0 0;
+			padding: 122px 0 44px 0;
 			background-size: cover;
 			background-position: center center;
+			min-height: 100vh;
+			min-height: -webkit-fill-available; // iOS Safari fix
 		}
 	}
 
