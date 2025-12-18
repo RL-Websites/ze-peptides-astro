@@ -24,7 +24,13 @@ const isHome = Astro.url.pathname === "/";
 					<li><a href="/about">About Us</a></li>
 					<li><a href="/contact-us">Contact</a></li>
 					<!-- <li><a href="/faq">FAQ</a></li> -->
-				</ul>
+					 <li>
+						<button type="button" onclick="goToLogin()" class="theme-btn theme-btn__outline theme-btn__outline--secondary">Log In</button>
+					</li>
+					<!-- <li id="getStartedLi" class="site__menu--signup show-in-mobile">
+						<button type="button" onclick="goToQuiz()" class="theme-btn theme-btn__primary cursor-pointer">Get Started</button>
+					</li>
+				</ul> -->
 			</nav>
 			<div class="cart">
 				<a href="/cart" class="header-icon cart-icon">

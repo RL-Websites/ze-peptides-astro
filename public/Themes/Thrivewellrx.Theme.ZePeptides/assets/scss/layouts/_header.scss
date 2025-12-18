@@ -18,7 +18,7 @@
 		}
 
 		&.menu-open {
-			background-color: $primary;
+			background-color: white;
 
 			.site__menu__list li a {
 				color: $white;
@@ -364,11 +364,11 @@
 
 			&.menu-open {
 				.hamburger-menu {
-					color: $white;
+					color: $primary;
 				}
 
 				.cart-icon .cart__badge {
-					color: $primary;
+					color: $white;
 				}
 			}
 		}
@@ -385,7 +385,7 @@
 			&__list {
 				padding: 30px 0;
 				flex-direction: column;
-				gap: 40px;
+				gap: 50px;
 				justify-content: flex-start;
 				position: fixed;
 				z-index: 999;
@@ -400,7 +400,7 @@
 					right: 0;
 					min-height: 100vh !important;
 					height: 100% !important;
-					background-color: $primary;
+					background-color: rgba(255, 255, 255, 1);
 					z-index: 999;
 
 					.site__menu--auth.show-in-mobile {
@@ -408,21 +408,21 @@
 					}
 
 					.theme-btn__outline {
-						border: 2px solid $white;
-						color: $white;
+						border: 2px solid #5708C6;
+						color: #5708C6;
 					}
 				}
 
 				li a {
-					color: $white;
+					color: $black !important;
 					font-size: 16px;
 					display: block;
 					width: 100%;
 					padding: 5px 0;
-					border-bottom: 1px solid $primary-light;
+					// border-bottom: 1px solid $primary-light;
 
 					&::after {
-						display: none;
+						bottom: 0;
 					}
 
 					&:hover,
@@ -441,6 +441,9 @@
 
 	.hamburger-menu {
 		display: flex; // Keep it visible but handled in mobile-header-elements
+		.icon-cross, .icon-hamburger-menu{
+			font-size: $fs-18;
+		}
 	}
 
 	// Mobile Header Layout Adjustments
