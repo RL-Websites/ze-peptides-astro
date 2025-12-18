@@ -3,12 +3,16 @@ import MobileTimelineStep from "./MobileTimelineStep.astro";
 import TimelineStep from "./TimelineStep.astro";
 
 const workImg =
-	"Themes/Thrivewellrx.Theme.ZePeptides/assets/img/howitworks/works.png";
+	"Themes/Thrivewellrx.Theme.ZePeptides/assets/img/howitworks/1.svg";
+const workImg2 =
+	"Themes/Thrivewellrx.Theme.ZePeptides/assets/img/howitworks/2.svg";
+const workImg3 =
+	"Themes/Thrivewellrx.Theme.ZePeptides/assets/img/howitworks/3.svg";
 ---
 
 <section class="how-works py-50 py-md-100">
 	<div class="container">
-		<div class="text-center mb-md-50 mb-30">
+		<div class="text-center mb-md-100 mb-30">
 			<h1
 				class="site__heading-one mb-3"
 				data-aos="fade-up"
@@ -30,8 +34,8 @@ const workImg =
 		<div class="timeline-desktop d-none d-lg-block">
 			<TimelineStep
 				stepNumber={1}
-				title="Consultation & Assessment"
-				description="Your transformation begins with a free, no-obligation consultation. We'll learn about your goals, review your health background, and determine whether GLP-1 therapy is right for you. Our team will explain how the medication works, what to expect, and answer all your questions about treatment, cost, and results."
+				title="Pick Your Product"
+				description="Browse our catalog and select the medication or wellness product that fits your needs. No medical forms, no doctor approval, and no prescription required. Just choose your product and proceed."
 				imageSrc={workImg}
 				imageAlt="Doctor consultation"
 				alignment="left"
@@ -39,18 +43,18 @@ const workImg =
 
 			<TimelineStep
 				stepNumber={2}
-				title="Doctor Evaluation & Prescription"
-				description="Once you're ready, your health profile is securely submitted to our licensed medical team through Doseward. A state-certified physician reviews your information and schedules a teleconsultation at your convenience. During this call, you can discuss any medical concerns before the doctor finalizes your personalized prescription."
-				imageSrc={workImg}
+				title="Secure Checkout"
+				description="Complete your purchase through our fast and secure checkout. Once your payment is confirmed, your order is automatically sent to the partner pharmacy for fulfillment."
+				imageSrc={workImg2}
 				imageAlt="Doctor evaluation"
 				alignment="right"
 			/>
 
 			<TimelineStep
 				stepNumber={3}
-				title="Medication Compounding & Delivery"
-				description="After your prescription is approved, our FDA-compliant 503A partner pharmacy compounds your customized medication. Your order is then shipped directly to your home in discreet packaging, along with easy-to-follow administration instructions, nutritional guidance, and lifestyle tips."
-				imageSrc={workImg}
+				title="Pharmacy Fulfillment & Delivery"
+				description="Our licensed pharmacy prepares your medication and ships it directly to your doorstep in discreet packaging. No middlemen. No delays. Just fast, reliable delivery."
+				imageSrc={workImg3}
 				imageAlt="Medication delivery"
 				alignment="left"
 			/>
@@ -59,25 +63,25 @@ const workImg =
 		<div class="d-lg-none">
 			<MobileTimelineStep
 				stepNumber={1}
-				title="Consultation & Assessment"
-				description="Your transformation begins with a free, no-obligation consultation. We'll learn about your goals, review your health background, and determine whether GLP-1 therapy is right for you. Our team will explain how the medication works, what to expect, and answer all your questions about treatment, cost, and results."
+				title="Pick Your Product"
+				description="Browse our catalog and select the medication or wellness product that fits your needs. No medical forms, no doctor approval, and no prescription required. Just choose your product and proceed."
 				imageSrc={workImg}
 				imageAlt="Doctor consultation"
 			/>
 
 			<MobileTimelineStep
 				stepNumber={2}
-				title="Doctor Evaluation & Prescription"
-				description="Once you're ready, your health profile is securely submitted to our licensed medical team through Doseward. A state-certified physician reviews your information and schedules a teleconsultation at your convenience. During this call, you can discuss any medical concerns before the doctor finalizes your personalized prescription."
-				imageSrc={workImg}
+				title="Secure Checkout"
+				description="Complete your purchase through our fast and secure checkout. Once your payment is confirmed, your order is automatically sent to the partner pharmacy for fulfillment."
+				imageSrc={workImg2}
 				imageAlt="Doctor evaluation"
 			/>
 
 			<MobileTimelineStep
 				stepNumber={3}
-				title="Medication Compounding & Delivery"
-				description="After your prescription is approved, our FDA-compliant 503A partner pharmacy compounds your customized medication. Your order is then shipped directly to your home in discreet packaging, along with easy-to-follow administration instructions, nutritional guidance, and lifestyle tips."
-				imageSrc={workImg}
+				title="Pharmacy Fulfillment & Delivery"
+				description="Our licensed pharmacy prepares your medication and ships it directly to your doorstep in discreet packaging. No middlemen. No delays. Just fast, reliable delivery."
+				imageSrc={workImg3}
 				imageAlt="Medication delivery"
 				isLast={true}
 			/>

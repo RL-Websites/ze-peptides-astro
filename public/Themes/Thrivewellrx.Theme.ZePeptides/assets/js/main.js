@@ -1,30 +1,31 @@
 // Header, menu, scrolling, toasts, etc.
 $(document).ready(function () {
-    document.addEventListener("keydown", function (e) {
-    const el = e.target;
+	document.addEventListener("keydown", function (e) {
+		const el = e.target;
 
-    if (!el || (el.id !== "expiry" && el.id !== 'cvc' && el.id !=='zipCode')) return;
+		if (!el || (el.id !== "expiry" && el.id !== "cvc" && el.id !== "zipCode"))
+			return;
 
-    // allow control keys
-    if (
-        e.key === "Backspace" ||
-        e.key === "Delete" ||
-        e.key === "ArrowLeft" ||
-        e.key === "ArrowRight" ||
-        e.key === "Tab"
-    ) {
-        return;
-    }
+		// allow control keys
+		if (
+			e.key === "Backspace" ||
+			e.key === "Delete" ||
+			e.key === "ArrowLeft" ||
+			e.key === "ArrowRight" ||
+			e.key === "Tab"
+		) {
+			return;
+		}
 
-    // allow digits only
-    if (!/^[0-9]$/.test(e.key)) {
-        e.preventDefault(); // ✅ WORKS (JS side)
-    }
-});
-    // AOS init (guarded)
-    if (window.AOS && typeof AOS.init === "function") {
-        AOS.init();
-    }
+		// allow digits only
+		if (!/^[0-9]$/.test(e.key)) {
+			e.preventDefault(); // ✅ WORKS (JS side)
+		}
+	});
+	// AOS init (guarded)
+	if (window.AOS && typeof AOS.init === "function") {
+		AOS.init();
+	}
 
 	// Tooltip
 	$(function () {
@@ -52,7 +53,10 @@ $(document).ready(function () {
 
 	// Close dropdown when clicking outside
 	$(document).on("click", function (e) {
-		if (!$(e.target).closest("#user-menu-btn").length && !$(e.target).closest("#user-dropdown").length) {
+		if (
+			!$(e.target).closest("#user-menu-btn").length &&
+			!$(e.target).closest("#user-dropdown").length
+		) {
 			$("#user-dropdown").removeClass("show");
 		}
 	});
@@ -120,18 +124,16 @@ $(document).ready(function () {
 		const baseUrl = $("#homeUrl").val();
 		if (baseUrl) {
 			window.location.href = baseUrl + "?loc=product";
-		}
-		else {
+		} else {
 			window.location.href = "?loc=product";
 		}
-
 	});
 	// Product Read More
 	$(document).on("click", "#readMore", function () {
-    const parent = $(this).parents(".product-hero__details");
-    parent.toggleClass("show");
-    $(this).text(parent.hasClass("show") ? "Read Less" : "Read More");
-});
+		const parent = $(this).parents(".product-hero__details");
+		parent.toggleClass("show");
+		$(this).text(parent.hasClass("show") ? "Read Less" : "Read More");
+	});
 });
 
 // Numeric-only input handlers
@@ -161,7 +163,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Desktop timeline helpers
-const getSteps = () => document.querySelectorAll(".timeline-step[data-observed]");
+const getSteps = () =>
+	document.querySelectorAll(".timeline-step[data-observed]");
 
 // Remove active class from all steps
 const deactivateAllSteps = () => {
@@ -237,7 +240,8 @@ updateActiveStep();
 window.addEventListener("scroll", handleScroll);
 
 // Mobile timeline helpers
-const getMobileSteps = () => document.querySelectorAll(".mobile-timeline-step[data-observed]");
+const getMobileSteps = () =>
+	document.querySelectorAll(".mobile-timeline-step[data-observed]");
 
 // Remove active class from all mobile steps
 const deactivateAllMobileSteps = () => {

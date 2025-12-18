@@ -73,29 +73,30 @@
 		margin-bottom: 0;
 	}
 
-	// Add connecting line AFTER each dot (except the last one)
-	&:not(:last-child)::after {
-		content: "";
-		position: absolute;
-		left: 50%;
-		top: 2rem; // Start from the dot (2rem is dot's top position)
-		height: calc(100% - 2rem); // Full height minus dot's top position
-		width: 1px;
-		background-color: $gray-border;
-		transform: translateX(-50%);
-		z-index: 1;
-	}
+	// // Add connecting line AFTER each dot (except the last one)
+	// &:not(:last-child)::after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	left: 50%;
+	// 	top: 2rem; // Start from the dot (2rem is dot's top position)
+	// 	height: calc(100% - 2rem); // Full height minus dot's top position
+	// 	width: 1px;
+	// 	background-color: $gray-border;
+	// 	transform: translateX(-50%);
+	// 	z-index: 1;
+	// }
 
 	// Alternative: Add gap in the line
 	&:not(:last-child)::after {
 		content: "";
 		position: absolute;
 		left: 50%;
-		top: 40px; // Start below the dot (12px dot + some gap)
-		height: calc(100% + 50px); // Height minus starting position
+		top: 50px; // Start below the dot (12px dot + some gap)
+		height: calc(100% + 70px);
 		width: 1px;
 		background-color: $gray-border;
 		transform: translateX(-50%);
+
 		z-index: 1;
 	}
 }
@@ -104,8 +105,9 @@
 .timeline-dot {
 	position: absolute;
 	left: 50%;
-	top: 0;
+	top: 20px;
 	transform: translateX(-50%);
+
 	width: 12px;
 	height: 12px;
 	background-color: $gray-border;
@@ -138,9 +140,8 @@
 
 // Images
 .timeline-img {
-	width: 370px;
+	width: 440px;
 	border-radius: 0.75rem;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
 
 	position: relative;
@@ -161,7 +162,7 @@
 
 	img {
 		width: 100%;
-		height: 200px;
+		height: 328px;
 		object-fit: cover;
 		display: block;
 	}
@@ -242,7 +243,6 @@
 // Mobile Image
 .mobile-img {
 	border-radius: 0.5rem;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
 	margin-bottom: 0.75rem;
 
