@@ -19,12 +19,14 @@ import Layout from "../layouts/Layout.astro";
 							class="login__header text-center mb-30"
 							data-aos="fade-up"
 							data-aos-duration="1000"
+							data-aos-once="true"
 						>
 							<div
 								class="col-12 text-center"
 								data-aos="fade-down"
 								data-aos-duration="1000"
 								data-aos-delay="100"
+								data-aos-once="true"
 							>
 								<h1 class="text-primary-grad-1 mb-0">Returning Customer</h1>
 							</div>
@@ -35,6 +37,7 @@ import Layout from "../layouts/Layout.astro";
 								data-aos="fade-down"
 								data-aos-duration="1000"
 								data-aos-delay="200"
+								data-aos-once="true"
 							>
 								<h2 class="text-primary-grad-1" style="line-height: 160%;"
 									>Log in to confirm your journey</h2
@@ -51,6 +54,7 @@ import Layout from "../layouts/Layout.astro";
 									data-aos="fade-up"
 									data-aos-duration="1000"
 									data-aos-delay="300"
+									data-aos-once="true"
 								>
 									<label for="email" class="basic-label">
 										Email Address <span class="icon-ellipse"> </span></label
@@ -66,6 +70,7 @@ import Layout from "../layouts/Layout.astro";
 										data-aos="fade-up"
 										data-aos-duration="1000"
 										data-aos-delay="400"
+										data-aos-once="true"
 									>
 										<label for="password" class="basic-label mt-24">
 											Password<span class="icon-ellipse"> </span></label
@@ -90,6 +95,8 @@ import Layout from "../layouts/Layout.astro";
 										data-aos="fade-up"
 										data-aos-duration="1000"
 										data-aos-delay="500"
+										data-aos-once="true"
+										data-aos-offset="-500"
 									>
 										<input
 											class="form-check-input"
@@ -102,21 +109,28 @@ import Layout from "../layouts/Layout.astro";
 											Remember me
 										</label>
 									</div>
-									<button
-										type="submit"
-										class="theme-btn theme-btn__primary theme-btn__min-w-100 w-100 btn-lg mb-4"
+									<div
 										data-aos="flip-left"
 										data-aos-duration="1000"
 										data-aos-delay="600"
+										data-aos-once="true"
+										data-aos-offset="-500"
 									>
-										Log In
-									</button>
+										<button
+											type="submit"
+											class="theme-btn theme-btn__primary theme-btn__min-w-100 w-100 btn-lg mb-4"
+										>
+											Log In
+										</button></div
+									>
 
 									<div
 										class="text-center mt-3"
 										data-aos="fade-up"
 										data-aos-duration="1000"
 										data-aos-delay="700"
+										data-aos-once="true"
+										data-aos-offset="-500"
 									>
 										<button
 											class="mb-3 text-link text-decoration-underline theme-btn theme-btn__accent text-primary"
