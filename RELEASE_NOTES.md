@@ -1,5 +1,9 @@
 # Release Notes
 
+## [0.0.1] - 2025-12-18
+
+- changed the how it works section content and images and aligned the dots and lines correctly like in figma
+
 ## [0.0.1] - 2025-12-17
 
 - fixed background issue on homepage for iPhone
