@@ -1,5 +1,18 @@
 @use "../base/variables" as *;
 
+/* Page Loader Overlay */
+#page-loader {
+	position: fixed;
+	inset: 0;
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 900;
+}
+
+
+
 .product {
 	&-hero {
 		overflow: hidden;

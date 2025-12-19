@@ -330,3 +330,13 @@ updateActiveMobileStep();
 
 // Listen to scroll events for mobile
 window.addEventListener("scroll", handleMobileScroll);
+
+
+
+$(window).on("load", function () {
+	setTimeout(function () {
+		$("#page-loader").fadeOut(300, function () {
+			$(this).remove();
+		});
+	}, 500); // 0.5s delay
+});
