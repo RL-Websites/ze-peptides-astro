@@ -1,5 +1,18 @@
 @use "../base/variables" as *;
 
+/* Page Loader Overlay */
+#page-loader {
+	position: fixed;
+	inset: 0;
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 900;
+}
+
+
+
 .product {
 	&-hero {
 		overflow: hidden;
@@ -27,12 +40,15 @@
 			width: auto;
 			max-width: 100%;
 		}
+
 		&__details {
 			height: auto;
 			max-height: 191px;
+			min-height: 70px;
 			overflow: hidden;
 			position: relative;
 			transition: all 0.5s;
+
 			.read-more {
 				background: linear-gradient(179.81deg, rgba(255, 255, 255, 0) 0.15%, #ffffff 72.46%);
 				position: absolute;
@@ -50,14 +66,17 @@
 				padding-bottom: 4px;
 				transition: all 0.3s;
 				transform-origin: bottom;
+
 				span {
 					transition: all 0.5s;
 				}
 			}
+
 			&.show {
 				max-height: 100vh;
 				overflow: auto;
 				transition: all 0.5s;
+
 				.read-more {
 					position: static;
 					height: 44px;
@@ -131,6 +150,7 @@
 @media only screen and (max-width: 768px) {
 	.product-hero {
 		padding: 102px 0 50px 0;
+
 		&__left {
 			padding: 56px 15px 56px 15px;
 			height: 313px;
@@ -145,6 +165,7 @@
 			height: 202px;
 		}
 	}
+
 	.product {
 		&-action {
 			&__btn {
