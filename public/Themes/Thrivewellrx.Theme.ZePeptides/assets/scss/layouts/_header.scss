@@ -112,7 +112,7 @@
 			list-style: none;
 
 			@media all and (min-width: 992px) {
-				margin-left: 220px;
+				margin-left: auto;
 			}
 
 			li {
@@ -156,6 +156,7 @@
 			align-items: center;
 			gap: 16px;
 			flex-shrink: 0;
+
 			.theme-btn {
 				font-weight: 500;
 			}
@@ -316,6 +317,7 @@
 				}
 			}
 		}
+
 		@media all and (max-width: 768px) {
 			left: unset;
 			right: -46px;
@@ -453,6 +455,7 @@
 		align-items: center;
 		gap: 12px;
 	}
+
 	.header-icon {
 		font-size: 24px;
 	}
@@ -461,6 +464,7 @@
 		width: 30px;
 		height: 30px;
 	}
+
 	.header-icon.mobile-only,
 	.user-dropdown-container.mobile-only {
 		display: block;
