@@ -109,7 +109,7 @@
 .basic-input {
 	background-color: transparent;
 	width: 100%;
-	height: 56px;
+	height: 60px;
 	padding: 15px 20px;
 	border: 1px solid $red;
 	border-radius: 10px;
@@ -314,7 +314,7 @@
 
 @media only screen and (max-width: 768px) {
 	.basic-input {
-		height: 45px;
+		height:50px;
 	}
 
 	//Input design
