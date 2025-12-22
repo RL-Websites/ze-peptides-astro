@@ -47,7 +47,7 @@
 			min-height: 70px;
 			overflow: hidden;
 			position: relative;
-			transition: all 0.5s;
+
 
 			.read-more {
 				background: linear-gradient(179.81deg, rgba(255, 255, 255, 0) 0.15%, #ffffff 72.46%);
@@ -74,8 +74,8 @@
 
 			&.show {
 				max-height: 100vh;
-				overflow: auto;
-				transition: all 0.5s;
+				overflow-y: auto;
+
 
 				.read-more {
 					position: static;
