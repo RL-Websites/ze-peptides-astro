@@ -3,6 +3,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Toast from "../components/Toast.astro";
 import Layout from "../layouts/Layout.astro";
+import StateAutocomplete from "../components/StateAutocomplete.astro";
 ---
 
 <Layout>
@@ -293,20 +294,14 @@ import Layout from "../layouts/Layout.astro";
 											<p class="basic-error">Shipping name is required</p>
 										</div>
 										<div class="payment__input">
-											<label class="basic-label" for="shippingAddress"
+											<label class="basic-label" for="shippingState"
 												>State <span class="icon-ellipse"></span></label
 											>
-
-											<div class="select__wrapper select__wrapper--alt">
-												<select
-													class="select__options select__options--padding fs-16 text-secondary"
-												>
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-												</select>
-											</div>
+											<StateAutocomplete 
+												id="shippingState" 
+												name="shippingState"
+												className="select__options select__options--padding fs-16 text-secondary"
+											/>
 										</div>
 										<div class="payment__input">
 											<label class="basic-label" for="shippingAddress"
@@ -411,64 +406,59 @@ import Layout from "../layouts/Layout.astro";
 											/>
 										</div>
 										<div class="payment__input">
-											<label class="basic-label" for="shippingAddress"
+											<label class="basic-label" for="billingState"
 												>State <span class="icon-ellipse"></span></label
 											>
-											<div class="select__wrapper select__wrapper--alt">
-												<select
-													class="select__options select__options--padding fs-16 text-secondary"
-												>
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-												</select>
-											</div>
+											<StateAutocomplete 
+												id="billingState" 
+												name="billingState"
+												className="select__options select__options--padding fs-16 text-secondary"
+											/>
 										</div>
 										<div class="payment__input">
-											<label class="basic-label" for="shippingAddress"
+											<label class="basic-label" for="billingAddress"
 												>Address <span class="icon-ellipse"></span></label
 											>
 											<input
 												class="basic-input"
 												type="email"
-												name="shippingAddress"
-												id="shippingAddress"
+												name="billingAddress"
+												id="billingAddress"
 											/>
 										</div>
 										
 										<div class="payment__input">
-											<label class="basic-label" for="shippingAddress"
+											<label class="basic-label" for="billingCity"
 												>City <span class="icon-ellipse"></span></label
 											>
 											<input
 												class="basic-input"
 												type="email"
-												name="shippingAddress"
-												id="shippingAddress"
+												name="billingCity"
+												id="billingCity"
 											/>
 										</div>
 										<div class="payment__input">
-											<label class="basic-label" for="shippingZipCode"
+											<label class="basic-label" for="billingZipCode"
 												>Zip Code <span class="icon-ellipse"></span></label
 											>
 											<input
 												inputmode="numeric"
 												class="basic-input"
 												type="text"
-												name="shippingZipCode"
-												id="shippingZipCode"
+												name="billingZipCode"
+												id="billingZipCode"
 											/>
 										</div>
 										<div class="payment__input">
-											<label class="basic-label" for="shippingEmail"
+											<label class="basic-label" for="billingEmail"
 												>Email Address <span class="icon-ellipse"></span></label
 											>
 											<input
 												class="basic-input"
 												type="email"
-												name="shippingEmail"
-												id="shippingEmail"
+												name="billingEmail"
+												id="billingEmail"
 											/>
 										</div>
 									</div>

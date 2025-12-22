@@ -216,7 +216,7 @@ a {
 /* SCROLL BAR CSS */
 * {
 	scrollbar-width: thin;
-	scrollbar-color: #a16de0 transparent !important;
+	scrollbar-color: #a16de0 #ffffff !important;
 
 	/* Default: Light pink */
 }
@@ -228,7 +228,7 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-	background: transparent;
+	background: #ffffff;
 	border-radius: 10px;
 }
 
