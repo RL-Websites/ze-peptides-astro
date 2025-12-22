@@ -140,7 +140,7 @@ $(document).ready(function () {
 	const parent = readMore.parents(".product-hero__details");
 
 	// Get the actual text content (excluding the "Read More" div)
-	const textContent = $details
+	const textContent = details
 		.clone()
 		.children(".read-more")
 		.remove()
