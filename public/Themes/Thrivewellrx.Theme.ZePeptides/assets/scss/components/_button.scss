@@ -194,8 +194,13 @@
 
 	&__accent {
 		background-color: transparent;
-		padding: 0;
 		text-decoration: underline;
+	}
+
+	&.theme-btn {
+		&__accent {
+			padding: 0;
+		}
 	}
 
 	&__icon-only {
