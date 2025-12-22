@@ -376,11 +376,12 @@
 		}
 
 		&__navbar {
-			gap: 16px;
+			gap: 8px;
 		}
 
 		&__logo--img {
-			height: 32px;
+			height: unset;
+			width: 140px;
 		}
 
 		&__menu {
@@ -456,7 +457,7 @@
 	.mobile-header-elements {
 		display: flex;
 		align-items: center;
-		gap: 12px;
+		gap: 8px;
 	}
 
 	.header-icon {
