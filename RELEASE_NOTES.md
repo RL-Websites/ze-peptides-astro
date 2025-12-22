@@ -1,5 +1,9 @@
 # Release Notes
 
+## [0.0.1] - 2025-12-22
+
+- read more issue fixed for product details
+
 ## [0.0.1] - 2025-12-18
 
 - changed the how it works section content and images and aligned the dots and lines correctly like in figma
