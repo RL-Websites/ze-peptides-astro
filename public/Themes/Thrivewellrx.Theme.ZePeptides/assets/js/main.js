@@ -135,9 +135,9 @@ $(document).ready(function () {
 	// 		$(this).text(parent.hasClass("show") ? "Read Less" : "Read More");
 	// 	});
 	// });
-	const $details = $(".product-hero__details");
-	const $readMore = $("#readMore");
-	const $parent = $readMore.parents(".product-hero__details");
+	const details = $(".product-hero__details");
+	const readMore = $("#readMore");
+	const parent = readMore.parents(".product-hero__details");
 
 	// Get the actual text content (excluding the "Read More" div)
 	const textContent = $details
@@ -150,16 +150,16 @@ $(document).ready(function () {
 
 	// If text is less than 50 characters, hide "Read More" and ensure content is fully visible
 	if (textContent.length < 640) {
-		$readMore.hide();
-		$parent.addClass("show"); // Optionally force full visibility
+		readMore.hide();
+		parent.addClass("show"); // Optionally force full visibility
 	} else {
-		$readMore.show();
+		readMore.show();
 	}
 
 	// Existing toggle functionality
 	$(document).on("click", "#readMore", function () {
-		$parent.toggleClass("show");
-		$(this).text($parent.hasClass("show") ? "Read Less" : "Read More");
+		parent.toggleClass("show");
+		$(this).text(parent.hasClass("show") ? "Read Less" : "Read More");
 	});
 });
 // Numeric-only input handlers
