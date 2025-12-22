@@ -460,6 +460,7 @@
 		}
 
 		&__item {
+
 			&--name,
 			&--value {
 				font-size: $fs-14;
@@ -581,6 +582,7 @@
 		gap: 12px;
 
 		@media only screen and (max-width: 768px) {
+
 			.products__filter-btn.products__filter-left,
 			.products__filter-btn.products__filter-right {
 				display: none !important;
@@ -773,7 +775,7 @@
 			padding: 5px;
 
 			img {
-				width: 33.8px;
+				width: 122px;
 				height: 70px;
 			}
 		}
