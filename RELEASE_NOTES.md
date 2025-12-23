@@ -1,5 +1,9 @@
 # Release Notes
 
+## [0.0.1] - 2025-12-23
+
+- added pagination hiding in mobile in astro
+
 ## [0.0.1] - 2025-12-22
 
 - read more issue fixed for product details
