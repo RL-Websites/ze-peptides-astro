@@ -62,6 +62,6 @@
 
 @media (max-width: 768px) {
     .paginator {
-        display: none;
+        display: none !important;
     }
 }
