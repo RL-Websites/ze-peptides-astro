@@ -1,5 +1,10 @@
 # Release Notes
 
+## [0.0.1] - 2025-12-24
+
+- changed login face texts as requested
+- fixed a class name error in login page input element
+
 ## [0.0.1] - 2025-12-23
 
 - added pagination hiding in mobile in astro
