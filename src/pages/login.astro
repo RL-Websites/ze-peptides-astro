@@ -28,7 +28,7 @@ import Layout from "../layouts/Layout.astro";
 								data-aos-delay="100"
 								data-aos-once="true"
 							>
-								<h1 class="text-primary-grad-1 mb-0">Returning Customer</h1>
+								<h1 class="text-primary-grad-1 mb-0">Account Login</h1>
 							</div>
 
 							<!-- Heading Row 2 -->
@@ -40,7 +40,7 @@ import Layout from "../layouts/Layout.astro";
 								data-aos-once="true"
 							>
 								<h2 class="text-primary-grad-1" style="line-height: 160%;"
-									>Log in to confirm your journey</h2
+									>Securely access your VPeptides account</h2
 								>
 							</div>
 						</div>
@@ -61,7 +61,8 @@ import Layout from "../layouts/Layout.astro";
 									>
 									<input
 										type="email"
-										class="basic-input form-control"
+										class="basic-input login__input"
+										placeholder="Registered email address"
 										id="email"
 										required
 									/>
@@ -78,7 +79,8 @@ import Layout from "../layouts/Layout.astro";
 										<div class="login__password">
 											<input
 												type="password"
-												class="login__input"
+												class="basic-input login__input"
+												placeholder="Your account password"
 												id="password"
 												required
 											/>
@@ -120,7 +122,7 @@ import Layout from "../layouts/Layout.astro";
 											type="submit"
 											class="theme-btn theme-btn__primary theme-btn__min-w-100 w-100 btn-lg mb-4"
 										>
-											Log In
+											Sign In
 										</button></div
 									>
 
@@ -132,12 +134,15 @@ import Layout from "../layouts/Layout.astro";
 										data-aos-once="true"
 										data-aos-offset="-500"
 									>
-										<button
-											class="mb-3 text-link text-decoration-underline theme-btn theme-btn__accent text-primary"
-											>Forgot Password?</button
-										>
+										<p class="first-time-text mb-20">
+											Forgot Password? <button
+												class="text-link text-decoration-underline fw-medium theme-btn theme-btn__accent text-primary"
+												>Reset it here</button
+											>
+										</p>
+
 										<p class="first-time-text mb-60">
-											First-time Visitor? <button
+											Don’t have an account yet? <button
 												class="text-link text-decoration-underline fw-medium theme-btn theme-btn__accent text-primary"
 												>Create an account</button
 											>
