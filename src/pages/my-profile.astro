@@ -14,7 +14,7 @@ import Layout from "../layouts/Layout.astro";
 			<section class="my-profile" id="profile">
 				<div class="container">
 					<div class="row justify-content-center">
-						<div class="col-md-7 col-xxl-5 ">
+						<div class="col-md-7 col-xxl-5">
 							<div
 								class="login__header text-center mb-60"
 								data-aos="fade-up"
@@ -39,6 +39,21 @@ import Layout from "../layouts/Layout.astro";
 							>
 								<div class="d-flex justify-content-end mb-22">
 									<a href="#edit-profile">Edit</a>
+								</div>
+								<div
+									class="d-flex align-items-center justify-content-center gap-3"
+								>
+									<img
+										id="openAvatarModalBtn"
+										src="img/default-avatar.png"
+										alt="Profile"
+										class="border"
+										style="width: 96px; height: 96px; object-fit: cover;"
+									/>
+
+									<!-- <button type="button" class="btn btn-primary">
+										Upload
+									</button> -->
 								</div>
 								<div class="form-group">
 									<label for="first-name" class="basic-label">First Name</label>
@@ -72,7 +87,8 @@ import Layout from "../layouts/Layout.astro";
 
 							<form
 								class="mt-md-20 mt-50 form-wrapper rounded-10"
-								id="edit-profile" data-aos="fade-down"
+								id="edit-profile"
+								data-aos="fade-down"
 								data-aos-duration="1000"
 								data-aos-delay="600"
 								data-aos-once="true"
@@ -121,61 +137,62 @@ import Layout from "../layouts/Layout.astro";
 								</div>
 								<div class="form-group">
 									<label class="fw-bold mb-5" for="expiry">Date of Birth</label>
-									<div class="dropdown__selection dropdown__selection__date dropdown__selection__date-md">									
+									<div
+										class="dropdown__selection dropdown__selection__date dropdown__selection__date-md"
+									>
+										<div class="select__wrapper">
+											<select class="select__options">
+												<option disabled selected>Month</option>
+												<option>January</option>
+												<option>February</option>
+												<option>March</option>
+												<option>April</option>
+												<option>May</option>
+												<option>June</option>
+												<option>July</option>
+												<option>August</option>
+												<option>September</option>
+												<option>October</option>
+												<option>November</option>
+												<option>December</option>
+											</select>
+										</div>
+										<div class="select__wrapper">
+											<select class="select__options">
+												<option disabled selected>Day</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+											</select>
+										</div>
 
-									<div class="select__wrapper">
-										<select class="select__options">
-											<option disabled selected>Month</option>
-											<option>January</option>
-											<option>February</option>
-											<option>March</option>
-											<option>April</option>
-											<option>May</option>
-											<option>June</option>
-											<option>July</option>
-											<option>August</option>
-											<option>September</option>
-											<option>October</option>
-											<option>November</option>
-											<option>December</option>
-										</select>
+										<div class="select__wrapper">
+											<select class="select__options">
+												<option disabled selected>Year</option>
+												<option>2025</option>
+												<option>2024</option>
+												<option>2023</option>
+												<option>2022</option>
+												<option>2021</option>
+												<option>2020</option>
+												<option>2019</option>
+												<option>2018</option>
+												<option>2017</option>
+												<option>2016</option>
+												<option>2015</option>
+												<option>2014</option>
+												<option>2013</option>
+												<option>2012</option>
+												<option>2011</option>
+												<option>2010</option>
+												<option>2009</option>
+												<option>2008</option>
+												<option>2007</option>
+												<option>2006</option>
+											</select>
+										</div>
 									</div>
-									<div class="select__wrapper">
-										<select class="select__options">
-											<option disabled selected>Day</option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-										</select>
-									</div>
-
-									<div class="select__wrapper">
-										<select class="select__options">
-											<option disabled selected>Year</option>
-											<option>2025</option>
-											<option>2024</option>
-											<option>2023</option>
-											<option>2022</option>
-											<option>2021</option>
-											<option>2020</option>
-											<option>2019</option>
-											<option>2018</option>
-											<option>2017</option>
-											<option>2016</option>
-											<option>2015</option>
-											<option>2014</option>
-											<option>2013</option>
-											<option>2012</option>
-											<option>2011</option>
-											<option>2010</option>
-											<option>2009</option>
-											<option>2008</option>
-											<option>2007</option>
-											<option>2006</option>
-										</select>
-									</div>
-								</div>
 									<p class="basic-error" id="myProfileDobError"
 										>Date of Birth is required</p
 									>
@@ -223,6 +240,124 @@ import Layout from "../layouts/Layout.astro";
 									/>
 								</div>
 							</form>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="modal fade"
+					id="avatarModal"
+					tabindex="-1"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog modal-lg modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Update Profile Photo</h5>
+								<button
+									type="button"
+									class="btn-close"
+									data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+
+							<div class="modal-body">
+								<!-- File input -->
+								<div class="mb-3">
+									<label for="avatarFile" class="form-label"
+										>Choose an image</label
+									>
+									<input
+										class="form-control"
+										type="file"
+										id="avatarFile"
+										accept="image/*"
+									/>
+									<div class="form-text"
+										>PNG/JPG recommended. You can crop after selecting.</div
+									>
+								</div>
+
+								<!-- Cropper preview area -->
+								<div
+									class="border rounded p-2 bg-light"
+									style="min-height: 320px;"
+								>
+									<div
+										class="w-100"
+										style="max-height: 520px; overflow: hidden;"
+									>
+										<img
+											id="cropperImage"
+											alt="Preview"
+											style="max-width: 100%; display: none;"
+										/>
+									</div>
+
+									<!-- Optional controls -->
+									<div id="cropperControls" class="mt-3 d-none">
+										<div
+											class="btn-group flex-wrap"
+											role="group"
+											aria-label="Cropper controls"
+										>
+											<button
+												type="button"
+												class="btn btn-outline-secondary"
+												id="zoomInBtn">Zoom +</button
+											>
+											<button
+												type="button"
+												class="btn btn-outline-secondary"
+												id="zoomOutBtn">Zoom -</button
+											>
+											<button
+												type="button"
+												class="btn btn-outline-secondary"
+												id="rotateLeftBtn">Rotate -</button
+											>
+											<button
+												type="button"
+												class="btn btn-outline-secondary"
+												id="rotateRightBtn">Rotate +</button
+											>
+											<button
+												type="button"
+												class="btn btn-outline-secondary"
+												id="resetBtn">Reset</button
+											>
+										</div>
+
+										<div class="mt-3">
+											<small class="text-muted">
+												Tip: Drag to move, scroll to zoom (desktop).
+											</small>
+										</div>
+									</div>
+								</div>
+
+								<div id="avatarError" class="alert alert-danger mt-3 d-none"
+								></div>
+							</div>
+
+							<div class="modal-footer">
+								<button
+									type="button"
+									class="btn btn-outline-secondary"
+									id="cancelAvatarBtn"
+									data-bs-dismiss="modal"
+								>
+									Cancel
+								</button>
+								<button
+									type="button"
+									class="btn btn-success"
+									id="saveAvatarBtn"
+									disabled
+								>
+									Save
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
