@@ -1,5 +1,9 @@
 # Release Notes
 
+## [0.0.1] - 2025-12-29
+
+- changed the placeholder color for basic input and single input according to figma
+
 ## [0.0.1] - 2025-12-24
 
 - changed login face texts as requested
