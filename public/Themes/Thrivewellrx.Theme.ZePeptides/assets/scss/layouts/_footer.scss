@@ -42,7 +42,7 @@
 		}
 
 		img {
-			width: 267px ;
+			width: 267px;
 		}
 
 		@media all and (max-width: 768px) {
@@ -98,6 +98,7 @@
 			color: $black;
 			text-decoration: none;
 			font-size: $fs-16;
+			cursor: pointer;
 
 			&:hover {
 				opacity: 0.7;
