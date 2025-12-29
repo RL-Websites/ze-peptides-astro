@@ -62,7 +62,7 @@
 			.cart__badge {
 				width: 18px;
 				font-size: 10px;
-				height: 16px; 
+				height: 16px;
 				top: -8px;
 				right: -5px;
 			}
@@ -72,7 +72,7 @@
 			.cart__badge {
 				width: 26px;
 				font-size: 10px;
-				height: 16px; 
+				height: 16px;
 				top: -8px;
 				right: -5px;
 			}
@@ -310,6 +310,7 @@
 				font-size: 14px;
 				transition: color 0.3s ease;
 				display: block;
+
 				padding: 4px 0;
 
 				&:hover {
@@ -381,7 +382,7 @@
 
 		&__logo--img {
 			height: 28px;
-			
+
 		}
 
 		&__menu {
@@ -444,7 +445,9 @@
 
 	.hamburger-menu {
 		display: flex; // Keep it visible but handled in mobile-header-elements
-		.icon-cross, .icon-hamburger-menu{
+
+		.icon-cross,
+		.icon-hamburger-menu {
 			font-size: $fs-18;
 		}
 	}
