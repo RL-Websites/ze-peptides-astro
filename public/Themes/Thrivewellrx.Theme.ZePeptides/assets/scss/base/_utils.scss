@@ -472,3 +472,12 @@ $width-list: (
 }
 
 //Width class
+.line-clamp-2 {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	/* Number of lines to show */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/* Optional but recommended for clarity */
+}
