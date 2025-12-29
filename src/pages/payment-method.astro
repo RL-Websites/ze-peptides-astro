@@ -39,8 +39,10 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 								>
 									<div class="form-group">
 										<div class="d-flex items-start">
-											<label class="fw-bold mb-5" for="cardNumber">Card Number</label>
-										<div class="card-icons d-md-none d-flex ml-auto">
+											<label class="fw-bold mb-5 basic-label" for="cardNumber"
+												>Card Number<span class="icon-ellipse"></span></label
+											>
+											<div class="card-icons d-md-none d-flex ml-auto">
 												<img
 													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/payment/visa.png"
 													alt="Visa"
@@ -91,8 +93,9 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 
 									<div class="payment__form--inline-fields mt-20">
 										<div class="form-group">
-											<label class="fw-bold mb-5" for="expiry"
-												>Expiration Date</label
+											<label class="fw-bold mb-5 basic-label" for="expiry"
+												>Expiration Date<span class="icon-ellipse"
+												></span></label
 											>
 											<input
 												inputmode="numeric"
@@ -103,7 +106,8 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 											/>
 										</div>
 										<div class="form-group">
-											<label class="fw-bold mb-5" for="cvc">Security Code</label
+											<label class="fw-bold mb-5 basic-label" for="cvc"
+												>Security Code<span class="icon-ellipse"></span></label
 											>
 											<input
 												inputmode="numeric"
@@ -116,7 +120,9 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 									</div>
 
 									<div class="select__items mb-0">
-										<label class="fw-bold mb-5" for="country">Country</label>
+										<label class="fw-bold mb-5 basic-label" for="country"
+											>Country<span class="icon-ellipse"></span></label
+										>
 										<select
 											class="select__options text-secondary fw-normal"
 											name="country"
@@ -297,8 +303,8 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 											<label class="basic-label" for="shippingState"
 												>State <span class="icon-ellipse"></span></label
 											>
-											<StateAutocomplete 
-												id="shippingState" 
+											<StateAutocomplete
+												id="shippingState"
 												name="shippingState"
 												className="select__options select__options--padding fs-16 text-secondary"
 											/>
@@ -314,7 +320,7 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 												id="shippingAddress"
 											/>
 										</div>
-										
+
 										<div class="payment__input">
 											<label class="basic-label" for="shippingAddress"
 												>City <span class="icon-ellipse"></span></label
@@ -409,8 +415,8 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 											<label class="basic-label" for="billingState"
 												>State <span class="icon-ellipse"></span></label
 											>
-											<StateAutocomplete 
-												id="billingState" 
+											<StateAutocomplete
+												id="billingState"
 												name="billingState"
 												className="select__options select__options--padding fs-16 text-secondary"
 											/>
@@ -426,7 +432,7 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 												id="billingAddress"
 											/>
 										</div>
-										
+
 										<div class="payment__input">
 											<label class="basic-label" for="billingCity"
 												>City <span class="icon-ellipse"></span></label
@@ -508,8 +514,9 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 							</span>
 
 							<span class="custom-check__label">
-								Please read the <span class="text-primary">Terms & Conditions</span>—purchase cannot be completed
-								without your acknowledgment.
+								Please read the <span class="text-primary"
+									>Terms & Conditions</span
+								>—purchase cannot be completed without your acknowledgment.
 							</span>
 						</label>
 						<p
@@ -672,15 +679,13 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 							<p class="fs-md-18 fs-14 fw-400 mt-20">
 								&nbsp;<span
 									>VPEPTIDES Weight Loss Wellness &amp; Recovery (“we” or “us”)
-									at  info@vpeptides.com &amp;
-									www.vpeptides-wellness.com</span
+									at info@vpeptides.com &amp; www.vpeptides-wellness.com</span
 								>&nbsp;<span> owns and operates websites located</span>
 								(collectively, the “Platform”). Your access and/or use of the Platform,
 								or anything associated with it (non-exhaustively: any products, services,
 								websites, software applications, mobile applications, content generated
 								by Us and/or any affiliated third-party, the “Service”) are governed
-								by these Terms and Conditions (the “Terms and Conditions” or the
-								“Agreement”)
+								by these Terms and Conditions (the “Terms and Conditions” or the “Agreement”)
 							</p>
 
 							<p class="fs-md-18 fs-14 fw-400 mt-20">
@@ -754,8 +759,8 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 								has no control or interference with the practice of medicine, nursing,
 								or any other such care by any providers. All providers are individually
 								and solely responsible for managing the medical care and/or any treatments
-								they provide to you. By accepting this Agreement, you understand
-								and agree that &nbsp;<span
+								they provide to you. By accepting this Agreement, you understand and
+								agree that &nbsp;<span
 									>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span
 								>
 								is not acting as a healthcare provider and that you are not entering
@@ -772,14 +777,14 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 								&nbsp;<span
 									>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span
 								>
-								is not acting as a pharmacy, nor do we control or interfere with
-								any such services. By accepting this Agreement, you understand and
-								agree that you may be entering into a relationship with a pharmacy,
-								pharmacist, and/or pharmacy group or other such relationship with
-								any one or more such third-party entities and authorize the aforementioned
-								to access your prescription records through a Controlled Substances
-								Prescription Management Program (CSPMP) or any other such program
-								as is required by law and/or under the discretion of the Pharmacy.
+								is not acting as a pharmacy, nor do we control or interfere with any
+								such services. By accepting this Agreement, you understand and agree
+								that you may be entering into a relationship with a pharmacy, pharmacist,
+								and/or pharmacy group or other such relationship with any one or more
+								such third-party entities and authorize the aforementioned to access
+								your prescription records through a Controlled Substances Prescription
+								Management Program (CSPMP) or any other such program as is required
+								by law and/or under the discretion of the Pharmacy.
 							</p>
 						</div>
 
@@ -800,8 +805,8 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 								and it’s affiliates are not responsible for the contents or security
 								of any of those means of communications. These communications may
 								contain important information about your health and treatment. You
-								acknowledge that the receipt and reading of any such messages is
-								solely your responsibility and that you agree to hold–harmless &nbsp;<span
+								acknowledge that the receipt and reading of any such messages is solely
+								your responsibility and that you agree to hold–harmless &nbsp;<span
 									data-bind="text: (referralShortCode && referralShortCode() && referralShortCode().trim() !== '') ? 'BIO ACCESS LABS' : 'ZEPETIDES Weight Loss , Wellness & Recovery '"
 									>ZEPETIDES Weight Loss , Wellness &amp; Recovery
 								</span>
@@ -820,8 +825,8 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 								</span>
 								and/or its subsidiaries are not currently enrolled with, accepting,
 								or participating in any state, local, or federal healthcare and/or
-								health insurance programs (non–exhaustively: Medicare, Medicaid,
-								etcetera). You acknowledge and accept that &nbsp;<span
+								health insurance programs (non–exhaustively: Medicare, Medicaid, etcetera).
+								You acknowledge and accept that &nbsp;<span
 									>ZEPETIDES Weight Loss , Wellness &amp; Recovery</span
 								>, the Providers, the Pharmacies, and yourself may not receive
 								payment from any such programs for any of the services or
@@ -883,7 +888,8 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
                                           text: (referralShortCode && referralShortCode() && referralShortCode().trim() !== '') ? 'www.bioaccesslabs.com' : 'www.zepetidesmd-scientific.com'"
 									target="_blank"
 									href=" info@vpeptides.com"
-									> info@vpeptides.com</a
+								>
+									info@vpeptides.com</a
 								>. Your use of any prescription medication, reliance on any
 								provider, or reliance on any treatment or health decision
 								delivered by the Providers via the Platform, is solely and
@@ -979,7 +985,8 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 							</p>
 						</div>
 						<div class="mt-md-40 mt-20">
-							<p class="mb-0 fs-18">Customer Full Name: <b>Shovon Redlime</b></p>
+							<p class="mb-0 fs-18">Customer Full Name: <b>Shovon Redlime</b></p
+							>
 							<p class="fs-18">Date: <b>December 18, 2025</b></p>
 						</div>
 					</div>
