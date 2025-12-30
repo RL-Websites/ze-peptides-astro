@@ -259,7 +259,6 @@
 															color: #2d2d2d;
 														"
 														>FlexRx Support</div -->
-													>
 												</td>
 											</tr>
 										</tbody>
@@ -293,10 +292,11 @@
                 
                                 
 					<tbody>
-                        <tr>
-                            <td  style="padding-bottom: 0px;">
-                                <h2 style="background-color: #ffffff; text-align: center; font-weight: bold; margin-top: 24px;">Email Verification for <br> VPeptide</h2></tr>
-                            </td>
+						<tr>
+							<td style="padding-bottom: 0px;">
+								<h2 style="background-color: #ffffff; text-align: center; font-weight: bold; margin-top: 24px;">Email Verification for <br> VPeptide</h2>
+							</td>
+						</tr>
 						<tr>
 							<td
 								style="
@@ -345,13 +345,9 @@
 															color: #2d2d2d;
 														"
 													>
-														<p>Dear {CustomerName}</p>
-														<p>
-															1:07 AM (7 hours ago)
-														</p>
-														<p>
-															In order to verify the email address associated to your user account, please click the link below.
-														</p>
+														<p style="margin:0 0 12px 0;padding:0;">Dear {CustomerName}</p>
+														<p style="margin:0 0 12px 0;padding:0;">1:07 AM (7 hours ago)</p>
+														<p style="margin:0 0 12px 0;padding:0;">In order to verify the email address associated to your user account, please click the link below.</p>
 													</div>
 												</td>
 											</tr>
@@ -371,20 +367,17 @@
 															line-height: 28px;
 															text-align: left;
 															color: #2d2d2d;
+															mso-line-height-rule:exactly;
 														"
 													>
-														<a href="{VerificationLink}" style="color: #007AFF">Click Here To Verify</a>
-                                                        <p>If the link is not displayed please copy and paste the following link to your browser</p>
-                                                        <p style="color: #007AFF">{VerificationLink}</p>
-                                                
+														<p style="margin:0 0 12px 0;padding:0;"><a href="{VerificationLink}" style="color: #007AFF; text-decoration: none;">Click Here To Verify</a></p>
+														<p style="margin:0 0 12px 0;padding:0;">If the link is not displayed please copy and paste the following link to your browser</p>
+														<p style="margin:0 0 12px 0;padding:0;color: #007AFF;word-break:break-all;">{VerificationLink}</p>
+
 													</div>
 												</td>
 											</tr>
-                                            <tr>
-                                                <td>
-                                                    <p>If the link is not displayed please copy and paste the following link to your browser</p>
-                                                </td>
-                                            </tr>
+											<!-- duplicate instructional paragraph removed to avoid Outlook spacing issues -->
 											<tr>
 												<td
 													align="left"
@@ -420,14 +413,16 @@
 			</div>
 			<!--[if mso | IE]></td></tr></table><![endif]-->
 			<!-- Footer Section -->
+			<!-- add a small spacer (Outlook-safe) instead of a large margin -->
+			<!--[if mso]><table align="center" width="600" cellpadding="0" cellspacing="0" role="presentation"><tr><td height="20" style="line-height:20px;font-size:20px">&nbsp;</td></tr></table><![endif]-->
+			<div style="height:20px;line-height:20px;font-size:20px">&nbsp;</div>
 			<!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#102c4e" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
 			<div
 				style="
 					background: #102c4e;
 					background-color: #102c4e;
-					margin: 0px auto;
+					margin: 120px auto 0px;
 					max-width: 600px;
-                    margin-top: 142px;
 				"
 			>
 				<table
