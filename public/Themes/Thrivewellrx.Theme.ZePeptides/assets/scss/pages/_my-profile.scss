@@ -154,11 +154,11 @@
 
 #avatarModal {
 
-  /* Remove unwanted UI */
-  #cropperControls,
-  #dropZone,
-  .preview-container {
-    display: none !important;
+  /* Hide controls only when modal does not have an image loaded */
+  #avatarModal:not(.image-loaded) #cropperControls,
+  #avatarModal:not(.image-loaded) #dropZone,
+  #avatarModal:not(.image-loaded) .preview-container {
+    display: none;
   }
 
   /* Cropper background */

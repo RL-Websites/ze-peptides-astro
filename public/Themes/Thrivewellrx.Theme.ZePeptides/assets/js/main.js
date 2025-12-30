@@ -621,6 +621,57 @@ $(window).on("load", function () {
         };
     }
 
+    // Initialize cropper from an existing image URL (e.g., already uploaded avatar)
+    async function initializeCropperFromUrl(url) {
+        console.log('🔄 Initializing cropper from URL...', url);
+
+        // Cleanup old cropper
+        if (cropper) {
+            cropper.destroy();
+            cropper = null;
+        }
+
+        cropperImg.src = url;
+        cropperImg.style.display = "block";
+
+        cropperImg.onload = function () {
+            console.log('🖼️ Image (URL) loaded, creating cropper...');
+
+            cropper = new Cropper(cropperImg, {
+                aspectRatio: 1,
+                viewMode: 1,
+                dragMode: "move",
+                autoCropArea: 0.8,
+                responsive: true,
+                background: false,
+                checkOrientation: true,
+                guides: true,
+                center: true,
+                highlight: false,
+                cropBoxMovable: true,
+                cropBoxResizable: true,
+                toggleDragModeOnDblclick: false,
+
+                ready() {
+                    console.log('✅ Cropper (URL) ready!');
+                    controls.classList.remove("d-none");
+                    saveBtn.disabled = false;
+                    if (modalEl && modalEl.classList) modalEl.classList.add('image-loaded');
+                    updatePreview();
+                },
+
+                crop: updatePreview,
+                zoom: updatePreview,
+                rotate: updatePreview
+            });
+        };
+
+        cropperImg.onerror = function () {
+            showError("Failed to load the selected image.");
+            cleanupPreview();
+        };
+    }
+
     // ---- Event Listeners ----
 
     // Open modal - both button and image click
@@ -628,6 +679,17 @@ $(window).on("load", function () {
         console.log('📖 Opening avatar modal...');
         cleanupPreview();
         bsModal.show();
+
+        // If an avatar already exists (not the default), preload it into the cropper
+        try {
+            const src = profileAvatar && profileAvatar.src ? profileAvatar.src : null;
+            if (src && !src.includes('default-avatar.png')) {
+                // initialize cropper from the existing avatar URL
+                initializeCropperFromUrl(src);
+            }
+        } catch (err) {
+            console.warn('Unable to preload avatar into modal:', err);
+        }
     }
 
     if (openBtn) {
@@ -660,6 +722,20 @@ $(window).on("load", function () {
             }
         });
     }
+
+    // On init, mark wrapper as having an image if profileAvatar is not the default avatar
+    (function markWrapperIfHasImage() {
+        try {
+            if (profileAvatar && profileWrapper) {
+                const src = profileAvatar.src || '';
+                if (src && !src.includes('default-avatar.png')) {
+                    profileWrapper.classList.add('has-image');
+                }
+            }
+        } catch (err) {
+            console.warn('Error checking existing avatar:', err);
+        }
+    })();
 
     // Modal cleanup
     modalEl.addEventListener("hidden.bs.modal", function () {
