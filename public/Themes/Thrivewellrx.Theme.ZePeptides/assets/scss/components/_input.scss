@@ -256,12 +256,14 @@
 		width: 25px;
 		height: 25px;
 		left: 40px;
-		top: 25px;
+		top: 50%;
+		transform: translateY(-50%);
 
 		&__right {
 			position: absolute;
 			right: 40px;
-			top: 25px;
+			top: 50%;
+			transform: translateY(-50%);
 			border: 0;
 			outline: 0;
 			background: transparent;
@@ -275,6 +277,10 @@
 			align-items: center;
 			justify-content: center;
 			-webkit-tap-highlight-color: transparent;
+
+			i {
+				font-size: $fs-22;
+			}
 		}
 
 		i {
@@ -374,28 +380,25 @@
 		&__input {
 			font-size: 14px;
 			letter-spacing: 1px;
-			padding: 10px;
-			padding-left: 15px;
-			padding-right: 15px;
+			padding: 10px 40px;
+
 		}
 
 		&__icon {
-			left: 15px;
-			top: 17px;
+			left: 12px;
+			top: 50%;
+			transform: translateY(-50%);
 
 			i {
-				font-size: 16px;
+				font-size: 18px;
 			}
 
 			&__right {
 				position: absolute;
-				right: 7px;
+				right: 12px;
 				top: 50%;
 				transform: translateY(-50%);
-				padding-left: 8px;
 				height: 15px;
-				padding-right: 8px;
-
 				z-index: 10;
 				background: rgba(0, 0, 0, 0.001);
 				pointer-events: auto;
@@ -404,6 +407,10 @@
 				align-items: center;
 				justify-content: center;
 				-webkit-tap-highlight-color: transparent;
+
+				i {
+					font-size: 15px;
+				}
 			}
 		}
 	}
