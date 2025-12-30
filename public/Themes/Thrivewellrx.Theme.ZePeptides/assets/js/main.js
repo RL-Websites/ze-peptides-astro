@@ -368,200 +368,502 @@ $(window).on("load", function () {
 		});
 	}, 500); // 0.5s delay
 });
+
+
+
+
+
 // my profile image  js code
 (function () {
-	// عناصر
-	const openBtn = document.getElementById("openAvatarModalBtn");
-	const modalEl = document.getElementById("avatarModal");
-	const fileInput = document.getElementById("avatarFile");
-	const cropperImg = document.getElementById("cropperImage");
-	const controls = document.getElementById("cropperControls");
-	const saveBtn = document.getElementById("saveAvatarBtn");
-	const avatarImg = document.getElementById("profileAvatar");
-	const errorBox = document.getElementById("avatarError");
+    console.log('🚀 Avatar Cropper initialized');
 
-	// Control buttons
-	const zoomInBtn = document.getElementById("zoomInBtn");
-	const zoomOutBtn = document.getElementById("zoomOutBtn");
-	const rotateLeftBtn = document.getElementById("rotateLeftBtn");
-	const rotateRightBtn = document.getElementById("rotateRightBtn");
-	const resetBtn = document.getElementById("resetBtn");
+    // DOM Elements
+    const profileAvatar = document.getElementById("profileAvatar");
+    const openBtn = document.getElementById("openAvatarModalBtn");
+    const modalEl = document.getElementById("avatarModal");
+    const fileInput = document.getElementById("avatarFile");
+    const cropperImg = document.getElementById("cropperImage");
+    const controls = document.getElementById("cropperControls");
+    const saveBtn = document.getElementById("saveAvatarBtn");
+    const errorBox = document.getElementById("avatarError");
+    const successBox = document.getElementById("avatarSuccess");
+    const dropZone = document.getElementById("dropZone");
+    const uploadProgress = document.getElementById("uploadProgress");
+    const cropPreview = document.getElementById("cropPreview");
 
-	const bsModal = new bootstrap.Modal(modalEl, { backdrop: "static" });
+    // Control buttons
+    const zoomInBtn = document.getElementById("zoomInBtn");
+    const zoomOutBtn = document.getElementById("zoomOutBtn");
+    const rotateLeftBtn = document.getElementById("rotateLeftBtn");
+    const rotateRightBtn = document.getElementById("rotateRightBtn");
+    const resetBtn = document.getElementById("resetBtn");
 
-	let cropper = null;
-	let objectUrl = null;
+    // Bootstrap modal instance
+    const bsModal = new bootstrap.Modal(modalEl, { backdrop: "static" });
 
-	// ---- helpers ----
-	function showError(message) {
-		errorBox.textContent = message;
-		errorBox.classList.remove("d-none");
-	}
+    let cropper = null;
+    let objectUrl = null;
 
-	function clearError() {
-		errorBox.textContent = "";
-		errorBox.classList.add("d-none");
-	}
+    // Configuration
+    const CONFIG = {
+        maxSizeMB: 8,
+        minDimensions: 150,
+        allowedTypes: ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'],
+        cropSize: 512,
+        quality: 0.9
+    };
 
-	function cleanupPreview() {
-		saveBtn.disabled = true;
-		controls.classList.add("d-none");
+    // ---- Helper Functions ----
+    function showError(message) {
+        console.error('❌ Error:', message);
+        errorBox.innerHTML = `<i class="fas fa-exclamation-triangle me-2"></i>${message}`;
+        errorBox.classList.remove("d-none");
+        hideSuccess();
+    }
 
-		if (cropper) {
-			cropper.destroy();
-			cropper = null;
-		}
+    function showSuccess(message) {
+        console.log('✅ Success:', message);
+        successBox.innerHTML = `<i class="fas fa-check-circle me-2"></i>${message}`;
+        successBox.classList.remove("d-none");
+        hideError();
+    }
 
-		cropperImg.style.display = "none";
-		cropperImg.removeAttribute("src");
+    function hideError() {
+        errorBox.classList.add("d-none");
+    }
 
-		if (objectUrl) {
-			URL.revokeObjectURL(objectUrl);
-			objectUrl = null;
-		}
+    function hideSuccess() {
+        successBox.classList.add("d-none");
+    }
 
-		// Reset input so user can re-pick same file
-		fileInput.value = "";
-		clearError();
-	}
+    function clearMessages() {
+        hideError();
+        hideSuccess();
+    }
 
-	// ---- open modal ----
-	openBtn.addEventListener("click", function () {
-		cleanupPreview();
-		bsModal.show();
-	});
+    function showToast(message, type = 'success') {
+        const toastEl = document.getElementById('successToast');
+        const toastBody = document.getElementById('successMessage');
+        
+        if (toastEl && toastBody) {
+            toastBody.textContent = message;
+            const toast = new bootstrap.Toast(toastEl);
+            toast.show();
+        }
+    }
 
-	// Clean up when modal fully hidden
-	modalEl.addEventListener("hidden.bs.modal", function () {
-		cleanupPreview();
-	});
+    function updateProgressBar(percent) {
+        const progressBar = uploadProgress.querySelector('.progress-bar');
+        if (progressBar) {
+            progressBar.style.width = percent + '%';
+            progressBar.setAttribute('aria-valuenow', percent);
+        }
+    }
 
-	// ---- file select -> init cropper ----
-	fileInput.addEventListener("change", function (e) {
-		clearError();
+    function showProgress() {
+        uploadProgress.classList.remove('d-none');
+        updateProgressBar(0);
+    }
 
-		const file = e.target.files && e.target.files[0];
-		if (!file) return;
+    function hideProgress() {
+        uploadProgress.classList.add('d-none');
+        updateProgressBar(0);
+    }
 
-		// basic validation
-		if (!file.type.startsWith("image/")) {
-			showError("Please select a valid image file.");
-			cleanupPreview();
-			return;
-		}
+    function updatePreview() {
+        if (!cropper || !cropPreview) return;
+        
+        try {
+            const canvas = cropper.getCroppedCanvas({
+                width: 100,
+                height: 100,
+                imageSmoothingEnabled: true,
+                imageSmoothingQuality: "high"
+            });
+            
+            if (canvas) {
+                cropPreview.src = canvas.toDataURL('image/jpeg', 0.8);
+                cropPreview.style.display = 'block';
+            }
+        } catch (err) {
+            console.warn('Preview update failed:', err);
+        }
+    }
 
-		const maxMB = 8;
-		if (file.size > maxMB * 1024 * 1024) {
-			showError(
-				"Image is too large. Please upload an image under " + maxMB + "MB."
-			);
-			cleanupPreview();
-			return;
-		}
+    function cleanupPreview() {
+        console.log('🧹 Cleaning up preview...');
+        
+        saveBtn.disabled = true;
+        saveBtn.innerHTML = '<i class="fas fa-save me-2"></i>Save';
+        controls.classList.add("d-none");
+        hideProgress();
 
-		// cleanup old
-		if (cropper) {
-			cropper.destroy();
-			cropper = null;
-		}
-		if (objectUrl) URL.revokeObjectURL(objectUrl);
+        if (cropper) {
+            cropper.destroy();
+            cropper = null;
+        }
 
-		objectUrl = URL.createObjectURL(file);
-		cropperImg.src = objectUrl;
-		cropperImg.style.display = "block";
+        cropperImg.style.display = "none";
+        cropperImg.removeAttribute("src");
 
-		// Wait for image to load before creating cropper
-		cropperImg.onload = function () {
-			cropper = new Cropper(cropperImg, {
-				// Typical profile photo: square crop
-				aspectRatio: 1,
-				viewMode: 1, // keep crop box within canvas
-				dragMode: "move",
-				autoCropArea: 0.9,
-				responsive: true,
-				background: false,
-				checkOrientation: true,
+        if (cropPreview) {
+            cropPreview.style.display = "none";
+            cropPreview.removeAttribute("src");
+        }
 
-				// Better UX for avatars
-				guides: true,
-				center: true,
-				highlight: false,
+        if (objectUrl) {
+            URL.revokeObjectURL(objectUrl);
+            objectUrl = null;
+        }
 
-				ready() {
-					controls.classList.remove("d-none");
-					saveBtn.disabled = false;
-				},
-			});
-		};
-	});
+        // Reset input
+        fileInput.value = "";
+        clearMessages();
+    }
 
-	// ---- cropper controls ----
-	zoomInBtn.addEventListener("click", () => cropper && cropper.zoom(0.1));
-	zoomOutBtn.addEventListener("click", () => cropper && cropper.zoom(-0.1));
-	rotateLeftBtn.addEventListener("click", () => cropper && cropper.rotate(-10));
-	rotateRightBtn.addEventListener("click", () => cropper && cropper.rotate(10));
-	resetBtn.addEventListener("click", () => cropper && cropper.reset());
+    function validateFile(file) {
+        console.log('🔍 Validating file:', file.name, file.type, file.size);
 
-	// ---- save (crop -> upload) ----
-	saveBtn.addEventListener("click", async function () {
-		clearError();
-		if (!cropper) return;
+        if (!CONFIG.allowedTypes.includes(file.type)) {
+            throw new Error("Please select a valid image file (JPEG, PNG, or WebP).");
+        }
 
-		saveBtn.disabled = true;
-		saveBtn.textContent = "Saving...";
+        if (file.size > CONFIG.maxSizeMB * 1024 * 1024) {
+            throw new Error(`Image is too large. Please upload an image under ${CONFIG.maxSizeMB}MB.`);
+        }
 
-		try {
-			// Generate cropped image
-			const canvas = cropper.getCroppedCanvas({
-				width: 512,
-				height: 512,
-				imageSmoothingEnabled: true,
-				imageSmoothingQuality: "high",
-			});
+        return true;
+    }
 
-			if (!canvas)
-				throw new Error(
-					"Unable to crop the image. Please try a different file."
-				);
+    async function validateImageDimensions(file) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = function() {
+                if (img.width < CONFIG.minDimensions || img.height < CONFIG.minDimensions) {
+                    reject(new Error(`Image is too small. Minimum size is ${CONFIG.minDimensions}×${CONFIG.minDimensions} pixels.`));
+                } else {
+                    console.log('✅ Image dimensions valid:', img.width, 'x', img.height);
+                    resolve(true);
+                }
+            };
+            img.onerror = () => reject(new Error("Invalid image file."));
+            img.src = URL.createObjectURL(file);
+        });
+    }
 
-			const blob = await new Promise((resolve) =>
-				canvas.toBlob(resolve, "image/jpeg", 0.9)
-			);
-			if (!blob) throw new Error("Could not create image blob.");
+    async function initializeCropper(file) {
+        console.log('🔄 Initializing cropper...');
+        
+        try {
+            await validateImageDimensions(file);
+        } catch (err) {
+            showError(err.message);
+            cleanupPreview();
+            return;
+        }
 
-			// Build form data
-			const formData = new FormData();
-			formData.append("avatar", blob, "avatar.jpg");
+        // Cleanup old cropper
+        if (cropper) {
+            cropper.destroy();
+            cropper = null;
+        }
+        if (objectUrl) {
+            URL.revokeObjectURL(objectUrl);
+        }
 
-			// OPTIONAL: include user id if needed
-			// formData.append("userId", "123");
+        objectUrl = URL.createObjectURL(file);
+        cropperImg.src = objectUrl;
+        cropperImg.style.display = "block";
 
-			// Upload to backend (change URL)
-			const response = await fetch("/api/profile/avatar", {
-				method: "POST",
-				body: formData,
-			});
+        // Wait for image to load
+        cropperImg.onload = function () {
+            console.log('🖼️ Image loaded, creating cropper...');
+            
+            cropper = new Cropper(cropperImg, {
+                aspectRatio: 1,
+                viewMode: 1,
+                dragMode: "move",
+                autoCropArea: 0.8,
+                responsive: true,
+                background: false,
+                checkOrientation: true,
+                guides: true,
+                center: true,
+                highlight: false,
+                cropBoxMovable: true,
+                cropBoxResizable: true,
+                toggleDragModeOnDblclick: false,
 
-			if (!response.ok) {
-				const text = await response.text();
-				throw new Error(text || "Upload failed. Please try again.");
-			}
+                ready() {
+                    console.log('✅ Cropper ready!');
+                    controls.classList.remove("d-none");
+                    saveBtn.disabled = false;
+                    updatePreview();
+                },
 
-			// Your backend should return the saved avatar URL
-			// Example response: { "avatarUrl": "/uploads/avatars/u1.jpg" }
-			const data = await response.json();
-			if (!data.avatarUrl) throw new Error("Server did not return avatar URL.");
+                crop: updatePreview,
+                zoom: updatePreview,
+                rotate: updatePreview
+            });
+        };
 
-			// Update profile image in UI
-			avatarImg.src = data.avatarUrl + "?v=" + Date.now();
+        cropperImg.onerror = function() {
+            showError("Failed to load the selected image.");
+            cleanupPreview();
+        };
+    }
 
-			// close modal
-			bsModal.hide();
-		} catch (err) {
-			showError(err.message || "Something went wrong.");
-			saveBtn.disabled = false;
-		} finally {
-			saveBtn.textContent = "Save";
-		}
-	});
+    // ---- Event Listeners ----
+
+    // Open modal - both button and image click
+    function openModal() {
+        console.log('📖 Opening avatar modal...');
+        cleanupPreview();
+        bsModal.show();
+    }
+
+    if (openBtn) {
+        openBtn.addEventListener("click", openModal);
+    }
+
+    if (profileAvatar) {
+        profileAvatar.addEventListener("click", openModal);
+        profileAvatar.addEventListener("keydown", function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openModal();
+            }
+        });
+    }
+
+    // Modal cleanup
+    modalEl.addEventListener("hidden.bs.modal", function () {
+        console.log('🚪 Modal closed, cleaning up...');
+        cleanupPreview();
+    });
+
+    // File input change
+    fileInput.addEventListener("change", async function (e) {
+        clearMessages();
+        console.log('📁 File input changed...');
+
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+
+        try {
+            validateFile(file);
+            await initializeCropper(file);
+        } catch (err) {
+            showError(err.message);
+            cleanupPreview();
+        }
+    });
+
+    // Drag & Drop functionality
+    if (dropZone) {
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            dropZone.classList.add('drag-over');
+        }
+
+        function unhighlight(e) {
+            dropZone.classList.remove('drag-over');
+        }
+
+        dropZone.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+
+            if (files.length > 0) {
+                fileInput.files = files;
+                fileInput.dispatchEvent(new Event('change'));
+            }
+        }
+    }
+
+    // Cropper controls
+    if (zoomInBtn) zoomInBtn.addEventListener("click", () => cropper && cropper.zoom(0.1));
+    if (zoomOutBtn) zoomOutBtn.addEventListener("click", () => cropper && cropper.zoom(-0.1));
+    if (rotateLeftBtn) rotateLeftBtn.addEventListener("click", () => cropper && cropper.rotate(-10));
+    if (rotateRightBtn) rotateRightBtn.addEventListener("click", () => cropper && cropper.rotate(10));
+    if (resetBtn) resetBtn.addEventListener("click", () => cropper && cropper.reset());
+
+    // Keyboard shortcuts
+    modalEl.addEventListener("keydown", function(e) {
+        if (!cropper) return;
+        
+        switch(e.key) {
+            case "=":
+            case "+":
+                e.preventDefault();
+                cropper.zoom(0.1);
+                break;
+            case "-":
+                e.preventDefault();
+                cropper.zoom(-0.1);
+                break;
+            case "ArrowLeft":
+                if (e.ctrlKey) {
+                    e.preventDefault();
+                    cropper.rotate(-10);
+                }
+                break;
+            case "ArrowRight":
+                if (e.ctrlKey) {
+                    e.preventDefault();
+                    cropper.rotate(10);
+                }
+                break;
+            case "r":
+                if (e.ctrlKey) {
+                    e.preventDefault();
+                    cropper.reset();
+                }
+                break;
+        }
+    });
+
+    // Save functionality
+    saveBtn.addEventListener("click", async function () {
+        clearMessages();
+        if (!cropper) return;
+
+        console.log('💾 Saving avatar...');
+
+        const originalHTML = saveBtn.innerHTML;
+        saveBtn.disabled = true;
+        saveBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Saving...';
+        
+        showProgress();
+
+        try {
+            // Simulate progress
+            updateProgressBar(10);
+
+            // Generate cropped image
+            const canvas = cropper.getCroppedCanvas({
+                width: CONFIG.cropSize,
+                height: CONFIG.cropSize,
+                imageSmoothingEnabled: true,
+                imageSmoothingQuality: "high",
+            });
+
+            updateProgressBar(30);
+
+            if (!canvas) {
+                throw new Error("Unable to crop the image. Please try a different file.");
+            }
+
+            updateProgressBar(50);
+
+            // Convert to blob
+            const blob = await new Promise((resolve) =>
+                canvas.toBlob(resolve, "image/jpeg", CONFIG.quality)
+            );
+            
+            if (!blob) {
+                throw new Error("Could not create image blob.");
+            }
+
+            updateProgressBar(70);
+
+            // Build form data
+            const formData = new FormData();
+            formData.append("avatar", blob, "avatar.jpg");
+
+            updateProgressBar(80);
+
+            // For demo purposes, we'll simulate an upload
+            // Replace this with your actual API endpoint
+            const response = await simulateUpload(formData);
+
+            updateProgressBar(100);
+
+            // Update UI
+            const avatarUrl = response.avatarUrl;
+            if (profileAvatar) {
+                profileAvatar.src = avatarUrl + "?v=" + Date.now();
+            }
+
+            showToast("Profile photo updated successfully!");
+            showSuccess("Avatar updated successfully!");
+            
+            setTimeout(() => {
+                bsModal.hide();
+            }, 1500);
+
+        } catch (err) {
+            console.error('❌ Save error:', err);
+            showError(err.message || "Something went wrong.");
+        } finally {
+            saveBtn.disabled = false;
+            saveBtn.innerHTML = originalHTML;
+            hideProgress();
+        }
+    });
+
+    // Simulate upload function (replace with your actual API call)
+    async function simulateUpload(formData) {
+        console.log('🔄 Simulating upload...');
+        
+        // Simulate network delay
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        // For demo, create a data URL from the blob
+        const blob = formData.get('avatar');
+        const dataUrl = await new Promise(resolve => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result);
+            reader.readAsDataURL(blob);
+        });
+
+        // Simulate successful response
+        return {
+            success: true,
+            avatarUrl: dataUrl,
+            message: "Avatar uploaded successfully"
+        };
+
+        // In real implementation, use this:
+        /*
+        const response = await fetch("/api/profile/avatar", {
+            method: "POST",
+            body: formData,
+        });
+
+        if (!response.ok) {
+            const text = await response.text();
+            throw new Error(text || "Upload failed. Please try again.");
+        }
+
+        const data = await response.json();
+        if (!data.avatarUrl) {
+            throw new Error("Server did not return avatar URL.");
+        }
+
+        return data;
+        */
+    }
+
+    console.log('✅ Avatar Cropper setup complete');
+	console.log(cropperImg)
+
 })();

@@ -28,7 +28,7 @@
 
 .form-wrapper {
 	background-color: #fbf9ff;
-	padding: 20px 40px 20px;
+	padding: 40px 40px 20px;
 	@media all and (max-width: 768px) {
 		padding: 20px;
 	}
@@ -51,4 +51,163 @@
 	input {
 		border-color: #aeaeae;
 	}
+}
+
+.profile-picture-wrapper {
+  position: relative;
+  width: 208px;
+  height: 208px;
+  margin-bottom: 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+	border-radius: 8px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 60%,
+      rgba(0, 0, 0, 0.6) 60%
+    );
+  }
+}
+
+.profile-picture {
+  width: 208px;
+  height: 208px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-image: linear-gradient(#00000099);
+  margin-bottom: 30px;
+}
+
+.profile-edit {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+
+  &__icon {
+	top: 45%;
+  	left: 50%;
+	font-size: 30px;
+	color: #fff;
+  }
+
+  &__text{
+	top: 60%;
+  	left: 50%;
+	font-size: 16px;
+	color: #fff;
+	text-wrap: nowrap;
+  }
+}
+
+.modal-content--custom{
+	max-width: 540px;
+	max-height: 785px;
+
+}
+
+.upload-icon {
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 20px;
+	color: #0C0C0D;
+	pointer-events: none;
+}
+
+
+
+
+/* ===============================
+   AVATAR MODAL DESIGN OVERRIDES
+   =============================== */
+/* ==============================
+   AVATAR MODAL – MASKED CIRCLE
+   ============================== */
+
+#avatarModal {
+
+  /* Remove unwanted UI */
+  #cropperControls,
+  #dropZone,
+  .preview-container {
+    display: none !important;
+  }
+
+  /* Cropper background */
+  .cropper-container {
+    position: relative;
+    // background: #8f9796;
+    border-radius: 10px;
+    padding: 0;
+    height: 380px;
+    overflow: hidden;
+  }
+
+  /* Image wrapper */
+  .cropper-wrapper {
+    position: absolute;
+    inset: 0;
+  }
+
+  #cropperImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* ===== DARK OVERLAY ===== */
+//   .cropper-container::before {
+//     content: "";
+//     position: absolute;
+//     inset: 0;
+//     background: rgba(0, 0, 0, 0.45);
+//     z-index: 2;
+//   }
+
+  /* ===== CIRCLE CUT-OUT ===== */
+  .cropper-container::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.45);
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  /* Ensure image stays below mask */
+  .cropper-wrapper {
+    z-index: 1;
+  }
+
+  /* Footer buttons styling (design match) */
+  .modal-footer {
+    border-top: 0;
+
+    .btn-outline-secondary {
+      border-radius: 8px;
+      padding: 8px 28px;
+    }
+
+    .btn-success {
+      background-color: #6a00ff;
+      border-color: #6a00ff;
+      border-radius: 8px;
+      padding: 8px 28px;
+    }
+  }
 }
