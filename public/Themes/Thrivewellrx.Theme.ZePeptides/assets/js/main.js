@@ -478,16 +478,30 @@ $(window).on("load", function () {
         if (!cropper || !cropPreview) return;
         
         try {
-            const canvas = cropper.getCroppedCanvas({
-                width: 100,
-                height: 100,
+            const size = 100;
+            const cropped = cropper.getCroppedCanvas({
+                width: size,
+                height: size,
                 imageSmoothingEnabled: true,
                 imageSmoothingQuality: "high"
             });
-            
-            if (canvas) {
-                cropPreview.src = canvas.toDataURL('image/jpeg', 0.8);
+
+            if (cropped) {
+                // Create a circular masked canvas so preview is actually circular
+                const masked = document.createElement('canvas');
+                masked.width = size;
+                masked.height = size;
+                const ctx = masked.getContext('2d');
+                ctx.clearRect(0, 0, size, size);
+                ctx.beginPath();
+                ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+                ctx.closePath();
+                ctx.clip();
+                ctx.drawImage(cropped, 0, 0, size, size);
+
+                cropPreview.src = masked.toDataURL('image/png');
                 cropPreview.style.display = 'block';
+                cropPreview.style.borderRadius = '50%';
             }
         } catch (err) {
             console.warn('Preview update failed:', err);
@@ -857,27 +871,39 @@ $(window).on("load", function () {
         try {
             updateProgressBar(10);
 
-            const canvas = cropper.getCroppedCanvas({
-                width: CONFIG.cropSize,
-                height: CONFIG.cropSize,
+            const size = CONFIG.cropSize;
+            const cropped = cropper.getCroppedCanvas({
+                width: size,
+                height: size,
                 imageSmoothingEnabled: true,
                 imageSmoothingQuality: "high",
             });
 
             updateProgressBar(40);
 
-            if (!canvas) throw new Error("Unable to crop the image.");
+            if (!cropped) throw new Error("Unable to crop the image.");
 
-            // get full data URL + raw base64
-            const dataUrl = canvas.toDataURL('image/jpeg', CONFIG.quality);
+            // Create circular masked canvas for final output (preserves transparency)
+            const out = document.createElement('canvas');
+            out.width = size;
+            out.height = size;
+            const octx = out.getContext('2d');
+            octx.clearRect(0, 0, size, size);
+            octx.beginPath();
+            octx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+            octx.closePath();
+            octx.clip();
+            octx.drawImage(cropped, 0, 0, size, size);
+
+            // Export PNG so circular corners are transparent
+            const dataUrl = out.toDataURL('image/png');
             const base64 = dataUrl.split(',')[1];
 
-            console.log('🖼️ Cropped data URL:', dataUrl);
-            console.log('🖼️ Cropped base64 (raw):', base64);
+            console.log('🖼️ Cropped circular data URL:', dataUrl);
 
             updateProgressBar(100);
 
-            // Optionally update the preview on the page immediately
+            // Update the avatar on the page
             if (profileAvatar) profileAvatar.src = dataUrl;
 
             showToast('Cropped image ready (logged to console)');

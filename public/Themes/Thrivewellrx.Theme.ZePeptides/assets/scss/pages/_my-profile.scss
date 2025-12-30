@@ -215,6 +215,21 @@
     z-index: 1;
   }
 
+  /* Make the crop box visually circular and ensure internal face is clipped */
+  .cropper-container .cropper-view-box,
+  .cropper-container .cropper-face {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  /* Circular preview image */
+  .preview-container img,
+  #cropPreview {
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+  }
+
   /* Footer buttons styling (design match) */
   .modal-footer {
     border-top: 0;
