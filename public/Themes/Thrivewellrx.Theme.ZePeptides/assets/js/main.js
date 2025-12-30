@@ -394,6 +394,8 @@ $(window).on("load", function () {
     const dropZone = document.getElementById("dropZone");
     const uploadProgress = document.getElementById("uploadProgress");
     const cropPreview = document.getElementById("cropPreview");
+    const previewContainer = document.querySelector('.preview-container');
+    const previewLabel = previewContainer ? previewContainer.querySelector('label') : null;
 
     // Control buttons
     const zoomInBtn = document.getElementById("zoomInBtn");
@@ -491,6 +493,8 @@ $(window).on("load", function () {
                 cropPreview.src = cropped.toDataURL('image/png');
                 cropPreview.style.display = 'block';
                 cropPreview.style.borderRadius = '8px'; // Match profile style
+                // Hide the static "Preview:" label when actual preview exists
+                if (previewLabel) previewLabel.style.display = 'none';
             }
         } catch (err) {
             console.warn('Preview update failed:', err);
@@ -519,6 +523,11 @@ $(window).on("load", function () {
         if (cropPreview) {
             cropPreview.style.display = "none";
             cropPreview.removeAttribute("src");
+        }
+
+        // Always hide the static preview label when cleaning up
+        if (previewLabel) {
+            previewLabel.style.display = 'none';
         }
 
         if (objectUrl) {
