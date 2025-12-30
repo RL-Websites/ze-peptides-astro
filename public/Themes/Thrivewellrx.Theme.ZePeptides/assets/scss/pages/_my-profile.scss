@@ -63,12 +63,19 @@
     content: "";
     position: absolute;
     inset: 0;
-	border-radius: 8px;
+    border-radius: 8px;
     background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.6) 60%,
       rgba(0, 0, 0, 0.6) 60%
     );
+    opacity: 0;
+    transition: opacity 160ms ease-in-out;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    opacity: 1;
   }
 }
 
@@ -83,28 +90,40 @@
 
 .profile-edit {
   position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   color: #fff;
-  padding: 5px;
-  border-radius: 50%;
-  overflow: hidden;
+  padding: 6px 10px;
+  border-radius: 8px;
+  overflow: visible;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease-in-out;
 
   &__icon {
-	top: 45%;
-  	left: 50%;
-	font-size: 30px;
-	color: #fff;
+    font-size: 30px;
+    color: #fff;
+    line-height: 1;
   }
 
-  &__text{
-	top: 60%;
-  	left: 50%;
-	font-size: 16px;
-	color: #fff;
-	text-wrap: nowrap;
+  &__text {
+    font-size: 14px;
+    color: #fff;
+    white-space: nowrap;
+    margin: 0;
   }
+}
+
+.profile-picture-wrapper:hover .profile-edit {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal-content--custom{
