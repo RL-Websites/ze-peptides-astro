@@ -644,6 +644,23 @@ $(window).on("load", function () {
         });
     }
 
+    // Also allow clicking the wrapper (overlay/icon area) to open modal
+    const profileWrapper = document.querySelector('.profile-picture-wrapper');
+    if (profileWrapper) {
+        profileWrapper.style.cursor = 'pointer';
+        profileWrapper.setAttribute('tabindex', '0');
+        profileWrapper.addEventListener('click', function (e) {
+            // if click lands on child controls that shouldn't open, let them handle it
+            openModal();
+        });
+        profileWrapper.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openModal();
+            }
+        });
+    }
+
     // Modal cleanup
     modalEl.addEventListener("hidden.bs.modal", function () {
         console.log('🚪 Modal closed, cleaning up...');
