@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?aci7ip');
-  src:  url('fonts/icomoon.eot?aci7ip#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.woff2?aci7ip') format('woff2'),
-    url('fonts/icomoon.ttf?aci7ip') format('truetype'),
-    url('fonts/icomoon.woff?aci7ip') format('woff'),
-    url('fonts/icomoon.svg?aci7ip#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?8v3qpn');
+  src:  url('fonts/icomoon.eot?8v3qpn#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?8v3qpn') format('woff2'),
+    url('fonts/icomoon.ttf?8v3qpn') format('truetype'),
+    url('fonts/icomoon.woff?8v3qpn') format('woff'),
+    url('fonts/icomoon.svg?8v3qpn#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -222,9 +222,6 @@
 .icon-search-rizz:before {
   content: "\e911";
 }
-.icon-cross-rizz:before {
-  content: "\e913";
-}
 .icon-star:before {
   content: "\e916";
 }
@@ -440,6 +437,9 @@
 }
 .icon-cart-rizz:before {
   content: "\e912";
+}
+.icon-cross-rizz:before {
+  content: "\e913";
 }
 .icon-StateOn:before {
   content: "\e965";
