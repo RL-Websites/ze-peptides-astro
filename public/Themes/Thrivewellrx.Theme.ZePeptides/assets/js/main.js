@@ -749,24 +749,21 @@ $(window).on("load", function () {
         }
     });
 
-    // Save functionality
+    // Save functionality (minimal): crop -> base64 -> console
     saveBtn.addEventListener("click", async function () {
         clearMessages();
         if (!cropper) return;
 
-        console.log('💾 Saving avatar...');
+        console.log('💾 Saving avatar (minimal)...');
 
         const originalHTML = saveBtn.innerHTML;
         saveBtn.disabled = true;
-        saveBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Saving...';
-        
+        saveBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Processing...';
         showProgress();
 
         try {
-            // Simulate progress
             updateProgressBar(10);
 
-            // Generate cropped image
             const canvas = cropper.getCroppedCanvas({
                 width: CONFIG.cropSize,
                 height: CONFIG.cropSize,
@@ -774,53 +771,29 @@ $(window).on("load", function () {
                 imageSmoothingQuality: "high",
             });
 
-            updateProgressBar(30);
+            updateProgressBar(40);
 
-            if (!canvas) {
-                throw new Error("Unable to crop the image. Please try a different file.");
-            }
+            if (!canvas) throw new Error("Unable to crop the image.");
 
-            updateProgressBar(50);
+            // get full data URL + raw base64
+            const dataUrl = canvas.toDataURL('image/jpeg', CONFIG.quality);
+            const base64 = dataUrl.split(',')[1];
 
-            // Convert to blob
-            const blob = await new Promise((resolve) =>
-                canvas.toBlob(resolve, "image/jpeg", CONFIG.quality)
-            );
-            
-            if (!blob) {
-                throw new Error("Could not create image blob.");
-            }
-
-            updateProgressBar(70);
-
-            // Build form data
-            const formData = new FormData();
-            formData.append("avatar", blob, "avatar.jpg");
-
-            updateProgressBar(80);
-
-            // For demo purposes, we'll simulate an upload
-            // Replace this with your actual API endpoint
-            const response = await simulateUpload(formData);
+            console.log('🖼️ Cropped data URL:', dataUrl);
+            console.log('🖼️ Cropped base64 (raw):', base64);
 
             updateProgressBar(100);
 
-            // Update UI
-            const avatarUrl = response.avatarUrl;
-            if (profileAvatar) {
-                profileAvatar.src = avatarUrl + "?v=" + Date.now();
-            }
+            // Optionally update the preview on the page immediately
+            if (profileAvatar) profileAvatar.src = dataUrl;
 
-            showToast("Profile photo updated successfully!");
-            showSuccess("Avatar updated successfully!");
-            
-            setTimeout(() => {
-                bsModal.hide();
-            }, 1500);
+            showToast('Cropped image ready (logged to console)');
+            showSuccess('Cropped image logged');
+            setTimeout(() => bsModal.hide(), 800);
 
         } catch (err) {
             console.error('❌ Save error:', err);
-            showError(err.message || "Something went wrong.");
+            showError(err.message || 'Something went wrong.');
         } finally {
             saveBtn.disabled = false;
             saveBtn.innerHTML = originalHTML;
@@ -828,48 +801,7 @@ $(window).on("load", function () {
         }
     });
 
-    // Simulate upload function (replace with your actual API call)
-    async function simulateUpload(formData) {
-        console.log('🔄 Simulating upload...');
-        
-        // Simulate network delay
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        // For demo, create a data URL from the blob
-        const blob = formData.get('avatar');
-        const dataUrl = await new Promise(resolve => {
-            const reader = new FileReader();
-            reader.onload = () => resolve(reader.result);
-            reader.readAsDataURL(blob);
-        });
-
-        // Simulate successful response
-        return {
-            success: true,
-            avatarUrl: dataUrl,
-            message: "Avatar uploaded successfully"
-        };
-
-        // In real implementation, use this:
-        /*
-        const response = await fetch("/api/profile/avatar", {
-            method: "POST",
-            body: formData,
-        });
-
-        if (!response.ok) {
-            const text = await response.text();
-            throw new Error(text || "Upload failed. Please try again.");
-        }
-
-        const data = await response.json();
-        if (!data.avatarUrl) {
-            throw new Error("Server did not return avatar URL.");
-        }
-
-        return data;
-        */
-    }
+    // No upload functions in minimal mode — cropping + base64 logging only.
 
     console.log('✅ Avatar Cropper setup complete');
 	console.log(cropperImg)
