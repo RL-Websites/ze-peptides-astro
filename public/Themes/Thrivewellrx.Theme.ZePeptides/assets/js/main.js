@@ -897,28 +897,32 @@ $(window).on("load", function () {
 
             if (!cropped) throw new Error("Unable to crop the image.");
 
-            // Create circular masked canvas for final output (preserves transparency)
+            // Composite cropped canvas onto a rectangular background and
+            // export as JPEG so the avatar on the page appears rectangular.
             const out = document.createElement('canvas');
             out.width = size;
             out.height = size;
             const octx = out.getContext('2d');
-            octx.clearRect(0, 0, size, size);
-            octx.beginPath();
-            octx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
-            octx.closePath();
-            octx.clip();
+            // Fill background (white) to avoid transparency showing as circle
+            octx.fillStyle = '#ffffff';
+            octx.fillRect(0, 0, size, size);
+            // Draw the cropped image (square) over the background
             octx.drawImage(cropped, 0, 0, size, size);
 
-            // Export PNG so circular corners are transparent
-            const dataUrl = out.toDataURL('image/png');
+            // Export as JPEG so result is a rectangular image
+            const dataUrl = out.toDataURL('image/jpeg', CONFIG.quality);
             const base64 = dataUrl.split(',')[1];
 
-            console.log('🖼️ Cropped circular data URL:', dataUrl);
+            console.log('🖼️ Cropped rectangular data URL:', dataUrl);
 
             updateProgressBar(100);
 
-            // Update the avatar on the page
-            if (profileAvatar) profileAvatar.src = dataUrl;
+            // Update the avatar on the page (ensure rectangular display)
+            if (profileAvatar) {
+                profileAvatar.src = dataUrl;
+                // enforce rectangular corner radius to match design
+                profileAvatar.style.borderRadius = '8px';
+            }
 
             showToast('Cropped image ready (logged to console)');
             showSuccess('Cropped image logged');
