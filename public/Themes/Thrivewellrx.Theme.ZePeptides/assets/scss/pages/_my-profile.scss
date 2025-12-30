@@ -174,7 +174,9 @@
 //   }
 
   /* ===== CIRCLE CUT-OUT ===== */
-  .cropper-container::after {
+  /* Only show the circular mask when an image is loaded and the modal has the
+     `image-loaded` class. This prevents the circle from showing before upload. */
+  #avatarModal.image-loaded .cropper-container::after {
     content: "";
     position: absolute;
     width: 260px;

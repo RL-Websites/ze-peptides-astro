@@ -225,6 +225,10 @@ const updateActiveStep = () => {
 	let mostCenteredStep = null;
 	let minDistance = Infinity;
 
+                // show circular mask and controls once image is ready
+                if (modalEl && modalEl.classList) modalEl.classList.add('image-loaded');
+                if (controls && controls.classList) controls.classList.remove('d-none');
+
 	const viewportCenter = window.innerHeight / 2;
 
 	steps.forEach((step) => {
@@ -498,6 +502,9 @@ $(window).on("load", function () {
         controls.classList.add("d-none");
         hideProgress();
 
+        // remove loaded-image state so circular mask is hidden
+        if (modalEl && modalEl.classList) modalEl.classList.remove('image-loaded');
+
         if (cropper) {
             cropper.destroy();
             cropper = null;
@@ -598,6 +605,7 @@ $(window).on("load", function () {
                     console.log('✅ Cropper ready!');
                     controls.classList.remove("d-none");
                     saveBtn.disabled = false;
+                    if (modalEl && modalEl.classList) modalEl.classList.add('image-loaded');
                     updatePreview();
                 },
 
