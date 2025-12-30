@@ -1,37 +1,39 @@
 @use "../base/variables" as *;
 
 .my-profile {
-	padding-top: 120px;
-	padding-bottom: 100px;
+  padding-top: 120px;
+  padding-bottom: 100px;
 }
 
 .my-profile__input {
-	&:-webkit-autofill,
-	&:-webkit-autofill:hover,
-	&:-webkit-autofill:focus,
-	&:-webkit-autofill:active {
-		-webkit-text-fill-color: black !important;
-		/* THE REAL FIX */
-		box-shadow: 0 0 0 1000px #fbf9ff inset !important;
-		/* THE SECRET iOS TRICK */
-		transition: background-color 99999s ease-in-out 0s !important;
-		/* Helps but not required */
-		caret-color: black !important;
-		appearance: none !important;
-		background-color: rgba(167, 112, 245, 0.12) !important;
-	}
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-text-fill-color: black !important;
+    /* THE REAL FIX */
+    box-shadow: 0 0 0 1000px #fbf9ff inset !important;
+    /* THE SECRET iOS TRICK */
+    transition: background-color 99999s ease-in-out 0s !important;
+    /* Helps but not required */
+    caret-color: black !important;
+    appearance: none !important;
+    background-color: rgba(167, 112, 245, 0.12) !important;
+  }
 }
 
 .rounded-10 {
-	border-radius: 10px !important;
+  border-radius: 10px !important;
 }
 
 .form-wrapper {
-	background-color: #fbf9ff;
-	padding: 40px 40px 20px;
-	@media all and (max-width: 768px) {
-		padding: 20px;
-	}
+  background-color: #fbf9ff;
+  padding: 40px 40px 20px;
+
+  @media all and (max-width: 768px) {
+    padding: 20px;
+  }
 }
 
 // .buttons {
@@ -46,11 +48,11 @@
 // }
 
 .form-group {
-	margin-bottom: 24px;
+  margin-bottom: 24px;
 
-	input {
-		border-color: #aeaeae;
-	}
+  input {
+    border-color: #aeaeae;
+  }
 }
 
 .profile-picture-wrapper {
@@ -64,11 +66,9 @@
     position: absolute;
     inset: 0;
     border-radius: 8px;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.6) 60%,
-      rgba(0, 0, 0, 0.6) 60%
-    );
+    background: linear-gradient(180deg,
+        rgba(0, 0, 0, 0.6) 60%,
+        rgba(0, 0, 0, 0.6) 60%);
     opacity: 0;
     transition: opacity 160ms ease-in-out;
     pointer-events: none;
@@ -126,20 +126,20 @@
   pointer-events: auto;
 }
 
-.modal-content--custom{
-	max-width: 540px;
-	max-height: 785px;
+.modal-content--custom {
+  max-width: 540px;
+  max-height: 785px;
 
 }
 
 .upload-icon {
-	position: absolute;
-	right: 12px;
-	top: 50%;
-	transform: translateY(-50%);
-	font-size: 20px;
-	color: #0C0C0D;
-	pointer-events: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #0C0C0D;
+  pointer-events: none;
 }
 
 
@@ -162,7 +162,7 @@
   }
 
   /* Cropper background */
-  .cropper-container {
+  .my-cropper-container {
     position: relative;
     // background: #8f9796;
     border-radius: 10px;
@@ -184,42 +184,44 @@
   }
 
   /* ===== DARK OVERLAY ===== */
-//   .cropper-container::before {
-//     content: "";
-//     position: absolute;
-//     inset: 0;
-//     background: rgba(0, 0, 0, 0.45);
-//     z-index: 2;
-//   }
+  //   .cropper-container::before {
+  //     content: "";
+  //     position: absolute;
+  //     inset: 0;
+  //     background: rgba(0, 0, 0, 0.45);
+  //     z-index: 2;
+  //   }
 
   /* ===== CIRCLE CUT-OUT ===== */
   /* Only show the circular mask when an image is loaded and the modal has the
      `image-loaded` class. This prevents the circle from showing before upload. */
-  #avatarModal.image-loaded .cropper-container::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: transparent;
-    border-radius: 50%;
-    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.45);
-    z-index: 3;
-    pointer-events: none;
-  }
+  /* ===== CIRCLE CUT-OUT ===== */
+  /* Show a circular mask over the cropper while keeping Cropper's
+     interactive controls visible and usable. */
 
   /* Ensure image stays below mask */
   .cropper-wrapper {
     z-index: 1;
   }
 
-  /* Make the crop box visually circular and ensure internal face is clipped */
-  .cropper-container .cropper-view-box,
-  .cropper-container .cropper-face {
+  /* Circular mask (darkens area outside the circle) */
+  .my-cropper-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    /* keep under Cropper controls */
+    /* Use radial gradient to create circular transparent center while
+       darkening the outside. This avoids stacking issues with box-shadow. */
+    // background: radial-gradient(circle at 50% 50%,
+    //     rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.45) 50%);
+  }
+
+  /* Make the crop view appear circular, but avoid hiding cropper controls */
+  .my-cropper-container .cropper-view-box,
+  .my-cropper-container .cropper-face {
     border-radius: 50%;
-    overflow: hidden;
   }
 
   /* Circular preview image */
@@ -228,6 +230,13 @@
     border-radius: 50%;
     display: block;
     object-fit: cover;
+  }
+
+  /* Ensure Cropper's interactive controls render above the mask */
+  .my-cropper-container .cropper-crop-box,
+  .my-cropper-container .cropper-point,
+  .my-cropper-container .cropper-line {
+    z-index: 3;
   }
 
   /* Footer buttons styling (design match) */
