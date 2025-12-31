@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?aci7ip');
-  src:  url('fonts/icomoon.eot?aci7ip#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.woff2?aci7ip') format('woff2'),
-    url('fonts/icomoon.ttf?aci7ip') format('truetype'),
-    url('fonts/icomoon.woff?aci7ip') format('woff'),
-    url('fonts/icomoon.svg?aci7ip#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?yeyusw');
+  src:  url('fonts/icomoon.eot?yeyusw#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?yeyusw') format('woff2'),
+    url('fonts/icomoon.ttf?yeyusw') format('truetype'),
+    url('fonts/icomoon.woff?yeyusw') format('woff'),
+    url('fonts/icomoon.svg?yeyusw#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -218,12 +218,6 @@
 }
 .icon-drop-down-rizz:before {
   content: "\e910";
-}
-.icon-search-rizz:before {
-  content: "\e911";
-}
-.icon-cross-rizz:before {
-  content: "\e913";
 }
 .icon-star:before {
   content: "\e916";
@@ -440,6 +434,12 @@
 }
 .icon-cart-rizz:before {
   content: "\e912";
+}
+.icon-search-rizz:before {
+  content: "\e911";
+}
+.icon-cross-rizz:before {
+  content: "\e913";
 }
 .icon-StateOn:before {
   content: "\e965";
