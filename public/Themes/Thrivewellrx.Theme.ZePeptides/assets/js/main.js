@@ -397,13 +397,6 @@ $(window).on("load", function () {
     const previewContainer = document.querySelector('.preview-container');
     const previewLabel = previewContainer ? previewContainer.querySelector('label') : null;
 
-    // Control buttons
-    const zoomInBtn = document.getElementById("zoomInBtn");
-    const zoomOutBtn = document.getElementById("zoomOutBtn");
-    const rotateLeftBtn = document.getElementById("rotateLeftBtn");
-    const rotateRightBtn = document.getElementById("rotateRightBtn");
-    const resetBtn = document.getElementById("resetBtn");
-
     // Bootstrap modal instance
     const bsModal = new bootstrap.Modal(modalEl, { backdrop: "static" });
 
@@ -502,8 +495,6 @@ $(window).on("load", function () {
     }
 
     function cleanupPreview() {
-        console.log('🧹 Cleaning up preview...');
-
         saveBtn.disabled = true;
         saveBtn.innerHTML = '<i class="fas fa-save me-2"></i>Save';
         controls.classList.add("d-none");
@@ -627,7 +618,7 @@ $(window).on("load", function () {
             });
         };
 
-        cropperImg.onerror = function() {
+        cropperImg.onerror = function () {
             showError("Failed to load the selected image.");
             cleanupPreview();
         };
@@ -715,7 +706,7 @@ $(window).on("load", function () {
 
     if (profileAvatar) {
         profileAvatar.addEventListener("click", openModal);
-        profileAvatar.addEventListener("keydown", function(e) {
+        profileAvatar.addEventListener("keydown", function (e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 openModal();
@@ -785,88 +776,6 @@ $(window).on("load", function () {
         } catch (err) {
             showError(err.message);
             cleanupPreview();
-        }
-    });
-
-    // Drag & Drop functionality
-    if (dropZone) {
-        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-            dropZone.addEventListener(eventName, preventDefaults, false);
-        });
-
-        function preventDefaults(e) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
-
-        ['dragenter', 'dragover'].forEach(eventName => {
-            dropZone.addEventListener(eventName, highlight, false);
-        });
-
-        ['dragleave', 'drop'].forEach(eventName => {
-            dropZone.addEventListener(eventName, unhighlight, false);
-        });
-
-        function highlight(e) {
-            dropZone.classList.add('drag-over');
-        }
-
-        function unhighlight(e) {
-            dropZone.classList.remove('drag-over');
-        }
-
-        dropZone.addEventListener('drop', handleDrop, false);
-
-        function handleDrop(e) {
-            const dt = e.dataTransfer;
-            const files = dt.files;
-
-            if (files.length > 0) {
-                fileInput.files = files;
-                fileInput.dispatchEvent(new Event('change'));
-            }
-        }
-    }
-
-    // Cropper controls
-    if (zoomInBtn) zoomInBtn.addEventListener("click", () => cropper && cropper.zoom(0.1));
-    if (zoomOutBtn) zoomOutBtn.addEventListener("click", () => cropper && cropper.zoom(-0.1));
-    if (rotateLeftBtn) rotateLeftBtn.addEventListener("click", () => cropper && cropper.rotate(-10));
-    if (rotateRightBtn) rotateRightBtn.addEventListener("click", () => cropper && cropper.rotate(10));
-    if (resetBtn) resetBtn.addEventListener("click", () => cropper && cropper.reset());
-
-    // Keyboard shortcuts
-    modalEl.addEventListener("keydown", function(e) {
-        if (!cropper) return;
-
-        switch(e.key) {
-            case "=":
-            case "+":
-                e.preventDefault();
-                cropper.zoom(0.1);
-                break;
-            case "-":
-                e.preventDefault();
-                cropper.zoom(-0.1);
-                break;
-            case "ArrowLeft":
-                if (e.ctrlKey) {
-                    e.preventDefault();
-                    cropper.rotate(-10);
-                }
-                break;
-            case "ArrowRight":
-                if (e.ctrlKey) {
-                    e.preventDefault();
-                    cropper.rotate(10);
-                }
-                break;
-            case "r":
-                if (e.ctrlKey) {
-                    e.preventDefault();
-                    cropper.reset();
-                }
-                break;
         }
     });
 
