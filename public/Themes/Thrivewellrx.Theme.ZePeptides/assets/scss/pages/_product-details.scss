@@ -163,9 +163,17 @@
 	.product-hero {
 		padding: 102px 0 50px 0;
 
+		&__details {
+			overflow-y: auto;
+		}
+
 		&__left {
 			padding: 56px 15px 56px 15px;
 			height: 313px;
+		}
+
+		&__left_gray {
+			height: 100px;
 		}
 
 		&__right {
