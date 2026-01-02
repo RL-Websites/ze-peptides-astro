@@ -36,13 +36,13 @@
 					type="button"
 					class="theme-btn theme-btn__outline theme-btn__outline--primary"
 					data-bs-toggle="modal"
-					data-bs-target="#doses">Learn more</button
+					data-bs-target="#productDetailsModal">Learn more</button
 				>
 				<button
 					type="button"
 					class="theme-btn theme-btn__primary"
 					data-bs-toggle="modal"
-					data-bs-target="#doses">Add to Cart</button
+					data-bs-target="#productDetailsModal">Add to Cart</button
 				>
 			</div>
 		</div>
@@ -70,13 +70,13 @@
 					type="button"
 					class="theme-btn theme-btn__outline theme-btn__outline--primary"
 					data-bs-toggle="modal"
-					data-bs-target="#doses">Learn more</button
+					data-bs-target="#productDetailsModal">Learn more</button
 				>
 				<button
 					type="button"
 					class="theme-btn theme-btn__primary theme-btn--disabled"
 					data-bs-toggle="modal"
-					data-bs-target="#doses"
+					data-bs-target="#productDetailsModal"
 					disabled>Add to Cart</button
 				>
 			</div>
@@ -105,13 +105,13 @@
 					type="button"
 					class="theme-btn theme-btn__outline theme-btn__outline--primary"
 					data-bs-toggle="modal"
-					data-bs-target="#doses">Learn more</button
+					data-bs-target="#productDetailsModal">Learn more</button
 				>
 				<!-- <button
 						type="button"
 						class="theme-btn theme-btn__primary"
 						data-bs-toggle="modal"
-						data-bs-target="#doses">Add to Cart</button
+						data-bs-target="#productDetailsModal">Add to Cart</button
 					> -->
 
 				<div
@@ -161,13 +161,13 @@
 					type="button"
 					class="theme-btn theme-btn__outline theme-btn__outline--primary"
 					data-bs-toggle="modal"
-					data-bs-target="#doses">Learn more</button
+					data-bs-target="#productDetailsModal">Learn more</button
 				>
 				<button
 					type="button"
 					class="theme-btn theme-btn__primary"
 					data-bs-toggle="modal"
-					data-bs-target="#doses">Add to Cart</button
+					data-bs-target="#productDetailsModal">Add to Cart</button
 				>
 			</div>
 		</div>
@@ -195,13 +195,13 @@
 					type="button"
 					class="theme-btn theme-btn__outline theme-btn__outline--primary"
 					data-bs-toggle="modal"
-					data-bs-target="#doses">Learn more</button
+					data-bs-target="#productDetailsModal">Learn more</button
 				>
 				<button
 					type="button"
 					class="theme-btn theme-btn__primary"
 					data-bs-toggle="modal"
-					data-bs-target="#doses">Add to Cart</button
+					data-bs-target="#productDetailsModal">Add to Cart</button
 				>
 			</div>
 		</div>
@@ -229,13 +229,13 @@
 					type="button"
 					class="theme-btn theme-btn__outline theme-btn__outline--primary"
 					data-bs-toggle="modal"
-					data-bs-target="#doses">Learn more</button
+					data-bs-target="#productDetailsModal">Learn more</button
 				>
 				<button
 					type="button"
 					class="theme-btn theme-btn__primary"
 					data-bs-toggle="modal"
-					data-bs-target="#doses">Add to Cart</button
+					data-bs-target="#productDetailsModal">Add to Cart</button
 				>
 			</div>
 		</div>
@@ -411,3 +411,122 @@
 </div>
 
 <!-- Dose Modal End -->
+
+<div
+	class="modal product-details-modal fade"
+	id="productDetailsModal"
+	tabindex="-1"
+	aria-hidden="true"
+>
+	<div class="modal-dialog modal-lg modal-dialog-centered">
+		<div class="modal-content">
+			<!-- Close button -->
+
+			<div class="modal-body">
+				<div class="btn-modal-close">
+					<button
+						type="button"
+						class="btn btn-outline border-0"
+						data-bs-dismiss="modal"
+						aria-label="Close"
+					>
+						<i class="icon-cross_filled btn-close-icon"></i>
+					</button>
+				</div>
+				<div class="row align-items-start pt-20">
+					<!-- Product Image -->
+					<div class="col-xl-5 col-md-6 product-hero__left-col">
+						<div class="product-hero__left_gray">
+							<img
+								src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-2.png"
+								class="product-hero__img"
+								alt="Semaglutide"
+							/>
+						</div>
+					</div>
+
+					<!-- Product Details -->
+					<div class="col-xl-7 col-md-6">
+						<div class="product-hero__right">
+							<h2 class="mb-3"> Semaglutide 5mg/vial </h2>
+
+							<h3 class="mt-12 text-primary"> $299.99 </h3>
+
+							<!-- Out of Stock badge (example - remove if not needed) -->
+							<!--
+              <div class="mt-12">
+                <span class="badge rounded-pill bg-pink-2 text-red">
+                  Out of Stock
+                </span>
+              </div>
+              -->
+
+							<div
+								class="d-flex justify-content-between align-items-center mt-12"
+							>
+								<h5 class="text-gray-dark">Purity: 99.9%</h5>
+								<a
+									href="https://example.com/coa/semaglutide.pdf"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="text-primary"
+								>
+									COA
+								</a>
+							</div>
+
+							<div class="alert-pill mt-20 mt-md-24">
+								<i class="icon-alert"></i>
+								<span>
+									For Research Purposes Only — Not for Human Consumption
+								</span>
+							</div>
+
+							<!-- Cart Actions -->
+							<div class="product-hero__cart mt-24">
+								<div class="product-action__btn mt-24 d-flex gap-3 flex-wrap">
+									<button
+										type="button"
+										class="theme-btn theme-btn-size-md theme-btn__primary"
+									>
+										Add to Cart
+									</button>
+
+									<button
+										type="button"
+										class="theme-btn theme-btn-size-md theme-btn__outline theme-btn__outline--primary"
+									>
+										Buy Now
+									</button>
+								</div>
+							</div>
+
+							<!-- Product Description -->
+							<div
+								class="text-body3 text-gray-dark mt-20 mt-md-24 product-hero__details_scroll"
+							>
+								<p
+									>Semaglutide is a high-purity research peptide used in
+									laboratory settings for studying GLP-1 receptor pathways.</p
+								>
+								<p
+									>It is lyophilized and supplied in vials for reconstitution.
+									Purity verified at 99.9% via HPLC.</p
+								>
+								<p
+									><strong
+										>For Research Purposes Only — Not for Human Consumption</strong
+									></p
+								>
+								<p
+									>Each vial contains 5 mg of Semaglutide with &gt;99.9% purity.
+									Certificate of Analysis (COA) available upon request.</p
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

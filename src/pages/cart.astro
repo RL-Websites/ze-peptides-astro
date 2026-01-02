@@ -50,7 +50,7 @@ import Layout from "../layouts/Layout.astro";
 			<!--==|| Product Cart Items Status End ||== -->
 
 			<!--==|| Cart Information Status Start ||== -->
-			<section class="cart-view pb-md-100 pb-50 d-none">
+			<section class="cart-view pb-md-100 pb-50">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-7" data-aos="fade-up" data-aos-duration="1000">
@@ -65,9 +65,9 @@ import Layout from "../layouts/Layout.astro";
 										</div>
 
 										<div class="cart__details">
-											<p class="cart__item-name">Finasteride 1mg Tablet</p>
+											<p class="cart__item-name">BPC-157-05MG</p>
 											<p class="cart__item-price mt-10">
-												$39.99/month and a $30.00 physician <span>Consult</span>
+												Product Price: <span>$90.00</span>
 											</p>
 											<p class="fw-600 mt-10"
 												>Qty: <span data-bind="text: product.Quantity">1</span
@@ -87,117 +87,6 @@ import Layout from "../layouts/Layout.astro";
 											class="theme-btn theme-btn__icon-only cart-delete-btn"
 											data-bs-toggle="modal"
 											data-bs-target="#confirm"
-										>
-											<i class="icon-delete"></i>
-										</button>
-									</div>
-								</div>
-								<div class="cart__item">
-									<div class="cart__product">
-										<div class="cart__thumbnail cart__thumbnail--purple">
-											<img
-												src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-1.png"
-												alt="Product Image"
-											/>
-										</div>
-
-										<div class="cart__details">
-											<p class="cart__item-name">Finasteride 1mg Tablet</p>
-											<p class="cart__item-price mt-10">
-												$39.99/month and a $30.00 physician <span>Consult</span>
-											</p>
-											<p class="fw-600 mt-10"
-												>Qty: <span data-bind="text: product.Quantity">1</span
-												></p
-											>
-
-											<!-- <p class="cart__item-type">
-												<span>.5mg</span>
-												<span class="px-2">|</span>
-												<span>Consult</span>
-											</p> -->
-										</div>
-									</div>
-
-									<div class="cart__action">
-										<button
-											class="theme-btn theme-btn__icon-only cart-delete-btn"
-											data-toggle="modal"
-											data-target="#confirm"
-										>
-											<i class="icon-delete"></i>
-										</button>
-									</div>
-								</div>
-								<div class="cart__item">
-									<div class="cart__product">
-										<div class="cart__thumbnail cart__thumbnail--purple">
-											<img
-												src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-1.png"
-												alt="Product Image"
-											/>
-										</div>
-
-										<div class="cart__details">
-											<p class="cart__item-name">Finasteride 1mg Tablet</p>
-											<p class="cart__item-price mt-10">
-												$39.99/month and a $30.00 physician <span>Consult</span>
-											</p>
-											<p class="fw-600 mt-10"
-												>Qty: <span data-bind="text: product.Quantity">1</span
-												></p
-											>
-
-											<!-- <p class="cart__item-type">
-												<span>.5mg</span>
-												<span class="px-2">|</span>
-												<span>Consult</span>
-											</p> -->
-										</div>
-									</div>
-
-									<div class="cart__action">
-										<button
-											class="theme-btn theme-btn__icon-only cart-delete-btn"
-											data-toggle="modal"
-											data-target="#confirm"
-										>
-											<i class="icon-delete"></i>
-										</button>
-									</div>
-								</div>
-								<div class="cart__item">
-									<div class="cart__product">
-										<div class="cart__thumbnail cart__thumbnail--purple">
-											<img
-												src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-1.png"
-												alt="Product Image"
-											/>
-										</div>
-
-										<div class="cart__details">
-											<p class="cart__item-name">Finasteride 1mg Tablet</p>
-											<p class="cart__item-price mt-10">
-												$39.99/month and a $30.00 physician <span>Consult</span>
-											</p>
-											<p class="fw-600 mt-10"
-												>Qty: <span data-bind="text: product.Quantity">1</span
-												></p
-											>
-
-											<!-- <p class="cart__item-type">
-												<span>.5mg</span>
-												<span class="px-2">|</span>
-												<span>Consult</span>
-											</p> -->
-										</div>
-									</div>
-
-									<div class="cart__action">
-										<button
-											class="theme-btn theme-btn__icon-only cart-delete-btn"
-											data-toggle="modal"
-											data-target="#confirm"
 										>
 											<i class="icon-delete"></i>
 										</button>
@@ -227,7 +116,11 @@ import Layout from "../layouts/Layout.astro";
 						>
 							<div class="cart-card">
 								<div class="cart-card__header">
-									<p class="fs-24 fw-extrabold mb-0">Cart Total</p>
+									<p class="fs-24 fw-extrabold mb-0"
+										>Cart Total <span class="fs-16 fw-normal ms-2"
+											>(1 Item)</span
+										></p
+									>
 								</div>
 								<div class="cart-card__body">
 									<div class="pricing__basic">
@@ -241,7 +134,7 @@ import Layout from "../layouts/Layout.astro";
 										</div>
 									</div>
 
-									<div class="coupon pricing__coupon">
+									<!-- <div class="coupon pricing__coupon">
 										<p class="coupon__label">Coupon Code</p>
 										<div class="theme-tag">
 											<i class="icon-promo-code theme-tag__icon"></i>
@@ -250,7 +143,7 @@ import Layout from "../layouts/Layout.astro";
 												<i class="icon-cross"></i>
 											</button>
 										</div>
-									</div>
+									</div> -->
 
 									<div class="pricing__total">
 										<div class="pricing__item">
@@ -345,7 +238,7 @@ import Layout from "../layouts/Layout.astro";
 			</section>
 			<!--==|| Cart Information Status End ||== -->
 
-			<!--==|| Empty Cart Status Start ||== -->
+			<!-- ==|| Empty Cart Status Start ||==
 			<section
 				class="cart-view pt-md-150 pb-md-100 pt-120 pb-50"
 				data-aos="fade-up"
@@ -361,11 +254,7 @@ import Layout from "../layouts/Layout.astro";
 									alt="Empty Cart"
 								/>
 							</div>
-							<!-- <img
-								class="img-fluid"
-								src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/empty-cart.svg"
-								alt=""
-							/> -->
+				
 							<p
 								class="cart-empty__text font-sfui fs-md-24 fs-20 text-secondary fw-bold mt-30"
 								>Your cart is currently empty!</p
@@ -381,56 +270,54 @@ import Layout from "../layouts/Layout.astro";
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 			<!--==|| Empty Cart Status End ||== -->
 		</div>
 	</main>
 	<!-- =====|| Main Section End ||====== -->
-</Layout>
 
-<Footer />
-
-<!-- Confirm Modal Start -->
-<div
-	id="confirm"
-	class="modal fade confirm-modal"
-	tabindex="-1"
-	aria-labelledby="confirmLabel"
-	aria-hidden="true"
->
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<!-- <button type="button" class="btn-close" data-dismiss="modal">
+	<!-- Confirm Modal Start -->
+	<div
+		id="confirm"
+		class="modal fade confirm-modal"
+		tabindex="-1"
+		aria-labelledby="confirmLabel"
+		aria-hidden="true"
+	>
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<!-- <button type="button" class="btn-close" data-dismiss="modal">
 				<i class="icon-cross_filled"></i>
 			</button> -->
 
-			<div class="modal-body">
-				<div class="modal__icon">
-					<i class="icon-alert"></i>
-				</div>
-				<div class="modal__title">
-					<p>Please Confirm</p>
-				</div>
+				<div class="modal-body">
+					<div class="modal__icon">
+						<i class="icon-alert"></i>
+					</div>
+					<div class="modal__title">
+						<p>Please Confirm</p>
+					</div>
 
-				<div class="modal__text">
-					<p>Do you want to delete this item?</p>
-				</div>
+					<div class="modal__text">
+						<p>Do you want to delete this item?</p>
+					</div>
 
-				<div class="modal__actions">
-					<button
-						class="modal__action modal__action--primary"
-						type="button"
-						data-bs-dismiss="modal"
-					>
-						No
-					</button>
-					<button class="modal__action modal__action--outline" type="button">
-						Yes
-					</button>
+					<div class="modal__actions">
+						<button
+							class="modal__action modal__action--primary"
+							type="button"
+							data-bs-dismiss="modal"
+						>
+							No
+						</button>
+						<button class="modal__action modal__action--outline" type="button">
+							Yes
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-
+</Layout>
+<Footer />
 <!-- Confirm Modal End -->
