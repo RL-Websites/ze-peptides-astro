@@ -5,6 +5,25 @@
   padding-bottom: 100px;
 }
 
+.select__wrapper__alt {
+  .select__options{
+     padding: 15px 10px;
+    color: #525252;
+    min-width: unset;
+
+    @media screen and (max-width: 576px) {
+      padding: 12.5px 6px;
+    }
+  }
+  width: 100%;
+     
+  // padding: 15px 10px;
+  &::after {
+    right: 10px;
+    font-size: 16px;
+  }
+}
+
 .my-profile__input {
 
   &:-webkit-autofill,
@@ -144,6 +163,13 @@
   color: #0C0C0D;
   pointer-events: none;
 }
+
+.edit-button{
+  color: #5607c5;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 
 /* Hide native file input UI text in avatar modal but keep the element clickable
    so the custom icon and area can be used to pick a file. */
