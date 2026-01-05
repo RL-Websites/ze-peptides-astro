@@ -218,17 +218,34 @@
                             <p style="margin:0 0 12px 0;padding:0">
                               If the button above does not work, please use the link below and paste it into your browser to verify your email address.
                             </p>
-                            <p style="margin:0 0 12px 0;padding:0;text-align:center">
+                            <!-- <p style="margin:0 0 12px 0;padding:0;text-align:center">
                               <div style="color:#2D2D2D; margin: 0 auto; padding: 0 12px; position: relative; background:#F3F3F3;border-radius:8px; display:flex; align-items: center; justify-content: space-between; font-size:16px;font-weight:600;line-height:45px;text-align:center; width:200px;-webkit-text-size-adjust:none;mso-line-height-rule:exactly;text-align: center;"> 
                                 <span  id="tooltip" >Copy Link </span>  
-                                <!-- <img onclick="copyToClipboard('{VerificationLink}');" src="../public/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/copy-link.png" style="display: inline-block; cursor: pointer; height: 20px;" alt="Copy Link Icon"/>     -->
-                                <img onclick="copyToClipboard('{VerificationLink}');" src="https://vpeptides.thrivewellrx.com/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/copy-link.png" style="display: inline-block; cursor: pointer; height: 20px;" alt="Copy Link Icon"/>    
+                                <img onclick="copyToClipboard('{VerificationLink}');" src="../public/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/copy-link.png" style="display: inline-block; cursor: pointer; height: 20px;" alt="Copy Link Icon"/>    
+                                 <a href="{VerificationLink}" target="_blank" style="text-decoration:none;">
+                                  <img
+                                    src="https://vpeptides.thrivewellrx.com/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/copy-link.png"
+                                    style="display:inline-block; height:20px; width:20px;"
+                                    alt="Open Link"
+                                  />
+                                </a>
                                 
-                                <!-- <span id="tooltip" style="visibility:hidden; background-color:#333; color:#fff; text-align:center; border-radius:5px; padding:5px; position:absolute; bottom:100%; left:50%; transform:translateX(-50%); z-index:10; white-space:nowrap;">      
+                                <span id="tooltip" style="visibility:hidden; background-color:#333; color:#fff; text-align:center; border-radius:5px; padding:5px; position:absolute; bottom:100%; left:50%; transform:translateX(-50%); z-index:10; white-space:nowrap;">      
                                   Link copied!    
-                                </span> -->
+                                </span>
                               </div>
+                            </p> -->
+                            <p
+                              style="
+                                font-size:14px;
+                                word-break:break-all;
+
+                                border-radius:6px;
+                              "
+                            >
+                              <a style="color: #007aff;" href="{VerificationLink}">{VerificationLink}</a>
                             </p>
+
                             <p style="margin:0 0 12px 0;padding:0">
                               If you did not create an account with VPeptides, you may safely ignore this email.
                             </p>
