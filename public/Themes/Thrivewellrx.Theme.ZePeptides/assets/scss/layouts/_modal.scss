@@ -88,10 +88,17 @@
 
 		p {
 			text-align: center;
-			font-size: $fs-16;
-			font-weight: 400;
+			font-size: 28px;
+			line-height: 1.4;
+			font-weight: 600;
+			text-transform: capitalize;
 			color: $black;
-			margin-bottom: 0px;
+
+			@media all and (max-width: 767px) {
+				font-size: 20px;
+				line-height: 26px;
+			}
+
 		}
 	}
 
@@ -105,16 +112,10 @@
 
 		p {
 			text-align: center;
-			font-size: 28px;
-			line-height: 1.4;
-			font-weight: 600;
-			text-transform: capitalize;
+			font-size: $fs-16;
+			font-weight: 400;
 			color: $black;
-
-			@media all and (max-width: 767px) {
-				font-size: 20px;
-				line-height: 26px;
-			}
+			margin-bottom: 0px;
 		}
 	}
 
@@ -389,6 +390,7 @@
 }
 
 .terms-condition-modal {
+
 	.modal-body,
 	.modal-header {
 		padding: 20px;
