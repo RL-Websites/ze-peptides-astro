@@ -12,24 +12,24 @@
 }
 
 .btn-modal-close {
-    position: absolute;
-    top: 30px;
-    right: 15px;
+	position: absolute;
+	top: 30px;
+	right: 15px;
 }
 
 .btn-close-icon {
-    font-size: 2rem;
+	font-size: 2rem;
 }
 
 @media (max-width: 768px) {
-    .btn-close-icon {
-        font-size: 20px;
-    }
+	.btn-close-icon {
+		font-size: 20px;
+	}
 
-    .btn-modal-close {
-        top: 10px;
-        right: 5px;
-    }
+	.btn-modal-close {
+		top: 10px;
+		right: 5px;
+	}
 }
 
 
@@ -75,7 +75,7 @@
 
 		&__details {
 			height: auto;
-			max-height: 191px;
+			max-height: 58px;
 			// min-height: 70px;
 			overflow: hidden;
 			position: relative;
