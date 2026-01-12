@@ -795,3 +795,12 @@
 		}
 	}
 }
+
+.pricing__item--value-strike {
+	/* Ensures the text remains its original color (e.g., black) */
+	font-weight: bold;
+	text-decoration: line-through;
+	text-decoration-thickness: 2px;
+
+	text-decoration-color: #FF0000;
+}
