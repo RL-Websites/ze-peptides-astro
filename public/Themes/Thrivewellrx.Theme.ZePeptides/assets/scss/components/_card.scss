@@ -40,6 +40,15 @@
 		text-transform: capitalize;
 	}
 
+	&__footer {
+		padding: 22px 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-top: 1px solid $primary-light;
+		text-transform: capitalize;
+	}
+
 	&__title {
 		margin: 0;
 		color: $secondary;
@@ -102,6 +111,10 @@
 
 
 		&__header {
+			padding: 12px 16px;
+		}
+
+		&__footer {
 			padding: 12px 16px;
 		}
 
