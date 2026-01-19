@@ -346,38 +346,51 @@ import Layout from "../layouts/Layout.astro";
 								</div>
 							</div>
 
-							<div class="col-md-6 mt-lg-0 mt-20">
+							<div class="col-md-12 mt-20">
 								<div class="card-basic h-100">
 									<div class="card-basic__header">
-										<p class="card-basic__title">Cart Summary</p>
+										<p class="card-basic__title">Order Summary</p>
 									</div>
 
 									<div class="card-basic__body">
-										<div class="document-info">
-											<div class="document-info__item">
+										<div
+											class="document-info flex-md-row flex-col justify-content-between w-100"
+										>
+											<div class="document-info__item d-flex flex-column w-100">
 												<p class="document-info__label">Subtotal:</p>
-												<p class="medicine-info__text">$ <span>70.00</span></p>
+												<p class="medicine-info__text mt-md-3 mt-1"
+													>$ <span>70.00</span></p
+												>
 											</div>
 
-											<div class="document-info__item">
+											<div class="document-info__item d-flex flex-column w-100">
 												<p class="document-info__label">Shipping:</p>
-												<p class="medicine-info__text">$ <span>20.00</span></p>
+												<p class="medicine-info__text mt-md-3 mt-1"
+													>$ <span>20.00</span></p
+												>
 											</div>
 
-											<div class="document-info__item">
+											<div class="document-info__item d-flex flex-column w-100">
 												<p class="document-info__label text-primary"
 													>Discount:</p
 												>
-												<p class="medicine-info__text text-primary"
+												<p class="medicine-info__text text-primary mt-md-3 mt-1"
 													>$ <span>- $7.00</span></p
 												>
 											</div>
 
-											<div class="document-info__item">
+											<div class="document-info__item d-flex flex-column w-100">
 												<p class="document-info__label">Total:</p>
-												<p class="medicine-info__text">$ <span>83.00</span></p>
+												<p class="medicine-info__text mt-md-3 mt-1"
+													>$ <span>83.00</span></p
+												>
 											</div>
 										</div>
+									</div>
+
+									<div class="card-basic__footer">
+										<p class="fs-md-22 fs-20 fw-bold">Total:</p>
+										<p class="fs-md-22 fs-20 fw-bold">$83.00</p>
 									</div>
 								</div>
 
