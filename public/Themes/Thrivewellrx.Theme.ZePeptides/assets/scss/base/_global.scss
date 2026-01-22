@@ -114,6 +114,10 @@ ul {
 		-moz-appearance: none;
 		cursor: pointer;
 
+		&-country{
+			padding: 18px 15px;
+		}
+
 		&--alt {
 			width: 520px;
 		}
