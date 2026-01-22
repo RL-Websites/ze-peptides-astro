@@ -114,8 +114,25 @@ ul {
 		-moz-appearance: none;
 		cursor: pointer;
 
-		&-country{
-			padding: 18px 15px;
+		&-country {
+			padding: 15px 15px;
+			position: relative;
+			background-color: transparent;
+
+			&::after {
+				content: "\e920";
+				font-family: "icomoon";
+				position: absolute;
+				z-index: 2;
+				top: 50%;
+				right: 15px;
+				transform: translateY(-50%);
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 1;
+				color: black;
+
+			}
 		}
 
 		&--alt {
