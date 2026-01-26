@@ -322,22 +322,27 @@
 
 			&-md {
 				gap: 8px;
+
 				.select__options {
 					padding: 15px 15px;
 					color: $gray-dark;
 					min-width: unset;
 				}
+
 				.select__wrapper {
 					width: 100%;
+
 					&::after {
 						color: $gray-dark;
 					}
 				}
+
 				@media all and (max-width: 576px) {
 					.select__options {
 						font-size: 12px;
 						padding: 12.5px 10px;
 					}
+
 					.select__wrapper {
 						&::after {
 							font-size: 14px;
@@ -388,6 +393,9 @@
 	font-size: $fs-14;
 	line-height: 1;
 	white-space: nowrap;
+	border: 0;
+	outline: 0;
+	box-shadow: none;
 
 	&--default {
 		background-color: $gray-normal;
@@ -417,6 +425,10 @@
 	&--state {
 		background-color: $gray-lighter;
 		color: $black-deep;
+	}
+
+	&--transparent {
+		background-color: transparent;
 	}
 }
 

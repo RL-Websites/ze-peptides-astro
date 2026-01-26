@@ -1,9 +1,9 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import StateAutocomplete from "../components/StateAutocomplete.astro";
 import Toast from "../components/Toast.astro";
 import Layout from "../layouts/Layout.astro";
-import StateAutocomplete from "../components/StateAutocomplete.astro";
 ---
 
 <Layout>
@@ -14,7 +14,7 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
     <div class="page__wrapper page__wrapper--alt">
       <!-- ==|| Cart Hero Section Start ||== -->
       <section class="cart-hero pt-md-130 pt-120">
-        <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container" data-aos="fade-up" data-aos-duration="500">
           <h1 class="text-primary-grad-1 text-center">Payment Method</h1>
         </div>
       </section>
@@ -26,7 +26,7 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
           <div
             class="m-0 cart-card payment__card--cart-summary"
             data-aos="fade-up"
-            data-aos-duration="1000"
+            data-aos-duration="500"
           >
             <div class="container">
               <div class="row mb-3">
@@ -313,12 +313,7 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
         <div class="container">
           <div class="row">
             <div class="col-12 payment__card--right">
-              <div
-                class="cart-card"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-delay="200"
-              >
+              <div class="cart-card" data-aos="fade-up" data-aos-duration="700">
                 <div class="cart-card__header">
                   <h3 class="fs-md-24 fs-20 fw-bold">
                     Cart Total <span class="fs-16 fw-normal">(4 items)</span>
