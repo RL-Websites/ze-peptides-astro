@@ -407,6 +407,11 @@
 		color: $primary-deep;
 	}
 
+	&--submitted {
+		background-color: $submitted;
+		color: $primary-deep;
+	}
+
 	&--warning {
 		background-color: $gray-light-2;
 		color: $primary-deep;
