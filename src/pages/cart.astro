@@ -57,21 +57,170 @@ import Layout from "../layouts/Layout.astro";
 							<div class="cart__items">
 								<div class="cart__item">
 									<div class="cart__product">
-										<div class="cart__thumbnail cart__thumbnail--purple">
-											<img
-												src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-1.png"
-												alt="Product Image"
-											/>
+										<div class="d-flex align-items-center flex-column">
+											<div class="cart__thumbnail cart__thumbnail--purple">
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-1.png"
+													alt="Product Image"
+												/>
+											</div>
+											<button
+												type="button"
+												class="theme-btn theme-btn__accent fw-bold text-primary d-none d-md-block mt-2"
+											>
+												Delete Item
+											</button>
 										</div>
 
 										<div class="cart__details">
 											<p class="cart__item-name">BPC-157-05MG</p>
-											<p class="cart__item-price mt-10">
-												Product Price: <span>$90.00</span>
-											</p>
-											<p class="fw-600 mt-10"
-												>Qty: <span data-bind="text: product.Quantity">1</span
-												></p
+											<div
+												class="d-flex flex-md-row flex-column align-items-md-center align-items-start w-100 justify-content-between py-3 gap-2"
+											>
+												<div class="d-flex align-items-start gap-2 w-100">
+													<input
+														class="form-check-input fs-md-24 fs-20 mt-0"
+														type="radio"
+														name="gender"
+														id="oneTimePrice"
+														value="male"
+														checked=""
+													/>
+													<div class="d-flex flex-md-column flex-row">
+														<label
+															class="form-check-label fs-md-24 fs-16 fw-bold lh-1"
+															for="oneTimePrice">One Time Price:</label
+														>
+														<p class="fs-16 fw-medium">$<span>500</span></p>
+													</div>
+												</div>
+												<div class="input-group product-action__cart w-auto">
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-minus"></i>
+														</button>
+													</span>
+													<input
+														type="text"
+														inputmode="numeric"
+														class="form-control numeric-only text-dark"
+														id="quantity"
+														value="1"
+													/>
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-plus1"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+											<div class="border-solid"></div>
+											<div
+												class="d-flex align-items-center w-100 justify-content-between pt-3"
+											>
+												<div class="d-flex align-items-start gap-2 w-100">
+													<input
+														class="form-check-input fs-md-24 fs-20 mt-0"
+														type="radio"
+														name="gender"
+														id="oneTimePrice"
+														value="male"
+														checked=""
+													/>
+													<div>
+														<label
+															class="form-check-label fs-md-24 fs-16 fw-bold lh-1"
+															for="oneTimePrice"
+														>
+															<span>Subscribe & Save</span>
+															<button
+																class="theme-btn theme-btn__icon-only cart-delete-btn fs-md-20 fs-16 p-0"
+															>
+																<i class="icon-info-circle text-primary"></i>
+															</button>
+														</label>
+														<div class="d-flex gap-2">
+															<p
+																class="text-gray-medium fs-16 text-decoration-line-through mb-0"
+																>$220</p
+															>
+															<p class="fs-16 fw-medium">$<span>500</span></p>
+															<span
+																class="status-pill status-pill--saving d-inline-block"
+																>16.67% Savings</span
+															>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- <p class="cart__item-type">
+												<span>.5mg</span>
+												<span class="px-2">|</span>
+												<span>Consult</span>
+											</p> -->
+										</div>
+									</div>
+									<!-- 
+									<div class="cart__action">
+										<button
+											class="theme-btn theme-btn__icon-only cart-delete-btn"
+											data-bs-toggle="modal"
+											data-bs-target="#confirm"
+										>
+											<i class="icon-delete"></i>
+										</button>
+									</div> -->
+								</div>
+								<div class="cart__item">
+									<div class="cart__product">
+										<div class="d-flex align-items-center flex-column">
+											<div class="cart__thumbnail cart__thumbnail--purple">
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-1.png"
+													alt="Product Image"
+												/>
+											</div>
+											<button
+												type="button"
+												class="theme-btn theme-btn__accent fw-bold text-primary d-none d-md-block mt-2"
+											>
+												Delete Item
+											</button>
+										</div>
+
+										<div class="cart__details">
+											<div
+												class="d-flex flex-md-row flex-column align-items-md-center align-items-start w-100 justify-content-between gap-2"
+											>
+												<div class="d-flex align-items-start gap-2 w-100">
+													<p class="cart__item-name"
+														>Cagrilintide Injectable Solution</p
+													>
+												</div>
+												<div class="input-group product-action__cart w-auto">
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-minus"></i>
+														</button>
+													</span>
+													<input
+														type="text"
+														inputmode="numeric"
+														class="form-control numeric-only text-dark"
+														id="quantity"
+														value="1"
+													/>
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-plus1"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+
+											<p class="fw-medium"
+												>$<span>60</span>+ $<span>29.00</span> Physician Consult</p
 											>
 
 											<!-- <p class="cart__item-type">
@@ -81,7 +230,7 @@ import Layout from "../layouts/Layout.astro";
 											</p> -->
 										</div>
 									</div>
-
+									<!-- 
 									<div class="cart__action">
 										<button
 											class="theme-btn theme-btn__icon-only cart-delete-btn"
@@ -90,7 +239,7 @@ import Layout from "../layouts/Layout.astro";
 										>
 											<i class="icon-delete"></i>
 										</button>
-									</div>
+									</div> -->
 								</div>
 							</div>
 
@@ -318,6 +467,7 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</div>
 	</div>
+
+	<Footer />
+	<!-- Confirm Modal End -->
 </Layout>
-<Footer />
-<!-- Confirm Modal End -->

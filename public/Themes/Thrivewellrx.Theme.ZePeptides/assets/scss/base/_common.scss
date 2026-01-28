@@ -22,6 +22,11 @@
 	&-dashed {
 		border-style: dashed !important;
 	}
+
+	&-solid {
+		border-top: 1px solid $primary-light;
+		width: 100%;
+	}
 }
 
 .ebook {
