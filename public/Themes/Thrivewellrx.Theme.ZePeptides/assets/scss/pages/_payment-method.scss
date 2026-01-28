@@ -205,6 +205,7 @@
 					opacity: 1; // required for Firefox
 				}
 			}
+
 			.card-icons {
 				padding-left: 10px;
 				display: flex;
@@ -212,7 +213,7 @@
 				gap: 5px;
 
 				img {
-					height: 20px;
+					height: 30px;
 					border-radius: 5px;
 				}
 			}
@@ -233,13 +234,13 @@
 				cursor: texts;
 
 				&::placeholder {
-				color: $light; // change this to your color
-				opacity: 1; // required for Firefox
-			}
+					color: $light; // change this to your color
+					opacity: 1; // required for Firefox
+				}
 
 			}
 
-			
+
 		}
 
 		&--inline-fields {
@@ -308,12 +309,13 @@
 	}
 }
 
-.card-image{
-	&__text{
+.card-image {
+	&__text {
 		font-size: 18px;
 		font-weight: 700;
 	}
-	img{
+
+	img {
 		height: 40px;
 		border-radius: 5px;
 	}
@@ -330,6 +332,7 @@
 .custom-check__label {
 	line-height: 1.5 !important;
 }
+
 .condition {
 	&__highlight {
 		background: $green-light;
@@ -365,6 +368,7 @@
 		background-color: #ffffff !important;
 	}
 }
+
 .login__input {
 	border: 1px solid #aeaeae !important;
 
@@ -393,9 +397,9 @@
 }
 
 
-.payment-table{
+.payment-table {
 
-	&-header{
+	&-header {
 		display: flex;
 		font-size: 22px;
 		font-weight: 500;
@@ -408,9 +412,9 @@
 			margin-top: 20px;
 		}
 	}
-	
-	
-	&-body{
+
+
+	&-body {
 		padding: 24px;
 		border-bottom: 1px solid $gray-border-light;
 		// align-items: center;
@@ -420,8 +424,9 @@
 		}
 	}
 
-	&-title{
+	&-title {
 		display: none;
+
 		@media all and (max-width: 768px) {
 			display: block;
 		}
@@ -431,9 +436,10 @@
 
 // Medium Device media Query
 @media all and (max-width: 992px) {
-	.table-my{
+	.table-my {
 		margin: 24px 0;
 	}
+
 	.payment {
 		padding: 60px 0;
 
@@ -490,16 +496,19 @@
 			border-bottom: 1px solid #e6d4ff !important;
 		}
 	}
+
 	.attention {
 		&__box {
 			text-align: left;
 		}
+
 		&__title {
 			p {
 				text-align: left;
 			}
 		}
 	}
+
 	.payment {
 		padding: 60px 0;
 
@@ -540,7 +549,7 @@
 				}
 			}
 
-			&--card{
+			&--card {
 				.card-icons {
 					gap: 3px;
 
@@ -555,16 +564,17 @@
 				height: 50px;
 				padding: 10px;
 
-				
-			&::placeholder {
-				color: $light; // change this to your color
-				opacity: 1; // required for Firefox
-			}
 
-				
+				&::placeholder {
+					color: $light; // change this to your color
+					opacity: 1; // required for Firefox
+				}
+
+
 			}
 		}
 	}
+
 	.condition {
 		&__highlight p {
 			font-weight: 500;
