@@ -427,6 +427,11 @@
 		color: $black-deep;
 	}
 
+	&--saving {
+		background-color: $saving;
+		color: $black-deep;
+	}
+
 	&--transparent {
 		background-color: transparent;
 	}
