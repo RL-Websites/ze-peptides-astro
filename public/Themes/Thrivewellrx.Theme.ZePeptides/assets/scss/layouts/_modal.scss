@@ -33,6 +33,17 @@
 		align-items: center;
 		border-bottom: 2px solid $primary-light;
 
+		&-title{
+			display: inline-block;
+			margin: auto;
+			font-size: 30px;
+			padding: 14px;
+
+			@media all and (max-width: 768px) {
+				font-size: 18px
+			}
+		}
+
 		h2 {
 			font-size: $fs-30;
 		}
