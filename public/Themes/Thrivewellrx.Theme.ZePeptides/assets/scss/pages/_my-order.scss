@@ -170,18 +170,24 @@
 .medicine-info,
 .document-info {
 	padding: 28px 20px 50px 20px;
-	display: flex;
-	flex-direction: column;
-	gap: 32px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); 
+	gap: 32px;  
+
+	@media (max-width: 768px) { 
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
 	&__item {
-		display: flex;
-		align-items: start;
-		justify-content: start;
+		// display: flex;
+		// align-items: start;
+		// justify-content: start;
 
 		p {
 			margin: 0;
 			line-height: 1;
+			margin-top: 20px;
 		}
 	}
 
@@ -199,6 +205,7 @@
 		justify-content: start;
 		flex-wrap: wrap;
 		gap: 12px;
+		margin-top: 20px;
 	}
 }
 
