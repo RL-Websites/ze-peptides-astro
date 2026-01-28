@@ -143,5 +143,12 @@
 		&__mt {
 			margin-top: 20px;
 		}
+
+		&__header {
+			padding: 16px 12px;
+			
+			display: flex;
+			flex-direction: column;
+		}
 	}
 }
