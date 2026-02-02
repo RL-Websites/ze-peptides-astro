@@ -172,6 +172,10 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 32px;
+	
+	&--3{
+		grid-template-columns: repeat(3, 1fr);
+	}
 
 	@media (max-width: 768px) {
 		grid-template-columns: 1fr;
@@ -187,6 +191,11 @@
 			margin: 0;
 			line-height: 1;
 			margin-top: 20px;
+			color: $gray-dark;
+
+			@media (max-width: 768px) {
+				margin-top: 0;
+			}
 		}
 	}
 
@@ -446,11 +455,18 @@
 		}
 	}
 
+	.px-15{
+		padding: 15px;
+	}
 
 	.medicine-info,
 	.document-info {
 		padding: 15px;
 		gap: 10px;
+
+		&--3{
+			padding: 15px 0;
+		}
 	}
 
 	.medicine-info__item,
