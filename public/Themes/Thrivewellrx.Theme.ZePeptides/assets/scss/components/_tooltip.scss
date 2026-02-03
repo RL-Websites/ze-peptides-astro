@@ -49,3 +49,7 @@
 .bs-tooltip-bottom .tooltip-arrow::before {
     border-bottom-color: $primary-lightest;
 }
+
+.tooltip.show {
+    opacity: 1 !important;
+}
