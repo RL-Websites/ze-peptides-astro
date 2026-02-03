@@ -33,7 +33,7 @@
 		align-items: center;
 		border-bottom: 2px solid $primary-light;
 
-		&-title{
+		&-title {
 			display: inline-block;
 			margin: auto;
 			font-size: 30px;
@@ -58,6 +58,14 @@
 
 		&__alt {
 			padding: 20px 15px;
+		}
+
+		&__alt2 {
+			padding: 60px 40px;
+
+			@media all and (max-width: 767px) {
+				padding: 25px 15px 30px 15px;
+			}
 		}
 	}
 
