@@ -392,6 +392,15 @@
 	border: 1px solid #aeaeae !important;
 }
 
+.conatiner-padding {
+    padding: 0px 15px;
+
+	@media screen and (max-width: 768px) {
+		padding: 0px;
+	}
+}
+
+
 .card-input {
 	border: none !important;
 }
