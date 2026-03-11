@@ -432,8 +432,19 @@
 		color: $black-deep;
 	}
 
+
 	&--transparent {
 		background-color: transparent;
+	}
+
+	&--yellow-light {
+		background-color: $yellow-light;
+		color: $gray-dark;
+	}
+
+	&--primary-lighter {
+		background-color: $primary-lighter;
+		color: $gray-dark;
 	}
 }
 

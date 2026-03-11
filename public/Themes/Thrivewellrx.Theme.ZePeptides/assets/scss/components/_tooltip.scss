@@ -50,6 +50,39 @@
     border-bottom-color: $primary-lightest;
 }
 
+
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before,
+.bs-tooltip-top .tooltip-arrow::before {
+    border-right-color: $primary-lightest;
+}
+
+.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before,
+.bs-tooltip-start .tooltip-arrow::before {
+    border-right-color: $primary-lightest;
+
+}
+
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before,
+.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: $primary-lightest; // ✅ was border-right-color
+}
+
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before,
+.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: $primary-lightest; // ✅ already correct
+}
+
+.bs-tooltip-auto[data-popper-placement^=right],
+.bs-tooltip-end {
+    margin-left: 10px;
+    /* adjust value as needed */
+}
+
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before,
+.bs-tooltip-end .tooltip-arrow::before {
+    border-right-color: $primary-lightest;
+}
+
 .tooltip.show {
     opacity: 1 !important;
 }
