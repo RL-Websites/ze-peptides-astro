@@ -483,3 +483,11 @@ $width-list: (
 	text-overflow: ellipsis;
 	/* Optional but recommended for clarity */
 }
+
+.rounded-pill-alt {
+	border-radius: 100px !important;
+
+	@media all and (max-width: 768px) {
+		padding: 8px 20px 8px 20px !important;
+	}
+}
