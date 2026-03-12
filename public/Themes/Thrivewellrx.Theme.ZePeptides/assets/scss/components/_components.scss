@@ -442,9 +442,25 @@
 		color: $gray-dark;
 	}
 
+	&--primary {
+		background-color: $primary;
+		color: $white;
+	}
+
 	&--primary-lighter {
 		background-color: $primary-lighter;
 		color: $gray-dark;
+	}
+
+	&--outline {
+		text-decoration: none;
+	}
+
+	&--active {
+		background-color: #F3F7FC;
+		color: #175BCC;
+		border-radius: 8px;
+		padding: 6px 20px;
 	}
 }
 

@@ -225,6 +225,95 @@
 		}
 	}
 
+
+	&__md {
+		margin-top: 0px;
+
+		&__heading {
+			border: 0;
+			background-color: transparent !important;
+			color: $black;
+
+			p {
+				padding-right: 70px;
+				position: relative;
+				z-index: 0;
+				margin-bottom: 0;
+				display: flex;
+				justify-content: space-between;
+				font-size: $fs-20;
+				font-weight: 700;
+				color: $dark;
+				transition: 0.5s;
+
+				&::after {
+					content: "\e919";
+					font-family: "icomoon";
+					font-size: $fs-16;
+					font-weight: 700;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					right: 0;
+					width: 30px;
+					height: 30px;
+					color: $primary;
+					border-radius: 50px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					transition: transform 0.5s linear, color 0.5s linear;
+				}
+
+				&.collapsed {
+					transition: 0.5s;
+
+					&::after {
+						content: "\e919";
+						font-family: "icomoon";
+						font-size: $fs-16;
+						font-weight: 700;
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						right: 0;
+						width: 30px;
+						height: 30px;
+						color: $primary;
+						border-radius: 50px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						transform: translateY(-50%) rotate(180deg);
+					}
+				}
+			}
+		}
+
+		&__body {
+			padding: 16px 20px;
+			font-size: $fs-16;
+			border: 0;
+			border-radius: 16px;
+			margin-top: 30px;
+
+			a {
+				text-decoration: underline;
+
+				&:visited {
+					color: $white !important;
+				}
+
+				&:hover,
+				&:focus {
+					color: $white;
+				}
+			}
+		}
+	}
+
+
+
 	&__main {
 		.faq {
 			&__lg {

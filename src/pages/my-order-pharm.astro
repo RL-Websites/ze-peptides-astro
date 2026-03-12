@@ -1,0 +1,248 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import OrderTable from "../components/OrderTable.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- =====|| Main Section Start ||====== -->
+	<main class="page page__alt">
+		<div class="page__wrapper page__wrapper--alt">
+			<!-- ==|| My Order Section Start ||== -->
+			<section class="my-order">
+				<div class="container">
+					<h2
+						class="cart-hero__heading text-left"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+					>
+						<span class="text-primary-grad-1 fw-700 fs-md-70">My Order</span>
+					</h2>
+
+					<div
+						class="card-basic card-basic--no-shadow card-basic__table card-basic__table-desktop mt-md-30 mt-20"
+						data-aos="fade-left"
+						data-aos-duration="1000"
+						data-aos-delay="300"
+					>
+						<div class="card-basic__body">
+							<div class="list-table">
+								<div class="table-responsive">
+									<table class="table order-list">
+										<thead>
+											<tr>
+												<th>Order ID</th>
+												<th>Date</th>
+												<th>Medication</th>
+												<th>Status</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<td>
+													<a
+														class="text-primary fw-500"
+														type="button"
+														data-bs-toggle="offcanvas"
+														data-bs-target="#offcanvasRight"
+														aria-controls="offcanvasRight"
+													>
+														#nx20250400010
+													</a>
+												</td>
+												<td class="list-table__time">12/28/2024 03:37:02 PM</td>
+												<td>
+													2X Blend Tesamorelin (10mg)/Ipamorelin (5mg)
+													<span
+														class="status-pill status-pill--primary d-inline-flex align-items-center gap-1"
+													>
+														<i class="icon-refresh"></i>
+														<span>R</span>
+													</span>
+												</td>
+												<td>
+													<a
+														href="#"
+														class="status-pill status-pill--outline d-flex align-items-center gap-2"
+													>
+														<span class="text-decoration-underline"
+															>View All Status</span
+														>
+														<i class="icon-refresh"></i>
+													</a>
+												</td>
+											</tr>
+
+											<tr>
+												<td>
+													<a class="text-primary fw-500" href="">
+														#nx20250400010
+													</a>
+												</td>
+												<td class="list-table__time">12/28/2024 03:37:02 PM</td>
+												<td>
+													2X Blend Tesamorelin (10mg)/Ipamorelin (5mg)
+													<span
+														class="status-pill status-pill--primary d-inline-flex align-items-center gap-1"
+													>
+														<i class="icon-refresh"></i>
+														<span>R</span>
+													</span>
+												</td>
+												<td>
+													<span class="status-pill status-pill--default">
+														Received
+													</span>
+												</td>
+											</tr>
+
+											<tr>
+												<td>
+													<a class="text-primary fw-500" href="">
+														#nx20250400010
+													</a>
+												</td>
+												<td class="list-table__time">12/28/2024 03:37:02 PM</td>
+												<td>2X Blend Tesamorelin (10mg)/Ipamorelin (5mg)</td>
+												<td>
+													<span class="status-pill status-pill--warning">
+														Processing
+													</span>
+												</td>
+											</tr>
+
+											<tr>
+												<td>
+													<a class="text-primary fw-500" href="">
+														#nx20250400010
+													</a>
+												</td>
+												<td>12/28/2024</td>
+												<td>Kyzetrex</td>
+												<td>
+													<span class="status-pill status-pill--danger">
+														Declined
+													</span>
+												</td>
+											</tr>
+
+											<tr>
+												<td>
+													<a class="text-primary fw-500" href="">
+														#nx20250400010
+													</a>
+												</td>
+												<td>12/28/2024</td>
+												<td>Kyzetrex</td>
+												<td>
+													<span class="status-pill status-pill--success">
+														Delivered
+													</span>
+												</td>
+											</tr>
+
+											<tr>
+												<td>
+													<a class="text-primary fw-500" href="">
+														#nx20250400010
+													</a>
+												</td>
+												<td>12/28/2024</td>
+												<td>Kyzetrex</td>
+
+												<td>
+													<span class="status-pill status-pill--warning"
+														>Shipped</span
+													>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="card-basic card-basic--no-shadow card-basic__table-mobile mt-30 border-0 rounded-0"
+					>
+						<div class="card-basic__body">
+							<OrderTable />
+							<OrderTable />
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ==|| My Order Section End ||== -->
+		</div>
+	</main>
+	<!-- =====|| Main Section End ||====== -->
+</Layout>
+
+<Footer />
+
+<!--OffCanvas UI Start -->
+<div class="faq faq__main">
+	<div
+		class="offcanvas offcanvas-end show"
+		tabindex="-1"
+		id="offcanvasRight"
+		aria-labelledby="offcanvasRightLabel"
+	>
+		<div class="offcanvas-header">
+			<h5 class="offcanvas-title" id="offcanvasRightLabel"
+				>#DV000832 Order Status</h5
+			>
+
+			<button
+				type="button"
+				class="btn btn-outline border-0"
+				data-bs-dismiss="offcanvas"
+				aria-label="Close"
+			>
+				<i class="icon-cross_filled btn-close-icon"></i>
+			</button>
+		</div>
+		<div class="offcanvas-body">
+			<div
+				class="panel panel-default faq__item faq__item--primary-lighter"
+				data-aos="fade-up"
+				data-aos-delay="600"
+				data-aos-duration="800"
+			>
+				<div class="panel-heading faq__md__heading" role="tab" id="headingTwo">
+					<p
+						class="collapsed justify-content-start align-items-center gap-2"
+						role="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapseTwo"
+						aria-expanded="false"
+						aria-controls="collapseTwo"
+					>
+						<span>Order Type: Fill</span>
+						<span class="status-pill status-pill--active"> Active </span>
+					</p>
+				</div>
+				<div
+					id="collapseTwo"
+					class="panel-collapse collapse"
+					data-bs-parent="#accordion"
+					aria-labelledby="headingTwo"
+				>
+					<div class="faq__lg__body">
+						<p>
+							VPeptides serves individuals seeking accessible, expert-led
+							healthcare for needs like weight management...
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--OffCanvas UI End -->

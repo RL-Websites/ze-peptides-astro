@@ -1,0 +1,24 @@
+@use "../base/variables" as *;
+
+.offcanvas {
+  background-color: $primary-lightest !important;
+  z-index: 999999;
+  width: 80% !important;
+
+
+  &-title {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-body {
+    border: 1px solid $primary-light;
+    background: #FFF;
+  }
+}
