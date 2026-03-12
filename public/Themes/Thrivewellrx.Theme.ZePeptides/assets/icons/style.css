@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?72v0uk');
-  src:  url('fonts/icomoon.eot?72v0uk#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.woff2?72v0uk') format('woff2'),
-    url('fonts/icomoon.ttf?72v0uk') format('truetype'),
-    url('fonts/icomoon.woff?72v0uk') format('woff'),
-    url('fonts/icomoon.svg?72v0uk#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?1a5y1n');
+  src:  url('fonts/icomoon.eot?1a5y1n#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?1a5y1n') format('woff2'),
+    url('fonts/icomoon.ttf?1a5y1n') format('truetype'),
+    url('fonts/icomoon.woff?1a5y1n') format('woff'),
+    url('fonts/icomoon.svg?1a5y1n#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -100,6 +100,12 @@
 }
 .icon-Checkbox_check_RIZZ:before {
   content: "\e963";
+}
+.icon-single:before {
+  content: "\e99c";
+}
+.icon-package:before {
+  content: "\e99d";
 }
 .icon-warehouse:before {
   content: "\e992";
@@ -272,6 +278,9 @@
 .icon-StateOff:before {
   content: "\e966";
 }
+.icon-Percentage:before {
+  content: "\e99b";
+}
 .icon-money:before {
   content: "\e99a";
 }
@@ -391,6 +400,9 @@
 }
 .icon-tick1:before {
   content: "\e93b";
+}
+.icon-info-fill:before {
+  content: "\e99e";
 }
 .icon-tiktok-flex:before {
   content: "\e990";

@@ -70,3 +70,43 @@
 		}
 	}
 }
+
+/* PRODUCT CARD NEW */
+.product {
+
+
+	&__img--package {
+		background: linear-gradient(90deg, #d2b3ff 0%, #ede0ff 100%);
+		border-radius: 12px;
+		width: 243px;
+		min-width: 243px;
+		height: 152px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 14px;
+
+		@media only screen and (max-width: 992px) {
+			width: 100% !important;
+			min-width: unset;
+			height: 160px;
+		}
+
+		img {
+			max-height: 120px;
+			max-width: 100%;
+			object-fit: contain;
+
+		}
+	}
+
+	&__price-section {
+		background-color: #F4EDFD;
+		padding: 24px;
+		margin-top: 24px;
+
+		@media only screen and (max-width: 768px) {
+			padding: 22px 12px 22px 12px;
+		}
+	}
+}
