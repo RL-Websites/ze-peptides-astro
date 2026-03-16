@@ -14,19 +14,12 @@ import Layout from "../layouts/Layout.astro";
 			<!-- ==|| My Order Section Start ||== -->
 			<section class="my-order">
 				<div class="container">
-					<h2
-						class="cart-hero__heading text-left"
-						data-aos="fade-up"
-						data-aos-duration="1000"
-					>
+					<h2 class="cart-hero__heading text-left">
 						<span class="text-primary-grad-1 fw-700 fs-md-70">My Order</span>
 					</h2>
 
 					<div
 						class="card-basic card-basic--no-shadow card-basic__table card-basic__table-desktop mt-md-30 mt-20"
-						data-aos="fade-left"
-						data-aos-duration="1000"
-						data-aos-delay="300"
 					>
 						<div class="card-basic__body">
 							<div class="list-table">
@@ -194,7 +187,7 @@ import Layout from "../layouts/Layout.astro";
 		aria-labelledby="offcanvasRightLabel"
 	>
 		<div class="offcanvas-header">
-			<h5 class="offcanvas-title" id="offcanvasRightLabel"
+			<h5 class="offcanvas-title fs-md-18" id="offcanvasRightLabel"
 				>#DV000832 Order Status</h5
 			>
 
@@ -208,26 +201,24 @@ import Layout from "../layouts/Layout.astro";
 			</button>
 		</div>
 		<div class="offcanvas-body">
-			<div class="offcanvas-body__wrapper">
-				<div
-					class="panel panel-default faq__item pt-0 pb-0 border-0"
-					data-aos="fade-up"
-					data-aos-delay="600"
-					data-aos-duration="800"
-				>
+			<div class="offcanvas-body__wrapper" id="accordion">
+				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
 					<div
 						class="panel-heading faq__md__heading"
-						role="tab"
-						id="headingTwo"
 						role="button"
+						id="headingOne"
 						data-bs-toggle="collapse"
-						data-bs-target="#collapseTwo"
+						data-bs-target="#collapseOne"
 						aria-expanded="false"
-						aria-controls="collapseTwo"
+						aria-controls="collapseOne"
 					>
-						<p class="collapsed justify-content-start align-items-center gap-2">
+						<p
+							class="custom-accordion-header collapsed justify-content-start align-items-center gap-2"
+						>
 							<span>Order Type: Fill</span>
-							<span class="status-pill status-pill--active"> Active </span>
+							<span class="status-pill status-pill--active fs-12">
+								Active
+							</span>
 						</p>
 
 						<div class="faq__items__top">
@@ -293,10 +284,10 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 
 					<div
-						id="collapseTwo"
+						id="collapseOne"
 						class="panel-collapse collapse"
 						data-bs-parent="#accordion"
-						aria-labelledby="headingTwo"
+						aria-labelledby="headingOne"
 					>
 						<div class="faq__lg__body pb-0 mt-0">
 							<div class="faq__items__bottom">
@@ -424,25 +415,20 @@ import Layout from "../layouts/Layout.astro";
 						</div>
 					</div>
 				</div>
-				<div
-					class="panel panel-default faq__item pt-0 pb-0 border-0"
-					data-aos="fade-up"
-					data-aos-delay="600"
-					data-aos-duration="800"
-				>
+				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
 					<div
 						class="panel-heading faq__md__heading"
-						role="tab"
-						id="headingTwo"
 						role="button"
+						id="headingTwo"
 						data-bs-toggle="collapse"
 						data-bs-target="#collapseTwo"
 						aria-expanded="false"
 						aria-controls="collapseTwo"
 					>
-						<p class="collapsed justify-content-start align-items-center gap-2">
-							<span>Order Type: Fill</span>
-							<span class="status-pill status-pill--active"> Active </span>
+						<p
+							class="custom-accordion-header collapsed justify-content-start align-items-center gap-2"
+						>
+							<span>Order Type: 1st Follow-up</span>
 						</p>
 
 						<div class="faq__items__top">
@@ -453,7 +439,7 @@ import Layout from "../layouts/Layout.astro";
 									</div>
 									<div class="custom-table__data">
 										<span class="status-pill status-pill--pending">
-											Waiting for Doctor
+											Refill Pending
 										</span>
 									</div>
 								</div>
@@ -462,9 +448,7 @@ import Layout from "../layouts/Layout.astro";
 										<p class="custom-table__header__text">Payment Status</p>
 									</div>
 									<div class="custom-table__data">
-										<span class="status-pill status-pill--submitted">
-											Success
-										</span>
+										<span class=""> Not Initiated </span>
 									</div>
 								</div>
 								<div class="custom-table__item">
@@ -483,17 +467,17 @@ import Layout from "../layouts/Layout.astro";
 									<div class="custom-table__header">
 										<p class="custom-table__header__text">Lab Report</p>
 									</div>
-									<div class="custom-table__data">
-										<a class="text-primary fw-500" type="button">
-											View & Upload Lab (2)
-										</a>
-									</div>
+									<div class="custom-table__data"> - </div>
 								</div>
 								<div class="custom-table__item">
 									<div class="custom-table__header">
 										<p class="custom-table__header__text">Action</p>
 									</div>
-									<div class="custom-table__data"> -- </div>
+									<div class="custom-table__data">
+										<span class="status-pill status-pill--success fs-12">
+											Refill Requested
+										</span>
+									</div>
 								</div>
 								<div class="custom-table__item">
 									<div class="custom-table__header">
@@ -515,7 +499,7 @@ import Layout from "../layouts/Layout.astro";
 					>
 						<div class="faq__lg__body pb-0 mt-0">
 							<div class="faq__items__bottom">
-								<div class="custom-table__alt">
+								<div class="custom-table__alt d-md-flex d-none">
 									<div class="list-table">
 										<div class="table-responsive">
 											<table class="table order-list">
@@ -574,6 +558,488 @@ import Layout from "../layouts/Layout.astro";
 												</tbody>
 											</table>
 										</div>
+									</div>
+								</div>
+								<div class="custom-table d-md-none d-block">
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Order Status</p
+											></div
+										>
+										<div class="custom-table__data"
+											><span class="status-pill status-pill--pending"
+												>Refill Pending</span
+											></div
+										>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Payment Status</p
+											></div
+										>
+										<div class="custom-table__data"
+											><span>Not Initiated</span></div
+										>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Est. Bill Amount</p
+											></div
+										>
+										<div class="custom-table__data">$35</div>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Product Price</p
+											></div
+										>
+										<div class="custom-table__data">$35</div>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Lab Report</p></div
+										>
+										<div class="custom-table__data">-</div>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Action</p></div
+										>
+										<div class="custom-table__data"
+											><span class="status-pill status-pill--success fs-12"
+												>Refill Requested</span
+											></div
+										>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Period</p></div
+										>
+										<div class="custom-table__data"
+											>29 Mar, 2026 - 03 Apr, 2026</div
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- third one -->
+				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
+					<div
+						class="panel-heading faq__md__heading"
+						id="headingThree"
+						role="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapseThree"
+						aria-expanded="false"
+						aria-controls="collapseThree"
+					>
+						<p
+							class="custom-accordion-header collapsed justify-content-start align-items-center gap-2"
+						>
+							<span>Order Type: 2nd Follow-up</span>
+						</p>
+
+						<div class="faq__items__top">
+							<div class="custom-table">
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Order Status</p>
+									</div>
+									<div class="custom-table__data">
+										<span class="status-pill status-pill--pending">
+											Refill Pending
+										</span>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Payment Status</p>
+									</div>
+									<div class="custom-table__data">
+										<span class=""> Not Initiated </span>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Est. Bill Amount</p>
+									</div>
+									<div class="custom-table__data"> $35 </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Product Price</p>
+									</div>
+									<div class="custom-table__data"> $35 </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Lab Report</p>
+									</div>
+									<div class="custom-table__data"> - </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Action</p>
+									</div>
+									<div class="custom-table__data">
+										<a class="text-primary fw-500" type="button">
+											Request Refill
+										</a>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Period</p>
+									</div>
+									<div class="custom-table__data">
+										29 Mar, 2026 - 03 Apr, 2026
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						id="collapseThree"
+						class="panel-collapse collapse"
+						data-bs-parent="#accordion"
+						aria-labelledby="headingThree"
+					>
+						<div class="faq__lg__body pb-0 mt-0">
+							<div class="faq__items__bottom">
+								<div class="custom-table__alt d-md-flex d-none">
+									<div class="list-table">
+										<div class="table-responsive">
+											<table class="table order-list">
+												<thead>
+													<tr>
+														<th>Medication</th>
+														<th>Strength</th>
+														<th>Direction</th>
+														<th>Qty</th>
+														<th>Status</th>
+													</tr>
+												</thead>
+
+												<tbody>
+													<tr>
+														<td
+															>TESTOSTERONE CYPIONATE/DHEA GRAPESEED OIL (1 ML)
+															1 Vial</td
+														>
+														<td>5</td>
+														<td>Inject 1 mL intramuscularly once weekly</td>
+														<td class="text-nowrap">1 vial</td>
+														<td>
+															<span class="status-pill status-pill--success">
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td>ESTRADIOL (0.125 MG/ML-10 MG/ML)</td>
+														<td>N/A</td>
+														<td
+															>Apply a thin layer to the prescribed area once
+															daily or as directed. For external use only. Wash
+															hands after application. Do not exceed prescribed
+															dose</td
+														>
+														<td class="text-nowrap">1</td>
+														<td>
+															<span class="status-pill status-pill--success">
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td>PROGESTERONE (CLEAR) MCC (25 MG-300 MG)</td>
+														<td>N/A</td>
+														<td>Take 1 capsule by mouth once daily</td>
+														<td class="text-nowrap">1</td>
+														<td>
+															<span class="status-pill status-pill--success">
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="custom-table d-md-none d-block">
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Order Status</p
+											></div
+										>
+										<div class="custom-table__data"
+											><span class="status-pill status-pill--pending"
+												>Refill Pending</span
+											></div
+										>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Payment Status</p
+											></div
+										>
+										<div class="custom-table__data"
+											><span>Not Initiated</span></div
+										>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Est. Bill Amount</p
+											></div
+										>
+										<div class="custom-table__data">$35</div>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Product Price</p
+											></div
+										>
+										<div class="custom-table__data">$35</div>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Lab Report</p></div
+										>
+										<div class="custom-table__data">-</div>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Action</p></div
+										>
+										<div class="custom-table__data"
+											><a class="text-primary fw-500" type="button"
+												>Request Refill</a
+											></div
+										>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Period</p></div
+										>
+										<div class="custom-table__data"
+											>29 Mar, 2026 - 03 Apr, 2026</div
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- fourth one -->
+				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
+					<div
+						class="panel-heading faq__md__heading"
+						role="button"
+						id="headingFour"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapseFour"
+						aria-expanded="false"
+						aria-controls="collapseFour"
+					>
+						<p
+							class="custom-accordion-header collapsed justify-content-start align-items-center gap-2"
+						>
+							<span>Order Type: 3rd Follow-up</span>
+						</p>
+
+						<div class="faq__items__top">
+							<div class="custom-table">
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Order Status</p>
+									</div>
+									<div class="custom-table__data">
+										<span class="status-pill status-pill--pending">
+											Refill Pending
+										</span>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Payment Status</p>
+									</div>
+									<div class="custom-table__data">
+										<span class=""> Not Initiated </span>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Est. Bill Amount</p>
+									</div>
+									<div class="custom-table__data"> $35 </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Product Price</p>
+									</div>
+									<div class="custom-table__data"> $35 </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Lab Report</p>
+									</div>
+									<div class="custom-table__data"> - </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Action</p>
+									</div>
+									<div class="custom-table__data">
+										<a class="text-primary fw-500" type="button">
+											Request Refill
+										</a>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Period</p>
+									</div>
+									<div class="custom-table__data">
+										29 Mar, 2026 - 03 Apr, 2026
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						id="collapseFour"
+						class="panel-collapse collapse"
+						data-bs-parent="#accordion"
+						aria-labelledby="headingFour"
+					>
+						<div class="faq__lg__body pb-0 mt-0">
+							<div class="faq__items__bottom">
+								<div class="custom-table__alt d-md-flex d-none">
+									<div class="list-table">
+										<div class="table-responsive">
+											<table class="table order-list">
+												<thead>
+													<tr>
+														<th>Medication</th>
+														<th>Strength</th>
+														<th>Direction</th>
+														<th>Qty</th>
+														<th>Status</th>
+													</tr>
+												</thead>
+
+												<tbody>
+													<tr>
+														<td
+															>TESTOSTERONE CYPIONATE/DHEA GRAPESEED OIL (1 ML)
+															1 Vial</td
+														>
+														<td>5</td>
+														<td>Inject 1 mL intramuscularly once weekly</td>
+														<td class="text-nowrap">1 vial</td>
+														<td>
+															<span class="status-pill status-pill--success">
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td>ESTRADIOL (0.125 MG/ML-10 MG/ML)</td>
+														<td>N/A</td>
+														<td
+															>Apply a thin layer to the prescribed area once
+															daily or as directed. For external use only. Wash
+															hands after application. Do not exceed prescribed
+															dose</td
+														>
+														<td class="text-nowrap">1</td>
+														<td>
+															<span class="status-pill status-pill--success">
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td>PROGESTERONE (CLEAR) MCC (25 MG-300 MG)</td>
+														<td>N/A</td>
+														<td>Take 1 capsule by mouth once daily</td>
+														<td class="text-nowrap">1</td>
+														<td>
+															<span class="status-pill status-pill--success">
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="custom-table d-md-none d-block">
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Order Status</p
+											></div
+										>
+										<div class="custom-table__data"
+											><span class="status-pill status-pill--pending"
+												>Refill Pending</span
+											></div
+										>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Payment Status</p
+											></div
+										>
+										<div class="custom-table__data"
+											><span>Not Initiated</span></div
+										>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Est. Bill Amount</p
+											></div
+										>
+										<div class="custom-table__data">$35</div>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Product Price</p
+											></div
+										>
+										<div class="custom-table__data">$35</div>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Lab Report</p></div
+										>
+										<div class="custom-table__data">-</div>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Action</p></div
+										>
+										<div class="custom-table__data"
+											><a class="text-primary fw-500" type="button"
+												>Request Refill</a
+											></div
+										>
+									</div>
+									<div class="custom-table__item">
+										<div class="custom-table__header"
+											><p class="custom-table__header__text">Period</p></div
+										>
+										<div class="custom-table__data"
+											>29 Mar, 2026 - 03 Apr, 2026</div
+										>
 									</div>
 								</div>
 							</div>

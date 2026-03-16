@@ -139,8 +139,10 @@
 			font-size: $fs-14;
 			font-weight: 700;
 			border-bottom: 1px solid #E6D4FF;
-			padding-bottom: 10px;
+			padding-top: 16px;
+			// padding-bottom: 10px;
 			padding-right: 15px;
+			text-wrap: nowrap;
 
 			@media all and (max-width: 768px) {
 				border: 0;
@@ -149,8 +151,11 @@
 			p {
 				font-size: $fs-14;
 				width: 100%;
+				padding-bottom: 12px !important;
 
 				&.custom-table__header__text {
+					color: #2D2D2D;
+
 					&::after {
 						display: none;
 					}
@@ -159,7 +164,7 @@
 		}
 
 		&__data {
-			padding-top: 15px;
+			padding-top: 18px;
 			padding-right: 15px;
 			font-size: 14px;
 			color: $gray-dark;

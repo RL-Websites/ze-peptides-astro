@@ -623,3 +623,20 @@
 		}
 	}
 }
+
+.custom-accordion-header {
+	padding-bottom: 16px !important;
+	border-bottom: 1px solid #E6D4FF;
+
+	color: #2D2D2D !important;
+
+
+
+}
+
+
+.offcanvas-title {
+	@media all and (max-width: 768px) {
+		font-size: 18px !important;
+	}
+}
