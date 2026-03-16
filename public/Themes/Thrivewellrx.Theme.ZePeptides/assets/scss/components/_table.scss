@@ -127,12 +127,13 @@
 		justify-content: space-between;
 
 		@media all and (max-width: 768px) {
-			gap: 20px;
+			// gap: 20px;
 			flex-direction: column;
 		}
 
 		&__item {
 			width: 100%;
+
 		}
 
 		&__header {
