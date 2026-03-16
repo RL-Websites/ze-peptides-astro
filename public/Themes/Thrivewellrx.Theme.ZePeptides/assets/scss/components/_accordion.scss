@@ -115,6 +115,7 @@
 	}
 
 
+
 	&__title {
 		font-size: $fs-22;
 		line-height: 1.2;
@@ -124,6 +125,19 @@
 	&__subtitle {
 		font-size: $fs-30;
 		line-height: 1.2;
+	}
+
+	&__items {
+		&__top {}
+
+		&__bottom {
+			padding: 0 20px;
+			background-color: #F7F9FC;
+
+			@media all and (max-width: 768px) {
+				padding: 15px;
+			}
+		}
 	}
 
 	&__item {
@@ -233,9 +247,12 @@
 			border: 0;
 			background-color: transparent !important;
 			color: $black;
+			padding: 20px !important;
+			cursor: pointer;
 
 			p {
 				padding-right: 70px;
+				padding-bottom: 20px;
 				position: relative;
 				z-index: 0;
 				margin-bottom: 0;
@@ -245,6 +262,10 @@
 				font-weight: 700;
 				color: $dark;
 				transition: 0.5s;
+
+				@media all and (max-width: 768px) {
+					font-size: $fs-18;
+				}
 
 				&::after {
 					content: "\e919";

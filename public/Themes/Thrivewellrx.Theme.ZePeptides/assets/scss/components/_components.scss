@@ -462,6 +462,11 @@
 		border-radius: 8px;
 		padding: 6px 20px;
 	}
+
+	&--pending {
+		background-color: #FFFCDB;
+		color: $dark;
+	}
 }
 
 // .stockout {

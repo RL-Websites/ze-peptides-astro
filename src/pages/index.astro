@@ -93,6 +93,45 @@ import Layout from "../layouts/Layout.astro";
 					or use a different word or phrase.</p
 				>
 
+				<div class="text-center">
+					<ul
+						class="nav nav-pills switch-tabs"
+						id="products-tab"
+						role="tablist"
+					>
+						<li class="nav-item switch-tab" role="presentation">
+							<button
+								class="nav-link active switch-tab__btn"
+								id="single-product"
+								data-bs-toggle="pill"
+								data-bs-target="#pills-single"
+								type="button"
+								role="tab"
+								aria-controls="pills-single"
+								aria-selected="true"
+							>
+								<i class="icon-single"></i>
+								<span>Single</span>
+							</button>
+						</li>
+						<li class="nav-item switch-tab" role="presentation">
+							<button
+								class="nav-link switch-tab__btn"
+								id="package-product"
+								data-bs-toggle="pill"
+								data-bs-target="#pills-package"
+								type="button"
+								role="tab"
+								aria-controls="pills-package"
+								aria-selected="false"
+							>
+								<i class="icon-package"></i>
+								<span>Package</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+
 				<ProductCard />
 				<PackageProductCard />
 

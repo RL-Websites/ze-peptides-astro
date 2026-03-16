@@ -3,6 +3,7 @@
 //Custom Table
 .list-table {
 	background-color: transparent;
+	width: 100%;
 
 	.table {
 		margin-bottom: 0;
@@ -88,11 +89,13 @@
 				}
 			}
 		}
-		
+
 	}
-.table>:not(caption)>*>*{
-			border-bottom: 0 !important;
-		}
+
+	.table>:not(caption)>*>* {
+		border-bottom: 0 !important;
+	}
+
 	&.normal-table {
 		.table {
 			&__normal {
@@ -114,6 +117,61 @@
 
 	&__time {
 		width: 140px;
+	}
+}
+
+.custom {
+	&-table {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+
+		@media all and (max-width: 768px) {
+			gap: 20px;
+			flex-direction: column;
+		}
+
+		&__item {
+			width: 100%;
+		}
+
+		&__header {
+			font-size: $fs-14;
+			font-weight: 700;
+			border-bottom: 1px solid #E6D4FF;
+			padding-bottom: 10px;
+			padding-right: 15px;
+
+			@media all and (max-width: 768px) {
+				border: 0;
+			}
+
+			p {
+				font-size: $fs-14;
+				width: 100%;
+
+				&.custom-table__header__text {
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&__data {
+			padding-top: 15px;
+			padding-right: 15px;
+			font-size: 14px;
+			color: $gray-dark;
+
+			@media all and (max-width: 768px) {
+				padding-top: 0;
+			}
+		}
+
+		&__alt {
+			display: flex;
+		}
 	}
 }
 
