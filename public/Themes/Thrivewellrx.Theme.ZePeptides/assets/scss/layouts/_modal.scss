@@ -482,3 +482,124 @@
 		}
 	}
 }
+
+
+
+.prescription-modal {
+	padding: 0 !important;
+
+	.modal-dialog {
+		width: 100vw !important;
+		max-width: 100% !important;
+		height: 100vh !important;
+		margin: 0 !important;
+	}
+
+	.modal-content {
+		max-height: 100vh !important;
+		border-radius: 0 !important;
+		border: 0 !important;
+		height: 100vh !important;
+	}
+
+	.modal-header {
+		display: flex !important;
+		flex-direction: row !important;
+		align-items: center !important;
+		justify-content: space-between !important;
+		border-bottom: 1px solid #E6D4FF !important;
+	}
+
+	.modal-header-title {
+		font-size: 30px;
+		font-weight: 700;
+
+
+		@media all and (max-width: 768px) {
+			font-size: 18px !important;
+		}
+	}
+
+	.modal-body {
+		padding: 16px !important;
+		overflow-y: auto !important;
+	}
+
+	.document-info {
+		flex-direction: row !important;
+		height: auto !important;
+
+		&__item {
+			flex-direction: column !important;
+			align-items: flex-start !important;
+		}
+	}
+
+	.card-basic {
+
+		.card-basic__header {
+			padding: 12px 24px !important;
+			flex-direction: column !important;
+			align-items: flex-start !important;
+
+			@media all and (max-width: 768px) {
+
+				padding-left: 16px !important;
+			}
+
+
+
+		}
+
+		.card-basic__title {
+			font-weight: 700;
+			color: #2D2D2D;
+			font-size: 30px;
+
+			@media all and (max-width: 768px) {
+				font-size: 18px;
+				padding-left: 0px;
+				margin-left: 0;
+			}
+		}
+
+		.card-basic__body {
+			.medicine-info__label {
+				font-weight: 700;
+				font-size: 18px;
+				color: #2D2D2D;
+			}
+
+			@media all and (max-width: 768px) {
+				padding: 0 !important;
+			}
+		}
+	}
+
+	.order-list {
+		background: white !important;
+
+		thead tr {
+			background: white !important;
+		}
+
+		tbody tr {
+			background: white !important;
+
+			&:nth-child(odd),
+			&:nth-child(even) {
+				background: white !important;
+			}
+		}
+
+		td,
+		th {
+			background: white !important;
+		}
+	}
+
+	.list-table {
+		padding: 0 9px !important;
+	}
+
+}
