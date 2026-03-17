@@ -126,9 +126,11 @@
 		width: 100%;
 		justify-content: space-between;
 
+
 		@media all and (max-width: 768px) {
 			// gap: 20px;
 			flex-direction: column;
+			padding-top: 16px;
 		}
 
 		&__item {
@@ -147,6 +149,8 @@
 
 			@media all and (max-width: 768px) {
 				border: 0;
+				padding-top: 0px;
+
 			}
 
 			p {
@@ -154,8 +158,14 @@
 				width: 100%;
 				padding-bottom: 12px !important;
 
+
+
 				&.custom-table__header__text {
 					color: #2D2D2D;
+
+					@media all and (max-width: 768px) {
+						font-size: 18px;
+					}
 
 					&::after {
 						display: none;
@@ -172,6 +182,8 @@
 
 			@media all and (max-width: 768px) {
 				padding-top: 0;
+				padding-bottom: 16px;
+				font-size: 16px;
 			}
 		}
 
@@ -289,4 +301,9 @@
 			margin-top: 8px;
 		}
 	}
+}
+
+.border-bottom-mobile {
+	border-bottom: 1px solid #E6D4FF;
+
 }

@@ -500,17 +500,35 @@
 		border-radius: 0 !important;
 		border: 0 !important;
 		height: 100vh !important;
+
 	}
 
-	.modal-header {
-		display: flex !important;
-		flex-direction: row !important;
-		align-items: center !important;
-		justify-content: space-between !important;
+	&__modal-header {
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		flex-direction: row;
 		border-bottom: 1px solid #E6D4FF !important;
+		padding: 31px 24px 31px 24px;
+
+		@media all and (max-width: 768px) {
+			padding: 16px;
+		}
+
+
 	}
 
-	.modal-header-title {
+	.btn-modal-close {
+		margin-left: auto;
+		position: unset;
+
+		button {
+			right: unset !important;
+			top: unset !important;
+		}
+	}
+
+	&__modal-header-title {
 		font-size: 30px;
 		font-weight: 700;
 
@@ -581,25 +599,37 @@
 
 		thead tr {
 			background: white !important;
+
 		}
 
 		tbody tr {
 			background: white !important;
 
-			&:nth-child(odd),
-			&:nth-child(even) {
-				background: white !important;
-			}
+
+
 		}
 
 		td,
 		th {
 			background: white !important;
+
+		}
+
+		td {
+			font-size: 16px !important;
+			font-weight: 500 !important;
+		}
+
+		th {
+			font-size: 18px !important;
+			font-weight: 700 !important;
 		}
 	}
 
 	.list-table {
 		padding: 0 9px !important;
+
+
 	}
 
 }
