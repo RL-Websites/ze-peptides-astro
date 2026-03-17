@@ -488,6 +488,11 @@
 .prescription-modal {
 	padding: 0 !important;
 
+	.table.order-list td {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
 	.modal-dialog {
 		width: 100vw !important;
 		max-width: 100% !important;
@@ -618,6 +623,7 @@
 		td {
 			font-size: 16px !important;
 			font-weight: 500 !important;
+
 		}
 
 		th {

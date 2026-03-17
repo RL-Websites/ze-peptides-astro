@@ -210,6 +210,7 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 		<div class="offcanvas-body">
 			<div class="offcanvas-body__wrapper" id="accordion">
+				<!-- Panel 1: Fill -->
 				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
 					<div
 						class="panel-heading faq__md__heading"
@@ -299,6 +300,7 @@ import Layout from "../layouts/Layout.astro";
 					>
 						<div class="faq__lg__body pb-0 mt-0">
 							<div class="faq__items__bottom">
+								<!-- Desktop medication table -->
 								<div class="custom-table__alt d-md-flex d-none">
 									<div class="list-table">
 										<div class="table-responsive">
@@ -312,7 +314,6 @@ import Layout from "../layouts/Layout.astro";
 														<th>Status</th>
 													</tr>
 												</thead>
-
 												<tbody>
 													<tr>
 														<td
@@ -367,61 +368,131 @@ import Layout from "../layouts/Layout.astro";
 									</div>
 								</div>
 
-								<div class="custom-table d-md-none d-block">
-									<div class="custom-table__item">
-										<div class="custom-table__header">
-											<p class="custom-table__header__text">Order Status</p>
+								<!-- Mobile medication rows (fixed) -->
+								<div class="d-md-none d-block">
+									<!-- Medication row 1 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>TESTOSTERONE CYPIONATE/DHEA GRAPESEED OIL (1 ML) 1 Vial</div
+											>
 										</div>
-										<div class="custom-table__data">
-											<span class="status-pill status-pill--pending fs-12">
-												Waiting for Doctor
-											</span>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">5</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Inject 1 mL intramuscularly once weekly</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1 vial</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
 										</div>
 									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header">
-											<p class="custom-table__header__text">Payment Status</p>
+									<!-- Medication row 2 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>ESTRADIOL (0.125 MG/ML-10 MG/ML)</div
+											>
 										</div>
-										<div class="custom-table__data">
-											<span class="status-pill status-pill--submitted fs-12">
-												Success
-											</span>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Apply a thin layer to the prescribed area once daily or
+												as directed. For external use only. Wash hands after
+												application. Do not exceed prescribed dose</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
 										</div>
 									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header">
-											<p class="custom-table__header__text">Est. Bill Amount</p>
+									<!-- Medication row 3 -->
+									<div class="custom-table">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>PROGESTERONE (CLEAR) MCC (25 MG-300 MG)</div
+											>
 										</div>
-										<div class="custom-table__data"> $35 </div>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header">
-											<p class="custom-table__header__text">Product Price</p>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
 										</div>
-										<div class="custom-table__data"> $35 </div>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header">
-											<p class="custom-table__header__text">Lab Report</p>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Take 1 capsule by mouth once daily</div
+											>
 										</div>
-										<div class="custom-table__data">
-											<a class="text-primary fw-500" type="button">
-												View & Upload Lab (2)
-											</a>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
 										</div>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header">
-											<p class="custom-table__header__text">Action</p>
-										</div>
-										<div class="custom-table__data"> -- </div>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header">
-											<p class="custom-table__header__text">Period</p>
-										</div>
-										<div class="custom-table__data">
-											29 Mar, 2026 - 03 Apr, 2026
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -429,6 +500,8 @@ import Layout from "../layouts/Layout.astro";
 						</div>
 					</div>
 				</div>
+
+				<!-- Panel 2: 1st Follow-up -->
 				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
 					<div
 						class="panel-heading faq__md__heading"
@@ -513,6 +586,7 @@ import Layout from "../layouts/Layout.astro";
 					>
 						<div class="faq__lg__body pb-0 mt-0">
 							<div class="faq__items__bottom">
+								<!-- Desktop medication table -->
 								<div class="custom-table__alt d-md-flex d-none">
 									<div class="list-table">
 										<div class="table-responsive">
@@ -526,7 +600,6 @@ import Layout from "../layouts/Layout.astro";
 														<th>Status</th>
 													</tr>
 												</thead>
-
 												<tbody>
 													<tr>
 														<td
@@ -580,64 +653,133 @@ import Layout from "../layouts/Layout.astro";
 										</div>
 									</div>
 								</div>
-								<div class="custom-table d-md-none d-block">
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Order Status</p
-											></div
-										>
-										<div class="custom-table__data"
-											><span class="status-pill status-pill--pending fs-12"
-												>Refill Pending</span
-											></div
-										>
+
+								<!-- Mobile medication rows (fixed) -->
+								<div class="d-md-none d-block">
+									<!-- Medication row 1 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>TESTOSTERONE CYPIONATE/DHEA GRAPESEED OIL (1 ML) 1 Vial</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">5</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Inject 1 mL intramuscularly once weekly</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1 vial</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
 									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Payment Status</p
-											></div
-										>
-										<div class="custom-table__data"
-											><span>Not Initiated</span></div
-										>
+									<!-- Medication row 2 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>ESTRADIOL (0.125 MG/ML-10 MG/ML)</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Apply a thin layer to the prescribed area once daily or
+												as directed. For external use only. Wash hands after
+												application. Do not exceed prescribed dose</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
 									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Est. Bill Amount</p
-											></div
-										>
-										<div class="custom-table__data">$35</div>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Product Price</p
-											></div
-										>
-										<div class="custom-table__data">$35</div>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Lab Report</p></div
-										>
-										<div class="custom-table__data">-</div>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Action</p></div
-										>
-										<div class="custom-table__data"
-											><span class="status-pill status-pill--success fs-12"
-												>Refill Requested</span
-											></div
-										>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Period</p></div
-										>
-										<div class="custom-table__data"
-											>29 Mar, 2026 - 03 Apr, 2026</div
-										>
+									<!-- Medication row 3 -->
+									<div class="custom-table">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>PROGESTERONE (CLEAR) MCC (25 MG-300 MG)</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Take 1 capsule by mouth once daily</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -645,7 +787,7 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 				</div>
 
-				<!-- third one -->
+				<!-- Panel 3: 2nd Follow-up -->
 				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
 					<div
 						class="panel-heading faq__md__heading"
@@ -730,6 +872,7 @@ import Layout from "../layouts/Layout.astro";
 					>
 						<div class="faq__lg__body pb-0 mt-0">
 							<div class="faq__items__bottom">
+								<!-- Desktop medication table -->
 								<div class="custom-table__alt d-md-flex d-none">
 									<div class="list-table">
 										<div class="table-responsive">
@@ -743,7 +886,6 @@ import Layout from "../layouts/Layout.astro";
 														<th>Status</th>
 													</tr>
 												</thead>
-
 												<tbody>
 													<tr>
 														<td
@@ -797,64 +939,133 @@ import Layout from "../layouts/Layout.astro";
 										</div>
 									</div>
 								</div>
-								<div class="custom-table d-md-none d-block">
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Order Status</p
-											></div
-										>
-										<div class="custom-table__data"
-											><span class="status-pill status-pill--pending fs-12"
-												>Refill Pending</span
-											></div
-										>
+
+								<!-- Mobile medication rows (fixed) -->
+								<div class="d-md-none d-block">
+									<!-- Medication row 1 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>TESTOSTERONE CYPIONATE/DHEA GRAPESEED OIL (1 ML) 1 Vial</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">5</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Inject 1 mL intramuscularly once weekly</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1 vial</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
 									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Payment Status</p
-											></div
-										>
-										<div class="custom-table__data"
-											><span>Not Initiated</span></div
-										>
+									<!-- Medication row 2 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>ESTRADIOL (0.125 MG/ML-10 MG/ML)</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Apply a thin layer to the prescribed area once daily or
+												as directed. For external use only. Wash hands after
+												application. Do not exceed prescribed dose</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
 									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Est. Bill Amount</p
-											></div
-										>
-										<div class="custom-table__data">$35</div>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Product Price</p
-											></div
-										>
-										<div class="custom-table__data">$35</div>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Lab Report</p></div
-										>
-										<div class="custom-table__data">-</div>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Action</p></div
-										>
-										<div class="custom-table__data"
-											><a class="text-primary fw-500" type="button"
-												>Request Refill</a
-											></div
-										>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Period</p></div
-										>
-										<div class="custom-table__data"
-											>29 Mar, 2026 - 03 Apr, 2026</div
-										>
+									<!-- Medication row 3 -->
+									<div class="custom-table">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>PROGESTERONE (CLEAR) MCC (25 MG-300 MG)</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Take 1 capsule by mouth once daily</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -862,7 +1073,7 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 				</div>
 
-				<!-- fourth one -->
+				<!-- Panel 4: 3rd Follow-up -->
 				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
 					<div
 						class="panel-heading faq__md__heading"
@@ -947,6 +1158,7 @@ import Layout from "../layouts/Layout.astro";
 					>
 						<div class="faq__lg__body pb-0 mt-0">
 							<div class="faq__items__bottom">
+								<!-- Desktop medication table -->
 								<div class="custom-table__alt d-md-flex d-none">
 									<div class="list-table">
 										<div class="table-responsive">
@@ -960,7 +1172,6 @@ import Layout from "../layouts/Layout.astro";
 														<th>Status</th>
 													</tr>
 												</thead>
-
 												<tbody>
 													<tr>
 														<td
@@ -1014,64 +1225,133 @@ import Layout from "../layouts/Layout.astro";
 										</div>
 									</div>
 								</div>
-								<div class="custom-table d-md-none d-block">
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Order Status</p
-											></div
-										>
-										<div class="custom-table__data"
-											><span class="status-pill status-pill--pending fs-12"
-												>Refill Pending</span
-											></div
-										>
+
+								<!-- Mobile medication rows (fixed) -->
+								<div class="d-md-none d-block">
+									<!-- Medication row 1 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>TESTOSTERONE CYPIONATE/DHEA GRAPESEED OIL (1 ML) 1 Vial</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">5</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Inject 1 mL intramuscularly once weekly</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1 vial</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
 									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Payment Status</p
-											></div
-										>
-										<div class="custom-table__data"
-											><span>Not Initiated</span></div
-										>
+									<!-- Medication row 2 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>ESTRADIOL (0.125 MG/ML-10 MG/ML)</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Apply a thin layer to the prescribed area once daily or
+												as directed. For external use only. Wash hands after
+												application. Do not exceed prescribed dose</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
 									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Est. Bill Amount</p
-											></div
-										>
-										<div class="custom-table__data">$35</div>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Product Price</p
-											></div
-										>
-										<div class="custom-table__data">$35</div>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Lab Report</p></div
-										>
-										<div class="custom-table__data">-</div>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Action</p></div
-										>
-										<div class="custom-table__data"
-											><a class="text-primary fw-500" type="button"
-												>Request Refill</a
-											></div
-										>
-									</div>
-									<div class="custom-table__item">
-										<div class="custom-table__header"
-											><p class="custom-table__header__text">Period</p></div
-										>
-										<div class="custom-table__data"
-											>29 Mar, 2026 - 03 Apr, 2026</div
-										>
+									<!-- Medication row 3 -->
+									<div class="custom-table">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>PROGESTERONE (CLEAR) MCC (25 MG-300 MG)</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Take 1 capsule by mouth once daily</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1082,7 +1362,6 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 	</div>
 </div>
-
 <!--OffCanvas UI End -->
 
 <div
