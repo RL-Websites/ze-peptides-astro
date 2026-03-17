@@ -493,55 +493,9 @@
 		padding-right: 0 !important;
 	}
 
-	.modal-dialog {
-		width: 100vw !important;
-		max-width: 100% !important;
-		height: 100vh !important;
-		margin: 0 !important;
-	}
-
-	.modal-content {
-		max-height: 100vh !important;
-		border-radius: 0 !important;
-		border: 0 !important;
-		height: 100vh !important;
-
-	}
-
-	&__modal-header {
-		display: flex;
-		align-items: center;
-		justify-content: start;
-		flex-direction: row;
-		border-bottom: 1px solid #E6D4FF !important;
-		padding: 31px 24px 31px 24px;
-
-		@media all and (max-width: 768px) {
-			padding: 16px;
-		}
 
 
-	}
 
-	.btn-modal-close {
-		margin-left: auto;
-		position: unset;
-
-		button {
-			right: unset !important;
-			top: unset !important;
-		}
-	}
-
-	&__modal-header-title {
-		font-size: 30px;
-		font-weight: 700;
-
-
-		@media all and (max-width: 768px) {
-			font-size: 18px !important;
-		}
-	}
 
 	.modal-body {
 		padding: 16px !important;
