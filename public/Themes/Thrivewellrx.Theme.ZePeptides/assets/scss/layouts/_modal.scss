@@ -676,8 +676,14 @@
 			padding-left: 24px !important;
 			padding-right: 24px !important;
 
+
+
 			@media all and (max-width: 768px) {
-				padding: 8px 0px !important;
+				padding: 4px 0px !important;
+
+				p {
+					margin-top: 0px !important;
+				}
 			}
 		}
 	}
