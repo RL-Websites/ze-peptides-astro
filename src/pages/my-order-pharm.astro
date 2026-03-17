@@ -209,7 +209,13 @@ import Layout from "../layouts/Layout.astro";
 			</button>
 		</div>
 		<div class="offcanvas-body">
-			<div class="offcanvas-body__wrapper" id="accordion">
+			<div
+				class="offcanvas-body__wrapper"
+				id="accordion"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+				data-aos-once="false"
+			>
 				<!-- Panel 1: Fill -->
 				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
 					<div
@@ -295,7 +301,7 @@ import Layout from "../layouts/Layout.astro";
 					<div
 						id="collapseOne"
 						class="panel-collapse collapse show"
-						data-bs-parent="#accordion"
+						data-bs-parent=".offcanvas-body__wrapper"
 						aria-labelledby="headingOne"
 					>
 						<div class="faq__lg__body pb-0 mt-0">
@@ -581,7 +587,7 @@ import Layout from "../layouts/Layout.astro";
 					<div
 						id="collapseTwo"
 						class="panel-collapse collapse"
-						data-bs-parent="#accordion"
+						data-bs-parent=".offcanvas-body__wrapper"
 						aria-labelledby="headingTwo"
 					>
 						<div class="faq__lg__body pb-0 mt-0">
@@ -867,7 +873,7 @@ import Layout from "../layouts/Layout.astro";
 					<div
 						id="collapseThree"
 						class="panel-collapse collapse"
-						data-bs-parent="#accordion"
+						data-bs-parent=".offcanvas-body__wrapper"
 						aria-labelledby="headingThree"
 					>
 						<div class="faq__lg__body pb-0 mt-0">
@@ -1153,7 +1159,7 @@ import Layout from "../layouts/Layout.astro";
 					<div
 						id="collapseFour"
 						class="panel-collapse collapse"
-						data-bs-parent="#accordion"
+						data-bs-parent=".offcanvas-body__wrapper"
 						aria-labelledby="headingFour"
 					>
 						<div class="faq__lg__body pb-0 mt-0">
@@ -1392,7 +1398,11 @@ import Layout from "../layouts/Layout.astro";
 			<div class="modal-body p-3">
 				<!-- Prescriber Details -->
 				<div class="d-flex flex-column gap-3">
-					<div class="card-basic card-basic--no-shadow">
+					<div
+						class="card-basic card-basic--no-shadow"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+					>
 						<div class="card-basic__header">
 							<p class="card-basic__title">Prescriber Details:</p>
 						</div>
@@ -1415,7 +1425,12 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 
 					<!-- Patient Details -->
-					<div class="card-basic card-basic--no-shadow">
+					<div
+						class="card-basic card-basic--no-shadow"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="100"
+					>
 						<div class="card-basic__header">
 							<p class="card-basic__title">Patient Details:</p>
 						</div>
@@ -1450,7 +1465,12 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 
 					<!-- Prescription Details -->
-					<div class="card-basic card-basic--no-shadow">
+					<div
+						class="card-basic card-basic--no-shadow"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="200"
+					>
 						<div class="card-basic__header">
 							<p class="card-basic__title">Prescription Details:</p>
 						</div>
@@ -1489,7 +1509,12 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 
 					<!-- Document Information -->
-					<div class="card-basic card-basic--no-shadow">
+					<div
+						class="card-basic card-basic--no-shadow"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="300"
+					>
 						<div class="card-basic__header">
 							<p class="card-basic__title">Document Information:</p>
 						</div>
@@ -1516,7 +1541,12 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 
 					<!-- TRT Cycles -->
-					<div class="mt-3">
+					<div
+						class="mt-3"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="400"
+					>
 						<p class="card-basic__title mb-3">TRT Cycles</p>
 
 						<div class="card-basic__body">
