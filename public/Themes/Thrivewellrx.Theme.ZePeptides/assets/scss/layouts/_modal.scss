@@ -587,6 +587,9 @@
 		}
 
 		.card-basic__body {
+			padding-top: 0px;
+			padding-bottom: 0px;
+
 			.medicine-info__label {
 				font-weight: 700;
 				font-size: 18px;
@@ -636,6 +639,47 @@
 		padding: 0 9px !important;
 
 
+	}
+
+	.medicine-info {
+		padding: 0 !important;
+		gap: 0;
+
+		@media all and (max-width: 768px) {
+			padding: 8px 0px !important;
+		}
+
+		&__item {
+			padding-top: 0px !important;
+			padding-bottom: 24px !important;
+			padding-left: 24px !important;
+			padding-right: 24px !important;
+
+			@media all and (max-width: 768px) {
+				padding: 8px 16px !important;
+			}
+		}
+	}
+
+	.document-info {
+		flex-direction: row !important;
+		height: auto !important;
+		padding: 0 !important;
+
+		@media all and (max-width: 768px) {
+			padding: 8px 16px !important;
+		}
+
+		&__item {
+			padding-top: 0px !important;
+			padding-bottom: 24px !important;
+			padding-left: 24px !important;
+			padding-right: 24px !important;
+
+			@media all and (max-width: 768px) {
+				padding: 8px 0px !important;
+			}
+		}
 	}
 
 }
