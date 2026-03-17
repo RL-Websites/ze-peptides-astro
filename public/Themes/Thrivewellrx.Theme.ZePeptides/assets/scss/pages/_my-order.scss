@@ -172,8 +172,8 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 32px;
-	
-	&--3{
+
+	&--3 {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
@@ -455,7 +455,7 @@
 		}
 	}
 
-	.px-15{
+	.px-15 {
 		padding: 15px;
 	}
 
@@ -464,7 +464,7 @@
 		padding: 15px;
 		gap: 10px;
 
-		&--3{
+		&--3 {
 			padding: 15px 0;
 		}
 	}
@@ -534,5 +534,19 @@
 	.medicine-info__label,
 	.document-info__label {
 		min-width: 120px;
+	}
+}
+
+.faq__items__bottom {
+	.order-list {
+		&.table {
+			thead th {
+				padding: 10px 12px !important;
+			}
+
+			tbody td {
+				color: #525252;
+			}
+		}
 	}
 }

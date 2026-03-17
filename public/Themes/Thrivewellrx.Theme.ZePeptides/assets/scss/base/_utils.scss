@@ -496,3 +496,12 @@ $width-list: (
 
 	border-radius: 12px;
 }
+
+.gap-128 {
+	gap: 128px;
+
+	@media all and (max-width: 768px) {
+
+		gap: 16px;
+	}
+}

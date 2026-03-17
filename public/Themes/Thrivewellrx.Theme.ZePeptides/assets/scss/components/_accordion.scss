@@ -53,6 +53,7 @@
 							background-color: $white;
 							font-size: $fs-24;
 							color: $blue-2;
+
 						}
 					}
 				}
@@ -622,4 +623,41 @@
 			}
 		}
 	}
+}
+
+.custom-accordion-header {
+	padding-bottom: 16px !important;
+	border-bottom: 1px solid #E6D4FF;
+	color: #2D2D2D !important;
+	position: relative;
+
+	&::after {
+		content: "\e919";
+		font-family: "icomoon";
+		font-size: $fs-16;
+		font-weight: 700;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		width: 30px;
+		height: 30px;
+		color: $primary;
+		border-radius: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: translateY(-50%) rotate(180deg);
+		transition: transform 0.35s ease; // ← transition lives here
+	}
+}
+
+.faq__md__heading .custom-accordion-header::after {
+	transform: translateY(-50%) rotate(180deg);
+	transition: transform 0.35s ease !important;
+	display: inline-flex !important;
+}
+
+.faq__md__heading.collapsed .custom-accordion-header::after {
+	transform: translateY(-50%) rotate(0deg);
+	transition: transform 0.35s ease !important;
 }

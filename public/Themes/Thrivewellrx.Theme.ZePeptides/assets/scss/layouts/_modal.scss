@@ -482,3 +482,181 @@
 		}
 	}
 }
+
+
+
+.prescription-modal {
+	padding: 0 !important;
+
+	.table.order-list td {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+
+
+
+
+	.modal-body {
+		padding: 16px !important;
+		overflow-y: auto !important;
+	}
+
+	.document-info {
+		flex-direction: row !important;
+		height: auto !important;
+
+		&__item {
+			flex-direction: column !important;
+			align-items: flex-start !important;
+		}
+	}
+
+	.card-basic {
+
+		.card-basic__header {
+			padding: 12px 24px !important;
+			flex-direction: column !important;
+			align-items: flex-start !important;
+
+			@media all and (max-width: 768px) {
+
+				padding-left: 16px !important;
+			}
+
+
+
+		}
+
+		.card-basic__title {
+			font-weight: 700;
+			color: #2D2D2D;
+			font-size: 30px;
+
+			@media all and (max-width: 768px) {
+				font-size: 18px;
+				padding-left: 0px;
+				margin-left: 0;
+			}
+		}
+
+		.card-basic__body {
+			padding-top: 0px;
+			padding-bottom: 0px;
+
+			.medicine-info__label {
+				font-weight: 700;
+				font-size: 18px;
+				color: #2D2D2D;
+			}
+
+			@media all and (max-width: 768px) {
+				padding: 0 !important;
+			}
+		}
+	}
+
+	.order-list {
+		background: white !important;
+
+		thead tr {
+			background: white !important;
+
+		}
+
+		tbody tr {
+			background: white !important;
+
+
+
+		}
+
+		td,
+		th {
+			background: white !important;
+
+		}
+
+		td {
+			font-size: 16px !important;
+			font-weight: 500 !important;
+
+		}
+
+		th {
+			font-size: 18px !important;
+			font-weight: 700 !important;
+		}
+	}
+
+	.list-table {
+		padding: 0 9px !important;
+
+
+	}
+
+	.medicine-info {
+		padding: 0 !important;
+		gap: 0;
+
+		@media all and (max-width: 768px) {
+			padding: 8px 0px !important;
+		}
+
+		&__item {
+			padding-top: 0px !important;
+			padding-bottom: 24px !important;
+			padding-left: 24px !important;
+			padding-right: 24px !important;
+
+			@media all and (max-width: 768px) {
+				padding: 8px 16px !important;
+			}
+		}
+	}
+
+	.document-info {
+		flex-direction: row !important;
+		height: auto !important;
+		padding: 0 !important;
+
+		@media all and (max-width: 768px) {
+			padding: 8px 16px !important;
+		}
+
+		&__item {
+			padding-top: 0px !important;
+			padding-bottom: 24px !important;
+			padding-left: 24px !important;
+			padding-right: 24px !important;
+
+
+
+			@media all and (max-width: 768px) {
+				padding: 4px 0px !important;
+
+				p {
+					margin-top: 0px !important;
+				}
+			}
+		}
+	}
+
+}
+
+@keyframes aosLikeFadeUp {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 100px, 0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+#prescriptionModal.show .modal-body .card-basic,
+#prescriptionModal.show .modal-body .mt-3 {
+	animation: aosLikeFadeUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s both;
+}
