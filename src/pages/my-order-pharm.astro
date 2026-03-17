@@ -218,11 +218,11 @@ import Layout from "../layouts/Layout.astro";
 						id="headingOne"
 						data-bs-toggle="collapse"
 						data-bs-target="#collapseOne"
-						aria-expanded="false"
+						aria-expanded="true"
 						aria-controls="collapseOne"
 					>
 						<p
-							class="custom-accordion-header collapsed justify-content-start align-items-center gap-2"
+							class="custom-accordion-header justify-content-start align-items-center gap-2"
 						>
 							<span>Order Type: Fill</span>
 							<span class="status-pill status-pill--active fs-12">
@@ -294,7 +294,7 @@ import Layout from "../layouts/Layout.astro";
 
 					<div
 						id="collapseOne"
-						class="panel-collapse collapse"
+						class="panel-collapse collapse show"
 						data-bs-parent="#accordion"
 						aria-labelledby="headingOne"
 					>
@@ -504,7 +504,7 @@ import Layout from "../layouts/Layout.astro";
 				<!-- Panel 2: 1st Follow-up -->
 				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
 					<div
-						class="panel-heading faq__md__heading"
+						class="panel-heading faq__md__heading collapsed"
 						role="button"
 						id="headingTwo"
 						data-bs-toggle="collapse"
@@ -513,7 +513,7 @@ import Layout from "../layouts/Layout.astro";
 						aria-controls="collapseTwo"
 					>
 						<p
-							class="custom-accordion-header collapsed justify-content-start align-items-center gap-2"
+							class="custom-accordion-header justify-content-start align-items-center gap-2"
 						>
 							<span>Order Type: 1st Follow-up</span>
 						</p>
@@ -790,7 +790,7 @@ import Layout from "../layouts/Layout.astro";
 				<!-- Panel 3: 2nd Follow-up -->
 				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
 					<div
-						class="panel-heading faq__md__heading"
+						class="panel-heading faq__md__heading collapsed"
 						id="headingThree"
 						role="button"
 						data-bs-toggle="collapse"
@@ -799,7 +799,7 @@ import Layout from "../layouts/Layout.astro";
 						aria-controls="collapseThree"
 					>
 						<p
-							class="custom-accordion-header collapsed justify-content-start align-items-center gap-2"
+							class="custom-accordion-header justify-content-start align-items-center gap-2"
 						>
 							<span>Order Type: 2nd Follow-up</span>
 						</p>
@@ -1076,7 +1076,7 @@ import Layout from "../layouts/Layout.astro";
 				<!-- Panel 4: 3rd Follow-up -->
 				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
 					<div
-						class="panel-heading faq__md__heading"
+						class="panel-heading faq__md__heading collapsed"
 						role="button"
 						id="headingFour"
 						data-bs-toggle="collapse"
@@ -1085,7 +1085,7 @@ import Layout from "../layouts/Layout.astro";
 						aria-controls="collapseFour"
 					>
 						<p
-							class="custom-accordion-header collapsed justify-content-start align-items-center gap-2"
+							class="custom-accordion-header justify-content-start align-items-center gap-2"
 						>
 							<span>Order Type: 3rd Follow-up</span>
 						</p>
