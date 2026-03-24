@@ -7,6 +7,8 @@
 .modal {
 	overflow-y: hidden !important;
 
+
+
 	&-dialog {
 		display: flex;
 		align-items: center;
@@ -15,6 +17,8 @@
 		width: 1024px;
 		max-width: 96%;
 		margin-top: 0;
+
+
 	}
 
 	&-content {
@@ -26,6 +30,8 @@
 		background-size: cover;
 		background-position: center;
 		border: 1px solid $primary-lightest;
+
+
 	}
 
 	&-header {
@@ -40,7 +46,8 @@
 			padding: 14px;
 
 			@media all and (max-width: 768px) {
-				font-size: 18px
+				font-size: 18px;
+				padding: 0px;
 			}
 		}
 
