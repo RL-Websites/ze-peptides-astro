@@ -31,6 +31,7 @@ import Layout from "../layouts/Layout.astro";
 												<th>Date</th>
 												<th>Medication</th>
 												<th>Status</th>
+												<th>Payment Status</th>
 											</tr>
 										</thead>
 
@@ -50,12 +51,12 @@ import Layout from "../layouts/Layout.astro";
 												<td class="list-table__time">12/28/2024 03:37:02 PM</td>
 												<td>
 													2X Blend Tesamorelin (10mg)/Ipamorelin (5mg)
-													<span
+													<!-- <span
 														class="status-pill status-pill--primary d-inline-flex align-items-center gap-1"
 													>
 														<i class="icon-plus-circle"></i>
 														<span>R</span>
-													</span>
+													</span> -->
 												</td>
 												<td>
 													<a
@@ -73,8 +74,24 @@ import Layout from "../layouts/Layout.astro";
 															</span>
 														</button>
 
-														<i class="icon-plus-circle"></i>
+														<i class="icon-refresh"></i>
 													</a>
+												</td>
+												<td>
+													<button
+														class="status-pill status-pill--submitted d-flex align-items-center gap-2"
+														title="
+																<div class='status-tooltip p-12'>
+																	<div class='text-left'>
+																		GLP-1, AOD-9604, Semaglutide, Cagrilintide Injectable Solution
+																	</div>
+																	
+																</div>
+															"
+														class="bg-transparent border-0 p-0"
+													>
+														<span class="fw-400">Paid</span>
+													</button>
 												</td>
 											</tr>
 
@@ -87,17 +104,59 @@ import Layout from "../layouts/Layout.astro";
 												<td class="list-table__time">12/28/2024 03:37:02 PM</td>
 												<td>
 													2X Blend Tesamorelin (10mg)/Ipamorelin (5mg)
-													<span
-														class="status-pill status-pill--primary d-inline-flex align-items-center gap-1"
+													<button
+														class="status-pill status-pill--primary-light mb-0 text-dark border-0"
+														title="
+																<div class='status-tooltip p-12'>
+																	<div class='text-left'>
+																		GLP-1, AOD-9604, Semaglutide, Cagrilintide Injectable Solution
+																	</div>
+																	
+																</div>
+															"
 													>
-														<i class="icon-plus-circle"></i>
-														<span>R</span>
-													</span>
+														<span class="fw-500">+2</span>
+													</button>
 												</td>
 												<td>
-													<span class="status-pill status-pill--default">
-														Received
-													</span>
+													<div class="d-flex align-items-center gap-2">
+														<button
+															class="text-primary text-decoration-underline bg-transparent border-0"
+															>P1</button
+														>
+														<button
+															class="text-primary text-decoration-underline bg-transparent border-0"
+															>P2</button
+														>
+														<button
+															class="text-primary text-decoration-underline bg-transparent border-0"
+															>S</button
+														>
+													</div>
+												</td>
+												<td>
+													<button
+														type="button"
+														class="theme-btn theme-btn__icon-only statusTooltipBtn"
+														title="
+																<div class='status-tooltip p-12'>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Received:</span>
+																			<span class='value'>GLP-1, AOD-9604</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Processing:</span>
+																			<span class='value'>Semaglutide</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Shipped:</span>
+																			<span class='value'>Cagrilintide Injectable Solution</span>
+																		</div>
+																	</div>
+															"
+													>
+														<i class="icon-money text-primary fs-24 fw-500"></i>
+													</button>
 												</td>
 											</tr>
 
@@ -114,6 +173,22 @@ import Layout from "../layouts/Layout.astro";
 														Processing
 													</span>
 												</td>
+												<td>
+													<button
+														class="status-pill status-pill--submitted d-flex align-items-center gap-2"
+														title="
+																<div class='status-tooltip p-12'>
+																	<div class='text-left'>
+																		GLP-1, AOD-9604, Semaglutide, Cagrilintide Injectable Solution
+																	</div>
+																	
+																</div>
+															"
+														class="bg-transparent border-0 p-0"
+													>
+														<span class="fw-400">Paid</span>
+													</button>
+												</td>
 											</tr>
 
 											<tr>
@@ -129,6 +204,30 @@ import Layout from "../layouts/Layout.astro";
 														Declined
 													</span>
 												</td>
+												<td>
+													<button
+														type="button"
+														class="theme-btn theme-btn__icon-only statusTooltipBtn"
+														title="
+																<div class='status-tooltip p-12'>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Received:</span>
+																			<span class='value'>GLP-1, AOD-9604</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Processing:</span>
+																			<span class='value'>Semaglutide</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Shipped:</span>
+																			<span class='value'>Cagrilintide Injectable Solution</span>
+																		</div>
+																	</div>
+															"
+													>
+														<i class="icon-money text-primary fs-24 fw-500"></i>
+													</button></td
+												>
 											</tr>
 
 											<tr>
@@ -144,6 +243,22 @@ import Layout from "../layouts/Layout.astro";
 														Delivered
 													</span>
 												</td>
+												<td>
+													<button
+														class="status-pill status-pill--submitted d-flex align-items-center gap-2"
+														title="
+																<div class='status-tooltip p-12'>
+																	<div class='text-left'>
+																		GLP-1, AOD-9604, Semaglutide, Cagrilintide Injectable Solution
+																	</div>
+																	
+																</div>
+															"
+														class="bg-transparent border-0 p-0"
+													>
+														<span class="fw-400">Paid</span>
+													</button></td
+												>
 											</tr>
 
 											<tr>
@@ -153,12 +268,50 @@ import Layout from "../layouts/Layout.astro";
 													</a>
 												</td>
 												<td>12/28/2024</td>
-												<td>Kyzetrex</td>
+												<td
+													>Kyzetrex <button
+														class="status-pill status-pill--primary-light mb-0 text-dark border-0"
+														title="
+																<div class='status-tooltip p-12'>
+																	<div class='text-left'>
+																		GLP-1, AOD-9604, Semaglutide, Cagrilintide Injectable Solution
+																	</div>
+																	
+																</div>
+															"
+													>
+														<span class="fw-500">+4</span>
+													</button></td
+												>
 
 												<td>
-													<span class="status-pill status-pill--warning"
+													<span class="status-pill status-pill--pending"
 														>Shipped</span
 													>
+												</td>
+												<td>
+													<button
+														type="button"
+														class="theme-btn theme-btn__icon-only statusTooltipBtn"
+														title="
+																<div class='status-tooltip p-12'>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Received:</span>
+																			<span class='value'>GLP-1, AOD-9604</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Processing:</span>
+																			<span class='value'>Semaglutide</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Shipped:</span>
+																			<span class='value'>Cagrilintide Injectable Solution</span>
+																		</div>
+																	</div>
+															"
+													>
+														<i class="icon-money text-primary fs-24 fw-500"></i>
+													</button>
 												</td>
 											</tr>
 										</tbody>
