@@ -1,7 +1,7 @@
 @use "../base/variables" as *;
 
 .login {
-  padding-top: 180px;
+  padding-top: 70px;
 
   &__header {
     padding: 24px;
@@ -23,7 +23,6 @@
     border-radius: 10px;
     width: 100%;
     font-size: $fs-18;
-
   }
 
   &__password {
@@ -81,7 +80,7 @@
 
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       width: 100%;
       height: 2px;
       background-color: $primary;
@@ -89,12 +88,11 @@
       left: 0;
     }
   }
-
 }
 
 @media only screen and (max-width: 768px) {
   .login {
-    padding: 100px 0 0;
+    padding: 30px 0 0;
 
     &__input {
       height: 50px;
